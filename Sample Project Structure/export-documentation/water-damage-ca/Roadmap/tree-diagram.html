@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Documentation Tree Structure</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .node circle {
+            fill: #fff;
+            stroke: #4CAF50;
+            stroke-width: 2px;
+        }
+        .node text {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 1px;
+        }
+        .directory {
+            fill: #4CAF50;
+        }
+        .file {
+            fill: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Documentation Tree Structure</h1>
+    <div id="tree-container"></div>
+    <script>
+        const treeData = {
+            name: "water-damage-ca",
+            type: "directory",
+            children: [
+                {
+                    name: "README.md",
+                    type: "file"
+                },
+                {
+                    name: "docs",
+                    type: "directory",
+                    children: [
+                        {
+                            name: "Core",
+                            type: "category",
+                            children: [
+                                { name: "api-integration-guide.md", type: "file" },
+                                { name: "business-data-flow.md", type: "file" },
+                                { name: "data-pipeline.md", type: "file" },
+                                { name: "data-quality.md", type: "file" }
+                            ]
+                        },
+                        {
+                            name: "Features",
+                            type: "category",
+                            children: [
+                                { name: "business-profile-implementation.md", type: "file" },
+                                { name: "city-management-implementation.md", type: "file" },
+                                { name: "seo-implementation.md", type: "file" }
+                            ]
+                        },
+                        {
+                            name: "Integration",
+                            type: "category",
+                            children: [
+                                { name: "google-integration.md", type: "file" },
+                                { name: "brave-search-integration.md", type: "file" },
+                                { name: "perplexity-mcp-server-guide.md", type: "file" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "Roadmap",
+                    type: "directory",
+                    children: [
+                        {
+                            name: "Data Enrichment",
+                            type: "directory",
+                            children: [
+                                { name: "batch-processing.md", type: "file" },
+                                { name: "data-enrichment-instructions.md", type: "file" },
+                                { name: "places-api-integration.md", type: "file" }
+                            ]
+                        },
+                        { name: "project-requirements.md", type: "file" },
+                        { name: "technical-implementation-plan.md", type: "file" },
+                        { name: "website-architecture.md", type: "file" },
+                        { name: "development-workflow.md", type: "file" },
+                        { name: "testing-workflow.md", type: "file" },
+                        { name: "project-status.md", type: "file" },
+                        { name: "next-steps.md", type: "file" },
+                        { name: "tracking-progress.md", type: "file" }
+                    ]
+                }
+            ]
+        };
+
+        // Set up the D3 tree layout
+        const width = 1200;
+        const height = 800;
+        const margin = { top: 20, right: 90, bottom: 20, left: 90 };
+
+        const svg = d3.select("#tree-container")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Create the tree layout
+        const tree = d3.tree()
+            .size([height - margin.top - margin.bottom, width - margin.left - margin.right]);
+
+        // Convert the data into D3 hierarchical format
+        const root = d3.hierarchy(treeData);
+
+        // Assign the data to the tree layout
+        const treeData2 = tree(root);
+
+        // Create the links
+        const links = svg.selectAll(".link")
+            .data(root.links())
+            .enter()
+            .append("path")
+            .attr("class", "link")
+            .attr("d", d3.linkHorizontal()
+                .x(d => d.y)
+                .y(d => d.x));
+
+        // Create the nodes
+        const nodes = svg.selectAll(".node")
+            .data(root.descendants())
+            .enter()
+            .append("g")
+            .attr("class", "node")
+            .attr("transform", d => `translate(${d.y},${d.x})`);
+
+        // Add circles to the nodes
+        nodes.append("circle")
+            .attr("r", 6)
+            .attr("class", d => d.data.type);
+
+        // Add labels to the nodes
+        nodes.append("text")
+            .attr("dy", ".35em")
+            .attr("x", d => d.children ? -13 : 13)
+            .attr("text-anchor", d => d.children ? "end" : "start")
+            .text(d => d.data.name)
+            .style("fill", d => {
+                if (d.data.type === "directory") return "#4CAF50";
+                if (d.data.type === "category") return "#FF9800";
+                return "#2196F3";
+            });
+    </script>
+</body>
+</html>
