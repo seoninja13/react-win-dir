@@ -27,6 +27,7 @@ The architecture documentation provides detailed information about the system de
 
 - [Component Structure](./architecture/component-structure.md) - Overview of the component structure
 - [Page Structure](./architecture/page-structure.md) - Overview of the page structure
+- [Relume Wireframe Conversion](./architecture/relume-wireframe-conversion.md) - Documentation of the Relume wireframe files conversion
 - [Root Layout](./architecture/root-layout.md) - Documentation for the root layout component
 - [API Routes](./architecture/api-routes.md) - Documentation for the API routes
 - [Utility Functions](./architecture/utility-functions.md) - Documentation for utility functions
@@ -100,4 +101,4 @@ When contributing to the documentation, follow these guidelines:
 - [Main README](../README.md) - Main project documentation and entry point
 - [Documentation Map](./documentation-map.md) - Comprehensive map of all documentation
 
-Last Updated: May 9, 2025
+Last Updated: May 10, 2025

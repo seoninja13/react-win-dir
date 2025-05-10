@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { Button } from '@relume_io/relume-ui';
 import Header from '@/components/Header';
 import Footer4 from '@/components/Footer4';
-import Link from 'next/link';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -75,7 +74,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="mb-4 text-4xl font-bold md:text-5xl">Contact Us</h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg">
-            We're here to help with all your window, door, siding, and roofing needs. Contact us today for a free estimate or to learn more about our products and services.
+            We&apos;re here to help with all your window, door, siding, and roofing needs. Contact us today for a free estimate or to learn more about our products and services.
           </p>
         </div>
       </section>
@@ -299,7 +298,6 @@ export default function ContactPage() {
                 <div className="text-center">
                   <Button
                     title="Submit Request"
-                    size="lg"
                     className="bg-blue-600 text-white hover:bg-blue-700"
                     type="submit"
                     disabled={formStatus.submitted && !formStatus.success}

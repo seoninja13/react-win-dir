@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { homeExteriorImages, windowImages, doorImages, sidingImages, roofingImages } from '@/utils/imageUrls';
+import { homeExteriorImages, windowImages, doorImages, sidingImages, roofingImages } from '@/utils/imageUrls.js';
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
-          <h1 className="mb-6 text-4xl font-bold md:text-6xl">Los Angeles' Leader in Windows, Doors, & Siding</h1>
+          <h1 className="mb-6 text-4xl font-bold md:text-6xl">Los Angeles&apos; Leader in Windows, Doors, & Siding</h1>
           <p className="mb-8 text-xl md:text-2xl">Transform your home with quality products and expert installation</p>
           <button className="rounded-md bg-blue-600 px-8 py-3 text-lg font-semibold text-white transition hover:bg-blue-700">
             Request Free Estimate
@@ -45,7 +45,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-60"></div>
               <div className="absolute inset-x-0 bottom-0 p-6 text-white">
                 <h3 className="mb-2 text-2xl font-bold">Windows</h3>
-                <p className="mb-4 text-sm">Energy-efficient windows that enhance your home's beauty and comfort.</p>
+                <p className="mb-4 text-sm">Energy-efficient windows that enhance your home&apos;s beauty and comfort.</p>
                 <button className="rounded bg-white px-4 py-2 text-sm font-semibold text-blue-600 transition hover:bg-gray-100">
                   Learn More
                 </button>
