@@ -12,32 +12,26 @@ This repository contains the code for the Window World LA website, a modern webs
 
 This project follows a pyramid documentation structure with this README as the single entry point. All documentation is organized hierarchically in the `docs` directory.
 
-For a comprehensive map of all documentation, see the [Documentation Directory](./docs/index.md) and the [Daily Logs](./docs/daily-logs/). For all project tasks and their priorities, see the [Priority Task List](./docs/priority-list.md). For the latest daily log, see the [May 10, 2025 Daily Log](./docs/daily-logs/2025-05-10.md).
+For a comprehensive map of all documentation, see the [Documentation Directory](./docs/README.md) and the [Daily Logs](./docs/daily-logs/). For the latest daily log, see the [November 16, 2023 Daily Log](./docs/daily-logs/2023-11-16.md).
 
 ## Documentation Directory
 
-All detailed documentation is organized in the [Documentation Directory](./docs/index.md), which serves as the central hub for all project documentation. The documentation is organized into the following categories:
+All detailed documentation is organized in the [Documentation Directory](./docs/README.md), which serves as the central hub for all project documentation. The documentation is organized into the following categories:
 
 ### Main Categories
 
-- [Architecture](./docs/architecture/index.md) - System design and architecture documentation
-- [Features](./docs/features/index.md) - Feature implementation documentation
-- [Guides](./docs/guides/index.md) - Developer guides and tutorials
-- [Integrations](./docs/integrations/index.md) - Integration documentation for external services
-- [Planning](./docs/planning/index.md) - Planning documentation and implementation plans
-- [Processes](./docs/processes/index.md) - Process documentation
-- [Testing](./docs/testing/index.md) - Testing documentation and guidelines
+- [Architecture](./docs/architecture/) - System design and architecture documentation
+- [Components](./docs/components/) - Component documentation
+- [Daily Logs](./docs/daily-logs/) - Daily development logs
 
 ### Key Documents
 
-- [Unsplash Integration](./docs/integrations/unsplash.md) - Unsplash API integration documentation
-- [Priority Task List](./docs/priority-list.md) - Prioritized list of tasks for the project
+- [Working Directory](./docs/architecture/working-directory.md) - Documentation of the working directory structure
+- [Header Components](./docs/components/header-components.md) - Documentation for Header47 and Header15 components
 - [Daily Development Logs](./docs/daily-logs/) - Daily development updates
-- [Latest Daily Log (May 10, 2025)](./docs/daily-logs/2025-05-10.md) - Latest development updates
-- [Component Structure](./docs/architecture/component-structure.md) - Overview of the component structure
-- [Page Structure](./docs/architecture/page-structure.md) - Overview of the page structure
-- [Development Workflow](./docs/processes/development-workflow.md) - Development workflow documentation
-- [Relume Wireframe Conversion](./docs/architecture/relume-wireframe-conversion.md) - Documentation of the Relume wireframe files conversion
+- [Latest Daily Log (November 16, 2023)](./docs/daily-logs/2023-11-16.md) - Latest development updates
+- [Export Documentation](./Export%20Documentation/export-documentation.md) - Comprehensive list of documentation files for export
+- [Sample Project Structure](./Sample%20Project%20Structure-DO-NOT-EDIT/) - Reference project structure from previous projects
 
 ## Implemented Features
 
@@ -126,27 +120,27 @@ Run the Next.js development server:
 npm run dev
 ```
 
-Open [http://localhost:4000](http://localhost:4000) with your browser to see the result.
+This will run the development server from the Relume-root directory. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-#### Netlify Dev (Production-like Environment)
+#### Building the Project
 
-For a production-like environment, use Netlify Dev:
-
-1. Install Netlify CLI globally (if not already installed):
+To build the project for production:
 
 ```bash
-npm install -g netlify-cli
+npm run build
 ```
 
-2. Run Netlify Dev:
+This will build the project from the Relume-root directory.
+
+#### Starting the Production Server
+
+To start the production server:
 
 ```bash
-netlify dev
+npm run start
 ```
 
-Open [http://localhost:8888](http://localhost:8888) with your browser to see the result.
-
-**IMPORTANT**: Always use Netlify Dev (`netlify dev`) on port 8888 for testing, not just the Next.js development server (`npm run dev`) on port 4000. This ensures that your testing environment closely matches the production environment.
+This will start the production server from the Relume-root directory.
 
 ### Troubleshooting
 
@@ -173,53 +167,60 @@ rm -rf .next
 ## Project Structure
 
 ```
-window-world-la/
-├── docs/                  # Documentation
-│   ├── architecture/      # Architecture documentation
-│   ├── daily-logs/        # Daily development logs
-│   ├── features/          # Feature documentation
-│   ├── guides/            # Developer guides
-│   ├── integrations/      # Integration documentation
-│   ├── planning/          # Planning documentation
-│   ├── processes/         # Process documentation
-│   └── testing/           # Testing documentation
-├── public/                # Static assets
-│   └── images/            # Static images
-├── Relume-root/           # Relume components
-│   ├── components/        # Shared Relume components
-│   │   ├── navigation/    # Navigation components
-│   │   ├── footer/        # Footer components
-│   │   └── ...            # Other components
-│   └── pages/             # Relume page components
-│       ├── home/          # Home page components
-│       ├── about/         # About page components
-│       └── ...            # Other page components
-├── src/                   # Source code
-│   ├── app/               # Next.js App Router
-│   │   ├── api/           # API routes
-│   │   ├── contact/       # Contact page
-│   │   ├── doors/         # Doors page
-│   │   ├── no-css/        # Page without CSS imports
-│   │   ├── relume-home/   # Relume home page
-│   │   ├── roofing/       # Roofing page
-│   │   ├── simple-page/   # Simple page without Tailwind CSS
-│   │   ├── vinyl-siding/  # Vinyl Siding page
-│   │   ├── windows/       # Windows page
-│   │   ├── globals.css    # Global CSS
-│   │   ├── layout.tsx     # Root layout
-│   │   └── page.tsx       # Home page
-│   ├── components/        # React components
-│   ├── hooks/             # Custom React hooks
-│   └── utils/             # Utility functions
-├── .env.local             # Environment variables
-├── .gitignore             # Git ignore file
-├── jsconfig.json          # JavaScript configuration
-├── netlify.toml           # Netlify configuration
-├── next.config.js         # Next.js configuration
-├── package.json           # Package configuration
-├── postcss.config.js      # PostCSS configuration
-├── README.md              # Project documentation
-└── tailwind.config.ts     # Tailwind CSS configuration
+react-win-dir/                      # Project root (repository root)
+├── docs/                           # Documentation
+│   ├── architecture/               # Architecture documentation
+│   │   └── working-directory.md    # Working directory documentation
+│   ├── components/                 # Component documentation
+│   │   └── header-components.md    # Header components documentation
+│   ├── daily-logs/                 # Daily development logs
+│   │   ├── 2023-11-15.md           # Daily log for November 15, 2023
+│   │   └── 2023-11-16.md           # Daily log for November 16, 2023
+│   └── README.md                   # Documentation index
+├── Relume-root/                    # PRIMARY WORKING DIRECTORY
+│   ├── components/                 # Reusable components
+│   │   ├── navigation/             # Navigation components
+│   │   ├── footer/                 # Footer components
+│   │   ├── header/                 # Header components
+│   │   ├── layout/                 # Layout components
+│   │   ├── gallery/                # Gallery components
+│   │   ├── testimonial/            # Testimonial components
+│   │   └── cta/                    # Call-to-action components
+│   ├── pages-components/           # Page-specific components
+│   │   └── home/                   # Home page components
+│   │       └── index.jsx           # Home page component
+│   ├── src/                        # Next.js source code
+│   │   └── app/                    # Next.js App Router
+│   │       ├── home/               # Home page route
+│   │       │   └── page.tsx
+│   │       ├── windows/            # Windows page route
+│   │       │   └── page.tsx
+│   │       ├── doors/              # Doors page route
+│   │       │   └── page.tsx
+│   │       ├── globals.css         # Global CSS
+│   │       ├── styles.css          # Custom styles
+│   │       ├── layout.tsx          # Root layout
+│   │       └── page.tsx            # Root page
+│   ├── public/                     # Static assets
+│   │   └── images/                 # Static images
+│   ├── dist/                       # Build output directory
+│   ├── node_modules/               # Node.js dependencies
+│   ├── layouts/                    # Layout components (To be implemented)
+│   ├── hooks/                      # Custom React hooks (To be implemented)
+│   ├── utils/                      # Utility functions (To be implemented)
+│   ├── package.json                # Package configuration
+│   ├── next.config.js              # Next.js configuration
+│   ├── tailwind.config.ts          # Tailwind CSS configuration
+│   ├── postcss.config.js           # PostCSS configuration
+│   ├── tsconfig.json               # TypeScript configuration
+│   └── README.md                   # Main documentation
+├── Relume-DO-NOT-EDIT/             # Original Relume components (DO NOT EDIT)
+├── .env.local                      # Environment variables
+├── .gitignore                      # Git ignore file
+├── jsconfig.json                   # JavaScript configuration
+├── netlify.toml                    # Netlify configuration
+├── package.json                    # Package configuration
+└── README.md                       # Project documentation
 ```
 
 ## License

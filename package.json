@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "setup-db": "ts-node src/scripts/setup-database.ts"
+    "dev": "cd Relume-root && next dev",
+    "build": "cd Relume-root && next build",
+    "start": "cd Relume-root && next start",
+    "lint": "cd Relume-root && next lint"
   },
   "dependencies": {
     "@relume_io/relume-tailwind": "^1.3.0",
@@ -23,7 +22,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.6",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
     "@types/react": "^19",

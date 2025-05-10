@@ -234,7 +234,7 @@ module.exports = {
   plugins: [
     require("tailwindcss-animate"),
     require("@tailwindcss/typography"),
-    ({ addComponents }) => {
+    ({ addComponents }: { addComponents: any }) => {
       const newComponents = {
         ".animate-disable": {
           animationName: "none",
