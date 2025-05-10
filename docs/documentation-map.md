@@ -14,19 +14,36 @@ window-world-la/
 ├── docs/                                    # Documentation directory
 │   ├── architecture/                        # Architecture documentation
 │   │   ├── api-routes.md                    # API routes documentation
+│   │   ├── architecture-documentation.md    # Comprehensive architecture documentation
 │   │   ├── component-structure.md           # Component structure documentation
+│   │   ├── data-flow.md                     # Data flow documentation
 │   │   ├── index.md                         # Architecture documentation index
 │   │   ├── page-structure.md                # Page structure documentation
 │   │   ├── relume-wireframe-conversion.md   # Relume wireframe conversion documentation
 │   │   ├── root-layout.md                   # Root layout documentation
-│   │   └── utility-functions.md             # Utility functions documentation
+│   │   ├── seo-structure.md                 # SEO structure documentation
+│   │   ├── technical-implementation-plan.md # Technical implementation plan
+│   │   ├── utility-functions.md             # Utility functions documentation
+│   │   └── website-architecture.md          # Website architecture documentation
 │   ├── components/                          # Component documentation
 │   │   ├── header.md                        # Header component documentation
 │   │   └── footer4.md                       # Footer component documentation
 │   ├── features/                            # Feature documentation
 │   │   ├── index.md                         # Feature documentation index
 │   │   └── seo-strategy.md                  # SEO strategy documentation
+│   ├── archived/                            # Archived documentation
+│   │   ├── architecture-documentation-bigger.md # Original architecture documentation
+│   │   ├── architecture-documentation-bigger-formatted.md # Formatted architecture documentation
+│   │   ├── index.md                         # Archived documentation index
+│   │   ├── relume-root-architecture-documentation.md # Relume-root architecture documentation
+│   │   ├── relume-root-documentation-structure.md # Relume-root documentation structure
+│   │   └── windows-doors-ca-architecture.md # Windows Doors CA architecture documentation
 │   ├── guides/                              # Guide documentation
+│   │   ├── index.md                         # Guide documentation index
+│   │   ├── relume-ui-integration-guide.md   # Relume UI integration guide
+│   │   ├── relume-component-usage-guide.md  # Relume component usage guide
+│   │   ├── relume-tailwind-configuration-guide.md # Relume Tailwind configuration guide
+│   │   └── relume-troubleshooting-guide.md  # Relume troubleshooting guide
 │   ├── integrations/                        # Integration documentation
 │   │   ├── netlify.md                       # Netlify integration documentation
 │   │   └── unsplash.md                      # Unsplash integration documentation
@@ -57,6 +74,7 @@ window-world-la/
 ### Architecture Documentation
 
 - [docs/architecture/index.md](./architecture/index.md) - Architecture documentation index
+- [docs/architecture/architecture-documentation.md](./architecture/architecture-documentation.md) - Comprehensive architecture documentation
 - [docs/architecture/component-structure.md](./architecture/component-structure.md) - Component structure documentation
 - [docs/architecture/page-structure.md](./architecture/page-structure.md) - Page structure documentation
 - [docs/architecture/relume-wireframe-conversion.md](./architecture/relume-wireframe-conversion.md) - Relume wireframe conversion documentation
@@ -77,7 +95,11 @@ window-world-la/
 
 ### Guide Documentation
 
-- No guide documentation yet
+- [docs/guides/index.md](./guides/index.md) - Guide documentation index
+- [docs/guides/relume-ui-integration-guide.md](./guides/relume-ui-integration-guide.md) - Relume UI integration guide
+- [docs/guides/relume-component-usage-guide.md](./guides/relume-component-usage-guide.md) - Relume component usage guide
+- [docs/guides/relume-tailwind-configuration-guide.md](./guides/relume-tailwind-configuration-guide.md) - Relume Tailwind configuration guide
+- [docs/guides/relume-troubleshooting-guide.md](./guides/relume-troubleshooting-guide.md) - Relume troubleshooting guide
 
 ### Integration Documentation
 
@@ -172,6 +194,10 @@ The following documentation is currently missing or incomplete:
 2. **Guide Documentation**
    - New developer guide
    - Component development guide
+   - ✓ Relume UI integration guide
+   - ✓ Relume component usage guide
+   - ✓ Relume Tailwind configuration guide
+   - ✓ Relume troubleshooting guide
 
 3. **Planning Documentation**
    - Project roadmap
@@ -195,6 +221,10 @@ The following documentation is planned for future development:
 2. **Guide Documentation**
    - Create new developer guide
    - Create component development guide
+   - ✓ Created Relume UI integration guide
+   - ✓ Created Relume component usage guide
+   - ✓ Created Relume Tailwind configuration guide
+   - ✓ Created Relume troubleshooting guide
 
 3. **Planning Documentation**
    - Create project roadmap
@@ -213,8 +243,12 @@ The following documentation is planned for future development:
 - [Component Structure](./architecture/component-structure.md)
 - [Page Structure](./architecture/page-structure.md)
 - [Relume Wireframe Conversion](./architecture/relume-wireframe-conversion.md)
+- [Relume UI Integration Guide](./guides/relume-ui-integration-guide.md)
+- [Relume Component Usage Guide](./guides/relume-component-usage-guide.md)
+- [Relume Tailwind Configuration Guide](./guides/relume-tailwind-configuration-guide.md)
+- [Relume Troubleshooting Guide](./guides/relume-troubleshooting-guide.md)
 - [Unsplash Integration](./integrations/unsplash.md)
 - [Development Workflow](./processes/development-workflow.md)
 - [Documentation Standards](./processes/documentation-standards.md)
 
-Last Updated: May 10, 2025
+Last Updated: May 10, 2025 (Added Relume UI documentation)

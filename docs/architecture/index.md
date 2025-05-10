@@ -15,6 +15,25 @@ This directory contains documentation related to the architecture of the Window 
 - [Technical Implementation Plan](./technical-implementation-plan.md) - Implementation details
 - [Data Flow](./data-flow.md) - How data flows through the system
 
+## Primary Architecture Reference
+
+The primary reference for the Windows Doors CA website architecture is the comprehensive analysis document:
+
+- [Architecture Documentation](./architecture-documentation.md)
+
+This document contains a detailed analysis of the Window World LA website (https://www.windowworldla.com/) that we are replicating exactly. It includes:
+
+1. Full site map and navigation analysis
+2. Page template analysis and wireframe descriptions
+3. Content inventory (textual and visual assets)
+4. UI/UX design elements specification
+5. Responsive behavior analysis
+6. Technology stack details
+7. Replication guidance and considerations
+8. Implementation for Windows Doors CA website
+
+All implementation work should follow this document precisely to ensure an exact replication of the Window World LA website architecture and functionality.
+
 ## Overview
 
 The Window World LA website is built using Next.js with the App Router, React, and Tailwind CSS. It uses Unsplash for images and follows a component-based architecture.

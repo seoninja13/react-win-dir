@@ -25,6 +25,7 @@ This project follows a pyramid documentation structure with the main [README.md]
 
 The architecture documentation provides detailed information about the system design, component interactions, and technical decisions.
 
+- [Architecture Documentation](./architecture/architecture-documentation.md) - Comprehensive analysis and implementation plan for the Windows Doors CA website
 - [Component Structure](./architecture/component-structure.md) - Overview of the component structure
 - [Page Structure](./architecture/page-structure.md) - Overview of the page structure
 - [Relume Wireframe Conversion](./architecture/relume-wireframe-conversion.md) - Documentation of the Relume wireframe files conversion
@@ -35,6 +36,8 @@ The architecture documentation provides detailed information about the system de
 - [SEO Structure](./architecture/seo-structure.md) - SEO optimization strategy
 - [Technical Implementation Plan](./architecture/technical-implementation-plan.md) - Implementation details
 - [Data Flow](./architecture/data-flow.md) - How data flows through the system
+
+**Primary Architecture Reference**: The primary reference for the Windows Doors CA website architecture is the comprehensive analysis document [Architecture Documentation](./architecture/architecture-documentation.md). This document contains a detailed analysis of the Window World LA website that we are replicating exactly.
 
 ### Features
 
@@ -54,6 +57,13 @@ The guides documentation provides step-by-step instructions for developers worki
 
 - [New Developer Guide](./guides/new-developer-guide.md) - Step-by-step guide for new developers
 - [Component Development Guide](./guides/component-development-guide.md) - Guide to developing components
+
+#### Relume UI Guides
+
+- [Relume UI Integration Guide](./guides/relume-ui-integration-guide.md) - Step-by-step instructions for integrating the Relume UI library
+- [Relume Component Usage Guide](./guides/relume-component-usage-guide.md) - Detailed examples and best practices for using Relume UI components
+- [Relume Tailwind Configuration Guide](./guides/relume-tailwind-configuration-guide.md) - Guide for configuring Tailwind CSS for use with Relume UI
+- [Relume Troubleshooting Guide](./guides/relume-troubleshooting-guide.md) - Solutions to common issues with Relume UI
 
 ### Integrations
 
