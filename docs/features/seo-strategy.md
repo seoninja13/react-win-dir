@@ -15,7 +15,7 @@ Each page should have the following meta tags:
 1. **Title Tag**: The title tag should be unique for each page and include the primary keyword. It should be 50-60 characters long.
 
 ```jsx
-<title>Window World LA - Windows, Doors, Siding, and Roofing in Los Angeles</title>
+<title>Windows Doors CA - Windows, Doors, Siding, and Roofing in California</title>
 ```
 
 2. **Meta Description**: The meta description should provide a brief summary of the page content and include the primary keyword. It should be 150-160 characters long.
@@ -23,23 +23,23 @@ Each page should have the following meta tags:
 ```jsx
 <meta
   name="description"
-  content="Window World LA provides high-quality windows, doors, siding, and roofing in Los Angeles. Get a free estimate for your home improvement project today!"
+  content="Windows Doors CA provides high-quality windows, doors, siding, and roofing in California. Get a free estimate for your home improvement project today!"
 />
 ```
 
 3. **Canonical URL**: The canonical URL should be included to prevent duplicate content issues.
 
 ```jsx
-<link rel="canonical" href="https://www.windowworldla.com/windows" />
+<link rel="canonical" href="https://www.windowsdoorsca.com/windows" />
 ```
 
 4. **Open Graph Tags**: Open Graph tags should be included for better social media sharing.
 
 ```jsx
-<meta property="og:title" content="Window World LA - Windows, Doors, Siding, and Roofing in Los Angeles" />
-<meta property="og:description" content="Window World LA provides high-quality windows, doors, siding, and roofing in Los Angeles. Get a free estimate for your home improvement project today!" />
-<meta property="og:image" content="https://www.windowworldla.com/images/og-image.jpg" />
-<meta property="og:url" content="https://www.windowworldla.com" />
+<meta property="og:title" content="Windows Doors CA - Windows, Doors, Siding, and Roofing in California" />
+<meta property="og:description" content="Windows Doors CA provides high-quality windows, doors, siding, and roofing in California. Get a free estimate for your home improvement project today!" />
+<meta property="og:image" content="https://www.windowsdoorsca.com/images/og-image.jpg" />
+<meta property="og:url" content="https://www.windowsdoorsca.com" />
 <meta property="og:type" content="website" />
 ```
 
@@ -47,9 +47,9 @@ Each page should have the following meta tags:
 
 ```jsx
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Window World LA - Windows, Doors, Siding, and Roofing in Los Angeles" />
-<meta name="twitter:description" content="Window World LA provides high-quality windows, doors, siding, and roofing in Los Angeles. Get a free estimate for your home improvement project today!" />
-<meta name="twitter:image" content="https://www.windowworldla.com/images/twitter-image.jpg" />
+<meta name="twitter:title" content="Windows Doors CA - Windows, Doors, Siding, and Roofing in California" />
+<meta name="twitter:description" content="Windows Doors CA provides high-quality windows, doors, siding, and roofing in California. Get a free estimate for your home improvement project today!" />
+<meta name="twitter:image" content="https://www.windowsdoorsca.com/images/twitter-image.jpg" />
 ```
 
 ### Heading Tags
@@ -59,7 +59,7 @@ Heading tags should be used to structure the content and include relevant keywor
 1. **H1 Tag**: Each page should have a single H1 tag that includes the primary keyword.
 
 ```jsx
-<h1>Windows for Your Los Angeles Home</h1>
+<h1>Windows for Your California Home</h1>
 ```
 
 2. **H2 Tags**: H2 tags should be used for main sections and include relevant keywords.
@@ -97,7 +97,7 @@ Heading tags should be used to structure the content and include relevant keywor
 ```jsx
 <Image
   src="/images/double-hung-windows.jpg"
-  alt="Double hung windows in a modern Los Angeles home"
+  alt="Double hung windows in a modern California home"
   width={800}
   height={600}
 />
@@ -116,7 +116,7 @@ Heading tags should be used to structure the content and include relevant keywor
 ```jsx
 <Image
   src="/images/double-hung-windows.jpg"
-  alt="Double hung windows in a modern Los Angeles home"
+  alt="Double hung windows in a modern California home"
   width={800}
   height={600}
   loading="lazy"
@@ -144,22 +144,22 @@ Implement structured data to help search engines understand the content of the w
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Window World LA",
-  "image": "https://www.windowworldla.com/images/logo.jpg",
-  "url": "https://www.windowworldla.com",
+  "name": "Windows Doors CA",
+  "image": "https://www.windowsdoorsca.com/images/logo.jpg",
+  "url": "https://www.windowsdoorsca.com",
   "telephone": "(310) 919-2352",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "12345 Main Street",
-    "addressLocality": "Los Angeles",
+    "addressLocality": "Sacramento",
     "addressRegion": "CA",
-    "postalCode": "90001",
+    "postalCode": "95814",
     "addressCountry": "US"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 34.0522,
-    "longitude": -118.2437
+    "latitude": 38.5816,
+    "longitude": -121.4944
   },
   "openingHoursSpecification": [
     {
@@ -193,11 +193,11 @@ Implement structured data to help search engines understand the content of the w
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Double Hung Windows",
-  "image": "https://www.windowworldla.com/images/double-hung-windows.jpg",
+  "image": "https://www.windowsdoorsca.com/images/double-hung-windows.jpg",
   "description": "Our double hung windows are energy-efficient and easy to clean.",
   "brand": {
     "@type": "Brand",
-    "name": "Window World"
+    "name": "Windows Doors CA"
   },
   "offers": {
     "@type": "Offer",
@@ -246,37 +246,37 @@ Create an XML sitemap to help search engines discover and index all pages on the
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.windowworldla.com</loc>
+    <loc>https://www.windowsdoorsca.com</loc>
     <lastmod>2025-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.windowworldla.com/windows</loc>
+    <loc>https://www.windowsdoorsca.com/windows</loc>
     <lastmod>2025-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.windowworldla.com/doors</loc>
+    <loc>https://www.windowsdoorsca.com/doors</loc>
     <lastmod>2025-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.windowworldla.com/vinyl-siding</loc>
+    <loc>https://www.windowsdoorsca.com/vinyl-siding</loc>
     <lastmod>2025-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.windowworldla.com/roofing</loc>
+    <loc>https://www.windowsdoorsca.com/roofing</loc>
     <lastmod>2025-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.windowworldla.com/contact</loc>
+    <loc>https://www.windowsdoorsca.com/contact</loc>
     <lastmod>2025-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -292,7 +292,7 @@ Create a robots.txt file to control which pages search engines can crawl:
 User-agent: *
 Allow: /
 
-Sitemap: https://www.windowworldla.com/sitemap.xml
+Sitemap: https://www.windowsdoorsca.com/sitemap.xml
 ```
 
 ## Content Strategy
@@ -301,9 +301,9 @@ Sitemap: https://www.windowworldla.com/sitemap.xml
 
 Conduct keyword research to identify relevant keywords for the website:
 
-1. **Primary Keywords**: Windows, doors, siding, roofing, Los Angeles
+1. **Primary Keywords**: Windows, doors, siding, roofing, California
 2. **Secondary Keywords**: Energy-efficient windows, replacement windows, entry doors, vinyl siding, roof replacement
-3. **Long-Tail Keywords**: Best windows for Los Angeles homes, energy-efficient windows in Los Angeles, vinyl siding installation in Los Angeles
+3. **Long-Tail Keywords**: Best windows for California homes, energy-efficient windows in California, vinyl siding installation in California
 
 ### Content Creation
 
@@ -326,7 +326,7 @@ Develop a content calendar to plan and schedule content creation:
 
 ### Google Business Profile
 
-Optimize the Google Business Profile for Window World LA:
+Optimize the Google Business Profile for Windows Doors CA:
 
 1. **Complete Profile**: Ensure all information is complete and accurate.
 2. **Photos**: Add high-quality photos of the business, products, and completed projects.
@@ -339,15 +339,15 @@ Create and maintain consistent local citations across the web:
 
 1. **Business Directories**: List the business in relevant directories like Yelp, Yellow Pages, and BBB.
 2. **Industry Directories**: List the business in industry-specific directories like HomeAdvisor and Angie's List.
-3. **Local Directories**: List the business in local directories like the Los Angeles Chamber of Commerce.
+3. **Local Directories**: List the business in local directories like the California Chamber of Commerce.
 
 ### Local Content
 
 Create content that targets local keywords and addresses local concerns:
 
-1. **Local Service Pages**: Create pages for each service area in Los Angeles.
-2. **Local Blog Posts**: Write blog posts about local events, news, and topics related to windows, doors, siding, and roofing in Los Angeles.
-3. **Local Case Studies**: Create case studies of projects completed in different neighborhoods of Los Angeles.
+1. **Local Service Pages**: Create pages for each service area in California.
+2. **Local Blog Posts**: Write blog posts about local events, news, and topics related to windows, doors, siding, and roofing in California.
+3. **Local Case Studies**: Create case studies of projects completed in different regions of California.
 
 ## Monitoring and Reporting
 
@@ -389,3 +389,7 @@ Create monthly SEO reports that include:
 - [Google Analytics Documentation](https://support.google.com/analytics/answer/9306384?hl=en)
 - [Schema.org Documentation](https://schema.org/docs/gs.html)
 - [Moz Local SEO Guide](https://moz.com/learn/seo/local-seo)
+
+## Last Updated
+
+2023-11-16
