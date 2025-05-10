@@ -40,6 +40,7 @@ window-world-la/
 │   │   └── windows-doors-ca-architecture.md # Windows Doors CA architecture documentation
 │   ├── guides/                              # Guide documentation
 │   │   ├── index.md                         # Guide documentation index
+│   │   ├── relume-ui-installation-guide.md  # Relume UI installation guide
 │   │   ├── relume-ui-integration-guide.md   # Relume UI integration guide
 │   │   ├── relume-component-usage-guide.md  # Relume component usage guide
 │   │   ├── relume-tailwind-configuration-guide.md # Relume Tailwind configuration guide
@@ -96,6 +97,7 @@ window-world-la/
 ### Guide Documentation
 
 - [docs/guides/index.md](./guides/index.md) - Guide documentation index
+- [docs/guides/relume-ui-installation-guide.md](./guides/relume-ui-installation-guide.md) - Relume UI installation guide
 - [docs/guides/relume-ui-integration-guide.md](./guides/relume-ui-integration-guide.md) - Relume UI integration guide
 - [docs/guides/relume-component-usage-guide.md](./guides/relume-component-usage-guide.md) - Relume component usage guide
 - [docs/guides/relume-tailwind-configuration-guide.md](./guides/relume-tailwind-configuration-guide.md) - Relume Tailwind configuration guide
@@ -243,6 +245,7 @@ The following documentation is planned for future development:
 - [Component Structure](./architecture/component-structure.md)
 - [Page Structure](./architecture/page-structure.md)
 - [Relume Wireframe Conversion](./architecture/relume-wireframe-conversion.md)
+- [Relume UI Installation Guide](./guides/relume-ui-installation-guide.md)
 - [Relume UI Integration Guide](./guides/relume-ui-integration-guide.md)
 - [Relume Component Usage Guide](./guides/relume-component-usage-guide.md)
 - [Relume Tailwind Configuration Guide](./guides/relume-tailwind-configuration-guide.md)
@@ -251,4 +254,4 @@ The following documentation is planned for future development:
 - [Development Workflow](./processes/development-workflow.md)
 - [Documentation Standards](./processes/documentation-standards.md)
 
-Last Updated: May 10, 2025 (Added Relume UI documentation)
+Last Updated: May 10, 2025 (Added Relume UI Installation Guide)

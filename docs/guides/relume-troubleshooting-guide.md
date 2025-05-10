@@ -66,6 +66,79 @@ npm install framer-motion react-icons tailwindcss-animate @tailwindcss/typograph
 
 ## Tailwind CSS Issues
 
+### Issue: Cannot read properties of undefined (reading '__isOptionsFunction')
+
+**Symptoms:**
+- CSS fails to load
+- Error in webpack build about '__isOptionsFunction'
+- Tailwind classes not applying
+
+**Solutions:**
+
+1. **Use correct PostCSS configuration:**
+   ```javascript
+   // postcss.config.js
+   module.exports = {
+     plugins: {
+       'postcss-import': {},
+       'tailwindcss/nesting': {},
+       tailwindcss: {},
+       autoprefixer: {},
+     },
+   };
+   ```
+
+2. **Ensure compatible Next.js version:**
+   ```json
+   {
+     "dependencies": {
+       "next": "13.4.19",
+       "eslint-config-next": "13.4.19"
+     }
+   }
+   ```
+
+3. **Use correct CSS imports:**
+   ```css
+   /* styles/globals.css */
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
+
+4. **Configure Tailwind properly:**
+   ```javascript
+   // tailwind.config.js
+   module.exports = {
+     content: [
+       './pages/**/*.{js,ts,jsx,tsx}',
+       './components/**/*.{js,ts,jsx,tsx}',
+       './home/**/*.{js,ts,jsx,tsx}',
+       './node_modules/@relume_io/relume-ui/**/*.{js,ts,jsx,tsx}',
+     ],
+     plugins: [
+       require('@relume_io/relume-tailwind'),
+       require('@tailwindcss/typography'),
+       require('tailwindcss-animate'),
+     ],
+   };
+   ```
+
+5. **Set up _app.js correctly:**
+   ```javascript
+   // pages/_app.js
+   import '../styles/globals.css';
+
+   export default function MyApp({ Component, pageProps }) {
+     return <Component {...pageProps} />;
+   }
+   ```
+
+6. **Install required dependencies:**
+   ```bash
+   npm install postcss-import @tailwindcss/nesting --save-dev
+   ```
+
 ### Issue: Styles Not Applied to Relume Components
 
 **Symptoms:**

@@ -2,22 +2,122 @@
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Basic Configuration](#basic-configuration)
-3. [Relume Tailwind Preset](#relume-tailwind-preset)
-4. [Theme Customization](#theme-customization)
-5. [Content Configuration](#content-configuration)
-6. [Plugin Configuration](#plugin-configuration)
-7. [PostCSS Configuration](#postcss-configuration)
-8. [Handling Conflicts](#handling-conflicts)
-9. [Best Practices](#best-practices)
-10. [Resources](#resources)
+1. [Getting Started](#getting-started)
+2. [CSS Configuration](#css-configuration)
+3. [Tailwind Configuration](#tailwind-configuration)
+4. [PostCSS Configuration](#postcss-configuration)
+5. [Common Issues](#common-issues)
 
-## Introduction
+## Getting Started
 
-This guide provides detailed information on configuring Tailwind CSS for use with the Relume UI library in the Windows Doors CA project. Proper Tailwind configuration is essential for ensuring that Relume components render correctly and consistently throughout the application.
+To set up Tailwind CSS with Relume UI, you need to configure several files correctly:
 
-## Basic Configuration
+### Required Files
+
+1. `tailwind.config.js` - Tailwind configuration
+2. `postcss.config.js` - PostCSS configuration
+3. `styles/globals.css` - Global styles
+4. `pages/_app.js` - Next.js app configuration
+
+## CSS Configuration
+
+### 1. Global CSS Setup
+
+Create a `styles/globals.css` file with the following content:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### 2. Next.js App Configuration
+
+Create a `pages/_app.js` file to import global styles:
+
+```javascript
+import '../styles/globals.css';
+
+export default function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
+```
+
+## Tailwind Configuration
+
+### Core Setup
+
+Create a `tailwind.config.js` file:
+
+```javascript
+module.exports = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './home/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@relume_io/relume-ui/**/*.{js,ts,jsx,tsx}',
+  ],
+  plugins: [
+    require('@relume_io/relume-tailwind'),
+    require('@tailwindcss/typography'),
+    require('tailwindcss-animate'),
+  ],
+};
+```
+
+## PostCSS Configuration
+
+### Main Setup
+
+Create a `postcss.config.js` file:
+
+```javascript
+module.exports = {
+  plugins: {
+    'postcss-import': {},
+    'tailwindcss/nesting': {},
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
+
+## Common Issues
+
+### Common CSS Issues
+
+If your CSS is not loading, ensure:
+
+First, ensure you have installed all required dependencies:
+
+```bash
+npm install postcss-import @tailwindcss/nesting --save-dev
+```
+
+Next, verify your Next.js version is compatible:
+
+```json
+{
+  "dependencies": {
+    "next": "13.4.19",
+    "eslint-config-next": "13.4.19"
+  }
+}
+```
+
+Finally, check your project structure matches:
+
+```text
+├── pages/
+│   ├── _app.js
+│   └── index.js
+├── styles/
+│   └── globals.css
+├── postcss.config.js
+└── tailwind.config.js
+```
+
+## Configuration Steps
 
 The basic Tailwind CSS configuration for Relume UI involves:
 

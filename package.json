@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cd Relume-root && next dev",
-    "build": "cd Relume-root && next build",
-    "start": "cd Relume-root && next start",
-    "lint": "cd Relume-root && next lint"
+    "dev": "cd Relume-root && npm run dev",
+    "build": "cd Relume-root && npm run build",
+    "start": "cd Relume-root && npm run start",
+    "lint": "cd Relume-root && npm run lint"
   },
   "dependencies": {
     "@relume_io/relume-tailwind": "^1.3.0",

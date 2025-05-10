@@ -4,6 +4,7 @@ This directory contains guides for developers working on the Windows Doors CA pr
 
 ## Relume UI Guides
 
+- [Relume UI Installation Guide](./relume-ui-installation-guide.md) - Step-by-step instructions for installing and configuring Relume UI
 - [Relume UI Integration Guide](./relume-ui-integration-guide.md) - Step-by-step instructions for integrating the Relume UI library
 - [Relume Component Usage Guide](./relume-component-usage-guide.md) - Detailed examples and best practices for using Relume UI components
 - [Relume Tailwind Configuration Guide](./relume-tailwind-configuration-guide.md) - Guide for configuring Tailwind CSS for use with Relume UI
