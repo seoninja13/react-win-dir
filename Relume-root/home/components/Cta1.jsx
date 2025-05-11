@@ -10,26 +10,24 @@ export function Cta1() {
         <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
           <div>
             <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-              Ready to Transform Your Home?
+              Get Your Free Estimate Today
             </h2>
             <p className="md:text-md">
-              Schedule your free consultation today and discover how our premium 
-              windows and doors can enhance your home's beauty, comfort, and 
-              energy efficiency. Our expert team is ready to help you every 
-              step of the way.
+              Transform your home with our premium windows and doors. Request
+              your estimate now!
             </p>
             <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-              <Button title="Schedule Free Consultation">Schedule Free Consultation</Button>
-              <Button title="View Our Products" variant="secondary">
-                View Our Products
+              <Button title="Estimate">Estimate</Button>
+              <Button title="Learn More" variant="secondary">
+                Learn More
               </Button>
             </div>
           </div>
           <div>
             <img
-              src="/assets/images/cta/happy-homeowners.jpg"
+              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
               className="w-full rounded-image object-cover"
-              alt="Happy homeowners with their new windows and doors"
+              alt="Relume placeholder image"
             />
           </div>
         </div>

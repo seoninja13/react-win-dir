@@ -10,51 +10,50 @@ export function Layout4_1() {
       <div className="container">
         <div className="grid grid-cols-1 gap-y-12 md:grid-flow-row md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
-            <p className="mb-3 font-semibold md:mb-4">Financing</p>
+            <p className="mb-3 font-semibold md:mb-4">Savings</p>
             <h1 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-              Affordable Home Improvement Solutions
+              Affordable Financing Options for Your Home
             </h1>
             <p className="mb-6 md:mb-8 md:text-md">
-              Don't let budget constraints delay your home improvement plans. 
-              We offer flexible financing options with competitive rates and 
-              convenient monthly payments to help you get the windows and doors 
-              you need today.
+              Transform your home without breaking the bank. Explore our
+              flexible financing solutions designed to fit your budget.
             </p>
             <div className="grid grid-cols-1 gap-6 py-2 sm:grid-cols-2">
               <div>
                 <h6 className="mb-3 text-md leading-[1.4] font-bold md:mb-4 md:text-xl">
-                  0% APR Financing
+                  Easy Payments
                 </h6>
                 <p>
-                  Qualified buyers can enjoy interest-free financing for up to 12 months.
+                  Monthly plans that make home improvement accessible for
+                  everyone.
                 </p>
               </div>
               <div>
                 <h6 className="mb-3 text-md leading-[1.4] font-bold md:mb-4 md:text-xl">
-                  Special Offers
+                  Limited Time
                 </h6>
-                <p>Save up to 20% on select windows and doors for a limited time!</p>
+                <p>Take advantage of our special promotions while they last!</p>
               </div>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="View Financing Options" variant="secondary">
-                View Financing Options
+              <Button title="Learn More" variant="secondary">
+                Learn More
               </Button>
               <Button
-                title="Apply Now"
+                title="Apply"
                 variant="link"
                 size="link"
                 iconRight={<RxChevronRight />}
               >
-                Apply Now
+                Apply
               </Button>
             </div>
           </div>
           <div>
             <img
-              src="/assets/images/financing/financing-options.jpg"
+              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
               className="w-full rounded-image object-cover"
-              alt="Family enjoying their new energy-efficient windows"
+              alt="Relume placeholder image"
             />
           </div>
         </div>

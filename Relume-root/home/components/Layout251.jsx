@@ -10,16 +10,17 @@ export function Layout251() {
       <div className="container">
         <div className="mb-12 grid grid-cols-1 items-start gap-5 md:mb-18 md:grid-cols-2 md:gap-x-12 lg:mb-20 lg:gap-x-20">
           <div>
-            <p className="mb-3 font-semibold md:mb-4">Our Process</p>
+            <p className="mb-3 font-semibold md:mb-4">Process</p>
             <h2 className="text-5xl font-bold md:text-7xl lg:text-8xl">
-              Three Simple Steps to Transform Your Home
+              Our Simple Steps to Your New Windows
             </h2>
           </div>
           <div>
             <p className="md:text-md">
-              We've made upgrading your windows and doors as simple as possible. 
-              Our expert team will guide you through each step, from initial consultation 
-              to final installation, ensuring a seamless and stress-free experience.
+              Transforming your home begins with a consultation. Our experts
+              will assess your needs and guide you through our wide selection of
+              energy-efficient windows and doors. We ensure a seamless
+              experience from start to finish.
             </p>
           </div>
         </div>
@@ -27,47 +28,47 @@ export function Layout251() {
           <div>
             <div className="mb-6 md:mb-8">
               <img
-                src="/assets/images/process/consultation.jpg"
-                alt="Free in-home consultation"
+                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+                alt="Relume placeholder image"
                 className="rounded-image"
               />
             </div>
             <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
-              1. Free Consultation
+              Step 1: Schedule Your Free Consultation
             </h3>
-            <p>Schedule a convenient time for our expert to visit your home and discuss your needs.</p>
+            <p>Contact us to set up a convenient time.</p>
           </div>
           <div>
             <div className="mb-6 md:mb-8">
               <img
-                src="/assets/images/process/product-selection.jpg"
-                alt="Product selection process"
+                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+                alt="Relume placeholder image"
                 className="rounded-image"
               />
             </div>
             <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
-              2. Choose Products
+              Step 2: Choose Your Perfect Products
             </h3>
-            <p>Select from our wide range of energy-efficient windows and stylish doors.</p>
+            <p>Explore our extensive range of styles and options.</p>
           </div>
           <div>
             <div className="mb-6 md:mb-8">
               <img
-                src="/assets/images/process/professional-installation.jpg"
-                alt="Professional installation"
+                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+                alt="Relume placeholder image"
                 className="rounded-image"
               />
             </div>
             <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
-              3. Expert Installation
+              Step 3: Professional Installation by Experts
             </h3>
-            <p>Our certified professionals ensure precise installation and a perfect finish.</p>
+            <p>Our skilled team ensures a flawless installation.</p>
           </div>
         </div>
         <div className="mt-12 flex items-center gap-4 md:mt-18 lg:mt-20">
-          <Button variant="secondary">Schedule Free Consultation</Button>
+          <Button variant="secondary">Get Started</Button>
           <Button iconRight={<RxChevronRight />} variant="link" size="link">
-            View Installation Process
+            Learn More
           </Button>
         </div>
       </div>

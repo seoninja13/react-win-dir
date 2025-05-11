@@ -1,14 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './home/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@relume_io/relume-ui/**/*.{js,ts,jsx,tsx}',
+    "./node_modules/@relume_io/relume-ui/dist/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./home/**/*.{js,ts,jsx,tsx}",
+    "./styles/**/*.css"
   ],
-  plugins: [
-    require('@relume_io/relume-tailwind'),
-    require('@tailwindcss/typography'),
-    require('tailwindcss-animate'),
-  ],
-};
+  presets: [require("@relume_io/relume-tailwind")]
+}

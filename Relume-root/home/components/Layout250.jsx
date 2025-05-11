@@ -19,16 +19,17 @@ export function Layout250() {
           <div className="flex flex-col">
             <div className="mb-6 md:mb-8">
               <img
-                src="/assets/images/services/windows-installation.jpg"
-                alt="Professional window installation"
+                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+                alt="Relume placeholder image"
                 className="rounded-image"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
-              Professional Window Installation
+              Stylish and Durable Doors for Every Entryway
             </h3>
             <p>
-              Our expert team ensures precise installation for optimal performance and energy efficiency.
+              Our windows offer unparalleled energy efficiency, enhancing your
+              home's comfort and value.
             </p>
             <div className="mt-6 flex gap-4 md:mt-8">
               <Button iconRight={<RxChevronRight />} variant="link" size="link">
@@ -39,16 +40,16 @@ export function Layout250() {
           <div className="flex flex-col">
             <div className="mb-6 md:mb-8">
               <img
-                src="/assets/images/services/door-installation.jpg"
-                alt="Professional door installation"
+                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+                alt="Relume placeholder image"
                 className="rounded-image"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
-              Expert Door Installation
+              Upgrade Your Home's Aesthetic with Our Premium Siding Options
             </h3>
             <p>
-              Transform your entryways with our premium door installation services.
+              Choose from a variety of styles and colors to match your vision.
             </p>
             <div className="mt-6 flex gap-4 md:mt-8">
               <Button iconRight={<RxChevronRight />} variant="link" size="link">
@@ -59,16 +60,18 @@ export function Layout250() {
           <div className="flex flex-col">
             <div className="mb-6 md:mb-8">
               <img
-                src="/assets/images/services/energy-efficiency.jpg"
-                alt="Energy efficient windows and doors"
+                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+                alt="Relume placeholder image"
                 className="rounded-image"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
-              Energy-Efficient Solutions
+              Experience Exceptional Craftsmanship with Our Installation
+              Services
             </h3>
             <p>
-              Save on energy costs with our high-performance windows and doors.
+              Our expert team ensures a seamless installation process for your
+              peace of mind.
             </p>
             <div className="mt-6 flex gap-4 md:mt-8">
               <Button iconRight={<RxChevronRight />} variant="link" size="link">

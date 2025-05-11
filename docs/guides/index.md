@@ -9,6 +9,7 @@ This directory contains guides for developers working on the Windows Doors CA pr
 - [Relume Component Usage Guide](./relume-component-usage-guide.md) - Detailed examples and best practices for using Relume UI components
 - [Relume Tailwind Configuration Guide](./relume-tailwind-configuration-guide.md) - Guide for configuring Tailwind CSS for use with Relume UI
 - [Relume Troubleshooting Guide](./relume-troubleshooting-guide.md) - Solutions to common issues with Relume UI
+- [Relume Home Page Integration Plan](./relume-home-page-integration-plan.md) - Comprehensive plan for implementing the Home page with Relume UI components
 
 ## General Development Guides
 
@@ -20,4 +21,4 @@ This directory contains guides for developers working on the Windows Doors CA pr
 - [Architecture Documentation](../architecture/architecture-documentation.md) - Comprehensive architecture documentation
 - [Relume Wireframe Conversion](../architecture/relume-wireframe-conversion.md) - Documentation of the Relume wireframe files conversion
 
-Last Updated: May 10, 2025
+Last Updated: May 10, 2025 (Added Home Page Integration Plan)

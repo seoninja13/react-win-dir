@@ -21,9 +21,9 @@ export function Header47() {
               lifetime warranty.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-              <Button title="Get a Free Estimate">Get a Free Estimate</Button>
-              <Button title="Call Us Today" variant="secondary">
-                Call Us Today
+              <Button title="Estimate">Estimate</Button>
+              <Button title="Call" variant="secondary">
+                Call
               </Button>
             </div>
           </div>

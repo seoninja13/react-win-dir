@@ -21,17 +21,17 @@ export function Header15() {
             </p>
             <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
               <Button title="Get a Free Estimate">Get a Free Estimate</Button>
-              <Button title="Explore Our Products" variant="secondary">
-                Explore Our Products
+              <Button title="Explore" variant="secondary">
+                Explore
               </Button>
             </div>
           </div>
         </div>
         <div>
           <img
-            src="/assets/images/hero-windows-doors.jpg"
+            src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
             className="w-full rounded-image object-cover"
-            alt="Modern home with beautiful windows and doors"
+            alt="Relume placeholder image"
           />
         </div>
       </div>

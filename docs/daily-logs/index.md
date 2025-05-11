@@ -6,6 +6,7 @@ This directory contains daily development logs for the Window World LA website p
 
 - [May 9, 2025](./2025-05-09.md) - Core page implementation, Unsplash API integration, and documentation structure
 - [May 10, 2025](./2025-05-10.md) - Tailwind CSS configuration updates and Relume wireframe files conversion
+- [May 10, 2025 - Home Page Integration](./2025-05-10-home-page-integration.md) - Home Page Integration Plan creation and documentation
 
 ## Log Format
 
@@ -36,4 +37,4 @@ To create a new daily log, follow these steps:
 - [Documentation Standards](../processes/documentation-standards.md) - Standards for documentation
 - [Development Workflow](../processes/development-workflow.md) - How to contribute to the project
 
-Last Updated: May 10, 2025
+Last Updated: May 10, 2025 (Added Home Page Integration log)

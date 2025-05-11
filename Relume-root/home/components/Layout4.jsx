@@ -16,7 +16,7 @@ export function Layout4() {
             </h1>
             <p className="mb-6 md:mb-8 md:text-md">
               At Window World Los Angeles, we prioritize quality and customer
-              satisfaction. Our products are designed to enhance your home's
+              satisfaction. Our products are designed to enhance your home’s
               comfort and energy efficiency.
             </p>
             <div className="grid grid-cols-1 gap-6 py-2 sm:grid-cols-2">
@@ -39,24 +39,24 @@ export function Layout4() {
               </div>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Learn More About Us" variant="secondary">
-                Learn More About Us
+              <Button title="Learn More" variant="secondary">
+                Learn More
               </Button>
               <Button
-                title="Explore Products"
+                title="Explore"
                 variant="link"
                 size="link"
                 iconRight={<RxChevronRight />}
               >
-                Explore Products
+                Explore
               </Button>
             </div>
           </div>
           <div>
             <img
-              src="/assets/images/why-choose-us.jpg"
+              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
               className="w-full rounded-image object-cover"
-              alt="Professional Window World LA team member installing a window"
+              alt="Relume placeholder image"
             />
           </div>
         </div>

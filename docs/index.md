@@ -60,10 +60,12 @@ The guides documentation provides step-by-step instructions for developers worki
 
 #### Relume UI Guides
 
+- [Relume UI Installation Guide](./guides/relume-ui-installation-guide.md) - Step-by-step instructions for installing and configuring Relume UI
 - [Relume UI Integration Guide](./guides/relume-ui-integration-guide.md) - Step-by-step instructions for integrating the Relume UI library
 - [Relume Component Usage Guide](./guides/relume-component-usage-guide.md) - Detailed examples and best practices for using Relume UI components
 - [Relume Tailwind Configuration Guide](./guides/relume-tailwind-configuration-guide.md) - Guide for configuring Tailwind CSS for use with Relume UI
 - [Relume Troubleshooting Guide](./guides/relume-troubleshooting-guide.md) - Solutions to common issues with Relume UI
+- [Relume Home Page Integration Plan](./guides/relume-home-page-integration-plan.md) - Comprehensive plan for implementing the Home page with Relume UI components
 
 ### Integrations
 
@@ -111,4 +113,4 @@ When contributing to the documentation, follow these guidelines:
 - [Main README](../README.md) - Main project documentation and entry point
 - [Documentation Map](./documentation-map.md) - Comprehensive map of all documentation
 
-Last Updated: May 10, 2025
+Last Updated: May 10, 2025 (Added Relume Home Page Integration Plan)

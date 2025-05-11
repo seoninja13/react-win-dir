@@ -8,38 +8,38 @@ export function Gallery4() {
       <div className="container">
         <div className="mb-12 text-center md:mb-18 lg:mb-20">
           <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-            Our Latest Projects
+            Project Showcase
           </h2>
           <p className="md:text-md">
-            See how we've transformed homes across Los Angeles with our premium windows and doors.
+            Transforming homes with our premium window and door solutions.
           </p>
         </div>
         <div className="grid grid-cols-2 items-start justify-center gap-6 md:gap-8 lg:grid-cols-4">
-          <a href="/gallery/modern-home-renovation">
+          <a href="#">
             <img
-              src="/assets/images/gallery/modern-home-windows.jpg"
-              alt="Modern home renovation with energy-efficient windows"
+              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              alt="Relume placeholder image 1"
               className="size-full rounded-image object-cover"
             />
           </a>
-          <a href="/gallery/traditional-home-makeover">
+          <a href="#">
             <img
-              src="/assets/images/gallery/traditional-home-doors.jpg"
-              alt="Traditional home with elegant entry doors"
+              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              alt="Relume placeholder image 2"
               className="size-full rounded-image object-cover"
             />
           </a>
-          <a href="/gallery/contemporary-windows">
+          <a href="#">
             <img
-              src="/assets/images/gallery/contemporary-windows.jpg"
-              alt="Contemporary home with floor-to-ceiling windows"
+              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              alt="Relume placeholder image 3"
               className="size-full rounded-image object-cover"
             />
           </a>
-          <a href="/gallery/custom-door-installation">
+          <a href="#">
             <img
-              src="/assets/images/gallery/custom-doors.jpg"
-              alt="Custom door installation project"
+              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              alt="Relume placeholder image 4"
               className="size-full rounded-image object-cover"
             />
           </a>
