@@ -92,6 +92,8 @@ To ensure consistency in tracking, the following status definitions are used:
 | Vinyl Siding | T2 | /vinyl-siding | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-20 | Category page for vinyl siding |
 | Roofing | T2 | /roofing | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | Jane Smith | 2025-05-20 | Category page for roofing |
 | Garden | T3 | /garden | Complete | In Progress | Complete | In Progress | Complete | Verified | None | John Doe | 2025-05-18 | Product page for garden windows |
+| 2000-Series | T3 | /2000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Card component issue fixed | Jane Smith | 2025-05-18 | Product page for 2000-series vinyl siding |
+| 3000-Series | T3 | /3000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Directory structure created manually | Jane Smith | 2025-05-18 | Premium product page for 3000-series vinyl siding |
 | Installation | T4 | /installation | Complete | In Progress | Complete | In Progress | Complete | In Progress | Card component issue fixed | Jane Smith | 2025-05-22 | Installation information page |
 | Financing | T4 | /financing | Complete | In Progress | Complete | In Progress | Complete | In Progress | Card component issue fixed | John Doe | 2025-05-22 | Financing information page |
 | About Us | T4 | /about-us | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | Jane Smith | 2025-05-25 | Company information page |
@@ -120,7 +122,7 @@ This section tracks the progress of implementing each page template type.
 ### T3: Product/Service Detail Page Template
 
 - **Implementation Status**: Complete
-- **Pages Using This Template**: Garden, Double-Hung, Casement, Bay-Bow, Awning, Picture, Sliding, Custom, Entry, Patio, Hinged-Patio, Garage
+- **Pages Using This Template**: Garden, 2000-Series, 3000-Series, Double-Hung, Casement, Bay-Bow, Awning, Picture, Sliding, Custom, Entry, Patio, Hinged-Patio, Garage
 - **Notes**: Product detail page template with product information, features, benefits, gallery, and call-to-action sections
 
 ### T4: Standard Informational Page Template
@@ -165,6 +167,8 @@ For more detailed information about specific pages, please refer to the individu
 
 - [Home Page Documentation](../pages/home/home-page-documentation.md)
 - [Garden Page Documentation](../pages/garden/garden-page-documentation.md)
+- [2000-Series Page Documentation](../pages/vinyl-siding/2000-series-page-documentation.md)
+- [3000-Series Page Documentation](../pages/vinyl-siding/3000-series-page-documentation.md)
 - [Windows Page Documentation](../pages/windows/windows-page-documentation.md)
 
 ## Related Documentation
@@ -175,4 +179,4 @@ For more detailed information about specific pages, please refer to the individu
 - [Testing Strategy Documentation](../testing/testing-strategy.md)
 - [Development Workflow Documentation](../processes/development-workflow.md)
 
-Last Updated: May 11, 2025 (Added Doors, Vinyl Siding, Roofing, and Financing pages)
+Last Updated: May 11, 2025 (Added 2000-Series and 3000-Series Vinyl Siding pages)

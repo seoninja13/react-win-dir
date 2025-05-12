@@ -42,18 +42,20 @@ The following pages have been implemented:
 
 ### T3: Product/Service Detail Pages
 6. [Garden Page](./garden/garden-page-documentation.md) - T3 Template
+7. [2000-Series Vinyl Siding Page](./vinyl-siding/2000-series-page-documentation.md) - T3 Template
+8. [3000-Series Vinyl Siding Page](./vinyl-siding/3000-series-page-documentation.md) - T3 Template
 
 ### T4: Standard Informational Pages
-7. [Financing Page](./financing/financing-page-documentation.md) - T4 Template
-8. [Installation Page](./installation/installation-page-documentation.md) - T4 Template
-9. [About Us Page](./about-us/about-us-page-documentation.md) - T4 Template
+9. [Financing Page](./financing/financing-page-documentation.md) - T4 Template
+10. [Installation Page](./installation/installation-page-documentation.md) - T4 Template
+11. [About Us Page](./about-us/about-us-page-documentation.md) - T4 Template
 
 ### T5-T9: Other Page Types
-10. [Blog Page](./blog/blog-page-documentation.md) - T5 Template
-11. [Blog Post Page](./blog-post/blog-post-page-documentation.md) - T6 Template
-12. [Contact Page](./contact/contact-page-documentation.md) - T7 Template
-13. [Gallery Page](./gallery/gallery-page-documentation.md) - T8 Template
-14. [FAQ Page](./faq/faq-page-documentation.md) - T9 Template
+12. [Blog Page](./blog/blog-page-documentation.md) - T5 Template
+13. [Blog Post Page](./blog-post/blog-post-page-documentation.md) - T6 Template
+14. [Contact Page](./contact/contact-page-documentation.md) - T7 Template
+15. [Gallery Page](./gallery/gallery-page-documentation.md) - T8 Template
+16. [FAQ Page](./faq/faq-page-documentation.md) - T9 Template
 
 ## Implementation Process
 
@@ -90,4 +92,4 @@ Each page is implemented following the process outlined in the [Relume Home Page
 - [Relume Home Page Integration Plan](../guides/relume-home-page-integration-plan.md)
 - [Component Structure Documentation](../architecture/component-structure.md)
 
-Last Updated: May 11, 2025 (Added documentation for Doors, Vinyl Siding, Roofing, and Financing pages)
+Last Updated: May 11, 2025 (Added documentation for 2000-Series and 3000-Series Vinyl Siding pages)
