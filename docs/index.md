@@ -12,10 +12,12 @@ This project follows a pyramid documentation structure with the main [README.md]
 - [Features](./features/index.md) - Feature implementation documentation
 - [Guides](./guides/index.md) - Developer guides and tutorials
 - [Integrations](./integrations/index.md) - Integration documentation for external services
+- [Pages](./pages/index.md) - Documentation for implemented pages
 - [Planning](./planning/index.md) - Planning documentation and implementation plans
 - [Processes](./processes/index.md) - Process documentation
 - [Testing](./testing/index.md) - Testing documentation and guidelines
 - [Templates](./templates/documentation-template.md) - Documentation templates
+- [Tracking](./tracking/index.md) - Project tracking documentation
 - [Daily Logs](./daily-logs/index.md) - Daily development logs
 - [Priority Task List](./priority-list.md) - Prioritized list of tasks for the project
 
@@ -67,6 +69,14 @@ The guides documentation provides step-by-step instructions for developers worki
 - [Relume Troubleshooting Guide](./guides/relume-troubleshooting-guide.md) - Solutions to common issues with Relume UI
 - [Relume Home Page Integration Plan](./guides/relume-home-page-integration-plan.md) - Comprehensive plan for implementing the Home page with Relume UI components
 
+### Pages
+
+The pages documentation provides detailed information about each implemented page in the Windows Doors CA website.
+
+- [Pages Overview](./pages/index.md) - Overview of all implemented pages
+- [Home Page](./pages/home/home-page-documentation.md) - Documentation for the Home page
+- [Garden Page](./pages/garden/garden-page-documentation.md) - Documentation for the Garden page
+
 ### Integrations
 
 The integrations documentation provides information about integrating with external services.
@@ -93,6 +103,15 @@ The testing documentation provides detailed instructions for testing the project
 - [Testing Guide](./testing/guide.md) - Detailed testing instructions
 - [Netlify Dev Testing](./testing/netlify-dev.md) - Testing in production-like environment
 
+### Tracking
+
+The tracking documentation provides comprehensive tracking of various aspects of the project.
+
+- [Webpage Progress Tracker](./tracking/webpage-progress-tracker.md) - Comprehensive tracker for all webpages in the project
+- [Component Implementation Tracker](./tracking/component-implementation-tracker.md) - Tracker for component implementation status (Coming Soon)
+- [Testing Results Tracker](./tracking/testing-results-tracker.md) - Tracker for testing results across all pages (Coming Soon)
+- [Performance Metrics Tracker](./tracking/performance-metrics-tracker.md) - Tracker for performance metrics across all pages (Coming Soon)
+
 ## Contributing to Documentation
 
 When contributing to the documentation, follow these guidelines:
@@ -113,4 +132,4 @@ When contributing to the documentation, follow these guidelines:
 - [Main README](../README.md) - Main project documentation and entry point
 - [Documentation Map](./documentation-map.md) - Comprehensive map of all documentation
 
-Last Updated: May 10, 2025 (Added Relume Home Page Integration Plan)
+Last Updated: May 11, 2025 (Added Webpage Progress Tracker)
