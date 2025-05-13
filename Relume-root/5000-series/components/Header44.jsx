@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
+
 import React from "react";
 
 export function Header44() {
@@ -26,12 +26,12 @@ export function Header44() {
               Sacramento's most distinguished homes.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button title="Schedule Design Consultation" variant="primary">
+              <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-blue-600 px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
                 Schedule Design Consultation
-              </Button>
-              <Button title="View Elite Color Portfolio" variant="secondary">
+              </button>
+              <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-blue-600 bg-white px-6 py-3 text-sm font-medium text-blue-600 shadow-sm transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
                 View Elite Color Portfolio
-              </Button>
+              </button>
             </div>
           </div>
         </div>

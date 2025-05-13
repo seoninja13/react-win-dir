@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
+
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 
@@ -56,17 +56,13 @@ export function Layout10() {
               </div>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Request Elite Color Portfolio" variant="secondary">
+              <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-blue-600 bg-white px-6 py-3 text-sm font-medium text-blue-600 shadow-sm transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
                 Request Elite Color Portfolio
-              </Button>
-              <Button
-                title="Schedule Design Consultation"
-                variant="link"
-                size="link"
-                iconRight={<RxChevronRight />}
-              >
+              </button>
+              <button className="inline-flex items-center justify-center whitespace-nowrap text-blue-600 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
                 Schedule Design Consultation
-              </Button>
+                <RxChevronRight className="ml-1" />
+              </button>
             </div>
           </div>
           <div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, useMediaQuery } from "@relume_io/relume-ui";
+import { useMediaQuery } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { RxChevronDown } from "react-icons/rx";
@@ -145,14 +145,9 @@ export function Navbar10() {
                               <p className="text-sm">
                                 Explore the latest in window and door designs.
                               </p>
-                              <Button
-                                title="Read More"
-                                variant="link"
-                                size="link"
-                                className="mt-2 w-fit text-sm underline"
-                              >
+                              <button className="mt-2 w-fit text-sm text-blue-600 underline">
                                 Read More
-                              </Button>
+                              </button>
                             </div>
                           </a>
                           <a
@@ -306,12 +301,12 @@ export function Navbar10() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Button title="Get Quote" variant="secondary" size="sm">
+            <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-blue-600 bg-white px-4 py-2 text-sm font-medium text-blue-600 shadow-sm transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
               Get Quote
-            </Button>
-            <Button title="Contact" size="sm">
+            </button>
+            <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
               Contact
-            </Button>
+            </button>
           </div>
         </div>
         <button
@@ -628,12 +623,12 @@ export function Navbar10() {
                 </AnimatePresence>
               </div>
               <div className="mt-6 flex flex-col gap-4">
-                <Button title="Button" variant="secondary" size="sm">
+                <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-blue-600 bg-white px-4 py-2 text-sm font-medium text-blue-600 shadow-sm transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
                   Button
-                </Button>
-                <Button title="Button" size="sm">
+                </button>
+                <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
                   Button
-                </Button>
+                </button>
               </div>
             </div>
           </motion.div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar10 } from "./components/Navbar10";
+import { SimpleNavbar } from "./components/SimpleNavbar";
 import { Header44 } from "./components/Header44";
 import { Header15 } from "./components/Header15";
 import { Layout16 } from "./components/Layout16";
@@ -15,7 +15,7 @@ import { Footer4 } from "./components/Footer4";
 export default function Page() {
   return (
     <div>
-      <Navbar10 />
+      <SimpleNavbar />
       <Header44 />
       <Header15 />
       <Layout16 />
