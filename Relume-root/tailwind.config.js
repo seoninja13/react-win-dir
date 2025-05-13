@@ -6,7 +6,13 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./home/**/*.{js,ts,jsx,tsx}",
-    "./styles/**/*.css"
+    "./styles/**/*.css",
+    "./1000-series/**/*.{js,ts,jsx,tsx}",
+    "./2000-series/**/*.{js,ts,jsx,tsx}",
+    "./3000-series/**/*.{js,ts,jsx,tsx}",
+    "./4000-series/**/*.{js,ts,jsx,tsx}",
+    "./5000-series/**/*.{js,ts,jsx,tsx}",
+    "./vinyl-siding/**/*.{js,ts,jsx,tsx}"
   ],
   presets: [require("@relume_io/relume-tailwind")]
 }

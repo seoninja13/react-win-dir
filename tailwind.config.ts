@@ -5,6 +5,13 @@ module.exports = {
     "./node_modules/@relume_io/relume-ui/dist/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./Relume-root/**/*.{js,ts,jsx,tsx}",
+    "./1000-series/**/*.{js,ts,jsx,tsx}",
+    "./2000-series/**/*.{js,ts,jsx,tsx}",
+    "./3000-series/**/*.{js,ts,jsx,tsx}",
+    "./4000-series/**/*.{js,ts,jsx,tsx}",
+    "./5000-series/**/*.{js,ts,jsx,tsx}",
+    "./vinyl-siding/**/*.{js,ts,jsx,tsx}",
   ],
   presets: [require("@relume_io/relume-tailwind")],
   theme: {
