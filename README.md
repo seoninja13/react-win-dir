@@ -5,8 +5,8 @@ This repository contains the code for the Window World LA website, a modern webs
 ## Project Status
 
 **Current Status**: Development in progress
-**Last Updated**: May 10, 2025
-**Current Version**: 0.1.0
+**Last Updated**: May 13, 2025
+**Current Version**: 0.1.1
 
 ## Documentation Structure
 
@@ -40,6 +40,7 @@ All detailed documentation is organized in the [Documentation Directory](./docs/
   - Windows product page with detailed information and gallery
   - Doors product page with detailed information and gallery
   - Vinyl Siding product page with detailed information and gallery
+  - 5000-Series Vinyl Siding product page with detailed information and gallery
   - Roofing product page with detailed information and gallery
   - Contact page with form and map
   - Simple page without Tailwind CSS

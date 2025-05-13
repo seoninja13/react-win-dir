@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
+import { CustomButton } from "./CustomButton";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 
@@ -47,17 +47,16 @@ export function Layout10_2() {
               </div>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Apply" variant="secondary">
+              <CustomButton variant="secondary">
                 Apply
-              </Button>
-              <Button
-                title="Learn More"
+              </CustomButton>
+              <CustomButton
                 variant="link"
                 size="link"
                 iconRight={<RxChevronRight />}
               >
                 Learn More
-              </Button>
+              </CustomButton>
             </div>
           </div>
           <div>

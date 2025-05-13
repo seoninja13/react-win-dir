@@ -1,6 +1,7 @@
 "use client";
 
-import { Button, Card } from "@relume_io/relume-ui";
+import { CustomButton } from "./CustomButton";
+import { CustomCard } from "./CustomCard";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 
@@ -16,7 +17,7 @@ export function Layout396() {
           <p className="md:text-md">Classic beauty meets modern efficiency.</p>
         </div>
         <div className="grid auto-cols-fr grid-cols-1 gap-6 md:gap-8 lg:grid-cols-3">
-          <Card className="flex flex-col justify-center p-6 md:p-8">
+          <CustomCard className="flex flex-col justify-center p-6 md:p-8">
             <div>
               <div className="rb-5 mb-5 md:mb-6">
                 <img
@@ -31,17 +32,16 @@ export function Layout396() {
               <p>Timeless design with easy ventilation.</p>
             </div>
             <div className="mt-5 md:mt-6">
-              <Button
-                title="Learn More"
+              <CustomButton
                 variant="link"
                 size="link"
                 iconRight={<RxChevronRight />}
               >
                 Learn More
-              </Button>
+              </CustomButton>
             </div>
-          </Card>
-          <Card className="flex flex-col justify-center p-6 md:p-8">
+          </CustomCard>
+          <CustomCard className="flex flex-col justify-center p-6 md:p-8">
             <div>
               <div className="rb-5 mb-5 md:mb-6">
                 <img
@@ -56,17 +56,16 @@ export function Layout396() {
               <p>Optimal airflow and unobstructed views.</p>
             </div>
             <div className="mt-5 md:mt-6">
-              <Button
-                title="Learn More"
+              <CustomButton
                 variant="link"
                 size="link"
                 iconRight={<RxChevronRight />}
               >
                 Learn More
-              </Button>
+              </CustomButton>
             </div>
-          </Card>
-          <Card className="flex flex-col justify-center p-6 md:p-8">
+          </CustomCard>
+          <CustomCard className="flex flex-col justify-center p-6 md:p-8">
             <div>
               <div className="rb-5 mb-5 md:mb-6">
                 <img
@@ -81,16 +80,15 @@ export function Layout396() {
               <p>Expand your space with stunning angles.</p>
             </div>
             <div className="mt-5 md:mt-6">
-              <Button
-                title="Learn More"
+              <CustomButton
                 variant="link"
                 size="link"
                 iconRight={<RxChevronRight />}
               >
                 Learn More
-              </Button>
+              </CustomButton>
             </div>
-          </Card>
+          </CustomCard>
         </div>
       </div>
     </section>

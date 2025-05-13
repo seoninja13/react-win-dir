@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 
@@ -21,7 +20,7 @@ export function Layout250() {
               <img
                 src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
                 alt="Relume placeholder image"
-                className="rounded-image"
+                className="rounded-lg"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
@@ -32,9 +31,10 @@ export function Layout250() {
               optimal performance.
             </p>
             <div className="mt-6 flex gap-4 md:mt-8">
-              <Button iconRight={<RxChevronRight />} variant="link" size="link">
+              <button className="inline-flex items-center justify-center gap-2 text-gray-800 hover:underline">
                 Learn More
-              </Button>
+                <RxChevronRight />
+              </button>
             </div>
           </div>
           <div className="flex flex-col">
@@ -42,7 +42,7 @@ export function Layout250() {
               <img
                 src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
                 alt="Relume placeholder image"
-                className="rounded-image"
+                className="rounded-lg"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
@@ -53,9 +53,10 @@ export function Layout250() {
               enhancing comfort.
             </p>
             <div className="mt-6 flex gap-4 md:mt-8">
-              <Button iconRight={<RxChevronRight />} variant="link" size="link">
+              <button className="inline-flex items-center justify-center gap-2 text-gray-800 hover:underline">
                 Learn More
-              </Button>
+                <RxChevronRight />
+              </button>
             </div>
           </div>
           <div className="flex flex-col">
@@ -63,7 +64,7 @@ export function Layout250() {
               <img
                 src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
                 alt="Relume placeholder image"
-                className="rounded-image"
+                className="rounded-lg"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
@@ -74,9 +75,10 @@ export function Layout250() {
               energy efficiency.
             </p>
             <div className="mt-6 flex gap-4 md:mt-8">
-              <Button iconRight={<RxChevronRight />} variant="link" size="link">
+              <button className="inline-flex items-center justify-center gap-2 text-gray-800 hover:underline">
                 Learn More
-              </Button>
+                <RxChevronRight />
+              </button>
             </div>
           </div>
         </div>

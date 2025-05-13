@@ -20,12 +20,19 @@ This directory contains comprehensive documentation for the Windows Doors CA web
 |----------|-------------|------|
 | Header Components | Documentation for Header47 and Header15 components | [components/header-components.md](components/header-components.md) |
 
+### Pages
+
+| Document | Description | Path |
+|----------|-------------|------|
+| 5000-Series Page | Documentation for the 5000-Series Vinyl Siding page | [pages/vinyl-siding/5000-series-page-documentation.md](pages/vinyl-siding/5000-series-page-documentation.md) |
+
 ### Daily Logs
 
 | Document | Description | Path |
 |----------|-------------|------|
 | 2023-11-15 | Daily log for November 15, 2023 | [daily-logs/2023-11-15.md](daily-logs/2023-11-15.md) |
 | 2023-11-16 | Daily log for November 16, 2023 | [daily-logs/2023-11-16.md](daily-logs/2023-11-16.md) |
+| 2025-05-13 | 5000-Series Troubleshooting | [daily-logs/2025-05-13-5000-series-troubleshooting.md](daily-logs/2025-05-13-5000-series-troubleshooting.md) |
 
 ### Implementation Guides
 
@@ -74,4 +81,4 @@ All documentation follows these standards:
 
 ## Last Updated
 
-2023-11-16
+2025-05-13 (Added 5000-Series page documentation)

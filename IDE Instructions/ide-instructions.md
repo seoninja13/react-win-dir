@@ -1,5 +1,18 @@
 # Windows Doors Website React - Project Rules and Documentation
 
+## Table of Contents
+
+1. [Tech Stack and Architecture](#1-tech-stack-and-architecture)
+2. [Project Structure](#2-project-structure)
+3. [UI Requirements](#3-ui-requirements)
+4. [Development Guidelines](#4-development-guidelines)
+5. [Development Environment](#5-development-environment)
+6. [Documentation Standards](#6-documentation-standards)
+7. [Exact Cloning Guidelines](#7-exact-cloning-guidelines)
+8. [Testing Requirements](#8-testing-requirements)
+9. [Page Implementation Workflow](#9-page-implementation-workflow)
+10. [Advanced Development Tools](#10-advanced-development-tools)
+
 ## 1. Tech Stack and Architecture
 
 - **Framework**: Next.js 15.3.1 with App Router
@@ -45,6 +58,7 @@ This document contains a detailed analysis of the Window World LA website that w
   - **daily-logs/**: Daily development logs
   - **features/**: Feature documentation
   - **processes/**: Process documentation
+  - **tracking/**: Progress tracking documentation
 
 ### Content Structure
 
@@ -286,4 +300,64 @@ The database schema is designed to support the exact replication of the Window W
 - Optimize Core Web Vitals while maintaining visual parity
 - Test on multiple devices and browsers
 
-Last Updated: May 10, 2025 (Updated with Supabase database information and Relume-DO-NOT-EDIT guidelines)
+## 9. Page Implementation Workflow
+
+Follow this exact workflow when implementing new pages:
+
+1. **Create the route for the page**
+   - Create the route file in the appropriate location
+   - Ensure it follows the established pattern from working pages
+
+2. **Open the page in the browser**
+   - Verify it is working as expected
+   - If you encounter errors, do NOT create minimal or simplified pages
+   - Reference what worked in previous page implementations
+
+3. **Wait for confirmation**
+   - Wait for confirmation that the page matches the expected design
+   - Do not proceed with documentation until confirmation is received
+
+4. **Document the implementation**
+   - Document all errors that occurred and their solutions
+   - Ensure thorough documentation for future reference
+   - Update the webpage progress tracker
+   - Update all relevant documentation in the project's pyramidal structure
+
+5. **Wait for command**
+   - Once documentation is complete, wait for command before proceeding to the next page
+   - Do not start implementing multiple pages simultaneously
+
+## 10. Advanced Development Tools
+
+### Sequential Thinking MCP Server
+
+- Use Sequential Thinking MCP server for all complex tasks:
+  - Implementing new pages
+  - Troubleshooting errors
+  - Planning documentation updates
+  - Analyzing component issues
+
+- This ensures a more methodical approach to problem-solving and better adherence to project guidelines
+
+- Configuration:
+  ```json
+  {
+    "mcpServers": {
+      "server-sequential-thinking": {
+        "command": "cmd",
+        "args": [
+          "/c",
+          "npx",
+          "-y",
+          "@smithery/cli@latest",
+          "run",
+          "@smithery-ai/server-sequential-thinking",
+          "--key",
+          "ea6a680f-20bb-4968-bcaa-1568439806c4"
+        ]
+      }
+    }
+  }
+  ```
+
+Last Updated: May 12, 2025 (Added Page Implementation Workflow and Advanced Development Tools sections)

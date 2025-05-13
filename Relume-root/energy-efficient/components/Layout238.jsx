@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 
@@ -33,9 +32,10 @@ export function Layout238() {
               your home's comfort.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button iconRight={<RxChevronRight />} variant="link" size="link">
+              <button className="inline-flex items-center justify-center gap-2 text-gray-800 hover:underline">
                 Learn More
-              </Button>
+                <RxChevronRight />
+              </button>
             </div>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -54,9 +54,10 @@ export function Layout238() {
               window solutions.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button iconRight={<RxChevronRight />} variant="link" size="link">
+              <button className="inline-flex items-center justify-center gap-2 text-gray-800 hover:underline">
                 Discover
-              </Button>
+                <RxChevronRight />
+              </button>
             </div>
           </div>
           <div className="flex flex-col items-center text-center">
@@ -75,9 +76,10 @@ export function Layout238() {
               and flooring.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button iconRight={<RxChevronRight />} variant="link" size="link">
+              <button className="inline-flex items-center justify-center gap-2 text-gray-800 hover:underline">
                 Protect
-              </Button>
+                <RxChevronRight />
+              </button>
             </div>
           </div>
         </div>

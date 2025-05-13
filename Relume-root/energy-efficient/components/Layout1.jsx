@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { RxChevronRight } from "react-icons/rx";
 
@@ -20,23 +19,19 @@ export function Layout1() {
               contributes to a more sustainable home in Sacramento.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-              <Button title="Learn More" variant="secondary">
+              <button className="inline-flex h-12 items-center justify-center rounded-lg border border-gray-800 bg-transparent px-6 text-center font-medium text-gray-800 transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
                 Learn More
-              </Button>
-              <Button
-                title="Discover"
-                variant="link"
-                size="link"
-                iconRight={<RxChevronRight />}
-              >
+              </button>
+              <button className="inline-flex items-center justify-center gap-2 text-gray-800 hover:underline">
                 Discover
-              </Button>
+                <RxChevronRight />
+              </button>
             </div>
           </div>
           <div>
             <img
               src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-              className="w-full rounded-image object-cover"
+              className="w-full rounded-lg object-cover"
               alt="Relume placeholder image"
             />
           </div>

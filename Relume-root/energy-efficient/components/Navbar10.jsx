@@ -1,6 +1,7 @@
 "use client";
 
-import { Button, useMediaQuery } from "@relume_io/relume-ui";
+import { useMediaQuery } from "@relume_io/relume-ui";
+import { CustomButton } from "./CustomButton";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { RxChevronDown } from "react-icons/rx";
@@ -145,14 +146,13 @@ export function Navbar10() {
                               <p className="text-sm">
                                 Explore the latest in window and door designs.
                               </p>
-                              <Button
-                                title="Read More"
+                              <CustomButton
                                 variant="link"
                                 size="link"
                                 className="mt-2 w-fit text-sm underline"
                               >
                                 Read More
-                              </Button>
+                              </CustomButton>
                             </div>
                           </a>
                           <a
@@ -173,14 +173,13 @@ export function Navbar10() {
                               <p className="text-sm">
                                 Discover how to save on energy bills today.
                               </p>
-                              <Button
-                                title="Read More"
+                              <CustomButton
                                 variant="link"
                                 size="link"
                                 className="mt-2 w-fit text-sm underline"
                               >
                                 Read More
-                              </Button>
+                              </CustomButton>
                             </div>
                           </a>
                           <a
@@ -201,14 +200,13 @@ export function Navbar10() {
                               <p className="text-sm">
                                 Learn the steps for a successful installation.
                               </p>
-                              <Button
-                                title="Read More"
+                              <CustomButton
                                 variant="link"
                                 size="link"
                                 className="mt-2 w-fit text-sm underline"
                               >
                                 Read More
-                              </Button>
+                              </CustomButton>
                             </div>
                           </a>
                           <a
@@ -230,14 +228,13 @@ export function Navbar10() {
                                 See how we've transformed homes across Los
                                 Angeles.
                               </p>
-                              <Button
-                                title="Read More"
+                              <CustomButton
                                 variant="link"
                                 size="link"
                                 className="mt-2 w-fit text-sm underline"
                               >
                                 Read More
-                              </Button>
+                              </CustomButton>
                             </div>
                           </a>
                           <a
@@ -258,14 +255,13 @@ export function Navbar10() {
                               <p className="text-sm">
                                 Keep your windows and doors in top shape.
                               </p>
-                              <Button
-                                title="Read More"
+                              <CustomButton
                                 variant="link"
                                 size="link"
                                 className="mt-2 w-fit text-sm underline"
                               >
                                 Read More
-                              </Button>
+                              </CustomButton>
                             </div>
                           </a>
                           <a
@@ -287,14 +283,13 @@ export function Navbar10() {
                                 Understand our lifetime warranty and what it
                                 covers.
                               </p>
-                              <Button
-                                title="Read More"
+                              <CustomButton
                                 variant="link"
                                 size="link"
                                 className="mt-2 w-fit text-sm underline"
                               >
                                 Read More
-                              </Button>
+                              </CustomButton>
                             </div>
                           </a>
                         </div>
@@ -306,12 +301,12 @@ export function Navbar10() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Button title="Get Quote" variant="secondary" size="sm">
+            <CustomButton variant="secondary" size="sm">
               Get Quote
-            </Button>
-            <Button title="Contact" size="sm">
+            </CustomButton>
+            <CustomButton size="sm">
               Contact
-            </Button>
+            </CustomButton>
           </div>
         </div>
         <button
@@ -465,14 +460,13 @@ export function Navbar10() {
                                   Lorem ipsum dolor sit amet, consectetur
                                   adipiscing elit
                                 </p>
-                                <Button
-                                  title="Read more"
+                                <CustomButton
                                   variant="link"
                                   size="link"
                                   className="mt-2 w-fit text-sm underline"
                                 >
                                   Read more
-                                </Button>
+                                </CustomButton>
                               </div>
                             </a>
                             <a
@@ -494,14 +488,13 @@ export function Navbar10() {
                                   Lorem ipsum dolor sit amet, consectetur
                                   adipiscing elit
                                 </p>
-                                <Button
-                                  title="Read more"
+                                <CustomButton
                                   variant="link"
                                   size="link"
                                   className="mt-2 w-fit text-sm underline"
                                 >
                                   Read more
-                                </Button>
+                                </CustomButton>
                               </div>
                             </a>
                             <a
@@ -523,14 +516,13 @@ export function Navbar10() {
                                   Lorem ipsum dolor sit amet, consectetur
                                   adipiscing elit
                                 </p>
-                                <Button
-                                  title="Read more"
+                                <CustomButton
                                   variant="link"
                                   size="link"
                                   className="mt-2 w-fit text-sm underline"
                                 >
                                   Read more
-                                </Button>
+                                </CustomButton>
                               </div>
                             </a>
                             <a
@@ -552,14 +544,13 @@ export function Navbar10() {
                                   Lorem ipsum dolor sit amet, consectetur
                                   adipiscing elit
                                 </p>
-                                <Button
-                                  title="Read more"
+                                <CustomButton
                                   variant="link"
                                   size="link"
                                   className="mt-2 w-fit text-sm underline"
                                 >
                                   Read more
-                                </Button>
+                                </CustomButton>
                               </div>
                             </a>
                             <a
@@ -581,14 +572,13 @@ export function Navbar10() {
                                   Lorem ipsum dolor sit amet, consectetur
                                   adipiscing elit
                                 </p>
-                                <Button
-                                  title="Read more"
+                                <CustomButton
                                   variant="link"
                                   size="link"
                                   className="mt-2 w-fit text-sm underline"
                                 >
                                   Read more
-                                </Button>
+                                </CustomButton>
                               </div>
                             </a>
                             <a
@@ -610,14 +600,13 @@ export function Navbar10() {
                                   Lorem ipsum dolor sit amet, consectetur
                                   adipiscing elit
                                 </p>
-                                <Button
-                                  title="Read more"
+                                <CustomButton
                                   variant="link"
                                   size="link"
                                   className="mt-2 w-fit text-sm underline"
                                 >
                                   Read more
-                                </Button>
+                                </CustomButton>
                               </div>
                             </a>
                           </div>
@@ -628,12 +617,12 @@ export function Navbar10() {
                 </AnimatePresence>
               </div>
               <div className="mt-6 flex flex-col gap-4">
-                <Button title="Button" variant="secondary" size="sm">
+                <CustomButton variant="secondary" size="sm">
                   Button
-                </Button>
-                <Button title="Button" size="sm">
+                </CustomButton>
+                <CustomButton size="sm">
                   Button
-                </Button>
+                </CustomButton>
               </div>
             </div>
           </motion.div>

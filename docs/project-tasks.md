@@ -48,6 +48,7 @@ This document outlines the tasks for the Windows Doors Website project.
 
 ### Page Implementation
 
+- [x] Implement 5000-series page
 - [ ] Implement home page
 - [ ] Implement windows page
 - [ ] Implement doors page

@@ -6,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
   Button,
-  Card,
 } from "@relume_io/relume-ui";
 import React from "react";
 import { RxPlus } from "react-icons/rx";
@@ -33,7 +32,7 @@ export function Faq6() {
           type="multiple"
           className="grid items-start justify-stretch gap-4"
         >
-          <Card>
+          <div className="border rounded-md shadow-sm">
             <AccordionItem value="item-0" className="border-none px-5 md:px-6">
               <AccordionTrigger
                 icon={
@@ -50,8 +49,8 @@ export function Faq6() {
                 can trust it to protect your home for years to come.
               </AccordionContent>
             </AccordionItem>
-          </Card>
-          <Card>
+          </div>
+          <div className="border rounded-md shadow-sm">
             <AccordionItem value="item-1" className="border-none px-5 md:px-6">
               <AccordionTrigger
                 icon={
@@ -68,8 +67,8 @@ export function Faq6() {
                 transforms their properties.
               </AccordionContent>
             </AccordionItem>
-          </Card>
-          <Card>
+          </div>
+          <div className="border rounded-md shadow-sm">
             <AccordionItem value="item-2" className="border-none px-5 md:px-6">
               <AccordionTrigger
                 icon={
@@ -86,8 +85,8 @@ export function Faq6() {
                 It's a commitment to quality that we stand by.
               </AccordionContent>
             </AccordionItem>
-          </Card>
-          <Card>
+          </div>
+          <div className="border rounded-md shadow-sm">
             <AccordionItem value="item-3" className="border-none px-5 md:px-6">
               <AccordionTrigger
                 icon={
@@ -104,8 +103,8 @@ export function Faq6() {
                 making it a practical choice for busy homeowners.
               </AccordionContent>
             </AccordionItem>
-          </Card>
-          <Card>
+          </div>
+          <div className="border rounded-md shadow-sm">
             <AccordionItem value="item-4" className="border-none px-5 md:px-6">
               <AccordionTrigger
                 icon={
@@ -121,7 +120,7 @@ export function Faq6() {
                 your home’s style and enhances its overall aesthetic.
               </AccordionContent>
             </AccordionItem>
-          </Card>
+          </div>
         </Accordion>
       </div>
     </section>

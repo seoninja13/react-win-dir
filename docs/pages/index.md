@@ -41,21 +41,38 @@ The following pages have been implemented:
 5. [Roofing Page](./roofing/roofing-page-documentation.md) - T2 Template
 
 ### T3: Product/Service Detail Pages
-6. [Garden Page](./garden/garden-page-documentation.md) - T3 Template
-7. [2000-Series Vinyl Siding Page](./vinyl-siding/2000-series-page-documentation.md) - T3 Template
-8. [3000-Series Vinyl Siding Page](./vinyl-siding/3000-series-page-documentation.md) - T3 Template
+6. [1000-Series Vinyl Siding Page](./vinyl-siding/1000-series-page-documentation.md) - T3 Template
+7. [1500-Series Vinyl Siding Page](./vinyl-siding/1500-series-page-documentation.md) - T3 Template
+8. [2000-Series Vinyl Siding Page](./vinyl-siding/2000-series-page-documentation.md) - T3 Template
+9. [3000-Series Vinyl Siding Page](./vinyl-siding/3000-series-page-documentation.md) - T3 Template
+10. [4000-Series Vinyl Siding Page](./vinyl-siding/4000-series-page-documentation.md) - T3 Template
+11. [Entry Doors Page](./doors/entry-page-documentation.md) - T3 Template
+12. [Patio Doors Page](./doors/patio-page-documentation.md) - T3 Template
+13. [Hinged Patio Doors Page](./doors/hinged-patio-doors-page-documentation.md) - T3 Template
+14. [Garage Doors Page](./doors/garage-page-documentation.md) - T3 Template
+15. [Double-Hung Windows Page](./windows/double-hung-page-documentation.md) - T3 Template
+16. [Casement Windows Page](./windows/casement-page-documentation.md) - T3 Template
+17. [Bay-Bow Windows Page](./windows/bay-bow-page-documentation.md) - T3 Template
+18. [Awning Windows Page](./windows/awning-page-documentation.md) - T3 Template
+19. [Picture Windows Page](./windows/picture-page-documentation.md) - T3 Template
+20. [Sliding Windows Page](./windows/sliding-page-documentation.md) - T3 Template
+21. [Custom Windows Page](./windows/custom-page-documentation.md) - T3 Template
+22. [Energy-Efficient Windows Page](./windows/energy-efficient-page-documentation.md) - T3 Template
+23. [Garden Windows Page](./windows/garden-page-documentation.md) - T3 Template
+24. [Shutters Page](./windows/shutters-page-documentation.md) - T3 Template
+25. [Wood Windows Page](./windows/wood-windows-page-documentation.md) - T3 Template
 
 ### T4: Standard Informational Pages
-9. [Financing Page](./financing/financing-page-documentation.md) - T4 Template
-10. [Installation Page](./installation/installation-page-documentation.md) - T4 Template
-11. [About Us Page](./about-us/about-us-page-documentation.md) - T4 Template
+26. [Financing Page](./financing/financing-page-documentation.md) - T4 Template
+27. [Installation Page](./installation/installation-page-documentation.md) - T4 Template
+28. [About Us Page](./about-us/about-us-page-documentation.md) - T4 Template
 
 ### T5-T9: Other Page Types
-12. [Blog Page](./blog/blog-page-documentation.md) - T5 Template
-13. [Blog Post Page](./blog-post/blog-post-page-documentation.md) - T6 Template
-14. [Contact Page](./contact/contact-page-documentation.md) - T7 Template
-15. [Gallery Page](./gallery/gallery-page-documentation.md) - T8 Template
-16. [FAQ Page](./faq/faq-page-documentation.md) - T9 Template
+29. [Blog Page](./blog/blog-page-documentation.md) - T5 Template
+30. [Blog Post Page](./blog-post/blog-post-page-documentation.md) - T6 Template
+31. [Contact Page](./contact/contact-page-documentation.md) - T7 Template
+32. [Gallery Page](./gallery/gallery-page-documentation.md) - T8 Template
+33. [FAQ Page](./faq/faq-page-documentation.md) - T9 Template
 
 ## Implementation Process
 
@@ -92,4 +109,4 @@ Each page is implemented following the process outlined in the [Relume Home Page
 - [Relume Home Page Integration Plan](../guides/relume-home-page-integration-plan.md)
 - [Component Structure Documentation](../architecture/component-structure.md)
 
-Last Updated: May 11, 2025 (Added documentation for 2000-Series and 3000-Series Vinyl Siding pages)
+Last Updated: May 12, 2025 (Added documentation for 1000-Series, 1500-Series, 2000-Series, 3000-Series, 4000-Series Vinyl Siding pages, Entry Doors page, Patio Doors page, Hinged Patio Doors page, Garage Doors page, Double-Hung Windows page, Casement Windows page, Bay-Bow Windows page, Awning Windows page, Picture Windows page, Sliding Windows page, Custom Windows page, Energy-Efficient Windows page, Garden Windows page, Shutters page, and Wood Windows page)

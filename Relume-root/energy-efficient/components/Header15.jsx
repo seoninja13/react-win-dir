@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
 import React from "react";
 
 export function Header15() {
@@ -21,17 +20,19 @@ export function Header15() {
               year-round.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-              <Button title="Schedule">Schedule</Button>
-              <Button title="Estimate" variant="secondary">
+              <button className="inline-flex h-12 items-center justify-center rounded-lg bg-gray-800 px-6 text-center font-medium text-white transition-colors hover:bg-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+                Schedule
+              </button>
+              <button className="inline-flex h-12 items-center justify-center rounded-lg border border-gray-800 bg-transparent px-6 text-center font-medium text-gray-800 transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
                 Estimate
-              </Button>
+              </button>
             </div>
           </div>
         </div>
         <div>
           <img
             src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-            className="w-full rounded-image object-cover"
+            className="w-full rounded-lg object-cover"
             alt="Relume placeholder image"
           />
         </div>

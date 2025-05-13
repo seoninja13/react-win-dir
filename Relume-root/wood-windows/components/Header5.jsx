@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
+import { CustomButton } from "./CustomButton";
 import React from "react";
 
 export function Header5() {
@@ -18,10 +18,10 @@ export function Header5() {
               while providing durability and energy efficiency.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-              <Button title="Schedule">Schedule</Button>
-              <Button title="Estimate" variant="secondary-alt">
+              <CustomButton>Schedule</CustomButton>
+              <CustomButton variant="secondary">
                 Estimate
-              </Button>
+              </CustomButton>
             </div>
           </div>
         </div>
