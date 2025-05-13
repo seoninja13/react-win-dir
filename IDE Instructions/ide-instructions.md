@@ -12,6 +12,8 @@
 8. [Testing Requirements](#8-testing-requirements)
 9. [Page Implementation Workflow](#9-page-implementation-workflow)
 10. [Advanced Development Tools](#10-advanced-development-tools)
+11. [Common Troubleshooting Scenarios](#11-common-troubleshooting-scenarios)
+12. [Case Studies](#12-case-studies)
 
 ## 1. Tech Stack and Architecture
 
@@ -360,4 +362,89 @@ Follow this exact workflow when implementing new pages:
   }
   ```
 
-Last Updated: May 12, 2025 (Added Page Implementation Workflow and Advanced Development Tools sections)
+## 11. Common Troubleshooting Scenarios
+
+### Accordion Component Issues
+
+When implementing pages with accordion components (like FAQ sections), ensure that:
+
+1. **Import all necessary components**: Always import all required components from @relume_io/relume-ui:
+   ```jsx
+   import {
+     Accordion,
+     AccordionContent,
+     AccordionItem,
+     AccordionTrigger,
+     Button,
+   } from "@relume_io/relume-ui";
+   ```
+
+2. **Use the correct component structure**: Follow this pattern for accordion components:
+   ```jsx
+   <Accordion type="multiple" className="grid items-start justify-stretch gap-4">
+     <div className="border rounded-md shadow-sm">
+       <AccordionItem value="item-0" className="border-none px-5 md:px-6">
+         <AccordionTrigger
+           icon={<Icon />}
+           className="md:py-5 md:text-md [&[data-state=open]>svg]:rotate-45"
+         >
+           Question text here
+         </AccordionTrigger>
+         <AccordionContent className="md:pb-6">
+           Answer text here
+         </AccordionContent>
+       </AccordionItem>
+     </div>
+   </Accordion>
+   ```
+
+3. **Check existing implementations**: When encountering issues with a component, compare it with working versions of the same component from other pages.
+
+### Connection Refused Errors
+
+If you encounter "Connection refused" errors when accessing pages:
+
+1. **Kill all Node.js processes**: Use `taskkill /F /FI "IMAGENAME eq node.exe"` to ensure no conflicting processes are running
+2. **Start the development server from the correct directory**: Always run `yarn dev` from the project root directory
+3. **Check port configuration**: Verify the port settings in netlify.toml and next.config.js
+4. **Verify route files**: Ensure the route file exists in the correct location with the proper import paths
+
+### Import Path Issues
+
+When creating new pages or components:
+
+1. **Verify relative paths**: Ensure import paths correctly reflect the actual project structure
+2. **Check for path inconsistencies**: The project may have inconsistencies between the documented structure and actual structure
+3. **Use absolute imports when possible**: Configure path aliases in tsconfig.json to avoid complex relative paths
+4. **Test imports incrementally**: When troubleshooting, import components one by one to identify problematic imports
+
+### Project Structure Inconsistencies
+
+Be aware of potential inconsistencies between documentation and actual project structure:
+
+1. **src/app directory location**: The documentation may specify that src/app should be inside Relume-root, but it might actually be at the project root level
+2. **Import path resolution**: Adjust import paths based on the actual project structure, not just the documented structure
+3. **Document inconsistencies**: When you find inconsistencies, document them in the daily logs for future reference
+
+## 12. Case Studies
+
+### 5000-Series Page Implementation
+
+The 5000-Series page implementation provides a valuable case study in troubleshooting and documentation:
+
+1. **Issue Identification**: The Faq5.jsx component was missing necessary imports for Accordion components
+2. **Comparative Analysis**: By comparing with working versions of the same component from other series pages, the issue was identified
+3. **Solution Implementation**: The component was updated to include the missing imports and correct component structure
+4. **Comprehensive Documentation**: The entire process was documented, including:
+   - Daily troubleshooting log
+   - Page documentation
+   - Updates to the webpage progress tracker
+   - Updates to the project tasks and priority list
+
+This case demonstrates the importance of:
+- Checking existing implementations before creating new components
+- Comparing problematic components with working versions
+- Following established patterns for component structure
+- Documenting all issues and solutions for future reference
+
+Last Updated: May 13, 2025 (Added Common Troubleshooting Scenarios and Case Studies sections, re-enabled Sequential Thinking MCP Server)
