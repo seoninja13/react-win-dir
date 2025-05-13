@@ -33,6 +33,7 @@ This directory contains comprehensive documentation for the Windows Doors CA web
 | 2023-11-15 | Daily log for November 15, 2023 | [daily-logs/2023-11-15.md](daily-logs/2023-11-15.md) |
 | 2023-11-16 | Daily log for November 16, 2023 | [daily-logs/2023-11-16.md](daily-logs/2023-11-16.md) |
 | 2025-05-13 | 5000-Series Troubleshooting | [daily-logs/2025-05-13-5000-series-troubleshooting.md](daily-logs/2025-05-13-5000-series-troubleshooting.md) |
+| 2025-05-13 | IDE Instructions Update | [daily-logs/2025-05-13-ide-instructions-update.md](daily-logs/2025-05-13-ide-instructions-update.md) |
 
 ### Implementation Guides
 
@@ -81,4 +82,4 @@ All documentation follows these standards:
 
 ## Last Updated
 
-2025-05-13 (Added 5000-Series page documentation)
+2025-05-13 (Added IDE Instructions Update documentation)
