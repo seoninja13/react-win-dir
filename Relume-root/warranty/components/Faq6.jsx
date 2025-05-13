@@ -6,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
   Button,
-  Card,
 } from "@relume_io/relume-ui";
 import React from "react";
 import { RxPlus } from "react-icons/rx";
@@ -33,7 +32,7 @@ export function Faq6() {
           type="multiple"
           className="grid items-start justify-stretch gap-4"
         >
-          <Card>
+          <div className="border rounded-lg shadow-sm">
             <AccordionItem value="item-0" className="border-none px-5 md:px-6">
               <AccordionTrigger
                 icon={
@@ -50,8 +49,8 @@ export function Faq6() {
                 we will repair or replace your windows or doors at no cost.
               </AccordionContent>
             </AccordionItem>
-          </Card>
-          <Card>
+          </div>
+          <div className="border rounded-lg shadow-sm">
             <AccordionItem value="item-1" className="border-none px-5 md:px-6">
               <AccordionTrigger
                 icon={
@@ -68,8 +67,8 @@ export function Faq6() {
                 great selling point!
               </AccordionContent>
             </AccordionItem>
-          </Card>
-          <Card>
+          </div>
+          <div className="border rounded-lg shadow-sm">
             <AccordionItem value="item-2" className="border-none px-5 md:px-6">
               <AccordionTrigger
                 icon={
@@ -86,8 +85,8 @@ export function Faq6() {
                 mind.
               </AccordionContent>
             </AccordionItem>
-          </Card>
-          <Card>
+          </div>
+          <div className="border rounded-lg shadow-sm">
             <AccordionItem value="item-3" className="border-none px-5 md:px-6">
               <AccordionTrigger
                 icon={
@@ -104,8 +103,8 @@ export function Faq6() {
                 documentation for complete details.
               </AccordionContent>
             </AccordionItem>
-          </Card>
-          <Card>
+          </div>
+          <div className="border rounded-lg shadow-sm">
             <AccordionItem value="item-4" className="border-none px-5 md:px-6">
               <AccordionTrigger
                 icon={
@@ -122,7 +121,7 @@ export function Faq6() {
                 this as easy as possible for you.
               </AccordionContent>
             </AccordionItem>
-          </Card>
+          </div>
         </Accordion>
       </div>
     </section>

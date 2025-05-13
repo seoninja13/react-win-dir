@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Card,
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -42,7 +41,7 @@ const useCarousel = () => {
 };
 
 export function Testimonial19() {
-  const useCarousel = useCarousel();
+  const carousel = useCarousel();
   return (
     <section
       id="relume"
@@ -58,14 +57,14 @@ export function Testimonial19() {
           </p>
         </div>
         <Carousel
-          setApi={useCarousel.setApi}
+          setApi={carousel.setApi}
           opts={{ loop: true, align: "start" }}
           className="overflow-hidden"
         >
           <div className="relative">
             <CarouselContent className="ml-0 md:mx-3.5">
               <CarouselItem className="pl-0 md:basis-1/2 md:px-4 lg:basis-1/3">
-                <Card className="flex w-full flex-col items-start justify-between p-6 md:p-8">
+                <div className="flex w-full flex-col items-start justify-between rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:p-8">
                   <div className="mb-5 flex md:mb-6">
                     <BiSolidStar className="size-6" />
                     <BiSolidStar className="size-6" />
@@ -89,10 +88,10 @@ export function Testimonial19() {
                       <p>Homeowner, Sacramento</p>
                     </div>
                   </div>
-                </Card>
+                </div>
               </CarouselItem>
               <CarouselItem className="pl-0 md:basis-1/2 md:px-4 lg:basis-1/3">
-                <Card className="flex w-full flex-col items-start justify-between p-6 md:p-8">
+                <div className="flex w-full flex-col items-start justify-between rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:p-8">
                   <div className="mb-5 flex md:mb-6">
                     <BiSolidStar className="size-6" />
                     <BiSolidStar className="size-6" />
@@ -116,10 +115,10 @@ export function Testimonial19() {
                       <p>Homeowner, Sacramento</p>
                     </div>
                   </div>
-                </Card>
+                </div>
               </CarouselItem>
               <CarouselItem className="pl-0 md:basis-1/2 md:px-4 lg:basis-1/3">
-                <Card className="flex w-full flex-col items-start justify-between p-6 md:p-8">
+                <div className="flex w-full flex-col items-start justify-between rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:p-8">
                   <div className="mb-5 flex md:mb-6">
                     <BiSolidStar className="size-6" />
                     <BiSolidStar className="size-6" />
@@ -143,10 +142,10 @@ export function Testimonial19() {
                       <p>Homeowner, Sacramento</p>
                     </div>
                   </div>
-                </Card>
+                </div>
               </CarouselItem>
               <CarouselItem className="pl-0 md:basis-1/2 md:px-4 lg:basis-1/3">
-                <Card className="flex w-full flex-col items-start justify-between p-6 md:p-8">
+                <div className="flex w-full flex-col items-start justify-between rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:p-8">
                   <div className="mb-5 flex md:mb-6">
                     <BiSolidStar className="size-6" />
                     <BiSolidStar className="size-6" />
@@ -170,10 +169,10 @@ export function Testimonial19() {
                       <p>Homeowner, Sacramento</p>
                     </div>
                   </div>
-                </Card>
+                </div>
               </CarouselItem>
               <CarouselItem className="pl-0 md:basis-1/2 md:px-4 lg:basis-1/3">
-                <Card className="flex w-full flex-col items-start justify-between p-6 md:p-8">
+                <div className="flex w-full flex-col items-start justify-between rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:p-8">
                   <div className="mb-5 flex md:mb-6">
                     <BiSolidStar className="size-6" />
                     <BiSolidStar className="size-6" />
@@ -197,10 +196,10 @@ export function Testimonial19() {
                       <p>Homeowner, Sacramento</p>
                     </div>
                   </div>
-                </Card>
+                </div>
               </CarouselItem>
               <CarouselItem className="pl-0 md:basis-1/2 md:px-4 lg:basis-1/3">
-                <Card className="flex w-full flex-col items-start justify-between p-6 md:p-8">
+                <div className="flex w-full flex-col items-start justify-between rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:p-8">
                   <div className="mb-5 flex md:mb-6">
                     <BiSolidStar className="size-6" />
                     <BiSolidStar className="size-6" />
@@ -224,7 +223,7 @@ export function Testimonial19() {
                       <p>Homeowner, Sacramento</p>
                     </div>
                   </div>
-                </Card>
+                </div>
               </CarouselItem>
             </CarouselContent>
             <CarouselPrevious className="hidden md:flex md:size-12 lg:size-14" />
@@ -232,28 +231,28 @@ export function Testimonial19() {
           </div>
           <div className="mt-[30px] flex items-center justify-center md:mt-[46px]">
             <button
-              onClick={useCarousel.handleDotClick(0)}
-              className={useCarousel.dotClassName(0)}
+              onClick={carousel.handleDotClick(0)}
+              className={carousel.dotClassName(0)}
             />
             <button
-              onClick={useCarousel.handleDotClick(1)}
-              className={useCarousel.dotClassName(1)}
+              onClick={carousel.handleDotClick(1)}
+              className={carousel.dotClassName(1)}
             />
             <button
-              onClick={useCarousel.handleDotClick(2)}
-              className={useCarousel.dotClassName(2)}
+              onClick={carousel.handleDotClick(2)}
+              className={carousel.dotClassName(2)}
             />
             <button
-              onClick={useCarousel.handleDotClick(3)}
-              className={useCarousel.dotClassName(3)}
+              onClick={carousel.handleDotClick(3)}
+              className={carousel.dotClassName(3)}
             />
             <button
-              onClick={useCarousel.handleDotClick(4)}
-              className={useCarousel.dotClassName(4)}
+              onClick={carousel.handleDotClick(4)}
+              className={carousel.dotClassName(4)}
             />
             <button
-              onClick={useCarousel.handleDotClick(5)}
-              className={useCarousel.dotClassName(5)}
+              onClick={carousel.handleDotClick(5)}
+              className={carousel.dotClassName(5)}
             />
           </div>
         </Carousel>
