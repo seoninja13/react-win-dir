@@ -487,6 +487,32 @@ For our Windows Doors CA website implementation, we will be using Next.js with t
 - **Form Handling**: React Hook Form with validation
 - **API Integrations**: Google Maps API, Form submission APIs
 - **Deployment**: Netlify
+- **Database**: Supabase for all data storage and management
+
+### Routing Strategy
+
+As of May 13, 2025, we have made the decision to exclusively use the **Next.js App Router** for all new page implementations and future development. This decision replaces the previous mixed approach that utilized both the Pages Router and App Router.
+
+The App Router provides several advantages:
+- Server Components for improved performance
+- Nested Layouts for consistent UI across routes
+- Built-in loading states and error handling
+- Improved SEO capabilities with the Metadata API
+- More intuitive directory-based routing
+
+All pages will follow the App Router directory structure:
+```
+src/
+  app/
+    [route]/
+      page.tsx      # The page component
+      layout.tsx    # (Optional) Layout for this route
+    [nested-route]/
+      [dynamic-param]/
+        page.tsx    # Dynamic route page
+```
+
+For more details on our routing strategy, see the [Routing Strategy Documentation](./routing-strategy.md).
 
 ### Adaptation Considerations
 
@@ -504,6 +530,6 @@ For our Windows Doors CA website implementation, we will be using Next.js with t
 
 7. **SEO Optimization**: Implement Next.js metadata API to ensure all pages have appropriate meta tags, titles, and descriptions.
 
-8. **Content Management**: While not using WordPress, ensure the content structure allows for easy updates and maintenance.
+8. **Content Management**: While not using WordPress, ensure the content structure allows for easy updates and maintenance through Supabase.
 
-Last Updated: May 10, 2025
+Last Updated: May 13, 2025 (Updated routing strategy to exclusively use App Router)

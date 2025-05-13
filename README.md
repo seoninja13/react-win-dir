@@ -6,7 +6,8 @@ This repository contains the code for the Window World LA website, a modern webs
 
 **Current Status**: Development in progress
 **Last Updated**: May 13, 2025
-**Current Version**: 0.1.1
+**Current Version**: 0.2.0
+**Routing Strategy**: Next.js App Router (exclusively)
 
 ## Documentation Structure
 
@@ -26,10 +27,13 @@ All detailed documentation is organized in the [Documentation Directory](./docs/
 
 ### Key Documents
 
+- [Architecture Documentation](./docs/architecture/architecture-documentation.md) - Comprehensive analysis and implementation plan
+- [Routing Strategy](./docs/architecture/routing-strategy.md) - Documentation of the App Router routing strategy
 - [Working Directory](./docs/architecture/working-directory.md) - Documentation of the working directory structure
 - [Header Components](./docs/components/header-components.md) - Documentation for Header47 and Header15 components
 - [Daily Development Logs](./docs/daily-logs/) - Daily development updates
-- [Latest Daily Log (November 16, 2023)](./docs/daily-logs/2023-11-16.md) - Latest development updates
+- [Latest Routing Strategy Decision](./docs/daily-logs/2025-05-13-routing-strategy-decision.md) - Documentation of the decision to standardize on App Router
+- [Webpage Progress Tracker](./docs/tracking/webpage-progress-tracker.md) - Comprehensive tracker for all webpages in the project
 - [Export Documentation](./Export%20Documentation/export-documentation.md) - Comprehensive list of documentation files for export
 - [Sample Project Structure](./Sample%20Project%20Structure-DO-NOT-EDIT/) - Reference project structure from previous projects
 
@@ -63,16 +67,20 @@ All detailed documentation is organized in the [Documentation Directory](./docs/
 ## Tech Stack
 
 - **Frontend**:
-  - Next.js 15.3.2 with App Router
+  - Next.js 15.3.2 with App Router (exclusively)
   - React 18.2.0
   - TypeScript
   - Tailwind CSS
-  - Relume UI components
+  - Relume UI components (@relume_io/relume-ui and @relume_io/relume-tailwind)
   - Framer Motion for animations
   - React Icons for icons
 
 - **API Integrations**:
   - Unsplash API for images
+  - Google Maps API for location maps
+
+- **Database**:
+  - Supabase for all data storage and management
 
 - **Deployment**:
   - Netlify for hosting and deployment

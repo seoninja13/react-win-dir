@@ -28,6 +28,7 @@ This project follows a pyramid documentation structure with the main [README.md]
 The architecture documentation provides detailed information about the system design, component interactions, and technical decisions.
 
 - [Architecture Documentation](./architecture/architecture-documentation.md) - Comprehensive analysis and implementation plan for the Windows Doors CA website
+- [Routing Strategy](./architecture/routing-strategy.md) - Documentation of the App Router routing strategy
 - [Component Structure](./architecture/component-structure.md) - Overview of the component structure
 - [Page Structure](./architecture/page-structure.md) - Overview of the page structure
 - [Relume Wireframe Conversion](./architecture/relume-wireframe-conversion.md) - Documentation of the Relume wireframe files conversion
@@ -132,4 +133,4 @@ When contributing to the documentation, follow these guidelines:
 - [Main README](../README.md) - Main project documentation and entry point
 - [Documentation Map](./documentation-map.md) - Comprehensive map of all documentation
 
-Last Updated: May 13, 2025 (Added 5000-Series Vinyl Siding page documentation)
+Last Updated: May 13, 2025 (Added Routing Strategy documentation and updated to reflect App Router standardization)

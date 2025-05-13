@@ -88,6 +88,7 @@ To ensure consistency in tracking, the following status definitions are used:
 |-----------|----------|----------|------------------------|------------------------|----------------|------------------------|-----------------|----------------|--------|-------------|----------|-------|
 | Home | T1 | / | Complete | Complete | Complete | Verified | Complete | Verified | None | John Doe | 2025-05-15 | Main landing page |
 | Windows | T2 | /windows | Complete | In Progress | Complete | In Progress | Complete | In Progress | Card component issue fixed | Jane Smith | 2025-05-20 | Category page for windows |
+| Warranty | T4 | /warranty | Complete | In Progress | Complete | In Progress | Complete | Verified | Card component import error fixed | Jane Smith | 2025-05-13 | Warranty information page |
 | Doors | T2 | /doors | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | Jane Smith | 2025-05-20 | Category page for doors |
 | Vinyl Siding | T2 | /vinyl-siding | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-20 | Category page for vinyl siding |
 | Roofing | T2 | /roofing | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | Jane Smith | 2025-05-20 | Category page for roofing |
@@ -97,7 +98,7 @@ To ensure consistency in tracking, the following status definitions are used:
 | 2000-Series | T3 | /2000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Card component issue fixed | Jane Smith | 2025-05-18 | Product page for 2000-series vinyl siding |
 | 3000-Series | T3 | /3000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Directory structure created manually | Jane Smith | 2025-05-18 | Premium product page for 3000-series vinyl siding |
 | 4000-Series | T3 | /4000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Proactively avoided Card component issue | Jane Smith | 2025-05-18 | Luxury product page for 4000-series vinyl siding |
-| 5000-Series | T3 | /5000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Fixed Accordion component imports in Faq5.jsx | Jane Smith | 2025-05-18 | Flagship product page for 5000-series vinyl siding |
+| 5000-Series | T3 | /5000-series | Complete | In Progress | Complete | In Progress | Complete | Issues Found | Navbar and header styling issues; Fixed Accordion component imports in Faq5.jsx | Jane Smith | 2025-05-18 | Flagship product page for 5000-series vinyl siding |
 | Entry | T3 | /entry | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-18 | Product page for entry doors |
 | Patio | T3 | /patio | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-18 | Product page for patio doors |
 | Hinged-Patio-Doors | T3 | /hinged-patio-doors | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-18 | Product page for hinged patio doors |
@@ -115,6 +116,7 @@ To ensure consistency in tracking, the following status definitions are used:
 | Wood-Windows | T3 | /wood-windows | Complete | In Progress | Complete | In Progress | Complete | In Progress | Fixed Button and Card components with custom implementations | John Doe | 2025-05-18 | Product page for wood windows |
 | Installation | T4 | /installation | Complete | In Progress | Complete | In Progress | Complete | In Progress | Card component issue fixed | Jane Smith | 2025-05-22 | Installation information page |
 | Financing | T4 | /financing | Complete | In Progress | Complete | In Progress | Complete | In Progress | Card component issue fixed | John Doe | 2025-05-22 | Financing information page |
+| Warranty | T4 | /warranty | Complete | In Progress | Complete | In Progress | Complete | Verified | Card component import error fixed | John Doe | 2025-05-13 | Warranty information page |
 | About Us | T4 | /about-us | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | Jane Smith | 2025-05-25 | Company information page |
 | Blog | T5 | /blog | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-06-01 | Blog listing page |
 | Blog Post | T6 | /blog/post | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | Jane Smith | 2025-06-05 | Individual blog post template |
@@ -207,6 +209,7 @@ For more detailed information about specific pages, please refer to the individu
 - [Shutters Page Documentation](../pages/windows/shutters-page-documentation.md)
 - [Wood Windows Page Documentation](../pages/windows/wood-windows-page-documentation.md)
 - [Windows Page Documentation](../pages/windows/windows-page-documentation.md)
+- [Warranty Page Documentation](../pages/warranty-page-documentation.md)
 
 ## Related Documentation
 
@@ -216,4 +219,4 @@ For more detailed information about specific pages, please refer to the individu
 - [Testing Strategy Documentation](../testing/testing-strategy.md)
 - [Development Workflow Documentation](../processes/development-workflow.md)
 
-Last Updated: May 13, 2025 (Added 5000-Series Vinyl Siding page)
+Last Updated: May 13, 2025 (Updated routing strategy to use App Router exclusively, updated URL paths and implementation status)

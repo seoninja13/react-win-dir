@@ -4,6 +4,8 @@ This directory contains documentation related to the architecture of the Window 
 
 ## Contents
 
+- [Architecture Documentation](./architecture-documentation.md) - Comprehensive analysis and implementation plan
+- [Routing Strategy](./routing-strategy.md) - Documentation of the App Router routing strategy
 - [Component Structure](./component-structure.md) - Overview of the component structure
 - [Page Structure](./page-structure.md) - Overview of the page structure
 - [Relume Wireframe Conversion](./relume-wireframe-conversion.md) - Documentation of the Relume wireframe files conversion
@@ -40,15 +42,16 @@ The Window World LA website is built using Next.js with the App Router, React, a
 
 ## Key Architectural Decisions
 
-1. **Next.js App Router**: We use Next.js App Router for routing and server-side rendering.
+1. **Next.js App Router**: We exclusively use Next.js App Router for routing and server-side rendering. As of May 13, 2025, we have standardized on the App Router approach for all pages, moving away from the mixed routing approach that previously used both the Pages Router and App Router.
 2. **Tailwind CSS**: We use Tailwind CSS for styling.
 3. **Relume UI**: We use Relume UI components for UI elements.
 4. **Unsplash API**: We use Unsplash API for images.
 5. **Netlify**: We use Netlify for deployment and hosting.
+6. **Supabase**: We use Supabase for all data storage and management.
 
 ## Related Documentation
 
 - [Features Documentation](../features/index.md)
 - [Integrations Documentation](../integrations/index.md)
 
-Last Updated: May 10, 2025
+Last Updated: May 13, 2025 (Updated to reflect App Router standardization)

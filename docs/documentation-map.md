@@ -21,6 +21,7 @@ window-world-la/
 │   │   ├── page-structure.md                # Page structure documentation
 │   │   ├── relume-wireframe-conversion.md   # Relume wireframe conversion documentation
 │   │   ├── root-layout.md                   # Root layout documentation
+│   │   ├── routing-strategy.md              # App Router routing strategy documentation
 │   │   ├── seo-structure.md                 # SEO structure documentation
 │   │   ├── technical-implementation-plan.md # Technical implementation plan
 │   │   ├── utility-functions.md             # Utility functions documentation
@@ -103,6 +104,7 @@ window-world-la/
 
 - [docs/architecture/index.md](./architecture/index.md) - Architecture documentation index
 - [docs/architecture/architecture-documentation.md](./architecture/architecture-documentation.md) - Comprehensive architecture documentation
+- [docs/architecture/routing-strategy.md](./architecture/routing-strategy.md) - App Router routing strategy documentation
 - [docs/architecture/component-structure.md](./architecture/component-structure.md) - Component structure documentation
 - [docs/architecture/page-structure.md](./architecture/page-structure.md) - Page structure documentation
 - [docs/architecture/relume-wireframe-conversion.md](./architecture/relume-wireframe-conversion.md) - Relume wireframe conversion documentation
@@ -173,6 +175,7 @@ window-world-la/
 
 - [docs/daily-logs/2025-05-09.md](./daily-logs/2025-05-09.md) - Daily log for May 9, 2025
 - [docs/daily-logs/2025-05-10.md](./daily-logs/2025-05-10.md) - Daily log for May 10, 2025
+- [docs/daily-logs/2025-05-13-routing-strategy-decision.md](./daily-logs/2025-05-13-routing-strategy-decision.md) - Daily log for routing strategy decision
 
 ## Documentation Topics
 
@@ -238,6 +241,7 @@ window-world-la/
 - [docs/daily-logs/2025-05-09.md](./daily-logs/2025-05-09.md) - Daily log for May 9, 2025
 - [docs/daily-logs/2025-05-10.md](./daily-logs/2025-05-10.md) - Daily log for May 10, 2025
 - [docs/daily-logs/2025-05-11-garden-page-implementation.md](./daily-logs/2025-05-11-garden-page-implementation.md) - Daily log for Garden page implementation
+- [docs/daily-logs/2025-05-13-routing-strategy-decision.md](./daily-logs/2025-05-13-routing-strategy-decision.md) - Daily log for routing strategy decision
 
 ## Documentation Gaps
 
@@ -323,4 +327,4 @@ The following documentation is planned for future development:
 - [Development Workflow](./processes/development-workflow.md)
 - [Documentation Standards](./processes/documentation-standards.md)
 
-Last Updated: May 11, 2025 (Added documentation for Doors, Vinyl Siding, Roofing, and Financing pages)
+Last Updated: May 13, 2025 (Added Routing Strategy documentation and updated to reflect App Router standardization)
