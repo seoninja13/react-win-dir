@@ -195,6 +195,7 @@ window-world-la/
 - [docs/architecture/index.md](./architecture/index.md) - Architecture documentation index
 - [docs/architecture/component-structure.md](./architecture/component-structure.md) - Component structure documentation
 - [docs/architecture/page-structure.md](./architecture/page-structure.md) - Page structure documentation
+- [docs/architecture/project-structure.md](./architecture/project-structure.md) - Project structure documentation (Priority 1)
 
 ### Components
 
@@ -336,4 +337,4 @@ The following documentation is planned for future development:
 - [Development Workflow](./processes/development-workflow.md)
 - [Documentation Standards](./processes/documentation-standards.md)
 
-Last Updated: May 15, 2025 (Added Project Structure Consolidation Implementation)
+Last Updated: May 15, 2025 (Added Project Structure documentation to architecture)
