@@ -176,6 +176,7 @@ window-world-la/
 - [docs/daily-logs/2025-05-09.md](./daily-logs/2025-05-09.md) - Daily log for May 9, 2025
 - [docs/daily-logs/2025-05-10.md](./daily-logs/2025-05-10.md) - Daily log for May 10, 2025
 - [docs/daily-logs/2025-05-13-routing-strategy-decision.md](./daily-logs/2025-05-13-routing-strategy-decision.md) - Daily log for routing strategy decision
+- [docs/daily-logs/2025-05-14-app-router-standardization-plan.md](./daily-logs/2025-05-14-app-router-standardization-plan.md) - Daily log for App Router standardization plan
 
 ## Documentation Topics
 

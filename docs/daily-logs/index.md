@@ -20,6 +20,7 @@ This directory contains daily development logs for the Window World LA website p
 - [May 11, 2025 - Vinyl Siding Page Implementation](./2025-05-11-vinyl-siding-page-implementation.md) - Vinyl Siding Page implementation and testing
 - [May 11, 2025 - Roofing Page Implementation](./2025-05-11-roofing-page-implementation.md) - Roofing Page implementation and testing
 - [May 11, 2025 - Financing Page Implementation](./2025-05-11-financing-page-implementation.md) - Financing Page implementation and testing
+- [May 14, 2025 - Project Structure Consolidation](./2025-05-14-project-structure-consolidation.md) - Project structure consolidation implementation
 
 ## Log Format
 
@@ -50,4 +51,4 @@ To create a new daily log, follow these steps:
 - [Documentation Standards](../processes/documentation-standards.md) - Standards for documentation
 - [Development Workflow](../processes/development-workflow.md) - How to contribute to the project
 
-Last Updated: May 11, 2025 (Added Financing Page Implementation log)
+Last Updated: May 14, 2025 (Added Project Structure Consolidation log)

@@ -135,4 +135,4 @@ When contributing to the documentation, follow these guidelines:
 - [Main README](../README.md) - Main project documentation and entry point
 - [Documentation Map](./documentation-map.md) - Comprehensive map of all documentation
 
-Last Updated: May 14, 2025 (Added Project Structure Consolidation documentation)
+Last Updated: May 14, 2025 (Added App Router Standardization Plan documentation)

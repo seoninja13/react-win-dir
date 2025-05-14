@@ -1,0 +1,5 @@
+[33m1fbf7443[m[33m ([m[1;36mHEAD -> [m[1;32m05-13-InegraterelumerestOfpages[m[33m, [m[1;31morigin/backup/project-structure-consolidation[m[33m, [m[1;31morigin/05-13-InegraterelumerestOfpages[m[33m, [m[1;32mfeature/project-structure-consolidation[m[33m, [m[1;32mbackup/project-structure-consolidation[m[33m, [m[1;32m05-13-ConvertPagesToAppRouter[m[33m)[m Fix layout issues and create project structure consolidation documentation.
+[33mbac9a18f[m[33m ([m[1;31morigin/05-11-InetgraterelumeAllPages[m[33m, [m[1;32m05-11-InetgraterelumeAllPages[m[33m)[m Add test and experimental files
+[33m4b753bab[m Add warranty component variations
+[33mfa0c1c8a[m Add SimpleNavbar component for 5000-series
+[33m9c331846[m Add Relume-root/src directory with App Router implementation
