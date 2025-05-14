@@ -269,6 +269,7 @@ The following documentation is currently missing or incomplete:
    - ✓ Relume Tailwind configuration guide
    - ✓ Relume troubleshooting guide
    - ✓ Relume Home page integration plan
+   - ✓ Project structure guide
 
 3. **Planning Documentation**
    - Project roadmap
@@ -297,6 +298,7 @@ The following documentation is planned for future development:
    - ✓ Created Relume Tailwind configuration guide
    - ✓ Created Relume troubleshooting guide
    - ✓ Created Relume Home page integration plan
+   - ✓ Created Project structure guide
 
 3. **Planning Documentation**
    - Create project roadmap
@@ -321,6 +323,7 @@ The following documentation is planned for future development:
 - [Relume Tailwind Configuration Guide](./guides/relume-tailwind-configuration-guide.md)
 - [Relume Troubleshooting Guide](./guides/relume-troubleshooting-guide.md)
 - [Relume Home Page Integration Plan](./guides/relume-home-page-integration-plan.md)
+- [Project Structure Guide](./guides/project-structure-guide.md)
 - [Home Page Documentation](./pages/home/home-page-documentation.md)
 - [Garden Page Documentation](./pages/garden/garden-page-documentation.md)
 - [Windows Page Documentation](./pages/windows/windows-page-documentation.md)
