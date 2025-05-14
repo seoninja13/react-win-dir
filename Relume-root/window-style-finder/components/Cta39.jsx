@@ -1,13 +1,13 @@
 "use client";
 
-import { Button, Card } from "@relume_io/relume-ui";
+import { Button } from "@relume_io/relume-ui";
 import React from "react";
 
 export function Cta39() {
   return (
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-        <Card className="grid auto-cols-fr grid-cols-1 lg:grid-cols-2">
+        <div className="grid auto-cols-fr grid-cols-1 lg:grid-cols-2 border rounded-lg shadow-md">
           <div className="flex flex-col justify-center p-8 md:p-12">
             <div>
               <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
@@ -34,7 +34,7 @@ export function Cta39() {
               alt="Relume placeholder image"
             />
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   );

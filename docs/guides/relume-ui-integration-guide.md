@@ -224,6 +224,40 @@ Relume-root/
 
 **Solution**: Add the 'use client' directive to the top of your component files when using Relume components in client components.
 
+#### 5. Card Component Import Error
+
+**Issue**: Importing the `Card` component from `@relume_io/relume-ui` causes a build error because the component doesn't exist in the library.
+
+**Error Message**:
+```
+Attempted import error: 'Card' is not exported from '@relume_io/relume-ui' (imported as 'Card').
+```
+
+**Solution**: Replace the `Card` component with a regular `div` element with similar styling using Tailwind CSS classes:
+
+```jsx
+// Before
+import { Button, Card } from "@relume_io/relume-ui";
+// ...
+<Card className="...">
+  {/* Content */}
+</Card>
+
+// After
+import { Button } from "@relume_io/relume-ui";
+// ...
+<div className="border rounded-lg shadow-md ...">
+  {/* Content */}
+</div>
+```
+
+This approach has been used successfully in multiple components across the project, including:
+- Window Style Finder page
+- Warranty page
+- Vinyl Siding series pages
+- Financing page
+- Wood Windows page
+
 ## Resources
 
 - [Official Relume React Documentation](https://react-docs.relume.io/)
@@ -232,4 +266,4 @@ Relume-root/
 - [Relume Component Library](https://www.relume.io/react/components)
 - [Relume Wireframe Conversion Documentation](../architecture/relume-wireframe-conversion.md)
 
-Last Updated: May 10, 2025
+Last Updated: May 14, 2025 (Added Card component troubleshooting information)

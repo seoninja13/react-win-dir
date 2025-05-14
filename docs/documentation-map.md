@@ -157,6 +157,8 @@ window-world-la/
 
 - [docs/processes/development-workflow.md](./processes/development-workflow.md) - Development workflow documentation
 - [docs/processes/documentation-standards.md](./processes/documentation-standards.md) - Documentation standards
+- [docs/processes/app-router-standardization-plan.md](./processes/app-router-standardization-plan.md) - App Router standardization plan
+- [docs/processes/project-structure-consolidation-plan.md](./processes/project-structure-consolidation-plan.md) - Project structure consolidation plan (Priority 1)
 
 ### Testing Documentation
 
@@ -177,6 +179,8 @@ window-world-la/
 - [docs/daily-logs/2025-05-10.md](./daily-logs/2025-05-10.md) - Daily log for May 10, 2025
 - [docs/daily-logs/2025-05-13-routing-strategy-decision.md](./daily-logs/2025-05-13-routing-strategy-decision.md) - Daily log for routing strategy decision
 - [docs/daily-logs/2025-05-14-app-router-standardization-plan.md](./daily-logs/2025-05-14-app-router-standardization-plan.md) - Daily log for App Router standardization plan
+- [docs/daily-logs/2025-05-14-window-style-finder-fix.md](./daily-logs/2025-05-14-window-style-finder-fix.md) - Daily log for Window Style Finder page fix
+- [docs/daily-logs/2025-05-14-project-structure-consolidation-plan.md](./daily-logs/2025-05-14-project-structure-consolidation-plan.md) - Daily log for Project Structure Consolidation Plan
 
 ## Documentation Topics
 
@@ -328,4 +332,4 @@ The following documentation is planned for future development:
 - [Development Workflow](./processes/development-workflow.md)
 - [Documentation Standards](./processes/documentation-standards.md)
 
-Last Updated: May 13, 2025 (Added Routing Strategy documentation and updated to reflect App Router standardization)
+Last Updated: May 14, 2025 (Added Project Structure Consolidation Plan)
