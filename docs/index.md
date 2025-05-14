@@ -11,6 +11,7 @@ This project follows a pyramid documentation structure with the main [README.md]
 - [Architecture](./architecture/index.md) - System design and architecture documentation
 - [Features](./features/index.md) - Feature implementation documentation
 - [Guides](./guides/index.md) - Developer guides and tutorials
+- [Image Generation](./Image%20generation/index.md) - Documentation for image generation using Google Cloud's Generative AI
 - [Integrations](./integrations/index.md) - Integration documentation for external services
 - [Pages](./pages/index.md) - Documentation for implemented pages
 - [Planning](./planning/index.md) - Planning documentation and implementation plans
@@ -31,6 +32,7 @@ The architecture documentation provides detailed information about the system de
 - [Routing Strategy](./architecture/routing-strategy.md) - Documentation of the App Router routing strategy
 - [Component Structure](./architecture/component-structure.md) - Overview of the component structure
 - [Page Structure](./architecture/page-structure.md) - Overview of the page structure
+- [Database Schema](./architecture/database-schema.md) - Database schema and structure
 - [Relume Wireframe Conversion](./architecture/relume-wireframe-conversion.md) - Documentation of the Relume wireframe files conversion
 - [Root Layout](./architecture/root-layout.md) - Documentation for the root layout component
 - [API Routes](./architecture/api-routes.md) - Documentation for the API routes
@@ -70,6 +72,11 @@ The guides documentation provides step-by-step instructions for developers worki
 - [Relume Troubleshooting Guide](./guides/relume-troubleshooting-guide.md) - Solutions to common issues with Relume UI
 - [Relume Home Page Integration Plan](./guides/relume-home-page-integration-plan.md) - Comprehensive plan for implementing the Home page with Relume UI components
 
+#### Integration Guides
+
+- [Google Generative AI Guide](./guides/google-generative-ai-guide.md) - Step-by-step guide for integrating Google Generative AI for image generation
+- [Vertex AI Image Analysis Guide](./guides/vertex-ai-image-analysis-guide.md) - Comprehensive guide for using Vertex AI to analyze images
+
 ### Pages
 
 The pages documentation provides detailed information about each implemented page in the Windows Doors CA website.
@@ -78,14 +85,28 @@ The pages documentation provides detailed information about each implemented pag
 - [Home Page](./pages/home/home-page-documentation.md) - Documentation for the Home page
 - [Garden Page](./pages/garden/garden-page-documentation.md) - Documentation for the Garden page
 
+### Image Generation
+
+The image generation documentation provides detailed information about generating images for the Windows Doors CA website using Google Cloud's Generative AI.
+
+- [Image Generation Implementation Plan](./Image%20generation/image-generation-implementation-plan.md) - Comprehensive plan for generating images
+- [CSV Processing Plan](./Image%20generation/csv-processing-plan.md) - Plan for processing the CSV file with Window World LA data
+- [URL Mapping Reference](./Image%20generation/url-mapping-reference.md) - Detailed mapping between Window World LA URLs and Windows Doors CA URLs
+- [Prompt Engineering Guide](./Image%20generation/prompt-engineering-guide.md) - Guide for creating effective prompts for image generation
+- [Image Generation Process Documentation](./Image%20generation/image-generation-process.md) - Detailed documentation of the image generation process
+- [Image Quality Standards](./Image%20generation/image-quality-standards.md) - Standards for image quality and acceptance criteria
+
 ### Integrations
 
 The integrations documentation provides information about integrating with external services.
 
 - [Unsplash Integration](./integrations/unsplash.md) - Unsplash API integration
 - [Netlify Integration](./integrations/netlify.md) - Netlify deployment and hosting
+- [Supabase Integration](./integrations/supabase.md) - Supabase database and backend services
 - [Google Maps Integration](./integrations/google-maps.md) - Google Maps API integration
 - [Form Submission Integration](./integrations/form-submission.md) - Form submission integration
+- [Vertex AI Integration](./integrations/vertex-ai.md) - Google Vertex AI integration for image generation and analysis
+- [Google Generative AI Integration](./integrations/google-generative-ai.md) - Google Generative AI integration
 
 ### Processes
 
@@ -135,4 +156,4 @@ When contributing to the documentation, follow these guidelines:
 - [Main README](../README.md) - Main project documentation and entry point
 - [Documentation Map](./documentation-map.md) - Comprehensive map of all documentation
 
-Last Updated: May 14, 2025 (Added App Router Standardization Plan documentation)
+Last Updated: May 14, 2025 (Added Image Generation documentation)

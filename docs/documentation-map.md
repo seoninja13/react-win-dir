@@ -17,6 +17,7 @@ window-world-la/
 │   │   ├── architecture-documentation.md    # Comprehensive architecture documentation
 │   │   ├── component-structure.md           # Component structure documentation
 │   │   ├── data-flow.md                     # Data flow documentation
+│   │   ├── database-schema.md               # Database schema documentation
 │   │   ├── index.md                         # Architecture documentation index
 │   │   ├── page-structure.md                # Page structure documentation
 │   │   ├── relume-wireframe-conversion.md   # Relume wireframe conversion documentation
@@ -46,10 +47,24 @@ window-world-la/
 │   │   ├── relume-component-usage-guide.md  # Relume component usage guide
 │   │   ├── relume-tailwind-configuration-guide.md # Relume Tailwind configuration guide
 │   │   ├── relume-troubleshooting-guide.md  # Relume troubleshooting guide
-│   │   └── relume-home-page-integration-plan.md # Relume Home page integration plan
+│   │   ├── relume-home-page-integration-plan.md # Relume Home page integration plan
+│   │   ├── google-generative-ai-guide.md    # Google Generative AI integration guide
+│   │   └── vertex-ai-image-analysis-guide.md # Vertex AI image analysis guide
+│   ├── Image generation/                    # Image generation documentation
+│   │   ├── index.md                         # Image generation documentation index
+│   │   ├── image-generation-implementation-plan.md # Image generation implementation plan
+│   │   ├── csv-processing-plan.md           # CSV processing plan
+│   │   ├── url-mapping-reference.md         # URL mapping reference
+│   │   ├── prompt-engineering-guide.md      # Prompt engineering guide
+│   │   ├── image-generation-process.md      # Image generation process documentation
+│   │   └── image-quality-standards.md       # Image quality standards
 │   ├── integrations/                        # Integration documentation
+│   │   ├── index.md                         # Integration documentation index
 │   │   ├── netlify.md                       # Netlify integration documentation
-│   │   └── unsplash.md                      # Unsplash integration documentation
+│   │   ├── supabase.md                      # Supabase integration documentation
+│   │   ├── unsplash.md                      # Unsplash integration documentation
+│   │   ├── google-generative-ai.md          # Google Generative AI integration documentation
+│   │   └── vertex-ai.md                     # Vertex AI integration documentation
 │   ├── pages/                               # Pages documentation
 │   │   ├── index.md                         # Pages documentation index
 │   │   ├── home/                            # Home page documentation
@@ -74,6 +89,8 @@ window-world-la/
 │   │   │   ├── index.md                     # Financing page documentation index
 │   │   │   └── financing-page-documentation.md # Financing page documentation
 │   ├── planning/                            # Planning documentation
+│   │   ├── index.md                         # Planning documentation index
+│   │   └── supabase-implementation-plan.md  # Supabase implementation plan
 │   ├── processes/                           # Process documentation
 │   │   ├── development-workflow.md          # Development workflow documentation
 │   │   └── documentation-standards.md       # Documentation standards
@@ -85,7 +102,8 @@ window-world-la/
 │   ├── templates/                           # Documentation templates
 │   ├── daily-logs/                          # Daily development logs
 │   │   ├── 2025-05-09.md                    # Daily log for May 9, 2025
-│   │   └── 2025-05-10.md                    # Daily log for May 10, 2025
+│   │   ├── 2025-05-10.md                    # Daily log for May 10, 2025
+│   │   └── 2025-05-16.md                    # Daily log for May 16, 2025
 │   ├── documentation-map.md                 # This document
 │   ├── index.md                             # Documentation index
 │   └── priority-list.md                     # Prioritized list of tasks
@@ -110,6 +128,7 @@ window-world-la/
 - [docs/architecture/relume-wireframe-conversion.md](./architecture/relume-wireframe-conversion.md) - Relume wireframe conversion documentation
 - [docs/architecture/root-layout.md](./architecture/root-layout.md) - Root layout documentation
 - [docs/architecture/api-routes.md](./architecture/api-routes.md) - API routes documentation
+- [docs/architecture/database-schema.md](./architecture/database-schema.md) - Database schema documentation
 - [docs/architecture/utility-functions.md](./architecture/utility-functions.md) - Utility functions documentation
 
 ### Component Documentation
@@ -132,6 +151,8 @@ window-world-la/
 - [docs/guides/relume-tailwind-configuration-guide.md](./guides/relume-tailwind-configuration-guide.md) - Relume Tailwind configuration guide
 - [docs/guides/relume-troubleshooting-guide.md](./guides/relume-troubleshooting-guide.md) - Relume troubleshooting guide
 - [docs/guides/relume-home-page-integration-plan.md](./guides/relume-home-page-integration-plan.md) - Relume Home page integration plan
+- [docs/guides/google-generative-ai-guide.md](./guides/google-generative-ai-guide.md) - Google Generative AI integration guide
+- [docs/guides/vertex-ai-image-analysis-guide.md](./guides/vertex-ai-image-analysis-guide.md) - Vertex AI image analysis guide
 
 ### Pages Documentation
 
@@ -144,14 +165,29 @@ window-world-la/
 - [docs/pages/roofing/roofing-page-documentation.md](./pages/roofing/roofing-page-documentation.md) - Roofing page documentation
 - [docs/pages/financing/financing-page-documentation.md](./pages/financing/financing-page-documentation.md) - Financing page documentation
 
+### Image Generation Documentation
+
+- [docs/Image generation/index.md](./Image%20generation/index.md) - Image generation documentation index
+- [docs/Image generation/image-generation-implementation-plan.md](./Image%20generation/image-generation-implementation-plan.md) - Image generation implementation plan
+- [docs/Image generation/csv-processing-plan.md](./Image%20generation/csv-processing-plan.md) - CSV processing plan
+- [docs/Image generation/url-mapping-reference.md](./Image%20generation/url-mapping-reference.md) - URL mapping reference
+- [docs/Image generation/prompt-engineering-guide.md](./Image%20generation/prompt-engineering-guide.md) - Prompt engineering guide
+- [docs/Image generation/image-generation-process.md](./Image%20generation/image-generation-process.md) - Image generation process documentation
+- [docs/Image generation/image-quality-standards.md](./Image%20generation/image-quality-standards.md) - Image quality standards
+
 ### Integration Documentation
 
+- [docs/integrations/index.md](./integrations/index.md) - Integration documentation index
 - [docs/integrations/unsplash.md](./integrations/unsplash.md) - Unsplash integration documentation
 - [docs/integrations/netlify.md](./integrations/netlify.md) - Netlify integration documentation
+- [docs/integrations/supabase.md](./integrations/supabase.md) - Supabase integration documentation
+- [docs/integrations/google-generative-ai.md](./integrations/google-generative-ai.md) - Google Generative AI integration documentation
+- [docs/integrations/vertex-ai.md](./integrations/vertex-ai.md) - Vertex AI integration documentation
 
 ### Planning Documentation
 
-- No planning documentation yet
+- [docs/planning/index.md](./planning/index.md) - Planning documentation index
+- [docs/planning/supabase-implementation-plan.md](./planning/supabase-implementation-plan.md) - Supabase implementation plan
 
 ### Process Documentation
 
@@ -181,7 +217,10 @@ window-world-la/
 - [docs/daily-logs/2025-05-14-app-router-standardization-plan.md](./daily-logs/2025-05-14-app-router-standardization-plan.md) - Daily log for App Router standardization plan
 - [docs/daily-logs/2025-05-14-window-style-finder-fix.md](./daily-logs/2025-05-14-window-style-finder-fix.md) - Daily log for Window Style Finder page fix
 - [docs/daily-logs/2025-05-14-project-structure-consolidation-plan.md](./daily-logs/2025-05-14-project-structure-consolidation-plan.md) - Daily log for Project Structure Consolidation Plan
+- [docs/daily-logs/2025-05-14.md](./daily-logs/2025-05-14.md) - Daily log for Vertex AI image analysis testing
+- [docs/daily-logs/2025-05-14-image-generation.md](./daily-logs/2025-05-14-image-generation.md) - Daily log for Image Generation documentation
 - [docs/daily-logs/2025-05-15-project-structure-consolidation-implementation.md](./daily-logs/2025-05-15-project-structure-consolidation-implementation.md) - Daily log for Project Structure Consolidation Implementation
+- [docs/daily-logs/2025-05-16.md](./daily-logs/2025-05-16.md) - Daily log for Google Generative AI integration
 
 ## Documentation Topics
 
@@ -217,8 +256,22 @@ window-world-la/
 
 ### Integrations
 
+- [docs/integrations/index.md](./integrations/index.md) - Integration documentation index
 - [docs/integrations/unsplash.md](./integrations/unsplash.md) - Unsplash integration documentation
 - [docs/integrations/netlify.md](./integrations/netlify.md) - Netlify integration documentation
+- [docs/integrations/supabase.md](./integrations/supabase.md) - Supabase integration documentation
+- [docs/integrations/google-generative-ai.md](./integrations/google-generative-ai.md) - Google Generative AI integration documentation
+- [docs/integrations/vertex-ai.md](./integrations/vertex-ai.md) - Vertex AI integration documentation
+
+### Image Generation
+
+- [docs/Image generation/index.md](./Image%20generation/index.md) - Image generation documentation index
+- [docs/Image generation/image-generation-implementation-plan.md](./Image%20generation/image-generation-implementation-plan.md) - Image generation implementation plan
+- [docs/Image generation/csv-processing-plan.md](./Image%20generation/csv-processing-plan.md) - CSV processing plan
+- [docs/Image generation/url-mapping-reference.md](./Image%20generation/url-mapping-reference.md) - URL mapping reference
+- [docs/Image generation/prompt-engineering-guide.md](./Image%20generation/prompt-engineering-guide.md) - Prompt engineering guide
+- [docs/Image generation/image-generation-process.md](./Image%20generation/image-generation-process.md) - Image generation process documentation
+- [docs/Image generation/image-quality-standards.md](./Image%20generation/image-quality-standards.md) - Image quality standards
 
 ### Development Workflow
 
@@ -274,7 +327,7 @@ The following documentation is currently missing or incomplete:
 
 3. **Planning Documentation**
    - Project roadmap
-   - Implementation plan
+   - ✓ Supabase implementation plan
 
 4. **Testing Documentation**
    - Testing workflow
@@ -303,7 +356,7 @@ The following documentation is planned for future development:
 
 3. **Planning Documentation**
    - Create project roadmap
-   - Create implementation plan
+   - ✓ Created Supabase implementation plan
 
 4. **Testing Documentation**
    - Create testing workflow documentation
@@ -337,4 +390,4 @@ The following documentation is planned for future development:
 - [Development Workflow](./processes/development-workflow.md)
 - [Documentation Standards](./processes/documentation-standards.md)
 
-Last Updated: May 15, 2025 (Added Project Structure documentation to architecture)
+Last Updated: May 14, 2025 (Added Image Generation documentation)

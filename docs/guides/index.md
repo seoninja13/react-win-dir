@@ -16,9 +16,14 @@ This directory contains guides for developers working on the Windows Doors CA pr
 - [New Developer Guide](./new-developer-guide.md) - Step-by-step guide for new developers
 - [Component Development Guide](./component-development-guide.md) - Guide to developing components
 
+## Integration Guides
+
+- [Google Generative AI Guide](./google-generative-ai-guide.md) - Step-by-step guide for integrating Google Generative AI for image generation
+- [Vertex AI Image Analysis Guide](./vertex-ai-image-analysis-guide.md) - Comprehensive guide for using Vertex AI to analyze images
+
 ## Related Documentation
 
 - [Architecture Documentation](../architecture/architecture-documentation.md) - Comprehensive architecture documentation
 - [Relume Wireframe Conversion](../architecture/relume-wireframe-conversion.md) - Documentation of the Relume wireframe files conversion
 
-Last Updated: May 10, 2025 (Added Home Page Integration Plan)
+Last Updated: May 14, 2025 (Added Vertex AI Image Analysis Guide)

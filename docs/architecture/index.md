@@ -9,6 +9,7 @@ This directory contains documentation related to the architecture of the Window 
 - [Project Structure](./project-structure.md) - Overview of the project structure (Priority 1)
 - [Component Structure](./component-structure.md) - Overview of the component structure
 - [Page Structure](./page-structure.md) - Overview of the page structure
+- [Database Schema](./database-schema.md) - Database schema and structure
 - [Relume Wireframe Conversion](./relume-wireframe-conversion.md) - Documentation of the Relume wireframe files conversion
 - [Root Layout](./root-layout.md) - Documentation for the root layout component
 - [API Routes](./api-routes.md) - Documentation for the API routes
@@ -56,4 +57,4 @@ The Window World LA website is built using Next.js with the App Router, React, a
 - [Features Documentation](../features/index.md)
 - [Integrations Documentation](../integrations/index.md)
 
-Last Updated: May 15, 2025 (Added Project Structure documentation)
+Last Updated: May 16, 2025 (Added Database Schema documentation)
