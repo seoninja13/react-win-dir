@@ -12,6 +12,7 @@ module.exports = {
     "./4000-series/**/*.{js,ts,jsx,tsx}",
     "./5000-series/**/*.{js,ts,jsx,tsx}",
     "./vinyl-siding/**/*.{js,ts,jsx,tsx}",
+    "./service-areas/**/*.{js,ts,jsx,tsx}",
   ],
   presets: [require("@relume_io/relume-tailwind")],
   theme: {

@@ -94,6 +94,8 @@ The processes documentation provides information about various processes used in
 - [Development Workflow](./processes/development-workflow.md) - How to contribute to the project
 - [Documentation Standards](./processes/documentation-standards.md) - Standards for documentation
 - [Deployment Process](./processes/deployment-process.md) - How to deploy the project
+- [Project Structure Consolidation Plan](./processes/project-structure-consolidation-plan.md) - Plan for consolidating the project structure
+- [Project Structure Consolidation Implementation](./processes/project-structure-consolidation-implementation.md) - Detailed implementation guide for project structure consolidation
 
 ### Testing
 
@@ -133,4 +135,4 @@ When contributing to the documentation, follow these guidelines:
 - [Main README](../README.md) - Main project documentation and entry point
 - [Documentation Map](./documentation-map.md) - Comprehensive map of all documentation
 
-Last Updated: May 13, 2025 (Added Routing Strategy documentation and updated to reflect App Router standardization)
+Last Updated: May 14, 2025 (Added Project Structure Consolidation documentation)

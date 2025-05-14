@@ -5,31 +5,25 @@ import React from "react";
 
 export function Cta3() {
   return (
-    <section id="relume" className="relative px-[5%] py-16 md:py-24 lg:py-28">
-      <div className="relative z-10 container">
-        <div className="w-full max-w-lg">
-          <h2 className="mb-5 text-5xl font-bold text-text-alternative md:mb-6 md:text-7xl lg:text-8xl">
-            Get Your Free Estimate Today
-          </h2>
-          <p className="text-text-alternative md:text-md">
-            Transform your home with our energy-efficient windows and doors.
-            Schedule your free estimate now!
-          </p>
-          <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-            <Button title="Estimate">Estimate</Button>
-            <Button title="Contact" variant="secondary-alt">
-              Contact
-            </Button>
+    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+      <div className="container grid w-full grid-cols-1 items-start justify-between gap-6 md:grid-cols-[1fr_max-content] md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+        <div className="md:mr-12 lg:mr-0">
+          <div className="w-full max-w-lg">
+            <h2 className="mb-3 text-4xl leading-[1.2] font-bold md:mb-4 md:text-5xl lg:text-6xl">
+              Get Your Free Estimate Today
+            </h2>
+            <p className="md:text-md">
+              Transform your home with our energy-efficient windows and doors.
+              Schedule your free estimate now!
+            </p>
           </div>
         </div>
-      </div>
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-          className="size-full object-cover"
-          alt="Relume placeholder image"
-        />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="flex items-start justify-start gap-4">
+          <Button title="Estimate" variant="primary">Estimate</Button>
+          <Button title="Contact" variant="secondary">
+            Contact
+          </Button>
+        </div>
       </div>
     </section>
   );

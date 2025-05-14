@@ -5,9 +5,10 @@ This repository contains the code for the Window World LA website, a modern webs
 ## Project Status
 
 **Current Status**: Development in progress
-**Last Updated**: May 13, 2025
+**Last Updated**: May 14, 2025
 **Current Version**: 0.2.0
 **Routing Strategy**: Next.js App Router (exclusively)
+**Project Structure**: Consolidation in progress
 
 ## Documentation Structure
 
@@ -24,12 +25,15 @@ All detailed documentation is organized in the [Documentation Directory](./docs/
 - [Architecture](./docs/architecture/) - System design and architecture documentation
 - [Components](./docs/components/) - Component documentation
 - [Daily Logs](./docs/daily-logs/) - Daily development logs
+- [Processes](./docs/processes/) - Process documentation and implementation guides
 
 ### Key Documents
 
 - [Architecture Documentation](./docs/architecture/architecture-documentation.md) - Comprehensive analysis and implementation plan
 - [Routing Strategy](./docs/architecture/routing-strategy.md) - Documentation of the App Router routing strategy
 - [Working Directory](./docs/architecture/working-directory.md) - Documentation of the working directory structure
+- [Project Structure Consolidation Plan](./docs/processes/project-structure-consolidation-plan.md) - Plan for consolidating the project structure
+- [Project Structure Consolidation Implementation](./docs/processes/project-structure-consolidation-implementation.md) - Detailed implementation guide for project structure consolidation
 - [Header Components](./docs/components/header-components.md) - Documentation for Header47 and Header15 components
 - [Daily Development Logs](./docs/daily-logs/) - Daily development updates
 - [Latest Routing Strategy Decision](./docs/daily-logs/2025-05-13-routing-strategy-decision.md) - Documentation of the decision to standardize on App Router

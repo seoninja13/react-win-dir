@@ -66,13 +66,14 @@ The following pages have been implemented:
 26. [Financing Page](./financing/financing-page-documentation.md) - T4 Template
 27. [Installation Page](./installation/installation-page-documentation.md) - T4 Template
 28. [About Us Page](./about-us/about-us-page-documentation.md) - T4 Template
+29. [Service Areas Page](./service-areas-page-documentation.md) - T4 Template
 
 ### T5-T9: Other Page Types
-29. [Blog Page](./blog/blog-page-documentation.md) - T5 Template
-30. [Blog Post Page](./blog-post/blog-post-page-documentation.md) - T6 Template
-31. [Contact Page](./contact/contact-page-documentation.md) - T7 Template
-32. [Gallery Page](./gallery/gallery-page-documentation.md) - T8 Template
-33. [FAQ Page](./faq/faq-page-documentation.md) - T9 Template
+30. [Blog Page](./blog/blog-page-documentation.md) - T5 Template
+31. [Blog Post Page](./blog-post/blog-post-page-documentation.md) - T6 Template
+32. [Contact Page](./contact/contact-page-documentation.md) - T7 Template
+33. [Gallery Page](./gallery/gallery-page-documentation.md) - T8 Template
+34. [FAQ Page](./faq/faq-page-documentation.md) - T9 Template
 
 ## Implementation Process
 
@@ -109,4 +110,4 @@ Each page is implemented following the process outlined in the [Relume Home Page
 - [Relume Home Page Integration Plan](../guides/relume-home-page-integration-plan.md)
 - [Component Structure Documentation](../architecture/component-structure.md)
 
-Last Updated: May 12, 2025 (Added documentation for 1000-Series, 1500-Series, 2000-Series, 3000-Series, 4000-Series Vinyl Siding pages, Entry Doors page, Patio Doors page, Hinged Patio Doors page, Garage Doors page, Double-Hung Windows page, Casement Windows page, Bay-Bow Windows page, Awning Windows page, Picture Windows page, Sliding Windows page, Custom Windows page, Energy-Efficient Windows page, Garden Windows page, Shutters page, and Wood Windows page)
+Last Updated: May 14, 2025 (Added documentation for Service Areas page)
