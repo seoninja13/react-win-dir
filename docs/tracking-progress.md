@@ -1,3 +1,40 @@
+# Development Progress - May 14, 2025
+
+## Google Generative AI Integration
+
+### Implementation Progress
+
+1. **Supabase Storage Integration**
+   - Created utilities for uploading images to Supabase Storage
+   - Implemented bucket management functions
+   - Fixed permissions issues by using the service role key
+   - Successfully tested CRUD operations with Supabase Storage
+
+2. **Vertex AI Integration**
+   - Implemented utilities for generating images using the Vertex AI API
+   - Configured to use the `imagen-3.0-fast-generate-001` model
+   - Set up proper error handling and logging
+   - Created test scripts for verifying the integration
+
+3. **Batch Processing**
+   - Created a batch processing utility for CSV data
+   - Implemented test scripts for processing a small batch of 5 images
+   - Encountered quota limits with the Google Cloud project
+   - Documented findings and next steps in `Docs/Image generation/test-batch-results.md`
+
+### Next Steps
+
+1. **Resolve Quota Issues**
+   - Request a quota increase for the Vertex AI API in the Google Cloud Console
+   - Implement rate limiting to stay within quota limits
+
+2. **Complete Test Batch**
+   - Run the test batch with 5 images once quota issues are resolved
+   - Verify proper storage in Supabase
+
+3. **Scale Up**
+   - Process the full CSV file with batching to avoid quota limits
+
 # Development Progress - May 10, 2025
 
 ## CSS and Configuration Updates

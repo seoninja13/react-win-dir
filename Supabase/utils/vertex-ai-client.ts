@@ -12,6 +12,12 @@
 
 import { GoogleGenAI } from '@google/genai';
 import { VertexAI } from '@google-cloud/vertexai';
+import dotenv from 'dotenv';
+
+// Load environment variables if not already loaded
+if (!process.env.GOOGLE_CLOUD_PROJECT) {
+  dotenv.config({ path: '.env.local' });
+}
 
 // Environment variables
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;

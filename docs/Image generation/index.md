@@ -19,15 +19,25 @@ The image generation process leverages a CSV file containing Window World LA web
 ## Documentation
 
 - [Image Generation Implementation Plan](./image-generation-implementation-plan.md) - Comprehensive plan for generating images using Google Cloud's Generative AI
+- [README](./README.md) - Overview of the Google Generative AI integration
+- [Image Generation Utilities](./image-generation-utilities.md) - Documentation for the image generation utilities
+- [Storage Utilities](./storage-utilities.md) - Documentation for the Supabase Storage utilities
+- [Batch Processing](./batch-processing.md) - Documentation for the batch processing utilities
+- [Test Batch Results](./test-batch-results.md) - Results and findings from the test batch process
+- [Rate Limiting](./rate-limiting.md) - Implementation of rate limiting to avoid quota issues
+- [Website Integration](./website-integration.md) - Guide for integrating generated images into the website
+- [Monitoring and Maintenance](./monitoring-maintenance.md) - Procedures for monitoring and maintaining the image generation system
 - [CSV Processing Plan](./csv-processing-plan.md) - Detailed plan for processing the CSV file containing Window World LA data
 - [URL Mapping Reference](./url-mapping-reference.md) - Detailed mapping between Window World LA URLs and Windows Doors CA URLs
 - [Prompt Engineering Guide](./prompt-engineering-guide.md) - Guide for creating effective prompts for image generation
 - [Image Generation Process Documentation](./image-generation-process.md) - Detailed documentation of the image generation process
 - [Image Quality Standards](./image-quality-standards.md) - Standards for image quality and acceptance criteria
+- [Test Batch Process](./test-batch-process.md) - Documentation for the small-scale test batch image generation process
 
 ## CSV Data
 
 The CSV data file contains the following information:
+
 - Original Window World LA URLs
 - Image paths/URLs from the original site
 - Prompts used or to be used for generation

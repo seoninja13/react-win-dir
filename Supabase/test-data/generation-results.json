@@ -1,0 +1,72 @@
+[
+  {
+    "entry": {
+      "original_url": "https://www.windowworldla.com/",
+      "target_url": "/",
+      "image_type": "homepage",
+      "prompt": "A photorealistic image of a modern two-story house with several large, white vinyl double-hung windows. The windows should have a clean, contemporary design. The house is light gray with dark trim. The setting is a sunny day with a well-maintained lawn and landscaping. Focus on showcasing the clarity and design of the windows."
+    },
+    "success": false,
+    "error": {
+      "message": "[VertexAI.ClientError]: got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\",\"status\":\"INVALID_ARGUMENT\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.BadRequest\",\"fieldViolations\":[{\"field\":\"generation_config\",\"description\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\"}]}]}}",
+      "stack": "ClientError: [VertexAI.ClientError]: got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\",\"status\":\"INVALID_ARGUMENT\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.BadRequest\",\"fieldViolations\":[{\"field\":\"generation_config\",\"description\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\"}]}]}}\n    at throwErrorIfNotOK (C:\\Users\\IvoD\\repos\\react-win-dir\\node_modules\\@google-cloud\\vertexai\\build\\src\\functions\\post_fetch_processing.js:32:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateContent (C:\\Users\\IvoD\\repos\\react-win-dir\\node_modules\\@google-cloud\\vertexai\\build\\src\\functions\\generate_content.js:59:5)\n    at async generateImage (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:109:22)\n    at async processTestBatch (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:211:46)\n    at async main (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:280:21)"
+    },
+    "timestamp": "2025-05-15T02:44:00.941Z"
+  },
+  {
+    "entry": {
+      "original_url": "https://www.windowworldla.com/windows/",
+      "target_url": "/windows",
+      "image_type": "product_category",
+      "prompt": "A visually appealing arrangement of various window styles offered by Window World. Include a white vinyl double-hung window, a wood casement window, a 2-lite sliding window, a bay window with three sections, and a custom geometric arched window. Arrange them creatively to represent the diversity of their window line. Use soft, diffused lighting."
+    },
+    "success": false,
+    "error": {
+      "message": "[VertexAI.ClientError]: got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\",\"status\":\"INVALID_ARGUMENT\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.BadRequest\",\"fieldViolations\":[{\"field\":\"generation_config\",\"description\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\"}]}]}}",
+      "stack": "ClientError: [VertexAI.ClientError]: got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\",\"status\":\"INVALID_ARGUMENT\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.BadRequest\",\"fieldViolations\":[{\"field\":\"generation_config\",\"description\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\"}]}]}}\n    at throwErrorIfNotOK (C:\\Users\\IvoD\\repos\\react-win-dir\\node_modules\\@google-cloud\\vertexai\\build\\src\\functions\\post_fetch_processing.js:32:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateContent (C:\\Users\\IvoD\\repos\\react-win-dir\\node_modules\\@google-cloud\\vertexai\\build\\src\\functions\\generate_content.js:59:5)\n    at async generateImage (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:109:22)\n    at async processTestBatch (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:211:46)\n    at async main (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:280:21)"
+    },
+    "timestamp": "2025-05-15T02:44:01.018Z"
+  },
+  {
+    "entry": {
+      "original_url": "https://www.windowworldla.com/windows/double-hung-windows/",
+      "target_url": "/windows/double-hung-windows",
+      "image_type": "product_detail",
+      "prompt": "A close-up, high-resolution image of a white vinyl double-hung window. Highlight the features such as the sashes, locking mechanism, and tilt-in functionality. The background should be a neutral gray. Use studio lighting to minimize shadows and emphasize the details."
+    },
+    "success": false,
+    "error": {
+      "message": "[VertexAI.ClientError]: got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\",\"status\":\"INVALID_ARGUMENT\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.BadRequest\",\"fieldViolations\":[{\"field\":\"generation_config\",\"description\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\"}]}]}}",
+      "stack": "ClientError: [VertexAI.ClientError]: got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\",\"status\":\"INVALID_ARGUMENT\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.BadRequest\",\"fieldViolations\":[{\"field\":\"generation_config\",\"description\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\"}]}]}}\n    at throwErrorIfNotOK (C:\\Users\\IvoD\\repos\\react-win-dir\\node_modules\\@google-cloud\\vertexai\\build\\src\\functions\\post_fetch_processing.js:32:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateContent (C:\\Users\\IvoD\\repos\\react-win-dir\\node_modules\\@google-cloud\\vertexai\\build\\src\\functions\\generate_content.js:59:5)\n    at async generateImage (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:109:22)\n    at async processTestBatch (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:211:46)\n    at async main (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:280:21)"
+    },
+    "timestamp": "2025-05-15T02:44:01.092Z"
+  },
+  {
+    "entry": {
+      "original_url": "https://www.windowworldla.com/about-us/",
+      "target_url": "/about-us",
+      "image_type": "informational",
+      "prompt": "An image depicting a happy, diverse family (two adults, two children) playing with two golden retriever dogs in a bright, sunny living room. A large window with white frames is visible in the background, showcasing a view of a green garden, suggesting a connection to natural light and a comfortable home environment."
+    },
+    "success": false,
+    "error": {
+      "message": "[VertexAI.ClientError]: got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\",\"status\":\"INVALID_ARGUMENT\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.BadRequest\",\"fieldViolations\":[{\"field\":\"generation_config\",\"description\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\"}]}]}}",
+      "stack": "ClientError: [VertexAI.ClientError]: got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\",\"status\":\"INVALID_ARGUMENT\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.BadRequest\",\"fieldViolations\":[{\"field\":\"generation_config\",\"description\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\"}]}]}}\n    at throwErrorIfNotOK (C:\\Users\\IvoD\\repos\\react-win-dir\\node_modules\\@google-cloud\\vertexai\\build\\src\\functions\\post_fetch_processing.js:32:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateContent (C:\\Users\\IvoD\\repos\\react-win-dir\\node_modules\\@google-cloud\\vertexai\\build\\src\\functions\\generate_content.js:59:5)\n    at async generateImage (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:109:22)\n    at async processTestBatch (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:211:46)\n    at async main (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:280:21)"
+    },
+    "timestamp": "2025-05-15T02:44:01.175Z"
+  },
+  {
+    "entry": {
+      "original_url": "https://www.windowworldla.com/gallery/",
+      "target_url": "/gallery",
+      "image_type": "gallery",
+      "prompt": "A charming traditional-style house with newly installed white wood-look double-hung windows and green louvered shutters."
+    },
+    "success": false,
+    "error": {
+      "message": "[VertexAI.ClientError]: got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\",\"status\":\"INVALID_ARGUMENT\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.BadRequest\",\"fieldViolations\":[{\"field\":\"generation_config\",\"description\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\"}]}]}}",
+      "stack": "ClientError: [VertexAI.ClientError]: got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\",\"status\":\"INVALID_ARGUMENT\",\"details\":[{\"@type\":\"type.googleapis.com/google.rpc.BadRequest\",\"fieldViolations\":[{\"field\":\"generation_config\",\"description\":\"Invalid JSON payload received. Unknown name \\\"responseStreamingConfig\\\" at 'generation_config': Cannot find field.\"}]}]}}\n    at throwErrorIfNotOK (C:\\Users\\IvoD\\repos\\react-win-dir\\node_modules\\@google-cloud\\vertexai\\build\\src\\functions\\post_fetch_processing.js:32:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateContent (C:\\Users\\IvoD\\repos\\react-win-dir\\node_modules\\@google-cloud\\vertexai\\build\\src\\functions\\generate_content.js:59:5)\n    at async generateImage (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:109:22)\n    at async processTestBatch (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:211:46)\n    at async main (file:///C:/Users/IvoD/repos/react-win-dir/Supabase/scripts/imagen-test-batch.js:280:21)"
+    },
+    "timestamp": "2025-05-15T02:44:01.253Z"
+  }
+]

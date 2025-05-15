@@ -64,6 +64,8 @@ All detailed documentation is organized in the [Documentation Directory](./docs/
   - Relume components converted to Relume-root directory structure
 
 - **Integrations**:
+  - Google Generative AI (Vertex AI) for image generation
+  - Supabase Storage for image storage and management
   - Unsplash API for high-quality images
   - Netlify for deployment and hosting
   - Relume UI library for components
@@ -80,11 +82,13 @@ All detailed documentation is organized in the [Documentation Directory](./docs/
   - React Icons for icons
 
 - **API Integrations**:
+  - Google Generative AI (Vertex AI) for image generation
   - Unsplash API for images
   - Google Maps API for location maps
 
 - **Database**:
   - Supabase for all data storage and management
+  - Supabase Storage for image storage
 
 - **Deployment**:
   - Netlify for hosting and deployment
@@ -102,57 +106,45 @@ All detailed documentation is organized in the [Documentation Directory](./docs/
 ### Installation
 
 1. Clone the repository:
-
 ```bash
 git clone <repository-url>
 cd window-world-la
 ```
-
 2. Install dependencies:
-
 ```bash
 npm install
 ```
-
 3. Create a `.env.local` file with your Unsplash API credentials:
-
-```
+```bash
 NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=vGwz6K4oB14ArpL-1Bm3FjFX-Bp2rFM5GM6a_cvM8VQ
 UNSPLASH_SECRET_KEY=n76HBdN-t-iG7t4BeGNjCIy-ynPCpUQ0VxfE82T9qCc
 UNSPLASH_APPLICATION_ID=749207
 NEXT_PUBLIC_SITE_URL=http://localhost:4000
 ```
-
 ### Development
 
 #### Standard Development Server
 
 Run the Next.js development server:
-
 ```bash
 npm run dev
 ```
-
 This will run the development server from the Relume-root directory. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 #### Building the Project
 
 To build the project for production:
-
 ```bash
 npm run build
 ```
-
 This will build the project from the Relume-root directory.
 
 #### Starting the Production Server
 
 To start the production server:
-
 ```bash
 npm run start
 ```
-
 This will start the production server from the Relume-root directory.
 
 ### Troubleshooting
@@ -160,7 +152,6 @@ This will start the production server from the Relume-root directory.
 If you encounter port conflicts or other issues:
 
 1. Kill all Node.js processes:
-
 ```bash
 # Windows
 taskkill /F /IM node.exe
@@ -168,13 +159,10 @@ taskkill /F /IM node.exe
 # Mac/Linux
 pkill -f node
 ```
-
 2. Clear Next.js cache:
-
 ```bash
 rm -rf .next
 ```
-
 3. Restart the development server.
 
 ## Project Structure

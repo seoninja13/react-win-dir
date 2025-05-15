@@ -6,6 +6,16 @@ This directory contains comprehensive documentation for the Windows Doors CA web
 
 ## Documentation Index
 
+### Image Generation
+
+| Document | Description | Path |
+|----------|-------------|------|
+| Image Generation Overview | Overview of the Google Generative AI integration | [Image generation/README.md](Image%20generation/README.md) |
+| Rate Limiting | Implementation of rate limiting for Vertex AI | [Image generation/rate-limiting.md](Image%20generation/rate-limiting.md) |
+| Website Integration | Guide for integrating generated images into the website | [Image generation/website-integration.md](Image%20generation/website-integration.md) |
+| Monitoring and Maintenance | Procedures for monitoring the image generation system | [Image generation/monitoring-maintenance.md](Image%20generation/monitoring-maintenance.md) |
+| Image Generation Index | Complete index of all image generation documentation | [Image generation/index.md](Image%20generation/index.md) |
+
 ### Architecture
 
 | Document | Description | Path |

@@ -13,7 +13,13 @@
 import {
   generateImage as generateImageWithVertexAI,
   generateMultipleImages as generateMultipleImagesWithVertexAI,
-} from "./vertex-ai-client";
+} from "./vertex-ai-client.js";
+import dotenv from 'dotenv';
+
+// Load environment variables if not already loaded
+if (!process.env.GOOGLE_CLOUD_PROJECT) {
+  dotenv.config({ path: '.env.local' });
+}
 
 // Types for Imagen API
 type AspectRatio = "1:1" | "9:16" | "16:9" | "3:4" | "4:3";
@@ -58,7 +64,7 @@ export async function generateImage(
     // Generate image using Vertex AI
     return await generateImageWithVertexAI(
       prompt,
-      "gemini-2.0-flash-preview-image-generation"
+      "imagen-3.0-fast-generate-001"
     );
   } catch (error) {
     console.error("Image generation failed:", error);
@@ -89,7 +95,7 @@ export async function generateMultipleImages(
     return await generateMultipleImagesWithVertexAI(prompt, {
       numberOfImages,
       aspectRatio,
-      model: "imagen-3.0-generate-002",
+      model: "imagen-3.0-fast-generate-001",
     });
   } catch (error) {
     console.error("Image generation failed:", error);
@@ -113,21 +119,21 @@ export async function generateProductImage(
   options: ImageGenerationOptions = {}
 ): Promise<ImageGenerationResponse> {
   try {
+    // Set default options
+    const {
+      aspectRatio = "1:1",
+      personGeneration = "allow_adult",
+      safetySetting = "block_medium_and_above",
+    } = options;
+
     // Create a detailed prompt for the product
-    const prompt = `High-quality professional product image of ${productName}, a ${productCategory} product. ${productDescription}. The image should be well-lit, with a clean background, showing the product from a clear angle. Photorealistic, detailed, product photography style.`;
+    const enhancedPrompt = `A high-quality, professional product image of a ${productName} for a windows and doors website. ${productDescription}. The image should be well-lit, with a clean background, and showcase the ${productCategory} from a flattering angle. Use photorealistic style with attention to detail.`;
 
-    // Set default options for product images
-    const defaultOptions: ImageGenerationOptions = {
-      aspectRatio: "1:1",
-      numberOfImages: 1,
-      personGeneration: "dont_allow",
-      ...options,
-    };
-
-    // Generate image using Vertex AI
-    const images = await generateMultipleImages(prompt, defaultOptions);
-
-    return images[0];
+    // Generate image using Vertex AI with the imagen-3.0-fast-generate-001 model
+    return await generateImageWithVertexAI(
+      enhancedPrompt,
+      "imagen-3.0-fast-generate-001"
+    );
   } catch (error) {
     console.error("Product image generation failed:", error);
     throw error;
