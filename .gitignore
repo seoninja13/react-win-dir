@@ -49,6 +49,10 @@ next-env.d.ts
 # Relume source files (do not modify)
 /Relume-DO-NOT-EDIT/
 
+# Service account keys
+*-service-account-key.json
+service-account-key.json
+
 # Temporary files
 .windsurfrules
 tatus

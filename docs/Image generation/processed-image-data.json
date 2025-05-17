@@ -1,0 +1,100 @@
+{
+  "images": [
+    {
+      "originalUrl": "https://windowworldla.com/doors/entry",
+      "mappedUrl": "https://windowsdoorsca.com/doors/entry",
+      "imageUrl": "https://windowworldla.com/images/products/entry-doors.jpg",
+      "imageType": "product",
+      "category": "doors",
+      "prompt": "Elegant front entry door with decorative glass inserts",
+      "enhancedPrompt": "Elegant front entry door with decorative glass inserts. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Detailed close-up, showing quality materials, clean lines, professional installation. Elegant door design, secure entry, quality materials, beautiful finish. Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+      "newImagePath": "windows/https:--windowsdoorsca.com-doors-entry-product.jpg"
+    },
+    {
+      "originalUrl": "https://windowworldla.com/doors/patio",
+      "mappedUrl": "https://windowsdoorsca.com/doors/patio",
+      "imageUrl": "https://windowworldla.com/images/products/patio-doors.jpg",
+      "imageType": "product",
+      "category": "doors",
+      "prompt": "Sliding glass patio door leading to outdoor deck",
+      "enhancedPrompt": "Sliding glass patio door leading to outdoor deck. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Detailed close-up, showing quality materials, clean lines, professional installation. Elegant door design, secure entry, quality materials, beautiful finish. Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+      "newImagePath": "windows/https:--windowsdoorsca.com-doors-patio-product.jpg"
+    },
+    {
+      "originalUrl": "https://windowworldla.com/windows/casement",
+      "mappedUrl": "https://windowsdoorsca.com/windows/casement",
+      "imageUrl": "https://windowworldla.com/images/products/casement-windows.jpg",
+      "imageType": "product",
+      "category": "windows",
+      "prompt": "Casement window with crank handle open to allow fresh air",
+      "enhancedPrompt": "Casement window with crank handle open to allow fresh air. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Detailed close-up, showing quality materials, clean lines, professional installation. Modern window design, energy efficient, clear glass, quality frame materials. Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+      "newImagePath": "windows/https:--windowsdoorsca.com-windows-casement-product.jpg"
+    },
+    {
+      "originalUrl": "https://windowworldla.com/windows/double-hung",
+      "mappedUrl": "https://windowsdoorsca.com/windows/double-hung",
+      "imageUrl": "https://windowworldla.com/images/products/double-hung-windows.jpg",
+      "imageType": "product",
+      "category": "windows",
+      "prompt": "Double-hung window with white frame installed in a modern home",
+      "enhancedPrompt": "Double-hung window with white frame installed in a modern home. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Detailed close-up, showing quality materials, clean lines, professional installation. Modern window design, energy efficient, clear glass, quality frame materials. Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+      "newImagePath": "windows/https:--windowsdoorsca.com-windows-double-hung-product.jpg"
+    },
+    {
+      "originalUrl": "https://windowworldla.com/",
+      "mappedUrl": "https://windowsdoorsca.com",
+      "imageUrl": "https://windowworldla.com/images/hero-home.jpg",
+      "imageType": "hero",
+      "category": "other",
+      "prompt": "Beautiful modern home with new energy-efficient windows and elegant entry door",
+      "enhancedPrompt": "Beautiful modern home with new energy-efficient windows and elegant entry door. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Wide angle view, showcasing the full exterior, dramatic lighting, inviting atmosphere. . Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+      "newImagePath": "windows/https:--windowsdoorsca.com-hero.jpg"
+    },
+    {
+      "originalUrl": "https://windowworldla.com/gallery",
+      "mappedUrl": "https://windowsdoorsca.com/gallery",
+      "imageUrl": "https://windowworldla.com/images/gallery/project1.jpg",
+      "imageType": "gallery",
+      "category": "gallery",
+      "prompt": "Before and after comparison of window replacement project",
+      "enhancedPrompt": "Before and after comparison of window replacement project. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Beautiful real-world example, professionally installed, elegant design. . Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+      "newImagePath": "windows/https:--windowsdoorsca.com-gallery-gallery.jpg"
+    },
+    {
+      "originalUrl": "https://windowworldla.com/about-us",
+      "mappedUrl": "https://windowsdoorsca.com/about-us",
+      "imageUrl": "https://windowworldla.com/images/about-hero.jpg",
+      "imageType": "hero",
+      "category": "about",
+      "prompt": "Professional window installation team working on a residential home",
+      "enhancedPrompt": "Professional window installation team working on a residential home. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Wide angle view, showcasing the full exterior, dramatic lighting, inviting atmosphere. . Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+      "newImagePath": "windows/https:--windowsdoorsca.com-about-us-hero.jpg"
+    },
+    {
+      "originalUrl": "https://windowworldla.com/contact-us",
+      "mappedUrl": "https://windowsdoorsca.com/contact-us",
+      "imageUrl": "https://windowworldla.com/images/contact-hero.jpg",
+      "imageType": "hero",
+      "category": "contact",
+      "prompt": "Customer service representative helping homeowner with window selection",
+      "enhancedPrompt": "Customer service representative helping homeowner with window selection. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Wide angle view, showcasing the full exterior, dramatic lighting, inviting atmosphere. . Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+      "newImagePath": "windows/https:--windowsdoorsca.com-contact-us-hero.jpg"
+    }
+  ],
+  "stats": {
+    "totalImages": 8,
+    "byCategory": {
+      "other": 1,
+      "windows": 2,
+      "doors": 2,
+      "about": 1,
+      "gallery": 1,
+      "contact": 1
+    },
+    "byImageType": {
+      "hero": 3,
+      "product": 4,
+      "gallery": 1
+    }
+  }
+}

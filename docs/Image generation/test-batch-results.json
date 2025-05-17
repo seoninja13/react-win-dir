@@ -1,0 +1,52 @@
+[
+  {
+    "originalUrl": "https://windowworldla.com/doors/entry",
+    "mappedUrl": "https://windowsdoorsca.com/doors/entry",
+    "imageType": "product",
+    "newImagePath": "windows/https:--windowsdoorsca.com-doors-entry-product.jpg",
+    "prompt": "Elegant front entry door with decorative glass inserts. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Detailed close-up, showing quality materials, clean lines, professional installation. Elegant door design, secure entry, quality materials, beautiful finish. Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+    "success": false,
+    "error": "GOOGLE_CLOUD_PROJECT environment variable is required",
+    "timestamp": "2025-05-15T18:43:40.703Z"
+  },
+  {
+    "originalUrl": "https://windowworldla.com/doors/patio",
+    "mappedUrl": "https://windowsdoorsca.com/doors/patio",
+    "imageType": "product",
+    "newImagePath": "windows/https:--windowsdoorsca.com-doors-patio-product.jpg",
+    "prompt": "Sliding glass patio door leading to outdoor deck. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Detailed close-up, showing quality materials, clean lines, professional installation. Elegant door design, secure entry, quality materials, beautiful finish. Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+    "success": false,
+    "error": "GOOGLE_CLOUD_PROJECT environment variable is required",
+    "timestamp": "2025-05-15T18:43:45.717Z"
+  },
+  {
+    "originalUrl": "https://windowworldla.com/windows/casement",
+    "mappedUrl": "https://windowsdoorsca.com/windows/casement",
+    "imageType": "product",
+    "newImagePath": "windows/https:--windowsdoorsca.com-windows-casement-product.jpg",
+    "prompt": "Casement window with crank handle open to allow fresh air. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Detailed close-up, showing quality materials, clean lines, professional installation. Modern window design, energy efficient, clear glass, quality frame materials. Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+    "success": false,
+    "error": "GOOGLE_CLOUD_PROJECT environment variable is required",
+    "timestamp": "2025-05-15T18:43:50.721Z"
+  },
+  {
+    "originalUrl": "https://windowworldla.com/windows/double-hung",
+    "mappedUrl": "https://windowsdoorsca.com/windows/double-hung",
+    "imageType": "product",
+    "newImagePath": "windows/https:--windowsdoorsca.com-windows-double-hung-product.jpg",
+    "prompt": "Double-hung window with white frame installed in a modern home. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Detailed close-up, showing quality materials, clean lines, professional installation. Modern window design, energy efficient, clear glass, quality frame materials. Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+    "success": false,
+    "error": "GOOGLE_CLOUD_PROJECT environment variable is required",
+    "timestamp": "2025-05-15T18:43:55.744Z"
+  },
+  {
+    "originalUrl": "https://windowworldla.com/",
+    "mappedUrl": "https://windowsdoorsca.com",
+    "imageType": "hero",
+    "newImagePath": "windows/https:--windowsdoorsca.com-hero.jpg",
+    "prompt": "Beautiful modern home with new energy-efficient windows and elegant entry door. Professional photography style, clear lighting, high resolution, photo-realistic, architectural photography. Wide angle view, showcasing the full exterior, dramatic lighting, inviting atmosphere. . Negative: No text, no watermarks, no people, no logos, no brand names, no distortion",
+    "success": false,
+    "error": "GOOGLE_CLOUD_PROJECT environment variable is required",
+    "timestamp": "2025-05-15T18:44:00.762Z"
+  }
+]

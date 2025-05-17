@@ -14,6 +14,7 @@ import { parse } from 'csv-parse/sync';
 import { VertexAI } from '@google-cloud/vertexai';
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
+import { createLogger, logErrorObject } from '../utils/logger.js';
 
 // Get current file path and directory
 const __filename = fileURLToPath(import.meta.url);
@@ -26,6 +27,9 @@ dotenv.config({ path: path.resolve(__dirname, '../../.env.local') });
 const TEST_CSV_PATH = path.join(__dirname, '../test-data/test-images.csv');
 const RESULTS_JSON_PATH = path.join(__dirname, '../test-data/generation-results.json');
 const GENERATED_IMAGES_BUCKET = 'generated-images';
+
+// Create a logger for this script
+const logger = createLogger('run-test-batch');
 
 // Initialize Supabase clients
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -50,8 +54,10 @@ const vertexAI = new VertexAI({
  */
 async function generateImage(prompt) {
   console.log(`Generating image with prompt: "${prompt.substring(0, 50)}..."`);
+  await logger.info('Generating image', { promptPreview: prompt.substring(0, 50) + '...' });
   
   try {
+    
     // Get the generative model
     const generativeModel = vertexAI.preview.getGenerativeModel({
       model: "imagen-3.0-fast-generate-001",
@@ -74,12 +80,17 @@ async function generateImage(prompt) {
     // Convert the image to a base64 data URL
     const imageUrl = `data:image/png;base64,${response.images[0].bytesBase64}`;
     
+    await logger.info('Image generated successfully', { 
+      hasEnhancedPrompt: !!response.promptFeedback?.enhancedPrompt 
+    });
+    
     return {
       imageUrl,
       enhancedPrompt: response.promptFeedback?.enhancedPrompt,
     };
   } catch (error) {
     console.error('Error generating image:', error.message);
+    await logErrorObject(error, 'run-test-batch', { stage: 'image-generation', promptPreview: prompt.substring(0, 100) });
     throw error;
   }
 }
@@ -93,6 +104,7 @@ async function generateImage(prompt) {
  */
 async function uploadImage(imageUrl, fileName) {
   console.log(`Uploading image: ${fileName}`);
+  await logger.info('Uploading image to Supabase', { fileName });
   
   try {
     // Create bucket if it doesn't exist
@@ -127,9 +139,11 @@ async function uploadImage(imageUrl, fileName) {
       .from(GENERATED_IMAGES_BUCKET)
       .getPublicUrl(filePath);
     
+    await logger.info('Image uploaded successfully', { fileName, publicUrl: publicUrlData.publicUrl });
     return publicUrlData.publicUrl;
   } catch (error) {
     console.error('Error uploading image:', error.message);
+    await logErrorObject(error, 'run-test-batch', { stage: 'upload-image', fileName });
     throw error;
   }
 }
@@ -142,8 +156,10 @@ async function uploadImage(imageUrl, fileName) {
 async function processTestBatch() {
   console.log('Starting test batch processing...');
   console.log(`Reading CSV file: ${TEST_CSV_PATH}`);
+  await logger.info('Starting test batch processing', { csvPath: TEST_CSV_PATH });
   
   try {
+    
     // Read and parse the CSV file
     const fileContent = fs.readFileSync(TEST_CSV_PATH, 'utf8');
     const records = parse(fileContent, {
@@ -152,6 +168,7 @@ async function processTestBatch() {
     });
     
     console.log(`Found ${records.length} entries to process`);
+    await logger.info('Parsed CSV file', { recordCount: records.length });
     
     // Process each entry
     const results = [];
@@ -159,6 +176,7 @@ async function processTestBatch() {
     for (let i = 0; i < records.length; i++) {
       const entry = records[i];
       console.log(`\nProcessing entry ${i + 1}/${records.length}: ${entry.target_url}`);
+      await logger.info(`Processing entry ${i + 1}/${records.length}`, { targetUrl: entry.target_url, imageType: entry.image_type });
       
       const startTime = Date.now();
       
@@ -183,6 +201,7 @@ async function processTestBatch() {
         });
         
         console.log(`✅ Successfully generated and uploaded image for ${entry.target_url}`);
+        await logger.info('Successfully processed entry', { targetUrl: entry.target_url, processingTimeMs: Date.now() - startTime });
       } catch (error) {
         // Record error
         results.push({
@@ -196,12 +215,19 @@ async function processTestBatch() {
         });
         
         console.error(`❌ Failed to process ${entry.target_url}: ${error.message}`);
+        await logErrorObject(error, 'run-test-batch', { 
+          stage: 'process-entry', 
+          targetUrl: entry.target_url, 
+          imageType: entry.image_type 
+        });
       }
     }
     
     return results;
   } catch (error) {
-    console.error('Error processing test batch:', error);
+    console.error(`❌ Fatal error: ${error.message}`);
+    console.error(error.stack);
+    await logErrorObject(error, 'run-test-batch', { stage: 'process-test-batch' });
     throw error;
   }
 }
@@ -211,15 +237,23 @@ async function processTestBatch() {
  * 
  * @param {Array} results - Array of generation results
  */
-function saveResultsToJson(results) {
-  console.log(`Saving results to: ${RESULTS_JSON_PATH}`);
-  
+async function saveResultsToJson(results) {
   try {
-    const resultsJson = JSON.stringify(results, null, 2);
-    fs.writeFileSync(RESULTS_JSON_PATH, resultsJson, 'utf8');
-    console.log('Results saved successfully');
+    await logger.info('Saving results to JSON file', { path: RESULTS_JSON_PATH });
+    
+    // Create directory if it doesn't exist
+    const dir = path.dirname(RESULTS_JSON_PATH);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    
+    // Write results to file
+    fs.writeFileSync(RESULTS_JSON_PATH, JSON.stringify(results, null, 2), 'utf8');
+    await logger.info('Results saved successfully', { fileSize: fs.statSync(RESULTS_JSON_PATH).size });
   } catch (error) {
-    console.error('Error saving results:', error.message);
+    console.error(`Error saving results to JSON: ${error.message}`);
+    await logErrorObject(error, 'run-test-batch', { stage: 'save-results' });
+    throw error;
   }
 }
 
@@ -227,39 +261,61 @@ function saveResultsToJson(results) {
  * Main function
  */
 async function main() {
-  console.log('Starting test batch image generation process...');
-  console.log('This will process 5 test entries from the CSV file.');
-  console.log('Using model: imagen-3.0-fast-generate-001');
-  
   try {
+    await logger.info('Starting run-test-batch script');
+    
+    // Check environment variables
+    const requiredEnvVars = [
+      'NEXT_PUBLIC_SUPABASE_URL',
+      'NEXT_PUBLIC_SUPABASE_ANON_KEY',
+      'SUPABASE_SERVICE_ROLE_KEY',
+      'GOOGLE_CLOUD_PROJECT',
+    ];
+    
+    const missingEnvVars = requiredEnvVars.filter(varName => !process.env[varName]);
+    
+    if (missingEnvVars.length > 0) {
+      const error = new Error(`Missing required environment variables: ${missingEnvVars.join(', ')}`);
+      console.error(`❌ Error: ${error.message}`);
+      await logger.error('Missing required environment variables', { missingVars: missingEnvVars });
+      process.exit(1);
+    }
+    
+    await logger.info('Environment validation successful');
+    
+    // Check if CSV file exists
+    if (!fs.existsSync(TEST_CSV_PATH)) {
+      const error = new Error(`Test CSV file not found at ${TEST_CSV_PATH}`);
+      console.error(`❌ Error: ${error.message}`);
+      await logger.error('Test CSV file not found', { path: TEST_CSV_PATH });
+      process.exit(1);
+    }
+    
     // Process test batch
     const results = await processTestBatch();
     
-    // Save results to JSON
-    saveResultsToJson(results);
+    // Save results to JSON file
+    await saveResultsToJson(results);
     
-    // Log summary
+    // Print summary
     const successCount = results.filter(r => r.success).length;
-    console.log('\n===== SUMMARY =====');
-    console.log(`Total entries processed: ${results.length}`);
-    console.log(`Successfully generated: ${successCount}`);
-    console.log(`Failed: ${results.length - successCount}`);
+    console.log(`\n✨ Test batch processing completed!`);
+    console.log(`📊 Summary: ${successCount}/${results.length} images generated successfully`);
+    console.log(`📄 Results saved to: ${RESULTS_JSON_PATH}`);
     
-    if (successCount < results.length) {
-      console.log('\nFailed entries:');
-      results.filter(r => !r.success).forEach(result => {
-        console.log(`- ${result.entry.target_url}: ${result.error?.message || 'Unknown error'}`);
-      });
-    }
-    
-    console.log('\nSuccessfully generated images:');
-    results.filter(r => r.success).forEach(result => {
-      console.log(`- ${result.entry.target_url}: ${result.supabaseUrl || result.imageUrl.substring(0, 50) + '...'}`);
+    await logger.info('Test batch processing completed', { 
+      total: results.length,
+      success: successCount,
+      failed: results.length - successCount,
+      successRate: `${Math.round((successCount / results.length) * 100)}%`,
+      resultsPath: RESULTS_JSON_PATH
     });
     
-    console.log('\nTest batch processing complete!');
+    return results;
   } catch (error) {
-    console.error('Unhandled error:', error);
+    console.error(`❌ Fatal error in main: ${error.message}`);
+    console.error(error.stack);
+    await logErrorObject(error, 'run-test-batch', { stage: 'main' });
     process.exit(1);
   }
 }

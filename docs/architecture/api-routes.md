@@ -10,11 +10,81 @@ The Window World LA website uses Next.js API routes to handle server-side functi
 
 ```
 src/app/api/
-└── unsplash/
-    └── route.ts
+├── unsplash/
+│   └── route.ts
+└── generative-ai/
+    ├── image/
+    │   └── route.ts
+    └── batch/
+        └── route.ts
 ```
 
 ## Unsplash API Route
+
+[Unsplash API Route](https://unsplash.com/documentation) - Legacy route for fetching images from Unsplash. This route is being phased out in favor of Google Generative AI integration.
+
+## Google Generative AI Routes
+
+### Image Generation Route
+
+The Image Generation route (`src/app/api/generative-ai/image/route.ts`) provides a server-side interface for generating images using Google's Generative AI. This route handles the following functionality:
+
+1. **Single Image Generation**: Generate a single image based on a prompt
+2. **Batch Image Generation**: Generate multiple images in a single request
+
+#### Route Handler
+
+```typescript
+// src/app/api/generative-ai/image/route.ts
+
+import { NextRequest, NextResponse } from 'next/server';
+import { generateImage } from '@/utils/generative-ai';
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+    const { prompt, model = 'gemini-2.0-flash' } = body;
+
+    const image = await generateImage(prompt, model);
+    return NextResponse.json({ image });
+  } catch (error) {
+    console.error('Error generating image:', error);
+    return NextResponse.json(
+      { error: 'Failed to generate image' },
+      { status: 500 }
+    );
+  }
+}
+```
+
+### Batch Generation Route
+
+The Batch Generation route (`src/app/api/generative-ai/batch/route.ts`) provides a server-side interface for generating multiple images in batches. This route is optimized for processing multiple image requests efficiently.
+
+#### Route Handler
+
+```typescript
+// src/app/api/generative-ai/batch/route.ts
+
+import { NextRequest, NextResponse } from 'next/server';
+import { generateBatchImages } from '@/utils/generative-ai';
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+    const { prompts, model = 'gemini-2.0-flash' } = body;
+
+    const images = await generateBatchImages(prompts, model);
+    return NextResponse.json({ images });
+  } catch (error) {
+    console.error('Error generating batch images:', error);
+    return NextResponse.json(
+      { error: 'Failed to generate batch images' },
+      { status: 500 }
+    );
+  }
+}
+```
 
 The Unsplash API route (`src/app/api/unsplash/route.ts`) provides a server-side interface for fetching images from the Unsplash API. This route handles the following functionality:
 

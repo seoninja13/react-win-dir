@@ -13,7 +13,8 @@
 9. [Page Implementation Workflow](#9-page-implementation-workflow)
 10. [Advanced Development Tools](#10-advanced-development-tools)
 11. [Common Troubleshooting Scenarios](#11-common-troubleshooting-scenarios)
-12. [Case Studies](#12-case-studies)
+12. [Common Errors to Avoid](#12-common-errors-to-avoid)
+13. [Case Studies](#13-case-studies)
 
 ## 1. Tech Stack and Architecture
 
@@ -35,9 +36,11 @@
 ### Architecture Documentation
 
 The comprehensive architecture documentation is located at:
+
 - `docs/architecture/architecture-documentation.md`
 
 This document contains a detailed analysis of the Window World LA website that we are replicating exactly, including:
+
 1. Full site map and navigation analysis
 2. Page template analysis and wireframe descriptions
 3. Content inventory (textual and visual assets)
@@ -182,7 +185,7 @@ The database schema is designed to support the exact replication of the Window W
 - Install Supabase CLI: `npm install -g supabase`
 - Start local Supabase: `supabase start`
 - Generate TypeScript types: `supabase gen types typescript --local > src/types/supabase.ts`
-- Access local Supabase Studio: http://localhost:54323
+- Access local Supabase Studio: <http://localhost:54323>
 
 #### Troubleshooting
 - If port conflicts occur, kill all ports first: `taskkill /F /FI "IMAGENAME eq node.exe"`
@@ -369,36 +372,38 @@ Follow this exact workflow when implementing new pages:
 When implementing pages with accordion components (like FAQ sections), ensure that:
 
 1. **Import all necessary components**: Always import all required components from @relume_io/relume-ui:
-   ```jsx
-   import {
-     Accordion,
-     AccordionContent,
-     AccordionItem,
-     AccordionTrigger,
-     Button,
-   } from "@relume_io/relume-ui";
-   ```
 
-2. **Use the correct component structure**: Follow this pattern for accordion components:
-   ```jsx
-   <Accordion type="multiple" className="grid items-start justify-stretch gap-4">
-     <div className="border rounded-md shadow-sm">
-       <AccordionItem value="item-0" className="border-none px-5 md:px-6">
-         <AccordionTrigger
-           icon={<Icon />}
-           className="md:py-5 md:text-md [&[data-state=open]>svg]:rotate-45"
-         >
-           Question text here
-         </AccordionTrigger>
-         <AccordionContent className="md:pb-6">
-           Answer text here
-         </AccordionContent>
-       </AccordionItem>
-     </div>
-   </Accordion>
-   ```
+```jsx
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+  Button,
+} from "@relume_io/relume-ui";
+```
 
-3. **Check existing implementations**: When encountering issues with a component, compare it with working versions of the same component from other pages.
+1. **Use the correct component structure**: Follow this pattern for accordion components:
+
+```jsx
+<Accordion type="multiple" className="grid items-start justify-stretch gap-4">
+  <div className="border rounded-md shadow-sm">
+    <AccordionItem value="item-0" className="border-none px-5 md:px-6">
+      <AccordionTrigger
+        icon={<Icon />}
+        className="md:py-5 md:text-md [&[data-state=open]>svg]:rotate-45"
+      >
+        Question text here
+      </AccordionTrigger>
+      <AccordionContent className="md:pb-6">
+        Answer text here
+      </AccordionContent>
+    </AccordionItem>
+  </div>
+</Accordion>
+```
+
+1. **Check existing implementations**: When encountering issues with a component, compare it with working versions of the same component from other pages.
 
 ### Connection Refused Errors
 
@@ -426,7 +431,83 @@ Be aware of potential inconsistencies between documentation and actual project s
 2. **Import path resolution**: Adjust import paths based on the actual project structure, not just the documented structure
 3. **Document inconsistencies**: When you find inconsistencies, document them in the daily logs for future reference
 
-## 12. Case Studies
+## 12. Common Errors to Avoid
+
+The following errors should be carefully avoided during development to ensure smooth progress and maintain code quality:
+
+### Markdown Linting Issues
+
+- **Heading Spacing**: Always add blank lines around headings
+- **List Spacing**: Always add blank lines around lists
+- **Code Block Spacing**: Always add blank lines around code blocks
+- **Code Language Specification**: Always specify language for code blocks (e.g., ```javascript)
+- **Line Length**: Keep lines under 80 characters in length for documentation files
+- **Trailing Spaces**: Remove any trailing spaces at the end of lines
+
+### Tool Call Errors
+
+- **Argument Accuracy**: Always match exact content when using tool call arguments
+- **File Existence Checks**: Always check file existence before creating new files
+- **Redundant Calls**: Avoid making redundant tool calls for the same operation
+- **Parameter Correctness**: Use the correct parameter names and formats for tools
+- **Tool Availability**: Only use tools that are available in the current context
+
+### Code Editing Errors
+
+- **Parallel Edits**: Never make multiple parallel calls to edit the same file
+- **Parameter Order**: Always specify TargetFile as the first argument in file editing tools
+- **Content Matching**: Ensure replacement content exactly matches the target content
+- **Comprehensive Edits**: Make comprehensive changes instead of incremental edits
+- **Layout Preservation**: Always preserve existing layouts when replacing content
+
+### Security Issues
+
+- **Sensitive Information**: Never include API keys or credentials in documentation or code
+- **Project Identifiers**: Use placeholders instead of actual project IDs
+- **Information Sanitization**: Always sanitize potentially sensitive information before committing
+
+### Documentation Errors
+
+- **Redundancy**: Avoid creating redundant documentation files
+- **Structure Consistency**: Follow consistent documentation structure
+- **Update Information**: Always update the "Last Updated" section with current information
+- **Heading Hierarchy**: Follow proper heading hierarchy (h1 > h2 > h3)
+- **Formatting Consistency**: Maintain consistent formatting across documentation files
+
+### Command Execution Errors
+
+- **Directory Changes**: Never include `cd` commands directly in the command line
+- **Working Directory**: Always specify the current working directory (cwd) parameter
+- **Command Safety**: Never run potentially unsafe commands without proper verification
+- **Output Handling**: Always handle command output properly
+
+### Troubleshooting Approach Errors
+
+- **Loop Avoidance**: Avoid getting stuck in unproductive loops trying to fix the same issue
+- **Approach Variation**: Try different approaches when one fails repeatedly
+- **Root Cause Analysis**: Always identify the root cause of issues
+- **Priority Focus**: Focus on major issues before addressing minor ones
+
+### Communication Errors
+
+- **Conciseness**: Be concise and avoid verbosity when brevity is requested
+- **Instruction Acknowledgment**: Clearly acknowledge user instructions
+- **Action Explanation**: Provide clear explanations for actions taken
+- **Change Summary**: Always summarize changes made to files
+
+### Project Structure Errors
+
+- **Existing File Checks**: Always check for existing files before creating new ones
+- **Structure Adherence**: Follow the established project structure
+- **Functionality Preservation**: Preserve existing functionality when making changes
+
+### Error Handling Errors
+
+- **Implementation**: Always implement proper error handling in code
+- **Clear Messages**: Provide clear error messages
+- **Solution Suggestions**: Suggest solutions for common errors
+
+## 13. Case Studies
 
 ### 5000-Series Page Implementation
 

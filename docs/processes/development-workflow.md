@@ -17,6 +17,21 @@ Before starting development, ensure you have the following installed:
 - Git
 - Visual Studio Code (recommended)
 - Netlify CLI (optional, for Netlify Dev)
+- Google Cloud SDK (for AI integration)
+
+### AI Integration Setup
+
+1. Google Cloud Setup:
+   - Create a Google Cloud project
+   - Enable Vertex AI API
+   - Create API key with Generative AI access
+   - Store API key securely in environment variables
+
+2. Environment Variables:
+   ```
+   GOOGLE_API_KEY=AIzaSyA8B_V05yct_YIo01B7HETGXtLAJg3o2_U
+   GEMINI_MODEL_VERSION=gemini-2.0-flash
+   ```
 
 ### Initial Setup
 
@@ -33,9 +48,14 @@ cd window-world-la
 npm install
 ```
 
-3. Create a `.env.local` file with your Unsplash API credentials:
+3. Create a `.env.local` file with your API credentials:
 
 ```
+# Google Generative AI
+GOOGLE_API_KEY=AIzaSyA8B_V05yct_YIo01B7HETGXtLAJg3o2_U
+GEMINI_MODEL_VERSION=gemini-2.0-flash
+
+# Legacy Unsplash (for reference)
 NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=vGwz6K4oB14ArpL-1Bm3FjFX-Bp2rFM5GM6a_cvM8VQ
 UNSPLASH_SECRET_KEY=n76HBdN-t-iG7t4BeGNjCIy-ynPCpUQ0VxfE82T9qCc
 UNSPLASH_APPLICATION_ID=749207
@@ -190,32 +210,36 @@ npm install -g netlify-cli@latest
 
 ## Best Practices
 
-### Code Quality
+### Code Organization
 
-- Follow the [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) configurations.
-- Write clean, readable, and maintainable code.
-- Use TypeScript for type safety.
-- Write meaningful comments.
+- Follow the component structure.
+- Keep related files together.
+- Use consistent naming conventions.
+- For AI code:
+  - Separate model configuration
+  - Keep error handling consistent
+  - Document API interactions
 
-### Component Development
+### Testing
 
-- Keep components focused on a single responsibility.
-- Use props for customization.
-- Use TypeScript interfaces for prop types.
-- Follow the component structure guidelines.
-
-### Page Development
-
-- Keep pages organized and structured.
-- Use components for reusable sections.
-- Follow the page structure guidelines.
-- Optimize for performance.
+- Write unit tests for new components.
+- Test in multiple browsers.
+- Test on mobile devices.
+- Check for accessibility issues.
+- For AI features:
+  - Test different model versions
+  - Verify batch processing
+  - Check error handling
 
 ### Documentation
 
 - Keep documentation up-to-date.
 - Document all changes in the daily logs.
 - Follow the documentation guidelines.
+- For AI features:
+  - Document model versions
+  - Include error patterns
+  - Note performance considerations
 
 ## Related Documentation
 

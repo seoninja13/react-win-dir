@@ -39,14 +39,22 @@ This integration replaces the previous Unsplash integration, providing more cont
 
 - Google Cloud account with billing enabled
 - Google Cloud project with Vertex AI API enabled
-- Google Cloud API key with access to Generative AI APIs
+- Working API key: AIzaSyA8B_V05yct_YIo01B7HETGXtLAJg3o2_U
+- Model: gemini-2.0-flash
+- Approach: Direct REST API (most reliable)
 
 ### Installation
 
-1. Install the Google Generative AI SDK:
-
+1. For SDK-based approach:
 ```bash
 npm install @google/genai
+```
+
+2. For direct REST API approach (recommended):
+```javascript
+const https = require('https');
+const API_KEY = 'AIzaSyA8B_V05yct_YIo01B7HETGXtLAJg3o2_U';
+const MODEL = 'gemini-2.0-flash';
 ```
 
 2. Install the Google Cloud CLI (gcloud):
@@ -317,7 +325,138 @@ A complete example component is available at `Supabase/examples/ImageGenerationE
 4. **Poor Image Quality**: Try adjusting your prompt to be more specific.
 5. **Slow Generation**: The Imagen model can be slower than the Gemini model.
 
+## Error Handling and Troubleshooting
+
 ### Error Handling
+
+Always wrap image generation calls in try-catch blocks:
+
+```typescript
+try {
+  const result = await generateImage("A modern double-hung window");
+} catch (error) {
+  console.error('Image generation failed:', error);
+  // Handle the error appropriately
+}
+```
+
+### Common Error Patterns
+
+#### 1. API Key Issues
+
+```javascript
+// Error Pattern 1: Invalid API Key Format
+Error: Invalid API key format
+
+// Error Pattern 2: API Key Validation Failed
+Error: API key validation failed
+```
+
+#### 2. Model Initialization Errors
+
+```javascript
+// Error Pattern 1: Model Not Found
+Error: Model 'gemini-pro' not found
+
+// Error Pattern 2: Invalid Model Version
+Error: Invalid model version
+```
+
+#### 3. Module Initialization Errors
+
+```javascript
+// Error Pattern 1: Module Not Found
+Error: Cannot find module '@google/genai'
+
+// Error Pattern 2: Version Mismatch
+Error: Version mismatch between dependencies
+```
+
+### Troubleshooting Guide
+
+#### 1. API Key Validation
+
+1. Verify API key format starts with 'AIzaSy'
+2. Check API key length (should be 40 characters)
+3. Test API key using direct REST API approach
+
+#### 2. Model Initialization
+
+1. Use exact model name: 'gemini-2.0-flash'
+2. Verify model availability in your region
+3. Test with fallback model if needed
+
+#### 3. Module Issues
+
+1. Clear npm cache: `npm cache clean --force`
+2. Reinstall dependencies: `npm install`
+3. Check package.json for version conflicts
+
+### Solutions and Workarounds
+
+#### 1. API Key Management
+
+```javascript
+// Solution 1: Environment variables
+const API_KEY = process.env.GOOGLE_API_KEY;
+
+// Solution 2: Validation wrapper
+const createGenAI = (key) => {
+  if (!key.startsWith('AIzaSy') || key.length !== 40) {
+    throw new Error('Invalid API key format');
+  }
+  return new GoogleGenerativeAI(key);
+};
+```
+
+#### 2. Model Fallback
+
+```javascript
+// Solution 1: Model fallback
+const getModelWithFallback = async (genAI, preferredModel) => {
+  const models = ['gemini-2.0-flash', 'gemini-pro'];
+  for (const model of models) {
+    try {
+      return genAI.getGenerativeModel({ model });
+    } catch (error) {
+      console.error(`Failed to initialize model ${model}:`, error.message);
+    }
+  }
+  throw new Error('No valid model found');
+};
+```
+
+#### 3. Error Monitoring
+
+```javascript
+const logError = (error, category) => {
+  console.error(`[${category}] Error:`, error.message);
+  if (error.response) {
+    console.error('Response:', error.response);
+  }
+  // Add to error tracking system
+};
+```
+
+### Best Practices
+
+#### 1. Error Handling
+
+1. Always validate API key format
+2. Implement model fallback mechanism
+3. Add proper error logging
+
+#### 2. Dependency Management
+
+1. Keep package versions consistent
+2. Use exact versions in package.json
+3. Regularly update dependencies
+
+#### 3. Testing
+
+1. Test API key validation
+2. Verify model initialization
+3. Check error handling
 
 Always wrap image generation calls in try-catch blocks:
 

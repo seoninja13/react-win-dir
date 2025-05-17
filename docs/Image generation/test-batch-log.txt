@@ -1,0 +1,11 @@
+[2025-05-15T18:47:02.275Z] ℹ️ INFO: Starting test batch processing...
+[2025-05-15T18:47:02.279Z] ℹ️ INFO: Using Google Cloud Project: mold-removal-lead-gen
+[2025-05-15T18:47:02.280Z] ℹ️ INFO: Using Google Cloud Location: us-west1
+[2025-05-15T18:47:02.281Z] ℹ️ INFO: Testing Vertex AI API with a simple prompt...
+[2025-05-15T18:47:02.282Z] ℹ️ INFO: Test prompt: "A beautiful double-hung window with white frame against a blue sky"
+[2025-05-15T18:47:02.283Z] ℹ️ INFO: Generating image with prompt: "A beautiful double-hung window with white frame ag..."
+[2025-05-15T18:47:02.284Z] ❌ ERROR: Error generating image: GOOGLE_CLOUD_PROJECT environment variable is required
+[2025-05-15T18:47:02.285Z] ❌ ERROR: API test failed: GOOGLE_CLOUD_PROJECT environment variable is required
+[2025-05-15T18:47:02.286Z] ❌ ERROR: Error details:
+[2025-05-15T18:47:02.288Z] ❌ ERROR: Fatal error: GOOGLE_CLOUD_PROJECT environment variable is required
+[2025-05-15T18:47:02.289Z] ❌ ERROR: Unhandled error: GOOGLE_CLOUD_PROJECT environment variable is required
