@@ -16,11 +16,23 @@ docs/
 ├── features/           # Feature implementation documentation
 ├── guides/             # Developer guides and tutorials
 ├── integrations/       # Integration documentation for external services
+├── Knowledge Base/     # Knowledge Base system documentation
+│   ├── index.md                      # Knowledge Base overview
+│   ├── knowledge-base-workflow.md    # End-to-end workflow
+│   ├── semantic-chunking-process.md  # Semantic chunking process
+│   ├── embedding-generation.md       # Embedding generation with Gemini
+│   ├── vector-storage.md             # Vector storage in Supabase
+│   ├── search-functionality.md       # Search functionality
+│   └── automated-ingestion-process.md # Automated content ingestion
 ├── planning/           # Planning documentation and implementation plans
 ├── processes/          # Process documentation
 ├── testing/            # Testing documentation and guidelines
 ├── templates/          # Documentation templates
 ├── daily-logs/         # Daily development logs
+├── tracking/           # Progress tracking documentation
+│   ├── project-priorities.md         # Project priorities tracker
+│   ├── webpage-progress-tracker.md   # Webpage implementation progress
+│   └── image-generation-progress.md  # Image generation progress
 ├── documentation-map.md # Map of all documentation
 ├── index.md            # Documentation index
 └── priority-list.md    # Prioritized list of tasks
@@ -47,6 +59,18 @@ Feature documentation provides detailed information about specific features of t
 ### Guide Documentation
 
 Guide documentation provides step-by-step instructions for developers working on the project.
+
+### Knowledge Base Documentation
+
+Knowledge Base documentation provides detailed information about the knowledge base system, including:
+
+- **Knowledge Base Overview**: General overview of the knowledge base system
+- **Knowledge Base Workflow**: End-to-end workflow of the knowledge base system
+- **Semantic Chunking Process**: Detailed explanation of the semantic chunking process
+- **Embedding Generation**: How embeddings are generated using Gemini 2.0 Flash
+- **Vector Storage**: How vectors are stored and retrieved from Supabase
+- **Search Functionality**: How the search functionality works
+- **Automated Ingestion Process**: How to automatically ingest content from various sources
 
 ### Integration Documentation
 

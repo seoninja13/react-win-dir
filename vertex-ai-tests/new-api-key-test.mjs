@@ -4,16 +4,20 @@
 
 import { GoogleGenerativeAI } from '@google/genai';
 
-// Use the new API key
-const API_KEY = 'AIzaSyA8B_V05yct_YIo01B7HETGXtLAJg3o2_U';
+// Use the API key from environment variable
+const apiKey = process.env.GOOGLE_API_KEY;
+if (!apiKey) {
+  console.error('Error: GOOGLE_API_KEY environment variable not set.');
+  process.exit(1); // Exit if the key is not found
+}
 
 async function run() {
   try {
-    console.log('Starting test with new API key...');
+    console.log('Starting test with API key from environment variable...');
     
-    // Initialize the API with the new key
-    const genAI = new GoogleGenerativeAI(API_KEY);
-    console.log('API initialized with new key');
+    // Initialize the API with the key from environment variable
+    const genAI = new GoogleGenerativeAI(apiKey);
+    console.log('API initialized with key from environment variable');
     
     // For text-only input, use the gemini-pro model
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
@@ -34,7 +38,7 @@ async function run() {
     console.log(text);
     console.log('======================');
     
-    console.log('\n✅ Test completed successfully with new API key!');
+    console.log('\n✅ Test completed successfully with API key from environment variable!');
     
   } catch (error) {
     console.error('\n❌ Test failed:');

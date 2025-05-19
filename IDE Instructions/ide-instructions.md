@@ -334,36 +334,131 @@ Follow this exact workflow when implementing new pages:
 
 ## 10. Advanced Development Tools
 
-### Sequential Thinking MCP Server
+### Knowledge Base System
 
-- Use Sequential Thinking MCP server for all complex tasks:
-  - Implementing new pages
-  - Troubleshooting errors
-  - Planning documentation updates
-  - Analyzing component issues
+The project includes a comprehensive knowledge base system that uses Supabase's pgvector capabilities and Gemini 2.0 Flash embeddings to create a powerful, searchable repository for documentation, API references, code snippets, and other information.
 
-- This ensures a more methodical approach to problem-solving and better adherence to project guidelines
+#### Automated Knowledge Base Ingestion
 
-- Configuration:
-  ```json
-  {
-    "mcpServers": {
-      "server-sequential-thinking": {
-        "command": "cmd",
-        "args": [
-          "/c",
-          "npx",
-          "-y",
-          "@smithery/cli@latest",
-          "run",
-          "@smithery-ai/server-sequential-thinking",
-          "--key",
-          "ea6a680f-20bb-4968-bcaa-1568439806c4"
-        ]
-      }
+The `knowledge-base-ingestion.mjs` script automates the process of retrieving content from various sources, chunking it semantically, generating embeddings, and storing everything in Supabase. Here's how to use it:
+
+```bash
+# Ingest content from Brave search results
+node scripts/knowledge-base-ingestion.mjs --source brave --query "windows installation guide"
+
+# Ingest content from a web URL
+node scripts/knowledge-base-ingestion.mjs --source url --url "https://example.com/documentation"
+
+# Ingest content from a local file
+node scripts/knowledge-base-ingestion.mjs --source file --path "./docs/guide.md"
+```
+
+#### Ingestion Process Workflow
+
+The automated ingestion process follows this workflow:
+
+1. **Content Retrieval**: Content is retrieved from the specified source (Brave search, URL, or file)
+2. **Content Processing**: Content is cleaned and normalized
+3. **Semantic Chunking**: Content is chunked using our hierarchical semantic chunking process
+4. **Embedding Generation**: Embeddings are generated for each chunk using Gemini 2.0 Flash
+5. **Supabase Storage**: Chunks, embeddings, and metadata are stored in Supabase
+
+#### Configuration Options
+
+The script supports several configuration options:
+
+| Option | Description | Default |
+|--------|-------------|--------|
+| `--source` | Content source (brave, url, file) | Required |
+| `--query` | Search query for Brave search | Required for brave source |
+| `--url` | URL to fetch content from | Required for url source |
+| `--path` | File path to read content from | Required for file source |
+| `--tag` | Tag to associate with the content | Source-specific default |
+| `--chunk-size` | Size of chunks in characters | 1000 |
+| `--chunk-overlap` | Overlap between chunks in characters | 200 |
+
+#### Documentation
+
+For detailed documentation on the knowledge base system, refer to:
+- [Knowledge Base Overview](../docs/Knowledge%20Base/index.md)
+- [Knowledge Base Workflow](../docs/Knowledge%20Base/knowledge-base-workflow.md)
+- [Automated Ingestion Process](../docs/Knowledge%20Base/automated-ingestion-process.md)
+
+### MCP Server Configuration
+
+The project uses several Model Context Protocol (MCP) servers for enhanced functionality. The configuration is in `.vscode/settings.json`:
+
+```json
+{
+  "cascade.mcpServers": {
+    "brave-search": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery-ai/brave-search",
+        "--key",
+        "ea6a680f-20bb-4968-bcaa-1568439806c4"
+      ]
+    },
+    "context7": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery-ai/context7",
+        "--key",
+        "ea6a680f-20bb-4968-bcaa-1568439806c4"
+      ]
+    },
+    "google-maps": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery-ai/google-maps",
+        "--key",
+        "ea6a680f-20bb-4968-bcaa-1568439806c4"
+      ]
+    },
+    "mcp-openai": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery-ai/mcp-openai",
+        "--key",
+        "ea6a680f-20bb-4968-bcaa-1568439806c4"
+      ]
+    },
+    "server-sequential-thinking": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery-ai/server-sequential-thinking",
+        "--key",
+        "ea6a680f-20bb-4968-bcaa-1568439806c4"
+      ]
     }
   }
-  ```
+}
+```
 
 ## 11. Common Troubleshooting Scenarios
 

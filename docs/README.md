@@ -6,6 +6,17 @@ This directory contains comprehensive documentation for the Windows Doors CA web
 
 ## Documentation Index
 
+### Knowledge Base
+
+| Document | Description | Path |
+|----------|-------------|------|
+| Knowledge Base Overview | Main entry point for knowledge base documentation | [Knowledge Base/index.md](Knowledge%20Base/index.md) |
+| Knowledge Base Workflow | Complete end-to-end workflow of the knowledge base system | [Knowledge Base/knowledge-base-workflow.md](Knowledge%20Base/knowledge-base-workflow.md) |
+| Semantic Chunking Process | Detailed explanation of the semantic chunking process | [Knowledge Base/semantic-chunking-process.md](Knowledge%20Base/semantic-chunking-process.md) |
+| Embedding Generation | How embeddings are generated using Gemini 2.0 Flash | [Knowledge Base/embedding-generation.md](Knowledge%20Base/embedding-generation.md) |
+| Vector Storage | How vectors are stored and retrieved from Supabase | [Knowledge Base/vector-storage.md](Knowledge%20Base/vector-storage.md) |
+| Search Functionality | How the search functionality works | [Knowledge Base/search-functionality.md](Knowledge%20Base/search-functionality.md) |
+
 ### Image Generation
 
 | Document | Description | Path |

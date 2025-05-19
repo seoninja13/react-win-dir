@@ -16,7 +16,9 @@ This section contains documentation for tracking various aspects of the Windows 
 
 ## Tracking Documents
 
+- [Project Priorities Tracker](./project-priorities.md) - Comprehensive tracker for project priorities
 - [Webpage Progress Tracker](./webpage-progress-tracker.md) - Comprehensive tracker for all webpages in the project
+- [Image Generation Progress](./image-generation-progress.md) - Tracking document for Google Generative AI integration
 - [Component Implementation Tracker](./component-implementation-tracker.md) - Tracker for component implementation status (Coming Soon)
 - [Testing Results Tracker](./testing-results-tracker.md) - Tracker for testing results across all pages (Coming Soon)
 - [Performance Metrics Tracker](./performance-metrics-tracker.md) - Tracker for performance metrics across all pages (Coming Soon)

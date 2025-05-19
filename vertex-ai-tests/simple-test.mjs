@@ -5,8 +5,13 @@
 
 import { GoogleGenerativeAI } from '@google/genai';
 
-// Access your API key as an environment variable (see "Set up your API key" above)
-const genAI = new GoogleGenerativeAI('AIzaSyADnIR2zPzAldt2vqDqLYUe24vsSDvWub0');
+// Access your API key as an environment variable
+const apiKey = process.env.GOOGLE_API_KEY;
+if (!apiKey) {
+  console.error('Error: GOOGLE_API_KEY environment variable not set.');
+  process.exit(1); // Exit if the key is not found
+}
+const genAI = new GoogleGenerativeAI(apiKey);
 
 async function run() {
   try {

@@ -71,6 +71,7 @@ export function initializeVertexAIClient() {
   return new VertexAI({
     project: GOOGLE_CLOUD_PROJECT,
     location: GOOGLE_CLOUD_LOCATION,
+    credentials: require('../../vertex-ai-imagen-service-account-key.json')
   });
 }
 
@@ -81,15 +82,30 @@ export function initializeVertexAIClient() {
  * @param model - The model to use (default: 'gemini-2.0-flash')
  * @returns The generated content
  */
-export async function generateContent(prompt: string, model = 'gemini-2.0-flash') {
-  const ai = initializeGenAIClient();
-  
-  const response = await ai.models.generateContent({
-    model,
-    contents: prompt,
+export async function generateContent(prompt: string, model = 'gemini-pro') {
+  const vertexai = initializeVertexAIClient();
+  const generativeModel = vertexai.preview.getGenerativeModel({
+    model: model,
+    generation_config: {
+      max_output_tokens: 2048,
+      temperature: 0.4,
+      top_p: 0.8,
+      top_k: 40
+    }
   });
-  
-  return response.text;
+
+  const request = {
+    contents: [{ role: 'user', parts: [{ text: prompt }] }]
+  };
+
+  try {
+    const response = await generativeModel.generateContent(request);
+    const result = await response.response;
+    return result.candidates[0].content.parts[0].text;
+  } catch (error: any) {
+    console.error('Error generating content:', error.message);
+    throw error;
+  }
 }
 
 /**

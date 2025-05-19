@@ -21,7 +21,12 @@
 /out/
 
 # production
-/build
+# Build output
+/dist/
+/build/
+
+# Test script outputs
+/output/
 
 # misc
 .DS_Store
@@ -48,6 +53,9 @@ next-env.d.ts
 
 # Relume source files (do not modify)
 /Relume-DO-NOT-EDIT/
+
+# Ignore JSON files (e.g., service account keys)
+*.json
 
 # Service account keys
 *-service-account-key.json

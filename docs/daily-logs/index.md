@@ -4,9 +4,12 @@ This directory contains daily development logs for the Window World LA website p
 
 ## Log Entries
 
-- [May 9, 2025](./2025-05-09.md) - Core page implementation, Unsplash API integration, and documentation structure
-- [May 10, 2025](./2025-05-10.md) - Tailwind CSS configuration updates and Relume wireframe files conversion
-- [May 10, 2025 - Home Page Integration](./2025-05-10-home-page-integration.md) - Home Page Integration Plan creation and documentation
+- [May 16, 2025 - Knowledge Base Implementation](./2025-05-16-knowledge-base-implementation.md) - Implementation of Knowledge Base system with semantic chunking and Gemini embeddings
+- [May 16, 2025 - Google GenAI SDK Testing](./2025-05-16-google-genai-sdk-testing.md) - Testing of Google Generative AI SDK for embedding generation
+- [May 16, 2025](./2025-05-16.md) - Daily development activities and progress
+- [May 14, 2025 - Project Structure Consolidation](./2025-05-14-project-structure-consolidation.md) - Project structure consolidation implementation
+- [May 14, 2025](./2025-05-14.md) - Vertex AI image analysis testing and documentation
+- [May 14, 2025 - Image Generation](./2025-05-14-image-generation.md) - Image generation documentation using Google Cloud's Generative AI
 - [May 11, 2025 - Garden Page Implementation](./2025-05-11-garden-page-implementation.md) - Garden Page testing and documentation
 - [May 11, 2025 - Webpage Progress Tracker](./2025-05-11-webpage-progress-tracker.md) - Webpage Progress Tracker creation and documentation
 - [May 11, 2025 - Installation Page Implementation](./2025-05-11-installation-page-implementation.md) - Installation Page implementation and testing
@@ -20,9 +23,9 @@ This directory contains daily development logs for the Window World LA website p
 - [May 11, 2025 - Vinyl Siding Page Implementation](./2025-05-11-vinyl-siding-page-implementation.md) - Vinyl Siding Page implementation and testing
 - [May 11, 2025 - Roofing Page Implementation](./2025-05-11-roofing-page-implementation.md) - Roofing Page implementation and testing
 - [May 11, 2025 - Financing Page Implementation](./2025-05-11-financing-page-implementation.md) - Financing Page implementation and testing
-- [May 14, 2025 - Project Structure Consolidation](./2025-05-14-project-structure-consolidation.md) - Project structure consolidation implementation
-- [May 14, 2025](./2025-05-14.md) - Vertex AI image analysis testing and documentation
-- [May 14, 2025 - Image Generation](./2025-05-14-image-generation.md) - Image generation documentation using Google Cloud's Generative AI
+- [May 10, 2025](./2025-05-10.md) - Tailwind CSS configuration updates and Relume wireframe files conversion
+- [May 10, 2025 - Home Page Integration](./2025-05-10-home-page-integration.md) - Home Page Integration Plan creation and documentation
+- [May 9, 2025](./2025-05-09.md) - Core page implementation, Unsplash API integration, and documentation structure
 
 ## Log Format
 

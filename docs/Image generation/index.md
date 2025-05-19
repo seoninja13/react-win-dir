@@ -18,21 +18,42 @@ The image generation process leverages a CSV file containing Window World LA web
 
 ## Documentation
 
+### Key Documentation
+
+- [Google Generative AI Comprehensive Guide](./google-generative-ai-comprehensive-guide.md) - **NEW** Complete guide to all aspects of the Google Generative AI integration with deep internal linking
+- [Vertex AI Imagen Implementation Status](./vertex-ai-imagen-implementation-status.md) - Current status of the Vertex AI Imagen implementation
 - [Image Generation Implementation Plan](./image-generation-implementation-plan.md) - Comprehensive plan for generating images using Google Cloud's Generative AI
 - [README](./README.md) - Overview of the Google Generative AI integration
+
+### Authentication and Setup
+
+- [Vertex AI Imagen Credentials](./vertex-ai-imagen-credentials.md) - Service account key location and authentication setup for Vertex AI
+- [Vertex AI Integration](./vertex-ai-integration.md) - Different approaches for connecting to Vertex AI
+
+### Utilities and Implementation
+
 - [Image Generation Utilities](./image-generation-utilities.md) - Documentation for the image generation utilities
 - [Storage Utilities](./storage-utilities.md) - Documentation for the Supabase Storage utilities
 - [Batch Processing](./batch-processing.md) - Documentation for the batch processing utilities
-- [Test Batch Results](./test-batch-results.md) - Results and findings from the test batch process
 - [Rate Limiting](./rate-limiting.md) - Implementation of rate limiting to avoid quota issues
+
+### Testing and Results
+
+- [Test Batch Process](./test-batch-process.md) - Documentation for the small-scale test batch image generation process
+- [Test Batch Results](./test-batch-results.md) - Results and findings from the test batch process
+
+### Integration and Maintenance
+
 - [Website Integration](./website-integration.md) - Guide for integrating generated images into the website
 - [Monitoring and Maintenance](./monitoring-maintenance.md) - Procedures for monitoring and maintaining the image generation system
+
+### Content and Quality
+
 - [CSV Processing Plan](./csv-processing-plan.md) - Detailed plan for processing the CSV file containing Window World LA data
 - [URL Mapping Reference](./url-mapping-reference.md) - Detailed mapping between Window World LA URLs and Windows Doors CA URLs
 - [Prompt Engineering Guide](./prompt-engineering-guide.md) - Guide for creating effective prompts for image generation
 - [Image Generation Process Documentation](./image-generation-process.md) - Detailed documentation of the image generation process
 - [Image Quality Standards](./image-quality-standards.md) - Standards for image quality and acceptance criteria
-- [Test Batch Process](./test-batch-process.md) - Documentation for the small-scale test batch image generation process
 
 ## CSV Data
 

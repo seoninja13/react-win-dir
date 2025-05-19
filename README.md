@@ -1,16 +1,24 @@
 # Window World LA Website
 
+> **PRIORITY 1**: Knowledge Base System Implementation (In Progress)  
+> **PRIORITY 2**: Vertex AI Image Generation (In Progress)  
+> **PRIORITY 5**: Website Performance Optimization (Planned for June 15, 2025)  
+> [View Full Project Priorities](./docs/tracking/project-priorities.md)
+
 This repository contains the code for the Window World LA website, a modern website for a windows, doors, siding, and roofing company in Los Angeles. The website is built using Next.js, React, and Tailwind CSS, with Relume UI components and Unsplash for images.
 
 ## Project Status
 
 **Current Status**: Development in progress
-**Last Updated**: May 15, 2025
-**Current Version**: 0.3.1
+**Last Updated**: May 16, 2025
+**Current Version**: 0.3.2
 **Routing Strategy**: Next.js App Router (exclusively)
 **Project Structure**: Consolidation complete
-**Current Priority**: Google Generative AI Integration (In Progress)
-**AI Integration Status**: Error logging implemented, component created, scripts updated
+**Priority 1**: Knowledge Base System Implementation (In Progress)
+**Priority 2**: Vertex AI Image Generation (In Progress)
+**Priority 5**: Website Performance Optimization (Planned for June 15, 2025)
+**Knowledge Base Status**: Semantic chunking implemented, documentation complete
+**Vertex AI Status**: Initial implementation complete, continuing with batch image generation
 
 ## Documentation Structure
 
@@ -31,6 +39,7 @@ All detailed documentation is organized in the [Documentation Directory](./docs/
 
 ### Key Project Documents
 
+- [Project Priorities Tracker](./docs/tracking/project-priorities.md) - **Current priority: Knowledge Base System Implementation**
 - [Architecture Documentation](./docs/architecture/architecture-documentation.md) - Comprehensive analysis and implementation plan
 - [Routing Strategy](./docs/architecture/routing-strategy.md) - Documentation of the App Router routing strategy
 - [Working Directory](./docs/architecture/working-directory.md) - Documentation of the working directory structure
@@ -45,9 +54,96 @@ All detailed documentation is organized in the [Documentation Directory](./docs/
 - [Export Documentation](./Export%20Documentation/export-documentation.md) - Comprehensive list of documentation files for export
 - [Sample Project Structure](./Sample%20Project%20Structure-DO-NOT-EDIT/) - Reference project structure from previous projects
 
+## Project Documentation
+
+This project includes detailed documentation to assist with development, setup, and understanding of its features.
+
+- **Architectural Overview**: See `docs/architecture/architecture-documentation.md`.
+- **Daily Development Logs**: Stored in `docs/daily-logs/`.
+- **Feature Specifics**: Maintained in `docs/features/`.
+  - [Vertex AI Image Generation](./docs/features/vertex-ai-image-generation.md)
+- **Processes and Setup Guides**: Located in `docs/processes/`.
+  - [Vertex AI Setup Guide](./docs/processes/vertex-ai-setup-guide.md)
+- **Progress Tracking**: See `@wWeb development progress folder @tracking-progress.md`.
+
+## Knowledge Base System
+
+We've implemented a comprehensive knowledge base system that uses Supabase's pgvector capabilities and Gemini 2.0 Flash embeddings to create a powerful, searchable repository for documentation, API references, code snippets, and other information.
+
+### Knowledge Base Documentation
+
+- [Knowledge Base Overview](./docs/Knowledge%20Base/index.md) - Main entry point for knowledge base documentation
+- [Knowledge Base Workflow](./docs/Knowledge%20Base/knowledge-base-workflow.md) - Complete end-to-end workflow of the knowledge base system
+- [Semantic Chunking Process](./docs/Knowledge%20Base/semantic-chunking-process.md) - Detailed explanation of the semantic chunking process
+- [Embedding Generation](./docs/Knowledge%20Base/embedding-generation.md) - How embeddings are generated using Gemini 2.0 Flash
+- [Vector Storage](./docs/Knowledge%20Base/vector-storage.md) - How vectors are stored and retrieved from Supabase
+- [Search Functionality](./docs/Knowledge%20Base/search-functionality.md) - How the search functionality works
+
 ## AI Image Generation Tools
 
-We've implemented a comprehensive set of tools for generating high-quality images using Google's Imagen 3.0 model. These tools allow you to generate, manage, and test AI-generated images for use throughout the application.
+We've implemented a comprehensive set of tools for generating high-quality images using Google's Imagen 3.0 model through Vertex AI. These tools allow you to generate, manage, and test AI-generated images for use throughout the application.
+
+### Image Generation Documentation
+
+- [Google Generative AI Comprehensive Guide](./docs/Image%20generation/google-generative-ai-comprehensive-guide.md) - Complete guide to all aspects of the Google Generative AI integration
+- [Vertex AI Imagen Implementation Status](./docs/Image%20generation/vertex-ai-imagen-implementation-status.md) - Current status of the Vertex AI implementation
+- [Image Generation Index](./docs/Image%20generation/index.md) - Complete index of all image generation documentation
+
+### Vertex AI Service Test Scripts (`Relume-root/src/lib/vertex-ai/`)
+
+Test scripts are available to validate the core Vertex AI services. These services use dynamic imports for Google Cloud SDKs and an asynchronous factory pattern. Due to complexities with `ts-node` and ESM module resolution, the test scripts must be bundled using `esbuild` before execution.
+
+**Prerequisites for all Vertex AI test scripts:**
+
+- Ensure `esbuild` is installed as a dev dependency (`npm install --save-dev esbuild`).
+- Ensure `dotenv` is installed as a project dependency (`npm install dotenv`).
+- A valid `.env.local` file in the project root with `GOOGLE_CLOUD_PROJECT`, `GOOGLE_CLOUD_LOCATION`, and `GOOGLE_APPLICATION_CREDENTIALS` configured.
+
+#### 1. Vertex AI Image Generation (`VertexAIImageService`)
+
+Validates the `VertexAIImageService` for generating images.
+
+**A. Build the Image Generation Test Script:**
+
+Run the following command from the project root to bundle the TypeScript test script into a JavaScript ESM module:
+
+```bash
+npx esbuild Relume-root/src/lib/vertex-ai/test-image-generation.ts --bundle --outfile=dist/test-image-generation.mjs --platform=node --format=esm --external:dotenv --external:google-auth-library --external:@google-cloud/vertexai --color=true
+```
+
+**B. Run the Bundled Image Generation Test Script:**
+
+Execute the bundled script from the project root:
+
+```bash
+node --no-warnings dist/test-image-generation.mjs
+```
+
+This will run the test, attempting to initialize the Vertex AI service and generate a sample image, logging the output to the console.
+
+#### 2. Vertex AI Text Generation (`VertexAITextService`)
+
+Validates the `VertexAITextService` for generating text using the `gemini-2.0-flash` model.
+
+**A. Build the Text Generation Test Script:**
+
+Run the following command from the project root:
+
+```bash
+npx esbuild Relume-root/src/lib/vertex-ai/test-text-generation.ts --bundle --outfile=dist/test-text-generation.mjs --platform=node --format=esm --external:dotenv --external:@google-cloud/vertexai --color=true
+```
+
+**B. Run the Bundled Text Generation Test Script:**
+
+Execute the bundled script from the project root:
+
+```bash
+node --no-warnings dist/test-text-generation.mjs
+```
+
+This will run the test, attempting to initialize the `VertexAITextService` and generate sample text for predefined prompts, saving the output to `output/generated_text.json`.
+
+Ensure the `dist/` and `output/` directories are in your `.gitignore` file.
 
 ### Image Generation Components
 
@@ -71,6 +167,7 @@ We've implemented a comprehensive set of tools for generating high-quality image
 
 1. **Prerequisites**
    - Node.js 16+
+   - npm 9.x or higher
    - Google API key with access to the Gemini API
    - Required dependencies (install with `npm install`)
 
@@ -268,7 +365,6 @@ If you encounter port conflicts or other issues:
 
 ### Project Files
 
-
 ```text
 react-win-dir/
 ├── docs/
@@ -278,8 +374,6 @@ react-win-dir/
 │   └── processes/               # Process documentation
 ├── Relume-root/                    # PRIMARY WORKING DIRECTORY
 │   ├── components/                 # Reusable components
-```
-
 │   │   ├── navigation/             # Navigation components
 │   │   ├── footer/                 # Footer components
 │   │   ├── header/                 # Header components
@@ -299,7 +393,6 @@ react-win-dir/
 │   │       ├── doors/              # Doors page route
 │   │       │   └── page.tsx
 │   │       ├── globals.css         # Global CSS
-```text
 │   │       ├── styles.css          # Custom styles
 │   │       ├── layout.tsx          # Root layout
 │   │       └── page.tsx            # Root page
