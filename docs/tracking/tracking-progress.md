@@ -49,6 +49,56 @@ The `test-image-generation.ts` script now runs successfully, validating the Vert
   1. Testing Vertex AI text generation to isolate if the quota issue is image-specific.
   1. Potential need to request a quota increase from Google Cloud if issues persist after sufficient waiting.
 
+## 2025-05-19 - Relume-root Development Environment Setup
+
+**Feature/Module:** Development Environment Setup (`Relume-root`)
+
+**Changes Implemented:**
+
+1. **Dependency Management:**
+    *Confirmed `yarn install` completed successfully within the `c:\Users\IvoD\repos\react-win-dir\Relume-root` directory.
+    *Removed `package-lock.json` from `Relume-root` to prevent potential conflicts with `yarn.lock` and ensure Yarn is the sole package manager for this directory.
+2. **Development Server:**
+    *Identified the `dev` script (`next dev -p 3000`) in `Relume-root/package.json`.
+    *Successfully started the Next.js development server using `yarn dev` from the `Relume-root` directory.
+    *Confirmed the server is running and accessible at `http://localhost:3000`.
+
+**Outcome:**
+
+The development environment for the `Relume-root` portion of the project is now operational. The Next.js application can be accessed and tested locally.
+
+## 2025-05-19 - Vertex AI Image Generation Issues & Workflow Pivot
+
+* **Issue**: Persistent Vertex AI Image Generation Failures
+* **Details**: Encountered consistent HTTP 429 'Too Many Requests' errors when attempting to use Vertex AI for image generation. This specifically affected:
+  * Project: `windows-doors-website-dir-v2`
+  * Region: `us-west1`
+  * Models: `imagen-3.0-generate` (and variants like `-001`, `-002`, `fast-generate-001`) and the default `imagegeneration` model.
+  * Error Message Snippet: 'Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model'.
+* **Impact**: Blocked image generation capabilities for the project via Vertex AI.
+* **Decision**: Pivoting to a workflow using local sample images stored in `c:\Users\IvoD\repos\react-win-dir\sample-images` (with `windows` and `doors` subfolders). These images will serve as placeholders and will be uploaded to Supabase Storage. Tagging and metadata management will also be handled via Supabase.
+* **Status**: Vertex AI image generation is on hold. Implementing local sample image workflow.
+
+## 2025-05-19 - Supabase Directory Structure Refactor
+
+**Feature/Module:** Supabase Integration
+
+**Changes Implemented:**
+
+1. **Directory Move:**
+   * Moved the `Supabase` directory from the project root (`c:\Users\IvoD\repos\react-win-dir\Supabase`) to `c:\Users\IvoD\repos\react-win-dir\Relume-root\Supabase\`.
+   * This change centralizes Supabase-related code within the `Relume-root` structure.
+2. **Memory Updates:**
+   * Updated relevant memories (e.g., for test scripts `test-db-connection.ts` and `test-read-storage.ts`) to reflect the new paths.
+
+**Outcome:**
+
+Supabase-related utilities and configurations are now located under `Relume-root/Supabase/`. This improves project organization. Further checks will be performed to ensure all internal references are updated.
+
+**Next Steps:**
+
+1. Scan codebase for any hardcoded paths or import statements referencing the old `Supabase/` location and update them.
+
 ## Feature: Vertex AI Text Generation Setup
 
 * **Date Implemented:** 2025-05-18
@@ -69,3 +119,33 @@ The `test-image-generation.ts` script now runs successfully, validating the Vert
   * `Relume-root/src/lib/vertex-ai/test-text-generation.ts` (Modified)
   * `.gitignore` (Modified)
   * `docs/tracking/tracking-progress.md` (Modified)
+
+## 2025-05-20 - Vertex AI Text Generation Tests
+
+* **Feature**: Vertex AI Integration - Text Generation
+* **Details**: Successfully conducted text generation tests using Google Cloud Vertex AI.
+  * **Model Used**: `gemini-2.0-flash` (confirmed working in `us-west1` for project `windows-doors-website-dir-v2`).
+  * **Script**: `Relume-root/src/lib/vertex-ai/test-text-generation.ts`.
+  * **Outcome**: Successfully generated text for 5 consecutive prompts without hitting quota limits. This indicates text generation capabilities are currently functional.
+  * **Previous Issues Resolved**: Cleared up confusion regarding model availability (e.g., `gemini-1.0-pro` resulted in a 404 error). Ensured build process correctly picks up script changes.
+  * **Note**: Image generation via Vertex AI (`imagen-3.0-generate` models) remains blocked by quota limits (`429 Too Many Requests`).
+* **Status**: Text generation testing successful. Image generation blocked.
+
+## 2025-05-20 - Supabase README Linting and Formatting
+
+**Feature/Module:** Supabase Integration Documentation (`Relume-root/Supabase/README.md`)
+
+**Changes Implemented:**
+
+1. **Markdown Linting:**
+    * Systematically addressed and resolved multiple markdown linting errors in `Relume-root/Supabase/README.md`.
+    * Corrected issues related to `MD009` (no-trailing-spaces), `MD012` (no-multiple-blanks), `MD022` (headers should be surrounded by blank lines), `MD029` (ordered list item prefix), `MD030` (spaces after list markers), and `MD031` (fenced code blocks should be surrounded by blank lines).
+2. **Whitespace Cleanup:**
+    * Removed numerous instances of trailing non-breaking spaces (U+00A0) and excessive blank lines that were causing lint errors and affecting readability.
+3. **Formatting:**
+    * Ensured proper indentation for code blocks within ordered lists.
+    * Standardized spacing around headings, paragraphs, and code blocks.
+
+**Outcome:**
+
+The `Relume-root/Supabase/README.md` file is now free of markdown lint errors and has improved formatting for better clarity and maintainability.

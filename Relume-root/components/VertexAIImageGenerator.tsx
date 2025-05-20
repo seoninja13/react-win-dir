@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { generateImage, generateMultipleImages } from '../../Supabase/utils/image-generation';
 
 interface ImageGenerationResponse {
   imageUrl: string;
@@ -15,7 +14,7 @@ export default function VertexAIImageGenerator() {
   const [generatedImages, setGeneratedImages] = useState<ImageGenerationResponse[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  const handleGenerateImage = async () => {
+  const callGenerateApi = async (action: 'single' | 'multiple') => {
     if (!prompt) {
       setError('Please enter a prompt');
       return;
@@ -23,38 +22,44 @@ export default function VertexAIImageGenerator() {
 
     setIsGenerating(true);
     setError(null);
-    
+    setGeneratedImage(null); // Clear previous single image
+    setGeneratedImages([]);    // Clear previous multiple images
+
     try {
-      const result = await generateImage(prompt);
-      setGeneratedImage(result);
-      setGeneratedImages([]);
-    } catch (err) {
-      console.error('Error generating image:', err);
-      setError('Failed to generate image. Please try again.');
+      const response = await fetch('/api/generateImage', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt, action }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || `API request failed with status ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      if (action === 'single') {
+        setGeneratedImage(result as ImageGenerationResponse);
+      } else {
+        setGeneratedImages(result as ImageGenerationResponse[]);
+      }
+    } catch (err: any) {
+      console.error(`Error generating image(s) via API:`, err);
+      setError(err.message || 'Failed to generate image(s). Please try again.');
     } finally {
       setIsGenerating(false);
     }
   };
 
-  const handleGenerateMultipleImages = async () => {
-    if (!prompt) {
-      setError('Please enter a prompt');
-      return;
-    }
+  const handleGenerateImage = () => {
+    callGenerateApi('single');
+  };
 
-    setIsGenerating(true);
-    setError(null);
-    
-    try {
-      const results = await generateMultipleImages(prompt);
-      setGeneratedImages(results);
-      setGeneratedImage(null);
-    } catch (err) {
-      console.error('Error generating images:', err);
-      setError('Failed to generate images. Please try again.');
-    } finally {
-      setIsGenerating(false);
-    }
+  const handleGenerateMultipleImages = () => {
+    callGenerateApi('multiple');
   };
 
   return (
@@ -81,7 +86,7 @@ export default function VertexAIImageGenerator() {
           disabled={isGenerating}
           className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
         >
-          {isGenerating ? 'Generating...' : 'Generate Single Image'}
+          {isGenerating && generatedImage === null && generatedImages.length === 0 ? 'Generating...' : 'Generate Single Image'}
         </button>
         
         <button
@@ -89,7 +94,7 @@ export default function VertexAIImageGenerator() {
           disabled={isGenerating}
           className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:opacity-50"
         >
-          {isGenerating ? 'Generating...' : 'Generate Multiple Images'}
+          {isGenerating && generatedImages.length === 0 && generatedImage === null ? 'Generating...' : 'Generate Multiple Images'}
         </button>
       </div>
       

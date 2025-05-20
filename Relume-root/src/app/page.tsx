@@ -1,8 +1,12 @@
 'use client';
 
 import React from 'react';
-import HomePage from '../../home/index.jsx';
 
 export default function Home() {
-  return <HomePage />;
+  return (
+    <div>
+      <h1>Hello from src/app/page.tsx</h1>
+      <p>If you see this, basic page rendering is working.</p>
+    </div>
+  );
 }

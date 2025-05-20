@@ -1,7 +1,7 @@
-import { NextResponse } from "next/server";
-import { supabase } from "../../../../Supabase/client";
-import { validateLeadForm } from "../../../../Supabase/utils/forms";
-import { logError } from "../../../../Supabase/utils/logging";
+import { NextRequest, NextResponse } from 'next/server';
+import { supabase } from "@/Supabase/client";
+import { validateLeadForm } from "@/Supabase/utils/forms";
+import { logError } from "@/Supabase/utils/logging";
 
 export async function POST(request: Request) {
   try {

@@ -6,7 +6,7 @@ import {
   generateImage,
   generateMultipleImages,
   generateProductImage
-} from '../Supabase/utils/imagen-client.js';
+} from '../Relume-root/Supabase/utils/imagen-client.js';
 
 async function testImageGeneration() {
   try {

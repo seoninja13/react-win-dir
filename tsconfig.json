@@ -26,14 +26,17 @@
     "paths": {
       "@/*": [
         "./Relume-root/src/*"
+      ],
+      "@/Supabase/*": [
+        "./Relume-root/Supabase/*"
       ]
     }
   },
   "include": [
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "next-env.d.ts",
     "dist/types/**/*.ts"
   ],
   "exclude": [

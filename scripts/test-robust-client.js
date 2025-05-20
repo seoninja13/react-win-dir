@@ -6,10 +6,11 @@
  */
 
 const {
+  initializeVertexAIClient,
   generateImageWithRetry,
   generateMultipleImagesWithRetry,
   generateImageBatch
-} = require('../Supabase/utils/vertex-ai-client-robust');
+} = require('../Relume-root/Supabase/utils/vertex-ai-client-robust');
 require('dotenv').config({ path: '.env.local' });
 
 /**

@@ -126,7 +126,7 @@ The Vertex AI client is initialized in the `vertex-ai-client.ts` file.
 This file provides utilities for initializing and using the Vertex AI client.
 
 ```typescript
-import { initializeGenAIClient, generateContent, generateImage } from '../../Supabase/utils/vertex-ai-client';
+import { initializeGenAIClient, generateContent, generateImage } from '@/Supabase/utils/vertex-ai-client';
 
 // Generate text content
 const textResponse = await generateContent('Why is the sky blue?');
@@ -143,7 +143,7 @@ The image generation utilities are available in the `image-generation.ts` file.
 These utilities provide a simple API for generating images using Vertex AI.
 
 ```typescript
-import { generateImage, generateMultipleImages } from '../../Supabase/utils/image-generation';
+import { generateImage, generateMultipleImages } from '@/Supabase/utils/image-generation';
 
 // Generate a single image
 const image = await generateImage('A modern house with large windows');
@@ -161,7 +161,7 @@ This allows you to send an image to the Vertex AI Gemini Vision model along with
 to analyze the image.
 
 ```typescript
-import { analyzeImage } from '../../Supabase/utils/vertex-ai-client';
+import { analyzeImage } from '@/Supabase/utils/vertex-ai-client';
 
 // Analyze an image using a Google Cloud Storage URI
 const analysis = await analyzeImage(
@@ -180,7 +180,7 @@ The React hooks for Vertex AI are available in the `useVertexAI.ts` file.
 These hooks provide a simple way to use Vertex AI in React components.
 
 ```typescript
-import { useVertexAI, useProductImageGeneration } from '../../hooks/useVertexAI';
+import { useVertexAI, useProductImageGeneration } from '@/hooks/useVertexAI';
 
 // In your component
 const { generateText, generateSingleImage, isLoading, error, data } = useVertexAI();

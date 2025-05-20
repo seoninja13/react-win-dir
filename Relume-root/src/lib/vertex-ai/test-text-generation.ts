@@ -10,7 +10,7 @@
  */
 
 import dotenv from 'dotenv';
-// import { generateContent } from '../../../../Supabase/utils/vertex-ai-client'; // Old import
+// import { generateContent } from '@/Supabase/utils/vertex-ai-client'; // Old import updated to new alias
 import { VertexAITextService } from './text-service'; // New import
 import fs from 'fs';
 import path from 'path';
@@ -21,9 +21,11 @@ dotenv.config({ path: '.env.local', override: true });
 
 // Test prompts
 const TEST_PROMPTS = [
-  "Write a brief description of a double-hung window's key features.",
-  "List 3 benefits of installing energy-efficient windows.",
-  "Explain what makes vinyl windows a popular choice for homeowners."
+  "What are the main components of a modern web application?",
+  "Explain the difference between a bay window and a bow window.",
+  "Write a short poem about the changing seasons.",
+  "List five popular JavaScript frameworks for front-end development.",
+  "Describe the process of photosynthesis in simple terms."
 ];
 
 // Output directory for saving generated text (in project root/output)
@@ -46,7 +48,7 @@ async function testTextGeneration() {
   }
   
   const results: GenerationResult[] = [];
-  const modelForTest = 'gemini-2.0-flash'; // Updated model based on user provided model card
+  const modelForTest = 'gemini-2.0-flash'; // Revert to user-specified model
 
   let textService: VertexAITextService;
   try {

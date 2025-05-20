@@ -5,7 +5,9 @@
  * Using CommonJS format (.cjs extension)
  */
 
-const { generateText, generateTextWithHistory } = require('../Supabase/utils/gemini-text-client');
+require('dotenv').config({ path: '../.env.local' });
+
+const { generateText, generateTextWithHistory } = require('../Relume-root/Supabase/utils/gemini-text-client');
 
 /**
  * Test simple text generation

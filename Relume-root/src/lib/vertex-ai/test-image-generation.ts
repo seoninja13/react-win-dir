@@ -48,7 +48,7 @@ async function runVertexImageTest() {
     // --- Define Image Generation Options ---
     const options: ImageGenerationOptions = {
       prompt: 'A small, cute, energy-efficient window on a modern home, sunny day.', // Slightly modified prompt for variety
-      model: 'imagen-3.0-generate-002', // Test with Imagen 3 (newest confirmed version)
+      model: 'imagegeneration@006', // Try a different model family
       width: 256, // Smaller width
       height: 256, // Smaller height
       // samples: 1, // samples is often implicit or handled by specific model parameters not in generic options

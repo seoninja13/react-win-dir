@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import { 
-  generateContent, 
+  initializeVertexAIClient,
+  generateContent,
   generateImage, 
   generateMultipleImages 
-} from '../../Supabase/utils/vertex-ai-client';
+} from '@/Supabase/utils/vertex-ai-client';
 
 interface ImageGenerationResponse {
   imageUrl: string;
