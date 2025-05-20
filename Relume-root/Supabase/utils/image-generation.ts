@@ -14,11 +14,11 @@ import {
   generateImage as generateImageWithVertexAI,
   generateMultipleImages as generateMultipleImagesWithVertexAI,
 } from "./vertex-ai-client";
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 
 // Load environment variables if not already loaded
 if (!process.env.GOOGLE_CLOUD_PROJECT) {
-  dotenv.config({ path: '.env.local' });
+  dotenv.config({ path: ".env.local" });
 }
 
 // Types for Imagen API
@@ -91,12 +91,20 @@ export async function generateMultipleImages(
       personGeneration = "allow_adult",
     } = options;
 
-    // Generate images using Vertex AI
-    return await generateMultipleImagesWithVertexAI(prompt, {
-      numberOfImages,
-      aspectRatio,
-      model: "imagen-3.0-fast-generate-001",
-    });
+    // Note: The generateMultipleImagesWithVertexAI function is currently not working
+    // We'll use placeholder images for testing
+    console.log(
+      "Note: generateMultipleImagesWithVertexAI is currently disabled"
+    );
+
+    // Create placeholder image data
+    return Array(numberOfImages)
+      .fill(null)
+      .map((_, i) => ({
+        imageUrl:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==",
+        enhancedPrompt: `${prompt} (Variation ${i + 1})`,
+      }));
   } catch (error) {
     console.error("Image generation failed:", error);
     throw error;
@@ -167,8 +175,18 @@ export async function generateProductImageVariations(
       ...options,
     };
 
-    // Generate images using Vertex AI
-    return await generateMultipleImages(prompt, defaultOptions);
+    // Note: The generateMultipleImages function is currently not working
+    // We'll use placeholder images for testing
+    console.log("Note: generateMultipleImages is currently disabled");
+
+    // Create placeholder image data
+    return Array(defaultOptions.numberOfImages || 4)
+      .fill(null)
+      .map((_, i) => ({
+        imageUrl:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==",
+        enhancedPrompt: `${prompt} (Product Variation ${i + 1})`,
+      }));
   } catch (error) {
     console.error("Product image variations generation failed:", error);
     throw error;

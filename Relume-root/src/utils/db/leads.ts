@@ -1,9 +1,9 @@
-import { supabase, handleDatabaseError } from './index';
-import type { Database } from '../../types/supabase';
+import { supabase, handleDatabaseError } from "./index";
+import type { Database } from "../../types/supabase";
 
-type Lead = Database['public']['Tables']['leads']['Row'];
-type LeadInsert = Database['public']['Tables']['leads']['Insert'];
-type LeadUpdate = Database['public']['Tables']['leads']['Update'];
+type Lead = Database["public"]["Tables"]["leads"]["Row"];
+type LeadInsert = Database["public"]["Tables"]["leads"]["Insert"];
+type LeadUpdate = Database["public"]["Tables"]["leads"]["Update"];
 
 /**
  * Create a new lead
@@ -11,18 +11,19 @@ type LeadUpdate = Database['public']['Tables']['leads']['Update'];
 export async function createLead(lead: LeadInsert): Promise<Lead | null> {
   try {
     const { data, error } = await supabase
-      .from('leads')
+      .from("leads")
       .insert([lead])
       .select()
       .single();
-    
+
     if (error) {
       throw error;
     }
-    
+
     return data;
   } catch (error) {
-    return handleDatabaseError(error, 'createLead', { lead });
+    handleDatabaseError(error, "createLead", { lead });
+    return null;
   }
 }
 
@@ -31,21 +32,24 @@ export async function createLead(lead: LeadInsert): Promise<Lead | null> {
  */
 export async function getLeads(status?: string): Promise<Lead[]> {
   try {
-    let query = supabase.from('leads').select('*');
-    
+    let query = supabase.from("leads").select("*");
+
     if (status) {
-      query = query.eq('status', status);
+      query = query.eq("status", status);
     }
-    
-    const { data, error } = await query.order('created_at', { ascending: false });
-    
+
+    const { data, error } = await query.order("created_at", {
+      ascending: false,
+    });
+
     if (error) {
       throw error;
     }
-    
+
     return data || [];
   } catch (error) {
-    return handleDatabaseError(error, 'getLeads', { status });
+    handleDatabaseError(error, "getLeads", { status });
+    return [];
   }
 }
 
@@ -55,43 +59,48 @@ export async function getLeads(status?: string): Promise<Lead[]> {
 export async function getLeadById(id: string): Promise<Lead | null> {
   try {
     const { data, error } = await supabase
-      .from('leads')
-      .select('*')
-      .eq('id', id)
+      .from("leads")
+      .select("*")
+      .eq("id", id)
       .single();
-    
+
     if (error) {
-      if (error.code === 'PGRST116') {
+      if (error.code === "PGRST116") {
         return null; // No rows returned
       }
       throw error;
     }
-    
+
     return data;
   } catch (error) {
-    return handleDatabaseError(error, 'getLeadById', { id });
+    handleDatabaseError(error, "getLeadById", { id });
+    return null;
   }
 }
 
 /**
  * Update a lead
  */
-export async function updateLead(id: string, updates: LeadUpdate): Promise<Lead | null> {
+export async function updateLead(
+  id: string,
+  updates: LeadUpdate
+): Promise<Lead | null> {
   try {
     const { data, error } = await supabase
-      .from('leads')
+      .from("leads")
       .update(updates)
-      .eq('id', id)
+      .eq("id", id)
       .select()
       .single();
-    
+
     if (error) {
       throw error;
     }
-    
+
     return data;
   } catch (error) {
-    return handleDatabaseError(error, 'updateLead', { id, updates });
+    handleDatabaseError(error, "updateLead", { id, updates });
+    return null;
   }
 }
 
@@ -100,17 +109,15 @@ export async function updateLead(id: string, updates: LeadUpdate): Promise<Lead 
  */
 export async function deleteLead(id: string): Promise<boolean> {
   try {
-    const { error } = await supabase
-      .from('leads')
-      .delete()
-      .eq('id', id);
-    
+    const { error } = await supabase.from("leads").delete().eq("id", id);
+
     if (error) {
       throw error;
     }
-    
+
     return true;
   } catch (error) {
-    return handleDatabaseError(error, 'deleteLead', { id });
+    handleDatabaseError(error, "deleteLead", { id });
+    return false;
   }
 }

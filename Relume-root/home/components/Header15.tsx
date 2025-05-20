@@ -4,7 +4,7 @@ import { Button } from "@relume_io/relume-ui";
 type ButtonProps = {
   title: string;
   variant: 'primary' | 'secondary';
-  size?: 'small' | 'medium' | 'large';
+  size?: 'sm' | null;
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
 };
@@ -28,12 +28,12 @@ const defaultProps = {
   heading: "Premium Replacement Windows & Doors for Your Home",
   description: "Transform your living space with our energy-efficient windows and doors. Experience quality craftsmanship and exceptional service that you can trust.",
   buttons: [
-    { title: "Get a Free Estimate", variant: "primary" },
-    { title: "Explore Our Products", variant: "secondary" },
+    { title: "Get a Free Estimate", variant: "primary", size: "sm" },
+    { title: "Explore Our Products", variant: "secondary", size: "sm" },
   ],
-  image: { 
-    src: "/assets/images/hero-windows-doors.jpg", 
-    alt: "Modern home with beautiful windows and doors" 
+  image: {
+    src: "/assets/images/hero-windows-doors.jpg",
+    alt: "Modern home with beautiful windows and doors"
   },
 };
 

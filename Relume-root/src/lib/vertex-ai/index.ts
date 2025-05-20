@@ -7,6 +7,6 @@
  */
 
 // Example (will be populated as services are created):
-export * from './text-service';
+export * from "./text-service";
 // export * from './image-service'; // Assuming this exists or will be moved here
-export * from '../types/vertex-ai-types';
+export * from "../../types/vertex-ai";
