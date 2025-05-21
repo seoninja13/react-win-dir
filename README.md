@@ -11,7 +11,7 @@ This repository contains the code for the Window World LA website, a modern webs
 ## Project Status
 
 **Current Status**: Development in progress
-**Last Updated**: May 27, 2025
+**Last Updated**: May 28, 2025
 **Current Version**: 0.4.0
 **Routing Strategy**: Next.js App Router (migration in progress)
 **Project Structure**: Consolidation complete, App Router migration in progress
@@ -20,6 +20,8 @@ This repository contains the code for the Window World LA website, a modern webs
 **Priority 3**: Migrate High-Priority Pages (If Time Permits)
 **App Router Migration Status**: 32% complete (8/25 pages migrated)
 **Non-Working Pages**: Bay-Bow Windows, Hinged Patio Doors, Vinyl Siding Series Pages, Garage Doors
+
+> **CRITICAL DIRECTORY STRUCTURE POLICY**: ALL files related to the website implementation MUST be located within the Relume-root directory. See the [Directory Structure Policy](./Docs/architecture/directory-structure-policy.md) for details.
 
 ## Documentation Structure
 
@@ -60,6 +62,7 @@ All detailed documentation is organized in the [Documentation Directory](./Docs/
 - [Daily Development Logs](./Docs/daily-logs/) - Daily development updates
 - [Latest App Router Migration Status Review](./Docs/daily-logs/2025-05-27-app-router-migration-status-review.md) - Latest review of the App Router migration status
 - [Webpage Progress Tracker](./Docs/tracking/webpage-progress-tracker.md) - Comprehensive tracker for all webpages in the project
+- [Development Progress Tracking](./Docs/tracking/tracking-progress.md) - Detailed tracking of development progress and feature implementation
 - [Image Generation Progress](./Docs/tracking/image-generation-progress.md) - Tracking document for Google Generative AI integration
 
 ## Project Documentation
@@ -74,7 +77,7 @@ This project includes detailed documentation to assist with development, setup, 
   - [Vertex AI Image Generation](./Docs/features/vertex-ai-image-generation.md)
 - **Processes and Setup Guides**: Located in [Processes](./Docs/processes/).
   - [Vertex AI Setup Guide](./Docs/processes/vertex-ai-setup-guide.md)
-- **Progress Tracking**: See [Webpage Progress Tracker](./Docs/tracking/webpage-progress-tracker.md).
+- **Progress Tracking**: See [Webpage Progress Tracker](./Docs/tracking/webpage-progress-tracker.md) and [Development Progress Tracking](./Docs/tracking/tracking-progress.md).
 
 ## Knowledge Base System
 

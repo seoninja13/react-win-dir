@@ -5,7 +5,8 @@ This directory contains documentation related to the architecture of the Window 
 ## Contents
 
 - [Architecture Documentation](./architecture-documentation.md) - Comprehensive analysis and implementation plan
-- [Project Structure Current State](./project-structure-current-state.md) - Current state of the project structure (Priority 1)
+- [Project Structure Current State](./project-structure-current-state-updated.md) - Current state of the project structure (Priority 1)
+- [Website Pages Organization](./website-pages-organization-updated.md) - Organization of page-specific components (Priority 2)
 - [Routing Strategy](./routing-strategy.md) - Documentation of the App Router routing strategy
 - [Project Structure](./project-structure.md) - Overview of the project structure (Priority 1)
 - [Component Structure](./component-structure.md) - Overview of the component structure
@@ -47,11 +48,12 @@ The Window World LA website is built using Next.js with the App Router, React, a
 
 1. **Next.js App Router**: We exclusively use Next.js App Router for routing and server-side rendering. As of May 13, 2025, we have standardized on the App Router approach for all pages, moving away from the mixed routing approach that previously used both the Pages Router and App Router.
 2. **Consolidated Project Structure**: As of May 15, 2025, we have consolidated all content into the `Relume-root` directory, removing duplicate directories and files outside of `Relume-root`. This creates a cleaner, more maintainable codebase and reduces confusion about which files to edit.
-3. **Tailwind CSS**: We use Tailwind CSS for styling.
-4. **Relume UI**: We use Relume UI components for UI elements.
-5. **Unsplash API**: We use Unsplash API for images.
-6. **Netlify**: We use Netlify for deployment and hosting.
-7. **Supabase**: We use Supabase for all data storage and management.
+3. **Centralized Page Components**: As of May 21, 2025, we have physically moved all page-specific components into the `Website Pages` directory within `Relume-root`, creating a cleaner and more organized project structure.
+4. **Tailwind CSS**: We use Tailwind CSS for styling.
+5. **Relume UI**: We use Relume UI components for UI elements.
+6. **Unsplash API**: We use Unsplash API for images.
+7. **Netlify**: We use Netlify for deployment and hosting.
+8. **Supabase**: We use Supabase for all data storage and management.
 
 ## Related Documentation
 
@@ -61,5 +63,6 @@ The Window World LA website is built using Next.js with the App Router, React, a
 - [Features Documentation](../features/index.md)
 - [Integrations Documentation](../integrations/index.md)
 - [Daily Log: May 27, 2025 - App Router Migration Status Review](../daily-logs/2025-05-27-app-router-migration-status-review.md)
+- [Daily Log: May 21, 2025 - Website Pages Reorganization](../daily-logs/2025-05-21-website-pages-reorganization.md)
 
-Last Updated: May 27, 2025 (Added Project Structure Current State documentation and App Router migration references)
+Last Updated: May 21, 2025 (Updated Website Pages Organization documentation)

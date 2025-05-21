@@ -68,13 +68,15 @@ The project is configured to run all Next.js commands from the Relume-root direc
 
 ## Important Notes
 
-1. **Do NOT create or modify files outside the Relume-root directory**. All project files should be contained within this directory.
+1. **CRITICAL: Do NOT create or modify files outside the Relume-root directory**. ALL project files MUST be contained within the Relume-root directory. This is a strict requirement with no exceptions unless explicitly authorized by the project lead.
 
 2. **Do NOT modify files in the Relume-DO-NOT-EDIT directory**. This directory contains the original Relume components that should be used as reference only.
 
 3. When creating new components, copy them from the Relume-DO-NOT-EDIT directory to the appropriate location in the Relume-root directory and then modify them as needed.
 
 4. The `pages-components` directory contains the page-specific components that are imported by the Next.js App Router pages. This naming convention is used to avoid conflicts with the Next.js Pages Router.
+
+> **CRITICAL DIRECTORY STRUCTURE POLICY**: ALL files related to the website implementation MUST be located within the Relume-root directory. See the [Directory Structure Policy](./directory-structure-policy.md) for details.
 
 ## Routing
 
