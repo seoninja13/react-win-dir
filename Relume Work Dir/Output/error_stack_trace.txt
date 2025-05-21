@@ -1,0 +1,4 @@
+VertexAIImageServiceError: [VertexAI.ClientError]: got status: 429 Too Many Requests. {"error":{"code":429,"message":"Quota exceeded for aiplatform.googleapis.com/generate_content_requests_per_minute_per_project_per_base_model with base model: imagen-3.0-generate. Please submit a quota increase request. https://cloud.google.com/vertex-ai/docs/generative-ai/quotas-genai.","status":"RESOURCE_EXHAUSTED"}}
+    at _VertexAIImageService.generateImage (file:///C:/Users/IvoD/repos/react-win-dir/dist/test-image-generation.mjs:265:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async runVertexImageTest (file:///C:/Users/IvoD/repos/react-win-dir/dist/test-image-generation.mjs:340:28)

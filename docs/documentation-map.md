@@ -204,6 +204,7 @@ window-world-la/
 
 - [docs/tracking/index.md](./tracking/index.md) - Tracking documentation index
 - [docs/tracking/webpage-progress-tracker.md](./tracking/webpage-progress-tracker.md) - Webpage progress tracker
+- [docs/tracking/tracking-progress.md](./tracking/tracking-progress.md) - Development progress tracking
 
 ### Template Documentation
 
@@ -297,6 +298,7 @@ window-world-la/
 ### Project Status
 
 - [docs/tracking/webpage-progress-tracker.md](./tracking/webpage-progress-tracker.md) - Webpage progress tracker
+- [docs/tracking/tracking-progress.md](./tracking/tracking-progress.md) - Development progress tracking
 - [docs/priority-list.md](./priority-list.md) - Prioritized list of tasks
 - [docs/daily-logs/2025-05-09.md](./daily-logs/2025-05-09.md) - Daily log for May 9, 2025
 - [docs/daily-logs/2025-05-10.md](./daily-logs/2025-05-10.md) - Daily log for May 10, 2025

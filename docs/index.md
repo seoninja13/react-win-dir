@@ -40,7 +40,8 @@ The admin documentation provides detailed information about the admin UI and how
 The architecture documentation provides detailed information about the system design, component interactions, and technical decisions.
 
 - [Architecture Documentation](./architecture/architecture-documentation.md) - Comprehensive analysis and implementation plan for the Windows Doors CA website
-- [Project Structure Current State](./architecture/project-structure-current-state.md) - Current state of the project structure
+- [Project Structure Current State](./architecture/project-structure-current-state-updated.md) - Current state of the project structure
+- [Website Pages Organization](./architecture/website-pages-organization-updated.md) - Organization of page-specific components
 - [Routing Strategy](./architecture/routing-strategy.md) - Documentation of the App Router routing strategy
 - [Component Structure](./architecture/component-structure.md) - Overview of the component structure
 - [Page Structure](./architecture/page-structure.md) - Overview of the page structure
@@ -187,6 +188,7 @@ The testing documentation provides detailed instructions for testing the project
 The tracking documentation provides comprehensive tracking of various aspects of the project.
 
 - [Webpage Progress Tracker](./tracking/webpage-progress-tracker.md) - Comprehensive tracker for all webpages in the project
+- [Development Progress Tracking](./tracking/tracking-progress.md) - Detailed tracking of development progress and feature implementation
 - [Component Implementation Tracker](./tracking/component-implementation-tracker.md) - Tracker for component implementation status (Coming Soon)
 - [Testing Results Tracker](./tracking/testing-results-tracker.md) - Tracker for testing results across all pages (Coming Soon)
 - [Performance Metrics Tracker](./tracking/performance-metrics-tracker.md) - Tracker for performance metrics across all pages (Coming Soon)
@@ -211,4 +213,4 @@ When contributing to the documentation, follow these guidelines:
 - [Main README](../README.md) - Main project documentation and entry point
 - [Documentation Map](./documentation-map.md) - Comprehensive map of all documentation
 
-Last Updated: May 28, 2025 (Added Knowledge Base documentation and Project Structure Current State reference)
+Last Updated: May 28, 2025 (Added Development Progress Tracking reference and consolidated documentation from Web Dev Progress folder)

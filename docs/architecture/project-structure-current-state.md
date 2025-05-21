@@ -17,14 +17,19 @@
 
 ## Overview
 
-This document provides a comprehensive overview of the current project structure as of May 26, 2025. The project is in the process of migrating from a mixed routing approach (Pages Router and App Router) to a standardized App Router approach. This document serves as a reference for the current state of the project structure and will be updated as the migration progresses.
+This document provides a comprehensive overview of the current project structure as of May 21, 2025. The project is in the process of migrating from a mixed routing approach (Pages Router and App Router) to a standardized App Router approach. This document serves as a reference for the current state of the project structure and will be updated as the migration progresses.
 
 ## Directory Structure
 
 The project currently has the following high-level directory structure:
 
 ```
-react-win-dir/
+react-win-dir/                      # Root directory
+├── .netlify/                       # Netlify configuration
+├── @wWeb development progress folder/ # Web development progress tracking
+│   ├── tracking-progress.md        # Original tracking progress
+│   └── tracking-progress-copy.md   # Copy of tracking progress
+├── Content Engine/                 # Content engine related files
 ├── Docs/                           # Project documentation
 │   ├── architecture/               # Architecture documentation
 │   ├── daily-logs/                 # Daily development logs
@@ -32,23 +37,57 @@ react-win-dir/
 │   ├── pages/                      # Page-specific documentation
 │   ├── processes/                  # Process documentation
 │   └── tracking/                   # Progress tracking documentation
-├── Relume-DO-NOT-EDIT/             # Original Relume components (DO NOT EDIT)
-├── Relume-root/                    # Main project directory
-│   ├── components/                 # Shared components
-│   ├── pages/                      # Pages Router pages (being phased out)
-│   ├── public/                     # Static assets
+├── Export Documentation/           # Export-related documentation
+├── generated-images/               # Generated image files
+├── IDE Instructions/               # IDE-specific instructions
+├── Relume-DO-NOT-EDIT/             # Original Relume files (DO NOT MODIFY)
+├── Relume-root/                    # Main working directory
+│   ├── .next/                      # Next.js build directory
+│   ├── app/                        # Next.js App Router pages
+│   ├── components/                 # React components
+│   ├── config/                     # Configuration files
+│   │   ├── .eslintrc.json         # ESLint configuration
+│   │   ├── eslint.config.mjs      # ESLint configuration
+│   │   ├── netlify.toml           # Netlify configuration
+│   │   ├── next.config.js         # Next.js configuration
+│   │   ├── postcss.config.js      # PostCSS configuration
+│   │   ├── postcss.config.mjs     # PostCSS configuration
+│   │   └── tailwind.config.ts     # Tailwind CSS configuration
+│   ├── docs/                       # Documentation files
+│   │   └── migration/             # Migration documentation
+│   ├── docs-assets/                # Documentation assets
+│   ├── env-files/                  # Environment files
+│   │   ├── .env                   # Environment variables
+│   │   ├── .env.example           # Example environment variables
+│   │   ├── .env.local             # Local environment variables
+│   │   └── .env.local.example     # Example local environment variables
+│   ├── hooks/                      # React hooks
+│   ├── misc/                       # Miscellaneous files
+│   ├── Output/                     # Output files
+│   ├── pages/                      # Next.js Pages Router pages (being phased out)
+│   ├── public/                     # Public assets
+│   ├── scripts/                    # Script files
+│   ├── service-accounts/           # Service account key files
 │   ├── src/                        # Source code
-│   │   ├── app/                    # App Router pages (target architecture)
-│   │   ├── components/             # React components
-│   │   └── utils/                  # Utility functions
+│   │   ├── app/                   # App Router pages (target architecture)
+│   │   ├── components/            # React components
+│   │   └── utils/                 # Utility functions
 │   ├── styles/                     # Global styles
-│   ├── [page-directories]/         # Page-specific components (e.g., home/, windows/, doors/)
-│   ├── next.config.js              # Next.js configuration
-│   ├── package.json                # Project dependencies
-│   └── tailwind.config.js          # Tailwind CSS configuration
-├── Sample Project Structure Do Not Delete/ # Reference materials
-├── sample-images/                  # Sample images for development
-└── Supabase/                       # Supabase-related files
+│   ├── Supabase/                   # Supabase related files
+│   ├── tests/                      # Test files
+│   ├── utils/                      # Utility functions
+│   ├── vertex-ai-tests/            # Vertex AI test files
+│   └── Website Pages/              # Centralized page-specific components
+│       ├── home/                  # Home page components
+│       ├── windows/               # Windows page components
+│       ├── doors/                 # Doors page components
+│       ├── patio/                 # Patio page components
+│       ├── picture-window/        # Picture Window page components
+│       └── [other-page-directories]/ # Other page-specific components
+├── Sample-images/                  # Sample images
+├── .gitignore                      # Git ignore file
+├── .windsurfrules                  # Windsurf rules
+└── README.md                       # Main README file
 ```
 
 ## Routing Architecture
@@ -61,7 +100,7 @@ The project is currently in transition from a mixed routing approach to a standa
    - Example: `Relume-root/pages/windows.js` → `export { default } from '../windows';`
 
 2. **App Router** (`Relume-root/src/app/`): Contains the target architecture pages.
-   - Example: `Relume-root/src/app/windows/page.tsx` → Imports components from `Relume-root/windows/`
+   - Example: `Relume-root/src/app/windows/page.tsx` → Imports components from `Relume-root/Website Pages/windows/`
 
 ### Routing Priority
 
@@ -75,8 +114,8 @@ This means that if a route exists in both directories, the Pages Router version 
 
 The project organizes components in the following way:
 
-1. **Page-Specific Components**: Located in dedicated directories at the root of `Relume-root/`.
-   - Example: `Relume-root/windows/components/Header44.jsx`
+1. **Page-Specific Components**: Located in the `Relume-root/Website Pages/` directory.
+   - Example: `Relume-root/Website Pages/windows/components/Header44.jsx`
 
 2. **Shared Components**: Located in `Relume-root/components/`.
    - Example: `Relume-root/components/Button.jsx`
@@ -161,5 +200,6 @@ The following steps are planned to address the current issues and complete the m
 - [Webpage Progress Tracker](../tracking/webpage-progress-tracker.md)
 - [Working Directory Documentation](./working-directory.md)
 - [Routing Strategy Documentation](./routing-strategy.md)
+- [Website Pages Organization](./website-pages-organization.md)
 
-Last Updated: May 26, 2025
+Last Updated: May 21, 2025 (Updated to reflect ongoing Website Pages reorganization)

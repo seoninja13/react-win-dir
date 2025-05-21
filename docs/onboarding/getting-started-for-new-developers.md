@@ -56,7 +56,7 @@ The Windows Doors CA website is a modern website for a windows, doors, siding, a
    ```bash
    # First, kill any existing Node.js processes to avoid port conflicts
    taskkill /F /IM node.exe
-   
+
    # Then start the development server
    npm run dev
    ```
@@ -98,10 +98,12 @@ react-win-dir/                      # Project root (repository root)
 
 ### Key Directories
 
-- **Relume-root/**: This is the primary working directory where all development work should be done.
+- **Relume-root/**: This is the primary working directory where ALL development work MUST be done. No files related to the website implementation should exist outside this directory.
 - **Relume-root/src/app/**: This is where all App Router pages should be created.
 - **Relume-DO-NOT-EDIT/**: This directory contains the original Relume components and should never be edited.
 - **Docs/**: This directory contains all project documentation.
+
+> **CRITICAL DIRECTORY STRUCTURE POLICY**: ALL files related to the website implementation MUST be located within the Relume-root directory. See the [Directory Structure Policy](../architecture/directory-structure-policy.md) for details.
 
 ## Priority System
 
