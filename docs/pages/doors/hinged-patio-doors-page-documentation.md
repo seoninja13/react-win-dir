@@ -16,9 +16,11 @@
 
 The Hinged Patio Doors page showcases the hinged patio door products offered by Windows Doors CA. It provides detailed information about the features, benefits, styles, and customization options for hinged patio doors.
 
-**URL Path**: `/hinged-patio-doors`  
-**Template Type**: T3 (Product/Service Detail Page Template)  
-**Priority Level**: Medium  
+**URL Paths**:
+- Pages Router: `/hinged-patio-doors`
+- App Router: `/doors/hinged-patio-doors`
+**Template Type**: T3 (Product/Service Detail Page Template)
+**Priority Level**: Medium
 
 ## Page Structure
 
@@ -57,6 +59,8 @@ The Hinged Patio Doors page uses the following components:
 
 The Hinged Patio Doors page was implemented using the following approach:
 
+### Pages Router Implementation (Legacy)
+
 1. Verified that the hinged-patio-doors page directory and components already existed in the Relume-root directory
 2. Created a route file at `Relume-root/pages/hinged-patio-doors.js` with the following content:
    ```javascript
@@ -64,6 +68,31 @@ The Hinged Patio Doors page was implemented using the following approach:
    ```
 3. Tested the page by opening it in the browser at http://localhost:3000/hinged-patio-doors
 4. Confirmed that the page rendered correctly with all components
+
+### App Router Implementation (Target Architecture)
+
+1. Created an App Router route at `Relume-root/src/app/doors/hinged-patio-doors/page.tsx` with the following content:
+   ```tsx
+   'use client';
+
+   import React, { useEffect } from 'react';
+   import HingedPatioDoorsPage from '../../../../../hinged-patio-doors/index.jsx';
+   import { logger } from '@/utils/logger';
+
+   export default function HingedPatioDoors() {
+     useEffect(() => {
+       // Log that the hinged patio doors page has been rendered
+       logger.info('Hinged Patio Doors page rendered', {
+         component: 'HingedPatioDoorsPage',
+         timestamp: new Date().toISOString(),
+       });
+     }, []);
+
+     return <HingedPatioDoorsPage />;
+   }
+   ```
+2. Tested the page by accessing it directly via URL at `/doors/hinged-patio-doors`
+3. Verified that the page renders correctly with all components
 
 ### Code Structure
 
@@ -126,15 +155,27 @@ export default function Page() {
 
 ## Issues and Solutions
 
-No issues were encountered during the implementation of the Hinged Patio Doors page. The implementation was straightforward because:
+### Pages Router Implementation
+
+No issues were encountered during the implementation of the Hinged Patio Doors page in the Pages Router. The implementation was straightforward because:
 
 1. The hinged-patio-doors page directory and components already existed in the Relume-root directory
 2. We followed the established pattern for creating route files
 3. We verified that the page exists in the Relume-DO-NOT-EDIT directory before implementing it
 
+### App Router Implementation
+
+No issues were encountered during the implementation of the Hinged Patio Doors page in the App Router. The implementation was straightforward because:
+
+1. We followed the established pattern for creating App Router routes
+2. We used the existing components from the Relume-root directory
+3. We added proper logging functionality to track page rendering
+
 ## Testing
 
 The Hinged Patio Doors page has been tested for the following:
+
+### Pages Router Testing
 
 - **Desktop Rendering**: Verified that all components render correctly on desktop
 - **Mobile Rendering**: Verified that all components render correctly on mobile
@@ -143,6 +184,14 @@ The Hinged Patio Doors page has been tested for the following:
 - **Navigation**: Verified that all navigation links work correctly
 - **Call-to-Action Buttons**: Verified that all call-to-action buttons work correctly
 
+### App Router Testing
+
+- **URL Access**: Verified that the page is accessible at `/doors/hinged-patio-doors`
+- **Component Rendering**: Verified that all components render correctly
+- **Logging**: Verified that proper logging is implemented
+- **Navigation**: Verified that all navigation links work correctly
+- **Responsive Design**: Verified that the page is responsive on all screen sizes
+
 ## Related Documentation
 
 - [Doors Page Documentation](./doors-page-documentation.md)
@@ -150,6 +199,8 @@ The Hinged Patio Doors page has been tested for the following:
 - [Patio Doors Page Documentation](./patio-page-documentation.md)
 - [Garage Doors Page Documentation](./garage-page-documentation.md)
 - [Hinged Patio Doors Page Implementation Log](../../daily-logs/2025-05-12-hinged-patio-doors-page-implementation.md)
+- [Hinged Patio Doors Page App Router Implementation Log](../../daily-logs/2025-05-26-app-router-implementation-fixes.md)
+- [App Router Standardization Plan](../../processes/app-router-standardization-plan.md)
 - [Webpage Progress Tracker](../../tracking/webpage-progress-tracker.md)
 
-Last Updated: May 12, 2025
+Last Updated: May 26, 2025 (Added App Router implementation details)

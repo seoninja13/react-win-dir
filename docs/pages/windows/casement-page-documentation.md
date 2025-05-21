@@ -16,9 +16,9 @@
 
 The Casement Windows page showcases the casement window products offered by Windows Doors CA. It provides detailed information about the features, benefits, styles, and customization options for casement windows.
 
-**URL Path**: `/casement`  
-**Template Type**: T3 (Product/Service Detail Page Template)  
-**Priority Level**: High  
+**URL Path**: `/casement`
+**Template Type**: T3 (Product/Service Detail Page Template)
+**Priority Level**: High
 
 ## Page Structure
 
@@ -41,19 +41,18 @@ The Casement Windows page follows the standard T3 template structure with the fo
 The Casement Windows page uses the following components:
 
 1. **Navbar10**: Main navigation component with dropdown menus
-2. **Header44**: Hero section component with background image and overlay
-3. **Header30**: Introduction component with title, description, and call-to-action buttons
-4. **Layout10**: Features and benefits component with image and text
-5. **Layout246**: Styles and options component with image and text
-6. **Layout22**: Customization options component with image and text
-7. **Layout4**: Gallery component with images of homes
-8. **Layout237**: Customization tool component with image and text
-9. **Layout22_1**: Complementary products component with image and text
-10. **Layout241**: Additional features component with image and text
-11. **Layout12**: Additional information component with image and text
-12. **Testimonial5**: Testimonials component with customer reviews
-13. **Cta7**: Call-to-action component with form
-14. **Footer4**: Footer component with links and contact information
+2. **Header47**: Hero section component with background image and overlay
+3. **Header5**: Introduction component with title, description, and call-to-action buttons
+4. **Layout1**: Features and benefits component with image and text
+5. **Layout240**: Styles and options component with image and text
+6. **Layout27**: Customization options component with image and text
+7. **Layout6**: Gallery component with images of homes
+8. **Layout90**: Customization tool component with image and text
+9. **Layout207**: Complementary products component with image and text
+10. **Gallery8**: Gallery component with images of homes
+11. **Layout1_1**: Additional information component with image and text
+12. **Faq1**: FAQ component with accordion-style questions and answers
+13. **Footer4**: Footer component with links and contact information
 
 ## Implementation Details
 
@@ -66,6 +65,73 @@ The Casement Windows page was implemented using the following approach:
    ```
 3. Tested the page by opening it in the browser at http://localhost:3000/casement
 4. Confirmed that the page rendered correctly with all components
+5. Created an App Router route at `Relume-root/src/app/casement/page.tsx` that imports the same components
+
+### Routing
+
+The Casement Windows page is accessible through both the Pages Router and App Router:
+
+#### Pages Router
+
+The route is defined in `Relume-root/pages/casement.js`:
+
+```javascript
+export { default } from '../casement';
+```
+
+#### App Router
+
+The route is defined in `Relume-root/src/app/casement/page.tsx`:
+
+```tsx
+'use client';
+
+import React, { useEffect } from 'react';
+import { logger } from '@/utils/logger';
+
+// Import components from the Pages Router version
+import { Navbar10 } from '../../../casement/components/Navbar10';
+import { Header47 } from '../../../casement/components/Header47';
+import { Header5 } from '../../../casement/components/Header5';
+import { Layout1 } from '../../../casement/components/Layout1';
+import { Layout240 } from '../../../casement/components/Layout240';
+import { Layout27 } from '../../../casement/components/Layout27';
+import { Layout6 } from '../../../casement/components/Layout6';
+import { Layout90 } from '../../../casement/components/Layout90';
+import { Layout207 } from '../../../casement/components/Layout207';
+import { Gallery8 } from '../../../casement/components/Gallery8';
+import { Layout1_1 } from '../../../casement/components/Layout1_1';
+import { Faq1 } from '../../../casement/components/Faq1';
+import { Footer4 } from '../../../casement/components/Footer4';
+
+export default function Casement() {
+  useEffect(() => {
+    // Log that the casement windows page has been rendered
+    logger.info('Casement Windows page rendered', {
+      component: 'CasementPage',
+      timestamp: new Date().toISOString(),
+    });
+  }, []);
+
+  return (
+    <div>
+      <Navbar10 />
+      <Header47 />
+      <Header5 />
+      <Layout1 />
+      <Layout240 />
+      <Layout27 />
+      <Layout6 />
+      <Layout90 />
+      <Layout207 />
+      <Gallery8 />
+      <Layout1_1 />
+      <Faq1 />
+      <Footer4 />
+    </div>
+  );
+}
+```
 
 ### Code Structure
 
@@ -75,18 +141,17 @@ The Casement Windows page is structured as follows:
 casement/
 ├── components/
 │   ├── Navbar10.jsx
-│   ├── Header44.jsx
-│   ├── Header30.jsx
-│   ├── Layout10.jsx
-│   ├── Layout246.jsx
-│   ├── Layout22.jsx
-│   ├── Layout4.jsx
-│   ├── Layout237.jsx
-│   ├── Layout22_1.jsx
-│   ├── Layout241.jsx
-│   ├── Layout12.jsx
-│   ├── Testimonial5.jsx
-│   ├── Cta7.jsx
+│   ├── Header47.jsx
+│   ├── Header5.jsx
+│   ├── Layout1.jsx
+│   ├── Layout240.jsx
+│   ├── Layout27.jsx
+│   ├── Layout6.jsx
+│   ├── Layout90.jsx
+│   ├── Layout207.jsx
+│   ├── Gallery8.jsx
+│   ├── Layout1_1.jsx
+│   ├── Faq1.jsx
 │   └── Footer4.jsx
 └── index.jsx
 ```
@@ -96,36 +161,34 @@ The `index.jsx` file imports all components and renders them in the correct orde
 ```jsx
 import React from "react";
 import { Navbar10 } from "./components/Navbar10";
-import { Header44 } from "./components/Header44";
-import { Header30 } from "./components/Header30";
-import { Layout10 } from "./components/Layout10";
-import { Layout246 } from "./components/Layout246";
-import { Layout22 } from "./components/Layout22";
-import { Layout4 } from "./components/Layout4";
-import { Layout237 } from "./components/Layout237";
-import { Layout22_1 } from "./components/Layout22_1";
-import { Layout241 } from "./components/Layout241";
-import { Layout12 } from "./components/Layout12";
-import { Testimonial5 } from "./components/Testimonial5";
-import { Cta7 } from "./components/Cta7";
+import { Header47 } from "./components/Header47";
+import { Header5 } from "./components/Header5";
+import { Layout1 } from "./components/Layout1";
+import { Layout240 } from "./components/Layout240";
+import { Layout27 } from "./components/Layout27";
+import { Layout6 } from "./components/Layout6";
+import { Layout90 } from "./components/Layout90";
+import { Layout207 } from "./components/Layout207";
+import { Gallery8 } from "./components/Gallery8";
+import { Layout1_1 } from "./components/Layout1_1";
+import { Faq1 } from "./components/Faq1";
 import { Footer4 } from "./components/Footer4";
 
 export default function Page() {
   return (
     <div>
       <Navbar10 />
-      <Header44 />
-      <Header30 />
-      <Layout10 />
-      <Layout246 />
-      <Layout22 />
-      <Layout4 />
-      <Layout237 />
-      <Layout22_1 />
-      <Layout241 />
-      <Layout12 />
-      <Testimonial5 />
-      <Cta7 />
+      <Header47 />
+      <Header5 />
+      <Layout1 />
+      <Layout240 />
+      <Layout27 />
+      <Layout6 />
+      <Layout90 />
+      <Layout207 />
+      <Gallery8 />
+      <Layout1_1 />
+      <Faq1 />
       <Footer4 />
     </div>
   );
@@ -163,4 +226,4 @@ The Casement Windows page has been tested for the following:
 - [Casement Windows Page Implementation Log](../../daily-logs/2025-05-12-casement-page-implementation.md)
 - [Webpage Progress Tracker](../../tracking/webpage-progress-tracker.md)
 
-Last Updated: May 12, 2025
+Last Updated: May 20, 2025 (Added App Router implementation)

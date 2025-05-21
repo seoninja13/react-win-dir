@@ -16,9 +16,9 @@
 
 The Double-Hung Windows page showcases the double-hung window products offered by Windows Doors CA. It provides detailed information about the features, benefits, styles, and customization options for double-hung windows.
 
-**URL Path**: `/double-hung`  
-**Template Type**: T3 (Product/Service Detail Page Template)  
-**Priority Level**: High  
+**URL Path**: `/double-hung`
+**Template Type**: T3 (Product/Service Detail Page Template)
+**Priority Level**: High
 
 ## Page Structure
 
@@ -68,6 +68,75 @@ The Double-Hung Windows page was implemented using the following approach:
 4. Fixed the Testimonial19 component by replacing it with a simpler version that doesn't use the Carousel component
 5. Tested the page by opening it in the browser at http://localhost:3000/double-hung
 6. Confirmed that the page rendered correctly with all components
+7. Created an App Router route at `Relume-root/src/app/double-hung/page.tsx` that imports the same components
+
+### Routing
+
+The Double-Hung Windows page is accessible through both the Pages Router and App Router:
+
+#### Pages Router
+
+The route is defined in `Relume-root/pages/double-hung.js`:
+
+```javascript
+export { default } from '../double-hung';
+```
+
+#### App Router
+
+The route is defined in `Relume-root/src/app/double-hung/page.tsx`:
+
+```tsx
+'use client';
+
+import React, { useEffect } from 'react';
+import { logger } from '@/utils/logger';
+
+// Import components from the Pages Router version
+import { Navbar10 } from '../../../double-hung/components/Navbar10';
+import { Header44 } from '../../../double-hung/components/Header44';
+import { Header30 } from '../../../double-hung/components/Header30';
+import { Layout10 } from '../../../double-hung/components/Layout10';
+import { Layout246 } from '../../../double-hung/components/Layout246';
+import { Layout22 } from '../../../double-hung/components/Layout22';
+import { Layout4 } from '../../../double-hung/components/Layout4';
+import { Layout237 } from '../../../double-hung/components/Layout237';
+import { Layout22_1 } from '../../../double-hung/components/Layout22_1';
+import { Layout241 } from '../../../double-hung/components/Layout241';
+import { Layout12 } from '../../../double-hung/components/Layout12';
+import { Testimonial19 } from '../../../double-hung/components/Testimonial19';
+import { Cta7 } from '../../../double-hung/components/Cta7';
+import { Footer4 } from '../../../double-hung/components/Footer4';
+
+export default function DoubleHung() {
+  useEffect(() => {
+    // Log that the double-hung windows page has been rendered
+    logger.info('Double-Hung Windows page rendered', {
+      component: 'DoubleHungPage',
+      timestamp: new Date().toISOString(),
+    });
+  }, []);
+
+  return (
+    <div>
+      <Navbar10 />
+      <Header44 />
+      <Header30 />
+      <Layout10 />
+      <Layout246 />
+      <Layout22 />
+      <Layout4 />
+      <Layout237 />
+      <Layout22_1 />
+      <Layout241 />
+      <Layout12 />
+      <Testimonial19 />
+      <Cta7 />
+      <Footer4 />
+    </div>
+  );
+}
+```
 
 ### Code Structure
 
@@ -140,7 +209,7 @@ Several issues were encountered during the implementation of the Double-Hung Win
 
 ### Issue 1: Naming Conflict in Testimonial19 Component
 
-**Error Message**: 
+**Error Message**:
 ```
 ReferenceError: Cannot access 'useCarousel' before initialization
 ```
@@ -157,7 +226,7 @@ const carousel = useCarousel();
 
 ### Issue 2: Carousel Component Import Problem
 
-**Error Message**: 
+**Error Message**:
 ```
 Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
 ```
@@ -189,4 +258,4 @@ The Double-Hung Windows page has been tested for the following:
 - [Double-Hung Windows Page Implementation Log](../../daily-logs/2025-05-12-double-hung-page-implementation.md)
 - [Webpage Progress Tracker](../../tracking/webpage-progress-tracker.md)
 
-Last Updated: May 12, 2025
+Last Updated: May 20, 2025 (Added App Router implementation)

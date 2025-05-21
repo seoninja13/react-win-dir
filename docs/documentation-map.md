@@ -4,7 +4,7 @@ This document provides a comprehensive map of all documentation for the Window W
 
 ## Overview
 
-The documentation is organized in a pyramid structure with the main README.md as the single entry point. All documentation is organized hierarchically in the `docs/` directory.
+The documentation is organized in a pyramid structure with the main README.md as the single entry point. All documentation is organized hierarchically in the `Docs/` directory.
 
 ## Documentation Structure
 
@@ -114,9 +114,9 @@ window-world-la/
 ### Main Documentation
 
 - [README.md](../README.md) - Main project documentation and entry point
-- [docs/index.md](./index.md) - Documentation index
-- [docs/documentation-map.md](./documentation-map.md) - Comprehensive map of all documentation
-- [docs/priority-list.md](./priority-list.md) - Prioritized list of tasks
+- [Docs/index.md](./index.md) - Documentation index
+- [Docs/documentation-map.md](./documentation-map.md) - Comprehensive map of all documentation
+- [Docs/priority-list.md](./priority-list.md) - Prioritized list of tasks
 
 ### Architecture Documentation
 
@@ -227,7 +227,7 @@ window-world-la/
 ### Project Overview
 
 - [README.md](../README.md) - Main project documentation and entry point
-- [docs/index.md](./index.md) - Documentation index
+- [Docs/index.md](./index.md) - Documentation index
 
 ### Architecture
 
@@ -302,6 +302,25 @@ window-world-la/
 - [docs/daily-logs/2025-05-10.md](./daily-logs/2025-05-10.md) - Daily log for May 10, 2025
 - [docs/daily-logs/2025-05-11-garden-page-implementation.md](./daily-logs/2025-05-11-garden-page-implementation.md) - Daily log for Garden page implementation
 - [docs/daily-logs/2025-05-13-routing-strategy-decision.md](./daily-logs/2025-05-13-routing-strategy-decision.md) - Daily log for routing strategy decision
+
+## Knowledge Base Documentation
+
+- [Docs/Knowledge Base/index.md](./Knowledge%20Base/index.md) - Knowledge Base documentation index
+- [Docs/Knowledge Base/knowledge-base-workflow.md](./Knowledge%20Base/knowledge-base-workflow.md) - Complete end-to-end workflow of the knowledge base system
+- [Docs/Knowledge Base/knowledge-base-implementation.md](./Knowledge%20Base/knowledge-base-implementation.md) - Overview of the implementation
+- [Docs/Knowledge Base/semantic-chunking-process.md](./Knowledge%20Base/semantic-chunking-process.md) - Detailed explanation of the semantic chunking process
+- [Docs/Knowledge Base/embedding-generation.md](./Knowledge%20Base/embedding-generation.md) - How embeddings are generated using Gemini 2.0 Flash
+- [Docs/Knowledge Base/vector-storage.md](./Knowledge%20Base/vector-storage.md) - How vectors are stored and retrieved from Supabase
+- [Docs/Knowledge Base/search-functionality.md](./Knowledge%20Base/search-functionality.md) - How the search functionality works
+- [Docs/Knowledge Base/automated-ingestion-process.md](./Knowledge%20Base/automated-ingestion-process.md) - How to automatically ingest content from various sources
+- [Docs/Knowledge Base/setup-guide.md](./Knowledge%20Base/setup-guide.md) - How to set up the knowledge base
+- [Docs/Knowledge Base/adding-content.md](./Knowledge%20Base/adding-content.md) - How to add content to the knowledge base
+- [Docs/Knowledge Base/searching-content.md](./Knowledge%20Base/searching-content.md) - How to search the knowledge base
+- [Docs/Knowledge Base/best-practices.md](./Knowledge%20Base/best-practices.md) - Best practices for using the knowledge base
+- [Docs/Knowledge Base/api-reference.md](./Knowledge%20Base/api-reference.md) - Reference for the knowledge base API
+- [Docs/Knowledge Base/database-schema.md](./Knowledge%20Base/database-schema.md) - Schema for the knowledge base database
+- [Docs/Knowledge Base/performance-considerations.md](./Knowledge%20Base/performance-considerations.md) - Performance considerations for the knowledge base
+- [Docs/Knowledge Base/troubleshooting.md](./Knowledge%20Base/troubleshooting.md) - Troubleshooting guide for the knowledge base
 
 ## Documentation Gaps
 
@@ -390,4 +409,14 @@ The following documentation is planned for future development:
 - [Development Workflow](./processes/development-workflow.md)
 - [Documentation Standards](./processes/documentation-standards.md)
 
-Last Updated: May 14, 2025 (Added Image Generation documentation)
+### Knowledge Base System
+
+- [Docs/Knowledge Base/index.md](./Knowledge%20Base/index.md) - Knowledge Base documentation index
+- [Docs/Knowledge Base/knowledge-base-workflow.md](./Knowledge%20Base/knowledge-base-workflow.md) - Complete end-to-end workflow of the knowledge base system
+- [Docs/Knowledge Base/semantic-chunking-process.md](./Knowledge%20Base/semantic-chunking-process.md) - Detailed explanation of the semantic chunking process
+- [Docs/Knowledge Base/embedding-generation.md](./Knowledge%20Base/embedding-generation.md) - How embeddings are generated using Gemini 2.0 Flash
+- [Docs/Knowledge Base/vector-storage.md](./Knowledge%20Base/vector-storage.md) - How vectors are stored and retrieved from Supabase
+- [Docs/Knowledge Base/search-functionality.md](./Knowledge%20Base/search-functionality.md) - How the search functionality works
+- [Docs/Knowledge Base/automated-ingestion-process.md](./Knowledge%20Base/automated-ingestion-process.md) - How to automatically ingest content from various sources
+
+Last Updated: May 28, 2025 (Added Knowledge Base documentation and updated documentation structure)

@@ -43,8 +43,8 @@ For each page in the Pages Router, follow these steps:
 
 | Page | App Router Equivalent | Status | Notes |
 |------|----------------------|--------|-------|
-| `/` (index.js) | `/src/app/page.tsx` | ✅ | Root page |
-| `/windows` | `/src/app/windows/page.tsx` | ✅ | Windows page |
+| `/` (index.js) | `/src/app/page.tsx` | ✅ | Migrated on May 15, 2025 |
+| `/windows` | `/src/app/windows/page.tsx` | ✅ | Migrated on May 20, 2025 |
 | `/doors` | `/src/app/doors/page.tsx` | ✅ | Doors page |
 | `/vinyl-siding` | `/src/app/vinyl-siding/page.tsx` | ✅ | Vinyl Siding page |
 | `/1000-series` | `/src/app/1000-series/page.tsx` | ❌ | Need to create |
@@ -54,11 +54,11 @@ For each page in the Pages Router, follow these steps:
 | `/4000-series` | `/src/app/4000-series/page.tsx` | ❌ | Need to create |
 | `/5000-series` | `/src/app/5000-series/page.tsx` | ❌ | Need to create |
 | `/awning` | `/src/app/awning/page.tsx` | ❌ | Need to create |
-| `/bay-bow` | `/src/app/bay-bow/page.tsx` | ❌ | Need to create |
+| `/bay-bow` | `/src/app/windows/bay-bow/page.tsx` | ✅ | Migrated on May 22, 2025 |
 | `/blog` | `/src/app/blog/page.tsx` | ❌ | Need to create |
-| `/casement` | `/src/app/casement/page.tsx` | ❌ | Need to create |
+| `/casement` | `/src/app/casement/page.tsx` | ✅ | Migrated on May 20, 2025 |
 | `/custom` | `/src/app/custom/page.tsx` | ❌ | Need to create |
-| `/double-hung` | `/src/app/double-hung/page.tsx` | ❌ | Need to create |
+| `/double-hung` | `/src/app/double-hung/page.tsx` | ✅ | Migrated on May 20, 2025 |
 | `/energy-efficient` | `/src/app/energy-efficient/page.tsx` | ❌ | Need to create |
 | `/entry` | `/src/app/entry/page.tsx` | ❌ | Need to create |
 | `/garage` | `/src/app/garage/page.tsx` | ❌ | Need to create |

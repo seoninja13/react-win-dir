@@ -4,6 +4,13 @@ This directory contains daily development logs for the Window World LA website p
 
 ## Log Entries
 
+- [May 27, 2025 - App Router Migration Status Review](./2025-05-27-app-router-migration-status-review.md) - Comprehensive review of App Router migration status and documentation updates
+- [May 26, 2025 - App Router Implementation Fixes](./2025-05-26-app-router-implementation-fixes.md) - Fixes for App Router implementations of non-working pages
+- [May 25, 2025 - Vinyl Siding Page App Router Implementation](./2025-05-25-vinyl-siding-page-app-router-implementation.md) - App Router implementation for Vinyl Siding pages
+- [May 24, 2025 - Doors Page App Router Implementation](./2025-05-24-doors-page-app-router-implementation.md) - App Router implementation for Doors page
+- [May 23, 2025 - Garage Doors App Router Implementation](./2025-05-23-garage-doors-app-router-implementation.md) - App Router implementation for Garage Doors page
+- [May 22, 2025 - Bay-Bow Page App Router Migration](./2025-05-22-bay-bow-page-app-router-migration.md) - App Router migration for Bay-Bow Windows page
+- [May 20, 2025 - Project Structure Cleanup Implementation](./2025-05-20-project-structure-cleanup-implementation.md) - Project structure cleanup implementation
 - [May 16, 2025 - Knowledge Base Implementation](./2025-05-16-knowledge-base-implementation.md) - Implementation of Knowledge Base system with semantic chunking and Gemini embeddings
 - [May 16, 2025 - Google GenAI SDK Testing](./2025-05-16-google-genai-sdk-testing.md) - Testing of Google Generative AI SDK for embedding generation
 - [May 16, 2025](./2025-05-16.md) - Daily development activities and progress
@@ -52,8 +59,12 @@ To create a new daily log, follow these steps:
 
 ## Related Documentation
 
+- [Project Structure Current State](../architecture/project-structure-current-state.md) - Current state of the project structure
+- [App Router Migration Tracking](../migration/app-router-migration-tracking.md) - Comprehensive tracking of the App Router migration progress
+- [Next Steps for App Router Migration](../migration/next-steps-for-app-router-migration.md) - Detailed steps for continuing the App Router migration
+- [App Router Standardization Plan](../processes/app-router-standardization-plan.md) - Detailed plan for standardizing on the App Router approach
 - [Priority Task List](../priority-list.md) - Prioritized list of tasks for the project
 - [Documentation Standards](../processes/documentation-standards.md) - Standards for documentation
 - [Development Workflow](../processes/development-workflow.md) - How to contribute to the project
 
-Last Updated: May 14, 2025 (Added Image Generation documentation log)
+Last Updated: May 27, 2025 (Added App Router Migration documentation logs)

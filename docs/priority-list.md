@@ -4,12 +4,48 @@ This document contains a prioritized list of tasks for the Window World LA websi
 
 ## High Priority Tasks
 
-1. ✅ **Fix Development Server Issues**
+1. **Fix Non-Working Pages (Immediate Action - May 28, 2025)**
+   - Resolve routing conflicts for Bay-Bow Windows Page
+   - Resolve routing conflicts for Hinged Patio Doors Page
+   - Resolve routing conflicts for Vinyl Siding Series Pages
+   - Remove simplified debug version of Garage Doors Page
+   - Test all fixed pages to ensure they work correctly
+   - Document all changes and update tracking documentation
+
+2. **Standardize Directory Structure (After Fixing Non-Working Pages)**
+   - Identify App Router pages outside Relume-root
+   - Move App Router pages to Relume-root/src/app/
+   - Update import paths to reflect the correct directory structure
+   - Test all pages to ensure they work correctly
+   - Document all changes and update tracking documentation
+
+3. **Migrate High-Priority Pages (If Time Permits)**
+   - Create App Router implementation for Entry Doors Page
+   - Create App Router implementation for Patio Doors Page
+   - Create App Router implementation for Awning Windows Page
+   - Create App Router implementation for Picture Windows Page
+   - Test all migrated pages to ensure they work correctly
+   - Document all changes and update tracking documentation
+
+4. **Complete App Router Migration (Medium-Term)**
+   - Migrate remaining Windows Pages (Sliding, Custom, Energy Efficient)
+   - Migrate Informational Pages (About, Contact, FAQs)
+   - Remove Pages Router implementations once all pages are migrated
+   - Test all pages to ensure they work correctly
+   - Document all changes and update tracking documentation
+
+5. **Implement Google Generative AI Integration**
+   - Process CSV data from Window World LA website
+   - Generate images using Google Cloud's Vertex AI
+   - Implement batch processing functionality
+   - Integrate generated images into the website
+
+6. ✅ **Fix Development Server Issues**
    - ✅ Resolve issues with the development server not starting properly
    - ✅ Ensure Netlify Dev works correctly
    - ✅ Document the correct process for starting the development server
 
-2. ✅ **Implement Core Pages**
+7. ✅ **Implement Core Pages**
    - ✅ Home page with hero section, product showcase, and call-to-action
    - ✅ Windows product page with detailed information and gallery
    - ✅ Doors product page with detailed information and gallery
@@ -17,60 +53,32 @@ This document contains a prioritized list of tasks for the Window World LA websi
    - ✅ Roofing product page with detailed information and gallery
    - ✅ Contact page with form and map
 
-3. **Implement Google Generative AI Integration**
-   - Process CSV data from Window World LA website
-   - Generate images using Google Cloud's Vertex AI
-   - Implement batch processing functionality
-   - Integrate generated images into the website
-
-4. ✅ **Implement Unsplash Integration**
+8. ✅ **Implement Unsplash Integration**
    - ✅ Create utility functions for interacting with the Unsplash API
    - ✅ Create API route for fetching Unsplash images
    - ✅ Create custom hook for fetching Unsplash images
    - ✅ Create components for displaying Unsplash images with proper attribution
    - ✅ Update existing components to use Unsplash images
 
-5. ✅ **Resolve Tailwind CSS Configuration Issues**
+9. ✅ **Resolve Tailwind CSS Configuration Issues**
    - ✅ Fix Tailwind CSS configuration to work with Relume UI
    - ✅ Update PostCSS configuration
    - ✅ Resolve CSS import syntax issues
    - ✅ Test all components with the updated configuration
 
-6. ✅ **App Router Standardization**
-   - ✅ Standardize on Next.js App Router approach
-   - ✅ Keep all files within Relume-root directory structure
-   - ✅ Remove Pages Router files with corresponding App Router implementations
-   - ✅ Update configuration files to support consolidated structure
+10. ✅ **Project Structure Consolidation**
+    - ✅ Remove duplicate directories and files outside Relume-root
+    - ✅ Update package.json scripts
+    - ✅ Update configuration files
+    - ✅ Test and verify the consolidated structure
 
-7. ✅ **Project Structure Consolidation**
-   - ✅ Remove duplicate directories and files outside Relume-root
-   - ✅ Update package.json scripts
-   - ✅ Update configuration files
-   - ✅ Test and verify the consolidated structure
-
-8. **Complete Relume Wireframe Files Conversion**
-   - ✅ Convert Relume wireframe files to Relume-root directory structure
-   - ✅ Update import paths in all files
-   - ✅ Create wrapper pages for Relume components
-   - Test all Relume components with the updated configuration
-   - ✅ Document the Relume component structure and usage
-   - ✅ Create Relume Home Page Integration Plan
-
-9. **Complete Netlify Integration**
-   - Complete Netlify initialization process
-   - Set up continuous deployment
-   - Configure Netlify Forms for the contact form
-
-10. **Implement Responsive Design Improvements**
-    - Ensure all pages and components are responsive
-    - Test on various screen sizes and devices
-    - Fix any layout issues
-
-11. **Implement SEO Optimization**
-    - Add meta tags for all pages
-    - Create sitemap.xml
-    - Add structured data for products and services
-    - Ensure all images have alt text
+11. **Complete Relume Wireframe Files Conversion**
+    - ✅ Convert Relume wireframe files to Relume-root directory structure
+    - ✅ Update import paths in all files
+    - ✅ Create wrapper pages for Relume components
+    - Test all Relume components with the updated configuration
+    - ✅ Document the Relume component structure and usage
+    - ✅ Create Relume Home Page Integration Plan
 
 ## Medium Priority Tasks
 
@@ -164,4 +172,4 @@ This document contains a prioritized list of tasks for the Window World LA websi
 - Tasks may be added or removed as the project progresses
 - Tasks may be broken down into smaller subtasks as needed
 
-Last Updated: May 13, 2025 (Added 5000-series page implementation)
+Last Updated: May 27, 2025 (Updated with App Router migration priorities)

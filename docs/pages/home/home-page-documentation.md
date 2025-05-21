@@ -110,12 +110,26 @@ The Home page consists of the following components:
 
 ## Routing
 
-The Home page is accessible at the root URL (`/`) through the Next.js Pages Router. The route is defined in `Relume-root/pages/index.js`:
+The Home page is accessible at the root URL (`/`) through the Next.js App Router. The route is defined in `Relume-root/src/app/page.tsx`:
 
-```jsx
-// Relume-root/pages/index.js
-export { default } from '../home';
+```tsx
+// Relume-root/src/app/page.tsx
+'use client';
+
+import React, { useEffect } from 'react';
+import { useLogger } from '@/utils/logger';
+
+// Import Relume components from the home directory
+import { Navbar10 } from '../../../home/components/Navbar10';
+import { Header47 } from '../../../home/components/Header47';
+// ... other component imports
+
+export default function Home() {
+  // ... component implementation
+}
 ```
+
+> **Note**: Previously, the Home page was implemented using the Pages Router in `Relume-root/pages/index.js`, but it has been migrated to the App Router as part of the App Router migration plan.
 
 ## Implementation Details
 
@@ -136,4 +150,4 @@ The Home page has been tested and confirmed to match the design 100%. The testin
 - [Relume Home Page Integration Plan](../../guides/relume-home-page-integration-plan.md)
 - [Component Structure Documentation](../../architecture/component-structure.md)
 
-Last Updated: May 11, 2025
+Last Updated: May 15, 2025

@@ -8,12 +8,16 @@ This index provides quick access to all process documentation for the Windows Do
 |----------|-------------|--------------|
 | [Project Structure Consolidation Plan](./project-structure-consolidation-plan.md) | High-level plan for consolidating the project structure | 2025-05-14 |
 | [Project Structure Consolidation Implementation](./project-structure-consolidation-implementation.md) | Detailed implementation guide for project structure consolidation | 2025-05-14 |
+| [App Router Standardization Plan](./app-router-standardization-plan.md) | Detailed plan for standardizing on the App Router approach | 2025-05-26 |
+| [Project Structure Current State](../architecture/project-structure-current-state.md) | Current state of the project structure | 2025-05-27 |
 
 ## Development Workflows
 
 | Document | Description | Last Updated |
 |----------|-------------|--------------|
 | [Page Implementation Workflow](../architecture/page-implementation-workflow.md) | Standard workflow for implementing new pages | 2025-05-12 |
+| [App Router Migration Tracking](../migration/app-router-migration-tracking.md) | Comprehensive tracking of the App Router migration progress | 2025-05-27 |
+| [Next Steps for App Router Migration](../migration/next-steps-for-app-router-migration.md) | Detailed steps for continuing the App Router migration | 2025-05-27 |
 
 ## Troubleshooting
 
@@ -30,4 +34,4 @@ This index provides quick access to all process documentation for the Windows Do
 
 ---
 
-Last Updated: 2025-05-14
+Last Updated: 2025-05-27

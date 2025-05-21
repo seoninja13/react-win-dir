@@ -8,13 +8,13 @@ This document tracks the progress of migrating the Windows Doors CA website from
 
 ## Migration Status
 
-**Overall Progress**: 0% (0/25 pages migrated)
+**Overall Progress**: 8% (2/25 pages migrated)
 
 ### Phase 1: Core Pages (Highest Priority)
 
 | Page Name | Current Route | Pages Router Path | App Router Path | Status | Priority | Dependencies | Issues | Notes |
 |-----------|---------------|-------------------|-----------------|--------|----------|--------------|--------|-------|
-| Home | / | /pages/index.js | /src/app/page.tsx | Not Started | High | None | | Already has partial implementation |
+| Home | / | /pages/index.js | /src/app/page.tsx | Completed | High | None | | Migrated on May 15, 2025 |
 | Windows | /windows | /pages/windows.js | /src/app/windows/page.tsx | Not Started | High | None | | Already has partial implementation |
 | Doors | /doors | /pages/doors.js | /src/app/doors/page.tsx | Not Started | High | None | | Already has partial implementation |
 | Vinyl Siding | /vinyl-siding | /pages/vinyl-siding.js | /src/app/vinyl-siding/page.tsx | Not Started | High | None | | Already has partial implementation |
@@ -27,12 +27,12 @@ This document tracks the progress of migrating the Windows Doors CA website from
 | Double-Hung | /double-hung | /pages/double-hung.js | /src/app/double-hung/page.tsx | Not Started | High | Windows | | |
 | Casement | /casement | /pages/casement.js | /src/app/casement/page.tsx | Not Started | High | Windows | | |
 | Awning | /awning | /pages/awning.js | /src/app/awning/page.tsx | Not Started | High | Windows | | |
-| Bay/Bow | /bay-bow | /pages/bay-bow.js | /src/app/bay-bow/page.tsx | Not Started | High | Windows | | |
+| Bay/Bow | /bay-bow | /pages/bay-bow.js | /src/app/windows/bay-bow/page.tsx | In Progress | High | Windows | Pages Router taking precedence | Migration started on May 22, 2025, App Router implementation exists but not being accessed |
 | Picture | /picture-window | /pages/picture-window.js | /src/app/picture-window/page.tsx | Not Started | High | Windows | | |
 | Sliding | /sliding | /pages/sliding.js | /src/app/sliding/page.tsx | Not Started | High | Windows | | |
 | Entry | /entry | /pages/entry.js | /src/app/entry/page.tsx | Not Started | High | Doors | | |
 | Patio | /patio | /pages/patio.js | /src/app/patio/page.tsx | Not Started | High | Doors | | |
-| Garage | /garage | /pages/garage.js | /src/app/garage/page.tsx | Not Started | High | Doors | | |
+| Garage | /garage, /doors/garage | /pages/garage.js | /src/app/doors/garage/page.tsx | In Progress | High | Doors | Initial implementation resulted in "Page Not Found" error | Migration started on May 23, 2025, fixed by directly importing components instead of the whole page component |
 | 1000 Series | /vinyl-siding/1000-series | /pages/vinyl-siding/1000-series.js | /src/app/vinyl-siding/1000-series/page.tsx | Not Started | High | Vinyl Siding | | |
 
 ### Phase 3: Information Pages (Medium Priority)
@@ -59,26 +59,36 @@ This document tracks the progress of migrating the Windows Doors CA website from
 
 | Date | Page/Component | Action | Details | Developer |
 |------|----------------|--------|---------|-----------|
-| YYYY-MM-DD | Example | Started | Initial setup | Developer Name |
+| 2025-05-15 | Home | Completed | Migrated Home page from Pages Router to App Router | Windows Doors CA Team |
+| 2025-05-22 | Bay/Bow | In Progress | Created App Router implementation at /windows/bay-bow, but Pages Router still taking precedence | Windows Doors CA Team |
+| 2025-05-23 | Garage | In Progress | Created App Router implementation at /doors/garage, fixed "Page Not Found" error by directly importing components | Windows Doors CA Team |
 
 ## Issues and Solutions
 
 | Issue | Severity | Status | Solution | Notes |
 |-------|----------|--------|----------|-------|
-| Example Issue | Medium | Resolved | Solution details | Additional notes |
+| Pages Router taking precedence over App Router | High | Ongoing | Currently keeping both implementations during transition | Will be resolved when Pages Router files are removed |
+| "Page Not Found" error when importing entire page component | Medium | Resolved | Directly import individual components instead of the whole page component | Encountered with Garage page, may affect other pages |
 
 ## Testing Results
 
 | Page/Component | Test Type | Status | Details | Date |
 |----------------|-----------|--------|---------|------|
-| Example | Routing | Passed | All routes working correctly | YYYY-MM-DD |
+| Home | Routing | Passed | App Router implementation working correctly at / | 2025-05-15 |
+| Bay/Bow | Routing | Mixed | Pages Router implementation working at /bay-bow, App Router implementation exists but not accessible | 2025-05-22 |
+| Garage | Routing | Passed | Both implementations working: Pages Router at /garage and App Router at /doors/garage | 2025-05-23 |
 
 ## Next Steps
 
-1. Begin migration of Home page
-2. Test thoroughly
-3. Document any issues and solutions
-4. Proceed to Windows page
+1. ✅ Migrate Home page (Completed on May 15, 2025)
+2. ✅ Begin migration of Bay/Bow page (In Progress as of May 22, 2025)
+3. ✅ Begin migration of Garage page (In Progress as of May 23, 2025)
+4. Continue migration of remaining Windows subpages
+5. Continue migration of remaining Doors subpages
+6. Test thoroughly
+7. Document any issues and solutions
+8. Once all pages are migrated to App Router, remove Pages Router files
+9. Update internal links to use App Router paths
 
 ## Resources
 
@@ -88,4 +98,4 @@ This document tracks the progress of migrating the Windows Doors CA website from
 
 ## Last Updated
 
-YYYY-MM-DD
+2025-05-23

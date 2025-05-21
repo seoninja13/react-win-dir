@@ -98,14 +98,21 @@ To ensure consistency in tracking, the following status definitions are used:
 | 2000-Series | T3 | /2000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Card component issue fixed | Jane Smith | 2025-05-18 | Product page for 2000-series vinyl siding |
 | 3000-Series | T3 | /3000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Directory structure created manually | Jane Smith | 2025-05-18 | Premium product page for 3000-series vinyl siding |
 | 4000-Series | T3 | /4000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Proactively avoided Card component issue | Jane Smith | 2025-05-18 | Luxury product page for 4000-series vinyl siding |
-| 5000-Series | T3 | /5000-series | Complete | In Progress | Complete | In Progress | Complete | Issues Found | Navbar and header styling issues; Fixed Accordion component imports in Faq5.jsx | Jane Smith | 2025-05-18 | Flagship product page for 5000-series vinyl siding |
+| 1000-Series | T3 | /1000-series, /vinyl-siding/1000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Updated App Router implementation to include logging | John Doe | 2025-05-25 | Product page for 1000-series vinyl siding; App Router migration complete |
+| 1500-Series | T3 | /1500-series, /vinyl-siding/1500-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Updated App Router implementation to include logging | John Doe | 2025-05-25 | Product page for 1500-series vinyl siding; App Router migration complete |
+| 2000-Series | T3 | /2000-series, /vinyl-siding/2000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Updated App Router implementation to include logging | John Doe | 2025-05-25 | Product page for 2000-series vinyl siding; App Router migration complete |
+| 3000-Series | T3 | /3000-series, /vinyl-siding/3000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Created App Router implementation | John Doe | 2025-05-25 | Product page for 3000-series vinyl siding; App Router migration complete |
+| 4000-Series | T3 | /4000-series, /vinyl-siding/4000-series | Complete | In Progress | Complete | In Progress | Complete | In Progress | Created App Router implementation | John Doe | 2025-05-25 | Product page for 4000-series vinyl siding; App Router migration complete |
+| 5000-Series | T3 | /5000-series, /vinyl-siding/5000-series | Complete | In Progress | Complete | In Progress | Complete | Issues Found | Navbar and header styling issues; Fixed Accordion component imports in Faq5.jsx; Created App Router implementation | John Doe | 2025-05-25 | Flagship product page for 5000-series vinyl siding; App Router migration complete |
 | Entry | T3 | /entry | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-18 | Product page for entry doors |
 | Patio | T3 | /patio | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-18 | Product page for patio doors |
-| Hinged-Patio-Doors | T3 | /hinged-patio-doors | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-18 | Product page for hinged patio doors |
-| Garage | T3 | /garage | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-18 | Product page for garage doors |
+| Hinged-Patio-Doors | T3 | /hinged-patio-doors, /doors/hinged-patio-doors | Complete | In Progress | Complete | In Progress | Complete | In Progress | Created App Router implementation at /doors/hinged-patio-doors | John Doe | 2025-05-26 | Product page for hinged patio doors; App Router migration complete; Both routes active during transition |
+| Garage | T3 | /garage, /doors/garage | Complete | In Progress | Complete | In Progress | Complete | In Progress | Fixed App Router implementation by directly importing components instead of the whole page component | John Doe | 2025-05-23 | Product page for garage doors; App Router migration in progress; Both routes active during transition |
+| Doors | T2 | /doors | Complete | In Progress | Complete | In Progress | Complete | In Progress | Updated App Router implementation to use actual components instead of debug version | John Doe | 2025-05-24 | Category page for doors; App Router migration complete |
+| Vinyl Siding | T2 | /vinyl-siding | Complete | In Progress | Complete | In Progress | Complete | In Progress | Updated App Router implementation to use actual components instead of debug version | John Doe | 2025-05-25 | Category page for vinyl siding; App Router migration complete |
 | Double-Hung | T3 | /double-hung | Complete | In Progress | Complete | In Progress | Complete | In Progress | Fixed Testimonial19 component | John Doe | 2025-05-18 | Product page for double-hung windows |
 | Casement | T3 | /casement | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-18 | Product page for casement windows |
-| Bay-Bow | T3 | /bay-bow | Complete | In Progress | Complete | In Progress | Complete | In Progress | Fixed Faq4 component with custom accordion implementation | John Doe | 2025-05-18 | Product page for bay and bow windows |
+| Bay-Bow | T3 | /bay-bow, /windows/bay-bow | Complete | In Progress | Complete | In Progress | Complete | In Progress | Fixed Faq4 component with custom accordion implementation; App Router implementation at /windows/bay-bow | John Doe | 2025-05-22 | Product page for bay and bow windows; App Router migration in progress |
 | Awning | T3 | /awning | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-18 | Product page for awning windows |
 | Picture-Window | T3 | /picture-window | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-18 | Product page for picture windows |
 | Sliding | T3 | /sliding | Complete | In Progress | Complete | In Progress | Complete | In Progress | None | John Doe | 2025-05-18 | Product page for sliding windows |
@@ -187,12 +194,9 @@ This section tracks the progress of implementing each page template type.
 
 For more detailed information about specific pages, please refer to the individual page documentation:
 
-- [Home Page Documentation](../pages/home/home-page-documentation.md)
-- [1000-Series Page Documentation](../pages/vinyl-siding/1000-series-page-documentation.md)
-- [1500-Series Page Documentation](../pages/vinyl-siding/1500-series-page-documentation.md)
-- [2000-Series Page Documentation](../pages/vinyl-siding/2000-series-page-documentation.md)
+### Windows Pages
+- [Windows Page Documentation](../pages/windows/windows-page-documentation.md)
 - [Double-Hung Windows Page Documentation](../pages/windows/double-hung-page-documentation.md)
-- [Image Generation Progress](./image-generation-progress.md)
 - [Casement Windows Page Documentation](../pages/windows/casement-page-documentation.md)
 - [Bay-Bow Windows Page Documentation](../pages/windows/bay-bow-page-documentation.md)
 - [Awning Windows Page Documentation](../pages/windows/awning-page-documentation.md)
@@ -203,15 +207,38 @@ For more detailed information about specific pages, please refer to the individu
 - [Garden Windows Page Documentation](../pages/windows/garden-page-documentation.md)
 - [Shutters Page Documentation](../pages/windows/shutters-page-documentation.md)
 - [Wood Windows Page Documentation](../pages/windows/wood-windows-page-documentation.md)
-- [Windows Page Documentation](../pages/windows/windows-page-documentation.md)
+
+### Doors Pages
+- [Doors Page Documentation](../pages/doors/doors-page-documentation.md)
+- [Entry Doors Page Documentation](../pages/doors/entry-page-documentation.md)
+- [Patio Doors Page Documentation](../pages/doors/patio-page-documentation.md)
+- [Hinged Patio Doors Page Documentation](../pages/doors/hinged-patio-doors-page-documentation.md)
+- [Garage Doors Page Documentation](../pages/doors/garage-page-documentation.md)
+
+### Vinyl Siding Pages
+- [Vinyl Siding Page Documentation](../pages/vinyl-siding/vinyl-siding-page-documentation.md)
+- [1000-Series Page Documentation](../pages/vinyl-siding/1000-series-page-documentation.md)
+- [1500-Series Page Documentation](../pages/vinyl-siding/1500-series-page-documentation.md)
+- [2000-Series Page Documentation](../pages/vinyl-siding/2000-series-page-documentation.md)
+- [3000-Series Page Documentation](../pages/vinyl-siding/3000-series-page-documentation.md)
+- [4000-Series Page Documentation](../pages/vinyl-siding/4000-series-page-documentation.md)
+- [5000-Series Page Documentation](../pages/vinyl-siding/5000-series-page-documentation.md)
+
+### Other Pages
+- [Home Page Documentation](../pages/home/home-page-documentation.md)
 - [Warranty Page Documentation](../pages/warranty-page-documentation.md)
+- [Image Generation Progress](./image-generation-progress.md)
 
 ## Related Documentation
 
+- [Project Structure Current State](../architecture/project-structure-current-state.md)
+- [App Router Migration Tracking](../migration/app-router-migration-tracking.md)
+- [App Router Standardization Plan](../processes/app-router-standardization-plan.md)
 - [Architecture Documentation](../architecture/architecture-documentation.md)
 - [Page Structure Documentation](../architecture/page-structure.md)
 - [Component Structure Documentation](../architecture/component-structure.md)
 - [Testing Strategy Documentation](../testing/testing-strategy.md)
 - [Development Workflow Documentation](../processes/development-workflow.md)
+- [Daily Log: May 27, 2025 - App Router Migration Status Review](../daily-logs/2025-05-27-app-router-migration-status-review.md)
 
-Last Updated: May 14, 2025 (Added Service Areas page implementation)
+Last Updated: May 27, 2025 (Updated Hinged Patio Doors page with App Router implementation and documented current migration status)

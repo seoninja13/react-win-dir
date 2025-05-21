@@ -16,9 +16,11 @@
 
 The Bay-Bow Windows page showcases the bay and bow window products offered by Windows Doors CA. It provides detailed information about the features, benefits, styles, and customization options for bay and bow windows.
 
-**URL Path**: `/bay-bow`  
-**Template Type**: T3 (Product/Service Detail Page Template)  
-**Priority Level**: High  
+**URL Paths**:
+- Pages Router: `/bay-bow`
+- App Router: `/windows/bay-bow`
+**Template Type**: T3 (Product/Service Detail Page Template)
+**Priority Level**: High
 
 ## Page Structure
 
@@ -56,6 +58,8 @@ The Bay-Bow Windows page uses the following components:
 
 The Bay-Bow Windows page was implemented using the following approach:
 
+### Pages Router Implementation
+
 1. Verified that the bay-bow page directory and components already existed in the Relume-root directory
 2. Created a route file at `Relume-root/pages/bay-bow.js` with the following content:
    ```javascript
@@ -64,6 +68,32 @@ The Bay-Bow Windows page was implemented using the following approach:
 3. Encountered an error with the Faq4 component that was using Accordion components from @relume_io/relume-ui
 4. Fixed the Faq4 component by replacing the Accordion components with a custom implementation using React's useState hook
 5. Tested the page and confirmed it was working correctly
+
+### App Router Implementation
+
+1. Created an App Router route at `Relume-root/src/app/windows/bay-bow/page.tsx` with the following content:
+   ```tsx
+   'use client';
+
+   import React, { useEffect } from 'react';
+   import BayBowPage from '../../../../bay-bow/index.jsx';
+   import { logger } from '@/utils/logger';
+
+   export default function BayBow() {
+     useEffect(() => {
+       // Log that the bay-bow windows page has been rendered
+       logger.info('Bay-Bow Windows page rendered', {
+         component: 'BayBowPage',
+         timestamp: new Date().toISOString(),
+       });
+     }, []);
+
+     return <BayBowPage />;
+   }
+   ```
+2. Tested the page by accessing it directly via URL
+3. Identified that the Pages Router implementation was taking precedence
+4. Updated the documentation to reflect both URL paths during the transition period
 
 ### Code Structure
 
@@ -131,7 +161,7 @@ export default function Page() {
 
 ### Issue 1: Relume UI Accordion Component Error
 
-**Error Message**: 
+**Error Message**:
 ```
 Server Error
 Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
@@ -139,7 +169,7 @@ Error: Element type is invalid: expected a string (for built-in components) or a
 
 **Root Cause**: The Faq4 component was importing Accordion, AccordionContent, AccordionItem, AccordionTrigger, Button, and Card components from @relume_io/relume-ui, but these components weren't properly configured or available in the project.
 
-**Solution**: 
+**Solution**:
 1. Created a custom implementation of the accordion functionality using React's useState hook
 2. Replaced the Relume UI components with standard HTML/JSX elements styled with Tailwind CSS
 3. Maintained the same visual appearance and functionality as the original component
@@ -206,6 +236,9 @@ The Bay-Bow Windows page has been tested for the following:
 - [Sliding Windows Page Documentation](./sliding-page-documentation.md)
 - [Custom Windows Page Documentation](./custom-page-documentation.md)
 - [Bay-Bow Windows Page Implementation Log](../../daily-logs/2025-05-12-bay-bow-page-implementation.md)
+- [Bay-Bow Windows Page App Router Migration Log](../../daily-logs/2025-05-22-bay-bow-page-app-router-migration.md)
+- [App Router Migration Plan](../../migration/app-router-migration-plan.md)
+- [App Router Migration Tracking](../../migration/app-router-migration-tracking.md)
 - [Webpage Progress Tracker](../../tracking/webpage-progress-tracker.md)
 
-Last Updated: May 12, 2025
+Last Updated: May 22, 2025 (Added App Router implementation details)

@@ -8,27 +8,39 @@ This project follows a pyramid documentation structure with the main [README.md]
 
 ## Documentation Categories
 
+- [Admin](./admin/admin-ui-guide.md) - Admin UI documentation and guides
 - [Architecture](./architecture/index.md) - System design and architecture documentation
+- [Daily Logs](./daily-logs/index.md) - Daily development logs
 - [Features](./features/index.md) - Feature implementation documentation
 - [Guides](./guides/index.md) - Developer guides and tutorials
 - [Image Generation](./Image%20generation/index.md) - Documentation for image generation using Google Cloud's Generative AI
 - [Integrations](./integrations/index.md) - Integration documentation for external services
+- [Knowledge Base](./Knowledge%20Base/index.md) - Knowledge Base system documentation
+- [Migration](./migration/index.md) - App Router migration documentation
+- [Onboarding](./onboarding/index.md) - Documentation for new developers
 - [Pages](./pages/index.md) - Documentation for implemented pages
 - [Planning](./planning/index.md) - Planning documentation and implementation plans
 - [Processes](./processes/index.md) - Process documentation
+- [Sample Images](./sample-images/sample-images-usage.md) - Documentation for using sample images in components
 - [Testing](./testing/index.md) - Testing documentation and guidelines
 - [Templates](./templates/documentation-template.md) - Documentation templates
 - [Tracking](./tracking/index.md) - Project tracking documentation
-- [Daily Logs](./daily-logs/index.md) - Daily development logs
 - [Priority Task List](./priority-list.md) - Prioritized list of tasks for the project
 
 ## Category Details
+
+### Admin
+
+The admin documentation provides detailed information about the admin UI and how to use it to manage the Windows Doors CA website.
+
+- [Admin UI Guide](./admin/admin-ui-guide.md) - Comprehensive guide for using the admin UI
 
 ### Architecture
 
 The architecture documentation provides detailed information about the system design, component interactions, and technical decisions.
 
 - [Architecture Documentation](./architecture/architecture-documentation.md) - Comprehensive analysis and implementation plan for the Windows Doors CA website
+- [Project Structure Current State](./architecture/project-structure-current-state.md) - Current state of the project structure
 - [Routing Strategy](./architecture/routing-strategy.md) - Documentation of the App Router routing strategy
 - [Component Structure](./architecture/component-structure.md) - Overview of the component structure
 - [Page Structure](./architecture/page-structure.md) - Overview of the page structure
@@ -108,6 +120,42 @@ The integrations documentation provides information about integrating with exter
 - [Vertex AI Integration](./integrations/vertex-ai.md) - Google Vertex AI integration for image generation and analysis
 - [Google Generative AI Integration](./integrations/google-generative-ai.md) - Google Generative AI integration
 
+### Knowledge Base
+
+The Knowledge Base documentation provides detailed information about the knowledge base system, including:
+
+- [Knowledge Base Overview](./Knowledge%20Base/index.md) - General overview of the knowledge base system
+- [Knowledge Base Workflow](./Knowledge%20Base/knowledge-base-workflow.md) - End-to-end workflow of the knowledge base system
+- [Knowledge Base Implementation](./Knowledge%20Base/knowledge-base-implementation.md) - Overview of the implementation
+- [Semantic Chunking Process](./Knowledge%20Base/semantic-chunking-process.md) - Detailed explanation of the semantic chunking process
+- [Embedding Generation](./Knowledge%20Base/embedding-generation.md) - How embeddings are generated using Gemini 2.0 Flash
+- [Vector Storage](./Knowledge%20Base/vector-storage.md) - How vectors are stored and retrieved from Supabase
+- [Search Functionality](./Knowledge%20Base/search-functionality.md) - How the search functionality works
+- [Automated Ingestion Process](./Knowledge%20Base/automated-ingestion-process.md) - How to automatically ingest content from various sources
+- [Setup Guide](./Knowledge%20Base/setup-guide.md) - How to set up the knowledge base
+- [Adding Content](./Knowledge%20Base/adding-content.md) - How to add content to the knowledge base
+- [Searching Content](./Knowledge%20Base/searching-content.md) - How to search the knowledge base
+- [Best Practices](./Knowledge%20Base/best-practices.md) - Best practices for using the knowledge base
+- [API Reference](./Knowledge%20Base/api-reference.md) - Reference for the knowledge base API
+- [Database Schema](./Knowledge%20Base/database-schema.md) - Schema for the knowledge base database
+- [Performance Considerations](./Knowledge%20Base/performance-considerations.md) - Performance considerations for the knowledge base
+- [Troubleshooting](./Knowledge%20Base/troubleshooting.md) - Troubleshooting guide for the knowledge base
+
+### Migration
+
+The migration documentation provides detailed information about the migration from Pages Router to App Router.
+
+- [App Router Migration Tracking](./migration/app-router-migration-tracking.md) - Comprehensive tracking of the App Router migration progress
+- [Next Steps for App Router Migration](./migration/next-steps-for-app-router-migration.md) - Detailed steps for continuing the App Router migration
+- [App Router Migration Plan](./migration/app-router-migration-plan.md) - Detailed plan for migrating from Pages Router to App Router
+- [Tomorrow Morning Tasks](./migration/tomorrow-morning-tasks.md) - Specific tasks to be completed tomorrow morning
+
+### Onboarding
+
+The onboarding documentation provides guidance for new developers joining the project.
+
+- [Getting Started for New Developers](./onboarding/getting-started-for-new-developers.md) - A comprehensive guide for new developers to get started with the project
+
 ### Processes
 
 The processes documentation provides information about various processes used in the project.
@@ -117,6 +165,13 @@ The processes documentation provides information about various processes used in
 - [Deployment Process](./processes/deployment-process.md) - How to deploy the project
 - [Project Structure Consolidation Plan](./processes/project-structure-consolidation-plan.md) - Plan for consolidating the project structure
 - [Project Structure Consolidation Implementation](./processes/project-structure-consolidation-implementation.md) - Detailed implementation guide for project structure consolidation
+- [Project Structure Cleanup Implementation](./processes/project-structure-cleanup-implementation.md) - Implementation details for the May 20, 2025 project structure cleanup
+
+### Sample Images
+
+The sample images documentation provides detailed information about using sample images in components until real images are available.
+
+- [Sample Images Usage Guide](./sample-images/sample-images-usage.md) - Comprehensive guide for using sample images in components
 
 ### Testing
 
@@ -156,4 +211,4 @@ When contributing to the documentation, follow these guidelines:
 - [Main README](../README.md) - Main project documentation and entry point
 - [Documentation Map](./documentation-map.md) - Comprehensive map of all documentation
 
-Last Updated: May 14, 2025 (Added Image Generation documentation)
+Last Updated: May 28, 2025 (Added Knowledge Base documentation and Project Structure Current State reference)

@@ -5,6 +5,7 @@ This directory contains documentation related to the architecture of the Window 
 ## Contents
 
 - [Architecture Documentation](./architecture-documentation.md) - Comprehensive analysis and implementation plan
+- [Project Structure Current State](./project-structure-current-state.md) - Current state of the project structure (Priority 1)
 - [Routing Strategy](./routing-strategy.md) - Documentation of the App Router routing strategy
 - [Project Structure](./project-structure.md) - Overview of the project structure (Priority 1)
 - [Component Structure](./component-structure.md) - Overview of the component structure
@@ -54,7 +55,11 @@ The Window World LA website is built using Next.js with the App Router, React, a
 
 ## Related Documentation
 
+- [App Router Migration Tracking](../migration/app-router-migration-tracking.md)
+- [App Router Standardization Plan](../processes/app-router-standardization-plan.md)
+- [Next Steps for App Router Migration](../migration/next-steps-for-app-router-migration.md)
 - [Features Documentation](../features/index.md)
 - [Integrations Documentation](../integrations/index.md)
+- [Daily Log: May 27, 2025 - App Router Migration Status Review](../daily-logs/2025-05-27-app-router-migration-status-review.md)
 
-Last Updated: May 16, 2025 (Added Database Schema documentation)
+Last Updated: May 27, 2025 (Added Project Structure Current State documentation and App Router migration references)

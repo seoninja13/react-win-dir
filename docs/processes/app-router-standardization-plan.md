@@ -274,6 +274,32 @@ As a Priority 1 (Critical) task, implementation should begin immediately to reso
 - [Project Structure Consolidation Plan](../processes/project-structure-consolidation-plan.md)
 - [Development Workflow](../processes/development-workflow.md)
 
+## Progress Update
+
+### Pages Migrated to App Router
+
+1. **Home Page** (`/`) - Completed May 20, 2025
+2. **Windows Page** (`/windows`) - Completed May 22, 2025
+3. **Doors Page** (`/doors`) - Completed May 24, 2025
+4. **Bay-Bow Windows Page** (`/windows/bay-bow`) - Completed May 22, 2025
+5. **Garage Doors Page** (`/doors/garage`) - Completed May 23, 2025
+6. **Hinged Patio Doors Page** (`/doors/hinged-patio-doors`) - Completed May 26, 2025
+7. **Vinyl Siding Page** (`/vinyl-siding`) - Completed May 25, 2025
+8. **Vinyl Siding Series Pages** (`/vinyl-siding/*-series`) - Completed May 25, 2025
+   - 1000-Series (`/vinyl-siding/1000-series`)
+   - 1500-Series (`/vinyl-siding/1500-series`)
+   - 2000-Series (`/vinyl-siding/2000-series`)
+   - 3000-Series (`/vinyl-siding/3000-series`)
+   - 4000-Series (`/vinyl-siding/4000-series`)
+   - 5000-Series (`/vinyl-siding/5000-series`)
+
+### Pages Pending Migration
+
+1. **Contact Page** (`/contact`)
+2. **About Page** (`/about`)
+3. **Blog Pages** (`/blog/*`)
+4. **FAQ Page** (`/faqs`)
+
 ## Last Updated
 
-2025-05-14 (Initial creation)
+2025-05-26 (Updated with progress on hinged patio doors page migration)

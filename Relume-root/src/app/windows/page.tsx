@@ -1,8 +1,22 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import Link from 'next/link';
 import { logger } from '@/utils/logger';
+
+// Import components from the Pages Router version
+import { Navbar10 } from '../../../windows/components/Navbar10';
+import { Header46 } from '../../../windows/components/Header46';
+import { Header36 } from '../../../windows/components/Header36';
+import { Layout6 } from '../../../windows/components/Layout6';
+import { Layout254 } from '../../../windows/components/Layout254';
+import { Layout10 } from '../../../windows/components/Layout10';
+import { Layout254_1 } from '../../../windows/components/Layout254_1';
+import { Layout90 } from '../../../windows/components/Layout90';
+import { Layout246 } from '../../../windows/components/Layout246';
+import { Layout101 } from '../../../windows/components/Layout101';
+import { Testimonial32 } from '../../../windows/components/Testimonial32';
+import { Cta3 } from '../../../windows/components/Cta3';
+import { Footer4 } from '../../../windows/components/Footer4';
 
 export default function Windows() {
   useEffect(() => {
@@ -14,35 +28,20 @@ export default function Windows() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
-      <div className="bg-white p-8 rounded-lg shadow-md max-w-2xl w-full">
-        <h1 className="text-3xl font-bold text-blue-600 mb-4">Windows Page</h1>
-        <p className="text-gray-600 mb-6">
-          This is a simplified version of the Windows page to help with debugging.
-        </p>
-
-        <div className="bg-yellow-50 p-4 rounded-lg mb-6">
-          <h2 className="text-lg font-semibold text-yellow-700 mb-2">Debugging Information</h2>
-          <p className="text-sm text-gray-700">
-            This page is being served from the App Router at src/app/windows/page.tsx.
-          </p>
-        </div>
-
-        <div className="flex justify-center space-x-4">
-          <Link
-            href="/"
-            className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition-colors"
-          >
-            Back to Home
-          </Link>
-          <Link
-            href="/debug"
-            className="bg-gray-600 text-white py-2 px-6 rounded-md hover:bg-gray-700 transition-colors"
-          >
-            Debug Page
-          </Link>
-        </div>
-      </div>
+    <div>
+      <Navbar10 />
+      <Header46 />
+      <Header36 />
+      <Layout6 />
+      <Layout254 />
+      <Layout10 />
+      <Layout254_1 />
+      <Layout90 />
+      <Layout246 />
+      <Layout101 />
+      <Testimonial32 />
+      <Cta3 />
+      <Footer4 />
     </div>
   );
 }

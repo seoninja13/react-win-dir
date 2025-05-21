@@ -8,27 +8,47 @@ Documentation is a critical part of the development process. It helps team membe
 
 ## Documentation Structure
 
-The documentation follows a pyramid structure with the main README.md as the single entry point. All documentation is organized hierarchically in the `docs/` directory.
+The documentation follows a pyramid structure with the main README.md as the single entry point. All documentation is organized hierarchically in the `Docs/` directory.
 
 ```
-docs/
+Docs/
+├── admin/              # Admin UI documentation and guides
 ├── architecture/       # System design and architecture documentation
+│   ├── index.md                      # Architecture documentation index
+│   ├── architecture-documentation.md # Comprehensive architecture documentation
+│   ├── project-structure-current-state.md # Current state of the project structure
+│   ├── routing-strategy.md           # App Router routing strategy
+│   └── ...                           # Other architecture documentation
+├── daily-logs/         # Daily development logs
 ├── features/           # Feature implementation documentation
 ├── guides/             # Developer guides and tutorials
+├── Image generation/   # Documentation for image generation using Google Cloud's Generative AI
 ├── integrations/       # Integration documentation for external services
 ├── Knowledge Base/     # Knowledge Base system documentation
 │   ├── index.md                      # Knowledge Base overview
 │   ├── knowledge-base-workflow.md    # End-to-end workflow
+│   ├── knowledge-base-implementation.md # Implementation overview
 │   ├── semantic-chunking-process.md  # Semantic chunking process
 │   ├── embedding-generation.md       # Embedding generation with Gemini
 │   ├── vector-storage.md             # Vector storage in Supabase
 │   ├── search-functionality.md       # Search functionality
-│   └── automated-ingestion-process.md # Automated content ingestion
+│   ├── automated-ingestion-process.md # Automated content ingestion
+│   ├── setup-guide.md                # Setup guide
+│   ├── adding-content.md             # Adding content guide
+│   ├── searching-content.md          # Searching content guide
+│   ├── best-practices.md             # Best practices
+│   ├── api-reference.md              # API reference
+│   ├── database-schema.md            # Database schema
+│   ├── performance-considerations.md # Performance considerations
+│   └── troubleshooting.md            # Troubleshooting guide
+├── migration/          # App Router migration documentation
+├── onboarding/         # Documentation for new developers
+├── pages/              # Documentation for implemented pages
 ├── planning/           # Planning documentation and implementation plans
 ├── processes/          # Process documentation
+├── sample-images/      # Documentation for using sample images in components
 ├── testing/            # Testing documentation and guidelines
 ├── templates/          # Documentation templates
-├── daily-logs/         # Daily development logs
 ├── tracking/           # Progress tracking documentation
 │   ├── project-priorities.md         # Project priorities tracker
 │   ├── webpage-progress-tracker.md   # Webpage implementation progress
