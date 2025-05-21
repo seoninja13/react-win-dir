@@ -1,70 +1,80 @@
 # Window World LA Website
 
-> **PRIORITY 1**: Knowledge Base System Implementation (In Progress)  
-> **PRIORITY 2**: Vertex AI Image Generation (In Progress)  
-> **PRIORITY 5**: Website Performance Optimization (Planned for June 15, 2025)  
-> [View Full Project Priorities](./docs/tracking/project-priorities.md)
+> **PRIORITY 1**: Fix Non-Working Pages (Immediate Action - May 28, 2025)
+> **PRIORITY 2**: Standardize Directory Structure (After Fixing Non-Working Pages)
+> **PRIORITY 3**: Migrate High-Priority Pages (If Time Permits)
+> [View Tomorrow Morning Tasks](./Docs/migration/tomorrow-morning-tasks.md)
+> [View Full Project Priorities](./Docs/priority-list.md)
 
 This repository contains the code for the Window World LA website, a modern website for a windows, doors, siding, and roofing company in Los Angeles. The website is built using Next.js, React, and Tailwind CSS, with Relume UI components and Unsplash for images.
 
 ## Project Status
 
 **Current Status**: Development in progress
-**Last Updated**: May 16, 2025
-**Current Version**: 0.3.2
-**Routing Strategy**: Next.js App Router (exclusively)
-**Project Structure**: Consolidation complete
-**Priority 1**: Knowledge Base System Implementation (In Progress)
-**Priority 2**: Vertex AI Image Generation (In Progress)
-**Priority 5**: Website Performance Optimization (Planned for June 15, 2025)
-**Knowledge Base Status**: Semantic chunking implemented, documentation complete
-**Vertex AI Status**: Initial implementation complete, continuing with batch image generation
+**Last Updated**: May 27, 2025
+**Current Version**: 0.4.0
+**Routing Strategy**: Next.js App Router (migration in progress)
+**Project Structure**: Consolidation complete, App Router migration in progress
+**Priority 1**: Fix Non-Working Pages (Immediate Action - May 28, 2025)
+**Priority 2**: Standardize Directory Structure (After Fixing Non-Working Pages)
+**Priority 3**: Migrate High-Priority Pages (If Time Permits)
+**App Router Migration Status**: 32% complete (8/25 pages migrated)
+**Non-Working Pages**: Bay-Bow Windows, Hinged Patio Doors, Vinyl Siding Series Pages, Garage Doors
 
 ## Documentation Structure
 
-This project follows a pyramid documentation structure with this README as the single entry point. All documentation is organized hierarchically in the `docs` directory.
+This project follows a pyramid documentation structure with this README as the single entry point. All documentation is organized hierarchically in the `Docs` directory.
 
-For a comprehensive map of all documentation, see the [Documentation Directory](./docs/README.md) and the [Daily Logs](./docs/daily-logs/). For the latest daily log, see the [November 16, 2023 Daily Log](./docs/daily-logs/2023-11-16.md).
+### New Developers
+
+If you're new to the project, start by reading the [Getting Started for New Developers](./Docs/onboarding/getting-started-for-new-developers.md) guide. This document provides a comprehensive overview of the project structure, priority system, and development workflow.
+
+For a comprehensive map of all documentation, see the [Documentation Directory](./Docs/index.md) and the [Daily Logs](./Docs/daily-logs/). For the latest daily log, see the [May 27, 2025 Daily Log](./Docs/daily-logs/2025-05-27-app-router-migration-status-review.md).
 
 ## Documentation Directory
 
-All detailed documentation is organized in the [Documentation Directory](./docs/README.md), which serves as the central hub for all project documentation. The documentation is organized into the following categories:
+All detailed documentation is organized in the [Documentation Directory](./Docs/index.md), which serves as the central hub for all project documentation. The documentation is organized into the following categories:
 
 ### Documentation Categories
 
-- [Architecture](./docs/architecture/) - System design and architecture documentation
-- [Components](./docs/components/) - Component documentation
-- [Daily Logs](./docs/daily-logs/) - Daily development logs
-- [Processes](./docs/processes/) - Process documentation and implementation guides
+- [Architecture](./Docs/architecture/index.md) - System design and architecture documentation
+- [Daily Logs](./Docs/daily-logs/index.md) - Daily development logs
+- [Knowledge Base](./Docs/Knowledge%20Base/index.md) - Knowledge Base system documentation
+- [Migration](./Docs/migration/index.md) - App Router migration documentation
+- [Onboarding](./Docs/onboarding/index.md) - Documentation for new developers
+- [Processes](./Docs/processes/index.md) - Process documentation and implementation guides
+- [Tracking](./Docs/tracking/index.md) - Project tracking documentation
 
 ### Key Project Documents
 
-- [Project Priorities Tracker](./docs/tracking/project-priorities.md) - **Current priority: Knowledge Base System Implementation**
-- [Architecture Documentation](./docs/architecture/architecture-documentation.md) - Comprehensive analysis and implementation plan
-- [Routing Strategy](./docs/architecture/routing-strategy.md) - Documentation of the App Router routing strategy
-- [Working Directory](./docs/architecture/working-directory.md) - Documentation of the working directory structure
-- [Project Structure Consolidation Plan](./docs/processes/project-structure-consolidation-plan.md) - Plan for consolidating the project structure
-- [Project Structure Consolidation Implementation](./docs/processes/project-structure-consolidation-implementation.md) - Detailed implementation guide for project structure consolidation
-- [Header Components](./docs/components/header-components.md) - Documentation for Header47 and Header15 components
-- [Daily Development Logs](./docs/daily-logs/) - Daily development updates
-- [Latest Routing Strategy Decision](./docs/daily-logs/2025-05-13-routing-strategy-decision.md) - Documentation of the decision to standardize on App Router
-- [Webpage Progress Tracker](./docs/tracking/webpage-progress-tracker.md) - Comprehensive tracker for all webpages in the project
-- [Image Generation Progress](./docs/tracking/image-generation-progress.md) - Tracking document for Google Generative AI integration
-- [Image Generation Implementation Plan](./docs/Image%20generation/image-generation-implementation-plan.md) - Detailed plan for implementing image generation
-- [Export Documentation](./Export%20Documentation/export-documentation.md) - Comprehensive list of documentation files for export
-- [Sample Project Structure](./Sample%20Project%20Structure-DO-NOT-EDIT/) - Reference project structure from previous projects
+- [Tomorrow Morning Tasks](./Docs/migration/tomorrow-morning-tasks.md) - **Current priority: Fix Non-Working Pages**
+- [Project Priorities List](./Docs/priority-list.md) - Prioritized list of tasks for the project
+- [Project Structure Current State](./Docs/architecture/project-structure-current-state.md) - Current state of the project structure
+- [Knowledge Base Overview](./Docs/Knowledge%20Base/index.md) - Knowledge Base system documentation
+- [App Router Migration Tracking](./Docs/migration/app-router-migration-tracking.md) - Comprehensive tracking of the App Router migration progress
+- [Next Steps for App Router Migration](./Docs/migration/next-steps-for-app-router-migration.md) - Detailed steps for continuing the App Router migration
+- [App Router Standardization Plan](./Docs/processes/app-router-standardization-plan.md) - Detailed plan for standardizing on the App Router approach
+- [Architecture Documentation](./Docs/architecture/architecture-documentation.md) - Comprehensive analysis and implementation plan
+- [Routing Strategy](./Docs/architecture/routing-strategy.md) - Documentation of the App Router routing strategy
+- [Working Directory](./Docs/architecture/working-directory.md) - Documentation of the working directory structure
+- [Daily Development Logs](./Docs/daily-logs/) - Daily development updates
+- [Latest App Router Migration Status Review](./Docs/daily-logs/2025-05-27-app-router-migration-status-review.md) - Latest review of the App Router migration status
+- [Webpage Progress Tracker](./Docs/tracking/webpage-progress-tracker.md) - Comprehensive tracker for all webpages in the project
+- [Image Generation Progress](./Docs/tracking/image-generation-progress.md) - Tracking document for Google Generative AI integration
 
 ## Project Documentation
 
 This project includes detailed documentation to assist with development, setup, and understanding of its features.
 
-- **Architectural Overview**: See `docs/architecture/architecture-documentation.md`.
-- **Daily Development Logs**: Stored in `docs/daily-logs/`.
-- **Feature Specifics**: Maintained in `docs/features/`.
-  - [Vertex AI Image Generation](./docs/features/vertex-ai-image-generation.md)
-- **Processes and Setup Guides**: Located in `docs/processes/`.
-  - [Vertex AI Setup Guide](./docs/processes/vertex-ai-setup-guide.md)
-- **Progress Tracking**: See `@wWeb development progress folder @tracking-progress.md`.
+- **Architectural Overview**: See [Architecture Documentation](./Docs/architecture/architecture-documentation.md).
+- **Project Structure**: See [Project Structure Current State](./Docs/architecture/project-structure-current-state.md).
+- **Daily Development Logs**: Stored in [Daily Logs](./Docs/daily-logs/).
+- **Knowledge Base System**: See [Knowledge Base Overview](./Docs/Knowledge%20Base/index.md).
+- **Feature Specifics**: Maintained in [Features](./Docs/features/).
+  - [Vertex AI Image Generation](./Docs/features/vertex-ai-image-generation.md)
+- **Processes and Setup Guides**: Located in [Processes](./Docs/processes/).
+  - [Vertex AI Setup Guide](./Docs/processes/vertex-ai-setup-guide.md)
+- **Progress Tracking**: See [Webpage Progress Tracker](./Docs/tracking/webpage-progress-tracker.md).
 
 ## Knowledge Base System
 
@@ -72,12 +82,13 @@ We've implemented a comprehensive knowledge base system that uses Supabase's pgv
 
 ### Knowledge Base Documentation
 
-- [Knowledge Base Overview](./docs/Knowledge%20Base/index.md) - Main entry point for knowledge base documentation
-- [Knowledge Base Workflow](./docs/Knowledge%20Base/knowledge-base-workflow.md) - Complete end-to-end workflow of the knowledge base system
-- [Semantic Chunking Process](./docs/Knowledge%20Base/semantic-chunking-process.md) - Detailed explanation of the semantic chunking process
-- [Embedding Generation](./docs/Knowledge%20Base/embedding-generation.md) - How embeddings are generated using Gemini 2.0 Flash
-- [Vector Storage](./docs/Knowledge%20Base/vector-storage.md) - How vectors are stored and retrieved from Supabase
-- [Search Functionality](./docs/Knowledge%20Base/search-functionality.md) - How the search functionality works
+- [Knowledge Base Overview](./Docs/Knowledge%20Base/index.md) - Main entry point for knowledge base documentation
+- [Knowledge Base Workflow](./Docs/Knowledge%20Base/knowledge-base-workflow.md) - Complete end-to-end workflow of the knowledge base system
+- [Semantic Chunking Process](./Docs/Knowledge%20Base/semantic-chunking-process.md) - Detailed explanation of the semantic chunking process
+- [Embedding Generation](./Docs/Knowledge%20Base/embedding-generation.md) - How embeddings are generated using Gemini 2.0 Flash
+- [Vector Storage](./Docs/Knowledge%20Base/vector-storage.md) - How vectors are stored and retrieved from Supabase
+- [Search Functionality](./Docs/Knowledge%20Base/search-functionality.md) - How the search functionality works
+- [Automated Ingestion Process](./Docs/Knowledge%20Base/automated-ingestion-process.md) - How to automatically ingest content from various sources
 
 ## AI Image Generation Tools
 
@@ -184,10 +195,10 @@ Ensure the `dist/` and `output/` directories are in your `.gitignore` file.
    ```bash
    # Generate a single image
    npm run generate:image "A beautiful sunset over mountains"
-   
+
    # Generate with custom options
    npm run generate:image "A futuristic city" -- --width 1280 --height 720 --numberOfImages 2
-   
+
    # Run the test suite
    npm run test:image-gen
    ```
@@ -352,7 +363,7 @@ If you encounter port conflicts or other issues:
    ```bash
    # Windows
    taskkill /F /IM node.exe
-   
+
    # Mac/Linux
    pkill -f node
    ```
