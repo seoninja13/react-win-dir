@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /Relume-root/node_modules
+/Relume Work Dir/node_modules
 /NextJs/node_modules
 /.pnp
 .pnp.*
@@ -18,7 +19,14 @@
 # next.js
 /.next/
 /Relume-root/.next/
+/Relume Work Dir/.next/
 /out/
+
+# Large files that exceed GitHub's file size limits
+/Relume Work Dir/.next/cache/webpack/client-development/8.pack.gz
+/Relume Work Dir/node_modules/@next/swc-win32-x64-msvc/next-swc.win32-x64-msvc.node
+/Relume Work Dir/.next/cache/webpack/client-production/9.pack
+/Relume Work Dir/.next/cache/webpack/client-production/4.pack
 
 # production
 # Build output
