@@ -4,7 +4,26 @@ This document contains a prioritized list of tasks for the Window World LA websi
 
 ## High Priority Tasks
 
-1. **Fix Non-Working Pages (Immediate Action - May 28, 2025)**
+1. **Project Structure Standardization (Priority 1 - Critical Foundation Issue)**
+   - Fix all `Relume-root/` references to `Relume Work Dir/`
+   - Update import statements across the entire codebase
+   - Update configuration files (tsconfig.json, next.config.js, etc.)
+   - Update documentation references
+   - Update package.json scripts and paths
+   - Test all pages to ensure they work correctly after changes
+   - Document all changes and update tracking documentation
+   - **Rationale**: This critical foundation issue must be resolved before continuing with Vibe Coding features implementation
+
+2. **Code Audit Detection Implementation (Priority 2 - Next Vibe Coding Feature)**
+   - Implement Feature #5 from the Vibe Coding Implementation Plan
+   - Static code analysis integration
+   - Code smell detection
+   - Security vulnerability scanning
+   - Performance issue identification
+   - Accessibility compliance checking
+   - **Rationale**: This is the next feature in the Vibe Coding sequence and marked as "Next to implement"
+
+3. **Fix Non-Working Pages (Priority 3 - After Structure Standardization)**
    - Resolve routing conflicts for Bay-Bow Windows Page
    - Resolve routing conflicts for Hinged Patio Doors Page
    - Resolve routing conflicts for Vinyl Siding Series Pages
@@ -12,7 +31,7 @@ This document contains a prioritized list of tasks for the Window World LA websi
    - Test all fixed pages to ensure they work correctly
    - Document all changes and update tracking documentation
 
-2. **Improve Project Structure Documentation (Completed - May 28, 2025)**
+4. **Improve Project Structure Documentation (Completed - May 28, 2025)**
    - ✅ Conduct comprehensive project structure audit
    - ✅ Create unified project structure documentation
    - ✅ Document App Router structure and conventions
@@ -23,7 +42,7 @@ This document contains a prioritized list of tasks for the Window World LA websi
    - ✅ Document build and deployment structure
    - Update existing documentation for consistency
 
-3. **Standardize Directory Structure (After Fixing Non-Working Pages)**
+5. **Standardize Directory Structure (After Project Structure Standardization)**
    - Identify App Router pages outside Relume Work Dir
    - Move App Router pages to Relume Work Dir/src/app/
    - Update import paths to reflect the correct directory structure
@@ -197,4 +216,4 @@ This document contains a prioritized list of tasks for the Window World LA websi
 - Tasks may be added or removed as the project progresses
 - Tasks may be broken down into smaller subtasks as needed
 
-Last Updated: May 28, 2025 (Completed Project Structure Documentation improvements)
+Last Updated: January 2, 2025 (Updated priorities: Project Structure Standardization as Priority 1, Code Audit Detection as Priority 2)
