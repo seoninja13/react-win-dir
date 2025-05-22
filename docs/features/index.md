@@ -4,6 +4,8 @@ This directory contains documentation related to the features of the Window Worl
 
 ## Contents
 
+### Website Features
+
 - [Home Page](./home-page.md) - Home page documentation
 - [SEO Strategy](./seo-strategy.md) - SEO optimization strategy
 - [Windows](./windows.md) - Windows product features
@@ -12,17 +14,29 @@ This directory contains documentation related to the features of the Window Worl
 - [Roofing](./roofing.md) - Roofing product features
 - [Financing](./financing.md) - Financing options
 
+### Development Features
+
+- [Intelligent Commit Reminders](./intelligent-commit-reminders.md) - Commit reminders and assistance
+
 ## Overview
 
 The Window World LA website features various product categories including windows, doors, siding, and roofing. Each product category has its own dedicated page with detailed information about the products, their features, and benefits.
 
 ## Key Features
 
+### Website Features
+
 1. **Product Showcase**: Detailed product information with images and specifications.
 2. **Financing Options**: Information about financing options for home improvement projects.
 3. **Gallery**: Gallery of recent projects with before and after images.
 4. **Contact Form**: Form for requesting a free estimate.
 5. **Service Areas**: Information about service areas in Los Angeles.
+
+### Development Features
+
+1. **Intelligent Commit Reminders**: Provides timely reminders to commit changes and assistance in creating meaningful commit messages.
+2. **AI-Generated Commit Messages**: Analyzes changes and suggests conventional commit format messages.
+3. **Git Hooks Integration**: Validates commit messages and ensures good version control practices.
 
 ## Related Documentation
 
