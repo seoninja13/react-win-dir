@@ -1,0 +1,18 @@
+{
+  "reminders": {
+    "timeThreshold": 30,
+    "changeThreshold": 50,
+    "fileThreshold": 5,
+    "enabled": true
+  },
+  "aiAssistance": {
+    "enabled": true,
+    "model": "default",
+    "customPrompt": ""
+  },
+  "notifications": {
+    "vscode": true,
+    "terminal": true,
+    "sound": false
+  }
+}
