@@ -1,0 +1,42 @@
+{
+  "storage": {
+    "format": "json",
+    "path": ".todo",
+    "backupEnabled": true,
+    "backupInterval": 86400
+  },
+  "tasks": {
+    "defaultPriority": "medium",
+    "priorities": [
+      "critical",
+      "high",
+      "medium",
+      "low"
+    ],
+    "statuses": [
+      "todo",
+      "in-progress",
+      "blocked",
+      "completed"
+    ],
+    "categories": [
+      "feature",
+      "bug",
+      "documentation",
+      "refactoring",
+      "testing"
+    ]
+  },
+  "notifications": {
+    "enabled": true,
+    "showOnStartup": true,
+    "reminderInterval": 3600
+  },
+  "ai": {
+    "enabled": true,
+    "allowAdd": true,
+    "allowComplete": true,
+    "allowUpdate": true,
+    "requireConfirmation": true
+  }
+}

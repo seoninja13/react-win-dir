@@ -15,7 +15,16 @@
     "postinstall": "node scripts/commit-assistant/install-hooks.js",
     "modularity:analyze": "node scripts/code-modularity/index.js analyze",
     "modularity:suggest": "node scripts/code-modularity/index.js suggest",
-    "modularity:config": "node scripts/code-modularity/index.js config"
+    "modularity:config": "node scripts/code-modularity/index.js config",
+    "todo:add": "node scripts/todo-list/index.js add",
+    "todo:list": "node scripts/todo-list/index.js list",
+    "todo:complete": "node scripts/todo-list/index.js complete",
+    "todo:update": "node scripts/todo-list/index.js update",
+    "todo:delete": "node scripts/todo-list/index.js delete",
+    "todo:prioritize": "node scripts/todo-list/index.js prioritize",
+    "todo:categorize": "node scripts/todo-list/index.js categorize",
+    "todo:config": "node scripts/todo-list/index.js config",
+    "todo:ai": "node scripts/todo-list/index.js ai"
   },
   "dependencies": {
     "@google-cloud/vertexai": "^1.10.0",
@@ -50,11 +59,13 @@
     "eslint": "^8.45.0",
     "eslint-config-next": "^13.4.19",
     "esprima": "^4.0.1",
+    "js-yaml": "^4.1.0",
     "ora": "^5.4.1",
     "postcss": "^8.4.27",
     "postcss-import": "^16.1.0",
     "tailwindcss": "^3.3.3",
     "tailwindcss-animate": "^1.0.6",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "uuid": "^9.0.1"
   }
 }
