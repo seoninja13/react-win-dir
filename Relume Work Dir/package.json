@@ -12,7 +12,10 @@
     "commit:config": "node scripts/commit-assistant/index.js config",
     "commit:stats": "node scripts/commit-assistant/index.js stats",
     "commit:install-hooks": "node scripts/commit-assistant/install-hooks.js",
-    "postinstall": "node scripts/commit-assistant/install-hooks.js"
+    "postinstall": "node scripts/commit-assistant/install-hooks.js",
+    "modularity:analyze": "node scripts/code-modularity/index.js analyze",
+    "modularity:suggest": "node scripts/code-modularity/index.js suggest",
+    "modularity:config": "node scripts/code-modularity/index.js config"
   },
   "dependencies": {
     "@google-cloud/vertexai": "^1.10.0",
@@ -33,6 +36,10 @@
     "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "@babel/generator": "^7.23.0",
+    "@babel/parser": "^7.23.0",
+    "@babel/traverse": "^7.23.0",
+    "@babel/types": "^7.23.0",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^20",
@@ -42,6 +49,7 @@
     "chalk": "^4.1.2",
     "eslint": "^8.45.0",
     "eslint-config-next": "^13.4.19",
+    "esprima": "^4.0.1",
     "ora": "^5.4.1",
     "postcss": "^8.4.27",
     "postcss-import": "^16.1.0",

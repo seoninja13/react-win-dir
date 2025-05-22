@@ -1,0 +1,30 @@
+{
+  "analysis": {
+    "complexityThreshold": 10,
+    "lengthThreshold": 100,
+    "depthThreshold": 3,
+    "parameterThreshold": 4,
+    "enabled": true
+  },
+  "aiAssistance": {
+    "enabled": true,
+    "model": "default",
+    "customPrompt": ""
+  },
+  "notifications": {
+    "vscode": true,
+    "terminal": true,
+    "frequency": "high"
+  },
+  "fileTypes": [
+    "js",
+    "jsx",
+    "ts",
+    "tsx"
+  ],
+  "excludePaths": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
+}
