@@ -17,6 +17,7 @@ This directory contains documentation related to the features of the Window Worl
 ### Development Features
 
 - [Intelligent Commit Reminders](./intelligent-commit-reminders.md) - Commit reminders and assistance
+- [Code Modularity Tools](./code-modularity-tools.md) - Code analysis and refactoring suggestions
 
 ## Overview
 
@@ -37,6 +38,9 @@ The Window World LA website features various product categories including window
 1. **Intelligent Commit Reminders**: Provides timely reminders to commit changes and assistance in creating meaningful commit messages.
 2. **AI-Generated Commit Messages**: Analyzes changes and suggests conventional commit format messages.
 3. **Git Hooks Integration**: Validates commit messages and ensures good version control practices.
+4. **Code Complexity Analysis**: Analyzes files for cyclomatic complexity, length, and other metrics.
+5. **Modularization Suggestions**: Identifies code sections that could be extracted into separate functions or modules.
+6. **AI-Powered Refactoring**: Generates refactoring suggestions using AI.
 
 ## Related Documentation
 

@@ -10,6 +10,7 @@ This index provides quick access to all process documentation for the Windows Do
 | [Project Structure Consolidation Implementation](./project-structure-consolidation-implementation.md) | Detailed implementation guide for project structure consolidation | 2025-05-14 |
 | [App Router Standardization Plan](./app-router-standardization-plan.md) | Detailed plan for standardizing on the App Router approach | 2025-05-26 |
 | [Project Structure Current State](../architecture/project-structure-current-state.md) | Current state of the project structure | 2025-05-27 |
+| [File Naming Convention](./file-naming-convention.md) | Standard for naming and describing files | 2025-05-30 |
 
 ## Development Workflows
 
@@ -34,4 +35,4 @@ This index provides quick access to all process documentation for the Windows Do
 
 ---
 
-Last Updated: 2025-05-27
+Last Updated: 2025-05-30
