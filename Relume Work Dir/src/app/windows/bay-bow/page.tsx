@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import BayBowPage from '../../../../bay-bow/index.jsx';
+import BayBowPage from '../../../../website-pages/bay-bow/index.jsx';
 import { logger } from '@/utils/logger';
 
 export default function BayBow() {

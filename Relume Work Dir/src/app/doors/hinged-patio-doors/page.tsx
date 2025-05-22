@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import HingedPatioDoorsPage from '../../../../../hinged-patio-doors/index.jsx';
+import HingedPatioDoorsPage from '../../../../website-pages/hinged-patio-doors/index.jsx';
 import { logger } from '@/utils/logger';
 
 export default function HingedPatioDoors() {

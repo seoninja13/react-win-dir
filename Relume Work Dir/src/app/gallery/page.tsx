@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import GalleryPage from '../../../gallery/index.jsx';
+import GalleryPage from '../../../website-pages/gallery/index.jsx';
 
 export default function Gallery() {
   return <GalleryPage />;

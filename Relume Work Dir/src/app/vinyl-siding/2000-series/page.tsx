@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { logger } from '@/utils/logger';
-import SeriesPage from '../../../../2000-series/index.jsx';
+import SeriesPage from '../../../../website-pages/2000-series/index.jsx';
 
 export default function Series2000() {
   useEffect(() => {

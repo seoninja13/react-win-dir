@@ -3,18 +3,18 @@
 import React, { useEffect } from 'react';
 import { logger } from '@/utils/logger';
 
-// Import the Doors page components
-import { Navbar10 } from '../../../doors/components/Navbar10';
-import { Header44 } from '../../../doors/components/Header44';
-import { Header9 } from '../../../doors/components/Header9';
-import { Layout101 } from '../../../doors/components/Layout101';
-import { Layout4 } from '../../../doors/components/Layout4';
-import { Layout25 } from '../../../doors/components/Layout25';
-import { Layout101_1 } from '../../../doors/components/Layout101_1';
-import { Layout16 } from '../../../doors/components/Layout16';
-import { Cta25 } from '../../../doors/components/Cta25';
-import { Testimonial4 } from '../../../doors/components/Testimonial4';
-import { Footer4 } from '../../../doors/components/Footer4';
+// Import the Doors page components from website-pages directory
+import { Navbar10 } from '../../../website-pages/doors/components/Navbar10';
+import { Header44 } from '../../../website-pages/doors/components/Header44';
+import { Header9 } from '../../../website-pages/doors/components/Header9';
+import { Layout101 } from '../../../website-pages/doors/components/Layout101';
+import { Layout4 } from '../../../website-pages/doors/components/Layout4';
+import { Layout25 } from '../../../website-pages/doors/components/Layout25';
+import { Layout101_1 } from '../../../website-pages/doors/components/Layout101_1';
+import { Layout16 } from '../../../website-pages/doors/components/Layout16';
+import { Cta25 } from '../../../website-pages/doors/components/Cta25';
+import { Testimonial4 } from '../../../website-pages/doors/components/Testimonial4';
+import { Footer4 } from '../../../website-pages/doors/components/Footer4';
 
 export default function Doors() {
   useEffect(() => {
