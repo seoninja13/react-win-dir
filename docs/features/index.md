@@ -18,6 +18,7 @@ This directory contains documentation related to the features of the Window Worl
 
 - [Intelligent Commit Reminders](./intelligent-commit-reminders.md) - Commit reminders and assistance
 - [Code Modularity Tools](./code-modularity-tools.md) - Code analysis and refactoring suggestions
+- [To-Do List Management](./todo-list-management.md) - Task management with AI integration
 
 ## Overview
 
@@ -41,6 +42,9 @@ The Window World LA website features various product categories including window
 4. **Code Complexity Analysis**: Analyzes files for cyclomatic complexity, length, and other metrics.
 5. **Modularization Suggestions**: Identifies code sections that could be extracted into separate functions or modules.
 6. **AI-Powered Refactoring**: Generates refactoring suggestions using AI.
+7. **Project-Aware Task Management**: Manages tasks in a structured format within the project.
+8. **AI Task Integration**: Enables AI assistants to read, add, and complete tasks.
+9. **Task Prioritization**: Allows tasks to be prioritized and categorized for better organization.
 
 ## Related Documentation
 

@@ -4,6 +4,7 @@ This directory contains daily development logs for the Window World LA website p
 
 ## Log Entries
 
+- [May 31, 2025 - To-Do List Management Implementation](./2025-05-31-todo-list-management-implementation.md) - Implementation of task management with AI integration
 - [May 30, 2025 - File Naming Convention Implementation](./2025-05-30-file-naming-convention-implementation.md) - Implementation of standardized file naming convention
 - [May 30, 2025 - Code Modularity Tools Implementation](./2025-05-30-code-modularity-tools-implementation.md) - Implementation of code analysis and refactoring tools
 - [May 29, 2025 - Intelligent Commit Reminders Implementation](./2025-05-29-intelligent-commit-reminders-implementation.md) - Implementation of commit reminders and assistance
@@ -70,4 +71,4 @@ To create a new daily log, follow these steps:
 - [Documentation Standards](../processes/documentation-standards.md) - Standards for documentation
 - [Development Workflow](../processes/development-workflow.md) - How to contribute to the project
 
-Last Updated: May 30, 2025 (Added File Naming Convention and IDE Features implementation logs)
+Last Updated: May 31, 2025 (Added To-Do List Management implementation log)
