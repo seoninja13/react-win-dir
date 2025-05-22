@@ -8,6 +8,12 @@ This project follows a pyramid documentation structure with the main [README.md]
 
 ## Documentation Categories
 
+### Core Operational Framework
+- [Project Operations Manual](./project-operations-manual.md) - **Primary operational guide for the dual MCP framework**
+- [Dashboards](./dashboards/index.md) - Strategic dashboards and project command centers
+- [MCP Server Integration Guide](./guides/mcp-server-integration-guide.md) - Detailed guide for Linear MCP and Sequential Thinking MCP integration
+
+### Development Documentation
 - [Admin](./admin/admin-ui-guide.md) - Admin UI documentation and guides
 - [Architecture](./architecture/index.md) - System design and architecture documentation
 - [Daily Logs](./daily-logs/index.md) - Daily development logs
@@ -25,7 +31,11 @@ This project follows a pyramid documentation structure with the main [README.md]
 - [Testing](./testing/index.md) - Testing documentation and guidelines
 - [Templates](./templates/documentation-template.md) - Documentation templates
 - [Tracking](./tracking/index.md) - Project tracking documentation
-- [Priority Task List](./priority-list.md) - Prioritized list of tasks for the project
+
+### Legacy Task Management (Archived)
+- [Priority Task List](./priority-list.md) - **[ARCHIVED]** Prioritized list of tasks (migrated to Linear MCP)
+- [Project Tasks](./project-tasks.md) - **[ARCHIVED]** Project tasks list (migrated to Linear MCP)
+- [Linear MCP - Window World LA Website Project](https://linear.app/1builder/project/window-world-la-website-b0de4f49730a) - **Current task management system**
 
 ## Category Details
 

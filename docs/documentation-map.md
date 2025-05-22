@@ -12,6 +12,13 @@ The documentation is organized in a pyramid structure with the main README.md as
 window-world-la/
 ├── README.md                                # Main project documentation
 ├── docs/                                    # Documentation directory
+│   ├── project-operations-manual.md         # PRIMARY OPERATIONAL GUIDE (Dual MCP Framework)
+│   ├── implementation-plan-dual-operational-framework.md # Implementation plan with phase tracking
+│   ├── task-analysis-for-linear-migration.md # Task analysis for Linear MCP migration
+│   ├── dual-operational-framework-implementation-guide.md # Framework implementation guide
+│   ├── dashboards/                          # Strategic dashboards
+│   │   ├── index.md                         # Dashboards index
+│   │   └── project-hub-strategic-dashboard.md # Real-time project command center
 │   ├── architecture/                        # Architecture documentation
 │   │   ├── api-routes.md                    # API routes documentation
 │   │   ├── architecture-documentation.md    # Comprehensive architecture documentation
@@ -42,6 +49,7 @@ window-world-la/
 │   │   └── windows-doors-ca-architecture.md # Windows Doors CA architecture documentation
 │   ├── guides/                              # Guide documentation
 │   │   ├── index.md                         # Guide documentation index
+│   │   ├── mcp-server-integration-guide.md  # MCP Server Integration Guide (CRITICAL)
 │   │   ├── relume-ui-installation-guide.md  # Relume UI installation guide
 │   │   ├── relume-ui-integration-guide.md   # Relume UI integration guide
 │   │   ├── relume-component-usage-guide.md  # Relume component usage guide
@@ -92,8 +100,13 @@ window-world-la/
 │   │   ├── index.md                         # Planning documentation index
 │   │   └── supabase-implementation-plan.md  # Supabase implementation plan
 │   ├── processes/                           # Process documentation
-│   │   ├── development-workflow.md          # Development workflow documentation
-│   │   └── documentation-standards.md       # Documentation standards
+│   │   ├── development-workflow.md          # AI-augmented development workflow v2.0
+│   │   ├── ai-integration-procedures.md     # Comprehensive AI tool usage guide
+│   │   ├── quality-assurance-processes.md   # Complete QA framework
+│   │   ├── documentation-standards.md       # Documentation standards
+│   │   ├── commit-standards.md              # Commit message standards
+│   │   ├── ai-agent-rules.md                # AI agent operational rules
+│   │   └── file-naming-convention.md        # File naming convention standards
 │   ├── testing/                             # Testing documentation
 │   │   └── testing-strategy.md              # Testing strategy documentation
 │   ├── tracking/                            # Tracking documentation
@@ -116,7 +129,23 @@ window-world-la/
 - [README.md](../README.md) - Main project documentation and entry point
 - [Docs/index.md](./index.md) - Documentation index
 - [Docs/documentation-map.md](./documentation-map.md) - Comprehensive map of all documentation
-- [Docs/priority-list.md](./priority-list.md) - Prioritized list of tasks
+
+### Core Operational Framework
+
+- [Docs/project-operations-manual.md](./project-operations-manual.md) - **Primary operational guide for the dual MCP framework**
+- [Docs/implementation-plan-dual-operational-framework.md](./implementation-plan-dual-operational-framework.md) - Detailed implementation plan with phase tracking
+- [Docs/task-analysis-for-linear-migration.md](./task-analysis-for-linear-migration.md) - Comprehensive task analysis for Linear MCP migration
+- [Docs/dashboards/project-hub-strategic-dashboard.md](./dashboards/project-hub-strategic-dashboard.md) - Real-time project command center
+- [Docs/guides/mcp-server-integration-guide.md](./guides/mcp-server-integration-guide.md) - Detailed guide for Linear MCP and Sequential Thinking MCP integration
+- [Docs/processes/development-workflow.md](./processes/development-workflow.md) - AI-augmented development workflow v2.0
+- [Docs/processes/ai-integration-procedures.md](./processes/ai-integration-procedures.md) - Comprehensive AI tool usage guide
+- [Docs/processes/quality-assurance-processes.md](./processes/quality-assurance-processes.md) - Complete QA framework
+
+### Legacy Task Management (Archived - Migrated to Linear MCP)
+
+- [Docs/priority-list.md](./priority-list.md) - **[ARCHIVED]** Prioritized list of tasks (migrated to Linear MCP)
+- [Docs/project-tasks.md](./project-tasks.md) - **[ARCHIVED]** Project tasks list (migrated to Linear MCP)
+- [Linear MCP - Window World LA Website Project](https://linear.app/1builder/project/window-world-la-website-b0de4f49730a) - **Current task management system**
 
 ### Architecture Documentation
 
@@ -421,4 +450,4 @@ The following documentation is planned for future development:
 - [Docs/Knowledge Base/search-functionality.md](./Knowledge%20Base/search-functionality.md) - How the search functionality works
 - [Docs/Knowledge Base/automated-ingestion-process.md](./Knowledge%20Base/automated-ingestion-process.md) - How to automatically ingest content from various sources
 
-Last Updated: May 28, 2025 (Added Knowledge Base documentation and updated documentation structure)
+Last Updated: January 2, 2025 (Phase V: Documentation Integration - Added Dual Operational Framework documentation, updated core documentation links, and organized legacy task management)

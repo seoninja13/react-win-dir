@@ -29,6 +29,10 @@ This repository contains the code for the Window World LA website, a modern webs
 
 This project follows a pyramid documentation structure with this README as the single entry point. All documentation is organized hierarchically in the `Docs` directory.
 
+### Project Operations Framework
+
+This project uses a **Dual Operational Framework** with Linear MCP and Sequential Thinking MCP servers for enhanced project management and workflow automation. For complete details on how our team operates, see the [Project Operations Manual](./Docs/project-operations-manual.md).
+
 ### New Developers
 
 If you're new to the project, start by reading the [Getting Started for New Developers](./Docs/onboarding/getting-started-for-new-developers.md) guide. This document provides a comprehensive overview of the project structure, priority system, and development workflow.
@@ -52,22 +56,37 @@ All detailed documentation is organized in the [Documentation Directory](./Docs/
 
 ### Key Project Documents
 
+#### Operational Framework
+- [Project Operations Manual](./Docs/project-operations-manual.md) - **Primary operational guide for the dual MCP framework**
+- [MCP Server Integration Guide](./Docs/guides/mcp-server-integration-guide.md) - Detailed guide for Linear MCP and Sequential Thinking MCP integration
+- [Project Hub Strategic Dashboard](./Docs/dashboards/project-hub-strategic-dashboard.md) - Real-time project command center
+- [Development Workflow v2.0](./Docs/processes/development-workflow.md) - AI-augmented development process
+- [AI Integration Procedures](./Docs/processes/ai-integration-procedures.md) - Comprehensive AI tool usage guide
+
+#### Current Priorities
 - [Tomorrow Morning Tasks](./Docs/migration/tomorrow-morning-tasks.md) - **Current priority: Fix Non-Working Pages**
-- [Project Priorities List](./Docs/priority-list.md) - Prioritized list of tasks for the project
+- [Project Priorities List](./Docs/priority-list.md) - **[ARCHIVED]** Prioritized list of tasks (migrated to Linear MCP)
+- [Linear MCP - Window World LA Website Project](https://linear.app/1builder/project/window-world-la-website-b0de4f49730a) - **Current task management system**
 - [Vibe Coding Implementation Plan](./Docs/features/vibe-coding-implementation.md) - **Current IDE feature priority: Code Audit Detection**
+
+#### Architecture & Structure
 - [Project Structure Current State](./Docs/architecture/project-structure-current-state.md) - Current state of the project structure
-- [Knowledge Base Overview](./Docs/Knowledge%20Base/index.md) - Knowledge Base system documentation
-- [App Router Migration Tracking](./Docs/migration/app-router-migration-tracking.md) - Comprehensive tracking of the App Router migration progress
-- [Next Steps for App Router Migration](./Docs/migration/next-steps-for-app-router-migration.md) - Detailed steps for continuing the App Router migration
-- [App Router Standardization Plan](./Docs/processes/app-router-standardization-plan.md) - Detailed plan for standardizing on the App Router approach
 - [Architecture Documentation](./Docs/architecture/architecture-documentation.md) - Comprehensive analysis and implementation plan
 - [Routing Strategy](./Docs/architecture/routing-strategy.md) - Documentation of the App Router routing strategy
 - [Working Directory](./Docs/architecture/working-directory.md) - Documentation of the working directory structure
-- [Daily Development Logs](./Docs/daily-logs/) - Daily development updates
-- [Latest App Router Migration Status Review](./Docs/daily-logs/2025-05-27-app-router-migration-status-review.md) - Latest review of the App Router migration status
+
+#### Migration & Progress Tracking
+- [App Router Migration Tracking](./Docs/migration/app-router-migration-tracking.md) - Comprehensive tracking of the App Router migration progress
+- [Next Steps for App Router Migration](./Docs/migration/next-steps-for-app-router-migration.md) - Detailed steps for continuing the App Router migration
+- [App Router Standardization Plan](./Docs/processes/app-router-standardization-plan.md) - Detailed plan for standardizing on the App Router approach
 - [Webpage Progress Tracker](./Docs/tracking/webpage-progress-tracker.md) - Comprehensive tracker for all webpages in the project
 - [Development Progress Tracking](./Docs/tracking/tracking-progress.md) - Detailed tracking of development progress and feature implementation
+
+#### Specialized Systems
+- [Knowledge Base Overview](./Docs/Knowledge%20Base/index.md) - Knowledge Base system documentation
 - [Image Generation Progress](./Docs/tracking/image-generation-progress.md) - Tracking document for Google Generative AI integration
+- [Daily Development Logs](./Docs/daily-logs/) - Daily development updates
+- [Latest App Router Migration Status Review](./Docs/daily-logs/2025-05-27-app-router-migration-status-review.md) - Latest review of the App Router migration status
 
 ## Project Documentation
 

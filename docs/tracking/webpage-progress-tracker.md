@@ -2,6 +2,12 @@
 
 > **Breadcrumb Navigation**: [README.md](../../README.md) > [Documentation](../index.md) > [Tracking](./index.md) > Webpage Progress Tracker
 
+> **📋 MIGRATION STATUS**: This document is under evaluation for Linear MCP migration as part of the Dual Operational Framework implementation. The detailed page tracking data may be migrated to Linear MCP for better task management integration.
+>
+> **Current Status**: Active tracking document - continue using until migration is complete
+> **Linear MCP Project**: [Window World LA Website Project](https://linear.app/1builder/project/window-world-la-website-b0de4f49730a)
+> **Related Dashboard**: [Project Hub Strategic Dashboard](../dashboards/project-hub-strategic-dashboard.md)
+
 ## Table of Contents
 
 1. [Overview](#overview)

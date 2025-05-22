@@ -1,6 +1,16 @@
-# Project Tasks
+# Project Tasks [ARCHIVED]
 
-This document outlines the tasks for the Windows Doors Website project.
+> **⚠️ MIGRATION NOTICE**: This document has been **ARCHIVED** as of January 2, 2025. All tasks have been successfully migrated to Linear MCP as part of the Dual Operational Framework implementation.
+>
+> **New Task Management Location**: [Linear MCP - Window World LA Website Project](https://linear.app/1builder/project/window-world-la-website-b0de4f49730a)
+>
+> **Migration Details**: 26 issues (1BU-10 through 1BU-35) created in Linear MCP covering all tasks from this document.
+>
+> **For Current Tasks**: Please use the [Project Hub Strategic Dashboard](./dashboards/project-hub-strategic-dashboard.md) and Linear MCP for all task management.
+
+---
+
+**ARCHIVED CONTENT BELOW** - This document outlines the tasks for the Windows Doors Website project.
 
 ## Table of Contents
 
