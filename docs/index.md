@@ -59,7 +59,9 @@ The architecture documentation provides detailed information about the system de
 
 ### Features
 
-The features documentation provides detailed information about specific features of the application.
+The features documentation provides detailed information about specific features of the application and development tools.
+
+#### Website Features
 
 - [Home Page](./features/home-page.md) - Home page documentation
 - [SEO Strategy](./features/seo-strategy.md) - SEO optimization strategy
@@ -68,6 +70,13 @@ The features documentation provides detailed information about specific features
 - [Siding](./features/siding.md) - Siding product features
 - [Roofing](./features/roofing.md) - Roofing product features
 - [Financing](./features/financing.md) - Financing options
+
+#### Development Features
+
+- [Vibe Coding Implementation Plan](./features/vibe-coding-implementation.md) - Master tracking document for all Vibe Coding features
+- [Intelligent Commit Reminders](./features/intelligent-commit-reminders.md) - Commit reminders and assistance
+- [Code Modularity Tools](./features/code-modularity-tools.md) - Code analysis and refactoring suggestions
+- [To-Do List Management](./features/todo-list-management.md) - Task management with AI integration
 
 ### Guides
 

@@ -43,6 +43,7 @@ All detailed documentation is organized in the [Documentation Directory](./Docs/
 
 - [Architecture](./Docs/architecture/index.md) - System design and architecture documentation
 - [Daily Logs](./Docs/daily-logs/index.md) - Daily development logs
+- [Features](./Docs/features/index.md) - Feature documentation and implementation guides
 - [Knowledge Base](./Docs/Knowledge%20Base/index.md) - Knowledge Base system documentation
 - [Migration](./Docs/migration/index.md) - App Router migration documentation
 - [Onboarding](./Docs/onboarding/index.md) - Documentation for new developers
@@ -53,6 +54,7 @@ All detailed documentation is organized in the [Documentation Directory](./Docs/
 
 - [Tomorrow Morning Tasks](./Docs/migration/tomorrow-morning-tasks.md) - **Current priority: Fix Non-Working Pages**
 - [Project Priorities List](./Docs/priority-list.md) - Prioritized list of tasks for the project
+- [Vibe Coding Implementation Plan](./Docs/features/vibe-coding-implementation.md) - **Current IDE feature priority: Code Audit Detection**
 - [Project Structure Current State](./Docs/architecture/project-structure-current-state.md) - Current state of the project structure
 - [Knowledge Base Overview](./Docs/Knowledge%20Base/index.md) - Knowledge Base system documentation
 - [App Router Migration Tracking](./Docs/migration/app-router-migration-tracking.md) - Comprehensive tracking of the App Router migration progress
@@ -221,6 +223,13 @@ Ensure the `dist/` and `output/` directories are in your `.gitignore` file.
   - Doors product page with detailed information and gallery
   - Vinyl Siding product page with detailed information and gallery
   - 5000-Series Vinyl Siding product page with detailed information and gallery
+
+- **Vibe Coding IDE Features** (In Progress):
+  - Intelligent Commit Reminders & Assistance - Provides timely reminders to commit changes
+  - Code Modularity & Refactoring Tools - Helps maintain clean, modular code
+  - To-Do List Management with AI Sync - Project-aware task management system
+  - File Naming Convention - Standardized file naming with hyphenated paths
+  - Next: Code Audit Detection - Automatically detects code quality issues
 
 - **Google Generative AI Integration** (In Progress):
   - Vertex AI client implementation for image generation

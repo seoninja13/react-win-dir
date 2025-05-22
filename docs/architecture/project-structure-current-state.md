@@ -33,9 +33,15 @@ react-win-dir/                      # Root directory
 ├── Docs/                           # Project documentation
 │   ├── architecture/               # Architecture documentation
 │   ├── daily-logs/                 # Daily development logs
+│   ├── features/                   # Feature documentation
+│   │   ├── vibe-coding-implementation.md  # Vibe Coding implementation plan
+│   │   ├── intelligent-commit-reminders.md # Intelligent Commit Reminders documentation
+│   │   ├── code-modularity-tools.md # Code Modularity Tools documentation
+│   │   └── todo-list-management.md # To-Do List Management documentation
 │   ├── migration/                  # Migration documentation
 │   ├── pages/                      # Page-specific documentation
 │   ├── processes/                  # Process documentation
+│   │   └── file-naming-convention.md # File Naming Convention documentation
 │   └── tracking/                   # Progress tracking documentation
 ├── Export Documentation/           # Export-related documentation
 ├── generated-images/               # Generated image files
@@ -67,6 +73,9 @@ react-win-dir/                      # Root directory
 │   ├── pages/                      # Next.js Pages Router pages (being phased out)
 │   ├── public/                     # Public assets
 │   ├── scripts/                    # Script files
+│   │   ├── commit-assistant/       # Intelligent Commit Reminders scripts
+│   │   ├── code-modularity/        # Code Modularity Tools scripts
+│   │   └── todo-list/              # To-Do List Management scripts
 │   ├── service-accounts/           # Service account key files
 │   ├── src/                        # Source code
 │   │   ├── app/                   # App Router pages (target architecture)
@@ -77,6 +86,9 @@ react-win-dir/                      # Root directory
 │   ├── tests/                      # Test files
 │   ├── utils/                      # Utility functions
 │   ├── vertex-ai-tests/            # Vertex AI test files
+│   ├── .commit-assistant.json     # Intelligent Commit Reminders configuration
+│   ├── .code-modularity.json      # Code Modularity Tools configuration
+│   ├── .todo-config.json          # To-Do List Management configuration
 │   └── Website Pages/              # Centralized page-specific components
 │       ├── home/                  # Home page components
 │       ├── windows/               # Windows page components
@@ -162,6 +174,47 @@ The project is currently migrating from Pages Router to App Router. The followin
 14. **Wood Windows Page** (`/wood-windows`)
 15. **Warranty Pages** (`/warranty-*`)
 
+## Development Tools
+
+The project includes several development tools inspired by David Jones Gelardi's "Vibe Coding" approach. These tools are designed to enhance the development workflow, improve code quality, and streamline collaboration between developers and AI tools.
+
+### Implemented Vibe Coding Features
+
+1. **Intelligent Commit Reminders & Assistance**
+   - Provides timely reminders to commit changes and assistance in creating meaningful commit messages
+   - Implemented in `Relume-root/scripts/commit-assistant/`
+   - Configured via `.commit-assistant.json`
+   - Documentation: `Docs/features/intelligent-commit-reminders.md`
+
+2. **Code Modularity & Refactoring Tools**
+   - Helps developers maintain clean, modular code by analyzing files for complexity and length
+   - Implemented in `Relume-root/scripts/code-modularity/`
+   - Configured via `.code-modularity.json`
+   - Documentation: `Docs/features/code-modularity-tools.md`
+
+3. **To-Do List Management with AI Sync**
+   - Provides a seamless, project-aware task management system that integrates with AI tools
+   - Implemented in `Relume-root/scripts/todo-list/`
+   - Configured via `.todo-config.json`
+   - Documentation: `Docs/features/todo-list-management.md`
+
+4. **File Naming Convention**
+   - Implements a standardized file naming convention using hyphenated path names
+   - Documentation: `Docs/processes/file-naming-convention.md`
+
+### Planned Vibe Coding Features
+
+The following features are planned for future implementation:
+
+1. **Code Audit Detection** (Next to implement)
+2. **Automated Testing**
+3. **AI Rule Configuration**
+4. **Automation Scripting**
+5. **AI Change Review**
+6. **Multi-Agent Comparison**
+
+For more details, see the [Vibe Coding Implementation Plan](../features/vibe-coding-implementation.md).
+
 ## Known Issues
 
 The following issues have been identified in the current project structure:
@@ -201,5 +254,10 @@ The following steps are planned to address the current issues and complete the m
 - [Working Directory Documentation](./working-directory.md)
 - [Routing Strategy Documentation](./routing-strategy.md)
 - [Website Pages Organization](./website-pages-organization.md)
+- [Vibe Coding Implementation Plan](../features/vibe-coding-implementation.md)
+- [Intelligent Commit Reminders](../features/intelligent-commit-reminders.md)
+- [Code Modularity Tools](../features/code-modularity-tools.md)
+- [To-Do List Management](../features/todo-list-management.md)
+- [File Naming Convention](../processes/file-naming-convention.md)
 
-Last Updated: May 21, 2025 (Updated to reflect ongoing Website Pages reorganization)
+Last Updated: May 31, 2025 (Updated to include Vibe Coding features implementation)
