@@ -22,6 +22,8 @@ This repository contains the code for the Window World LA website, a modern webs
 **Non-Working Pages**: Bay-Bow Windows, Hinged Patio Doors, Vinyl Siding Series Pages, Garage Doors
 
 > **CRITICAL DIRECTORY STRUCTURE POLICY**: ALL files related to the website implementation MUST be located within the Relume-root directory. See the [Directory Structure Policy](./Docs/architecture/directory-structure-policy.md) for details.
+>
+> **CRITICAL FILE NAMING CONVENTION**: ALL files MUST follow the hyphenated naming convention and include a 5-7 word description. See the [File Naming Convention](./Docs/processes/file-naming-convention.md) for details.
 
 ## Documentation Structure
 
