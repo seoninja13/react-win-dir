@@ -1,6 +1,6 @@
 /**
  * Configuration Module for Code Modularity Tools
- * 
+ *
  * Handles loading, saving, and providing access to configuration settings.
  */
 
@@ -15,6 +15,13 @@ const DEFAULT_CONFIG = {
     depthThreshold: 3,           // Nesting depth threshold
     parameterThreshold: 4,       // Parameter count threshold
     enabled: true                // Enable/disable analysis
+  },
+  enhancedAnalysis: {
+    deadCodeDetection: true,     // Enable dead code detection
+    unusedImportsDetection: true, // Enable unused imports detection
+    codeDuplicationDetection: true, // Enable code duplication detection
+    duplicateThreshold: 5,       // Minimum lines for duplication detection
+    enabled: true                // Enable/disable enhanced analysis
   },
   aiAssistance: {
     enabled: true,               // Enable/disable AI assistance
@@ -81,7 +88,7 @@ function saveConfig(config) {
  */
 function mergeWithDefaults(userConfig) {
   const merged = { ...DEFAULT_CONFIG };
-  
+
   // Merge top-level sections
   for (const section in userConfig) {
     if (merged[section] && typeof merged[section] === 'object' && !Array.isArray(merged[section])) {
@@ -92,7 +99,7 @@ function mergeWithDefaults(userConfig) {
       merged[section] = userConfig[section];
     }
   }
-  
+
   return merged;
 }
 
@@ -104,11 +111,11 @@ function mergeWithDefaults(userConfig) {
  */
 function updateConfig(section, key, value) {
   const config = getConfig();
-  
+
   if (!config[section]) {
     config[section] = {};
   }
-  
+
   config[section][key] = value;
   saveConfig(config);
 }
