@@ -80,8 +80,8 @@ The structure remains largely the same, but the root directory is renamed to Rel
 
 The conversion process involved the following steps:
 
-1. Create the Relume-root directory
-2. Copy all files from the Relume directory to the Relume-root directory
+1. Create the Relume Work Dir directory
+2. Copy all files from the Relume directory to the Relume Work Dir directory
 3. Update import paths in all files
 4. Create new pages in the Next.js App Router structure that import the Relume components
 5. Modify components as needed to work with the Next.js App Router
@@ -95,7 +95,7 @@ We updated the import paths in all files to match the new directory structure. F
 import Navigation from '../../components/navigation/Navigation';
 
 // After
-import Navigation from '../../../Relume-root/components/navigation/Navigation';
+import Navigation from '../../../website-pages/components/navigation/Navigation';
 ```
 
 This ensures that the components can be imported from the new directory structure.

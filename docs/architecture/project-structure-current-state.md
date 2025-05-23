@@ -143,6 +143,14 @@ The project organizes components in the following way:
 - **Linear Tracking**: [Issue 1BU-37](https://linear.app/1builder/issue/1BU-37/milestone-completed-35-pages-across-8-testing-batches)
 - **Daily Log**: [May 28, 2025 - Batch Testing Milestone](../daily-logs/2025-05-28-batch-testing-milestone-35-pages-complete.md)
 
+### **📋 Documentation Milestone Commit**
+- **Commit Hash**: `161ac166`
+- **Date**: May 22, 2025
+- **Branch**: `05-21-RestructureDocs-2`
+- **Message**: "docs: Complete pyramidal documentation structure for 35-page milestone"
+- **Status**: ✅ Successfully pushed to repository
+- **Repository**: https://github.com/seoninja13/react-win-dir.git
+
 The project is currently migrating from Pages Router to App Router using a systematic batch testing approach (5 pages per batch).
 
 ### Completed Migrations (35 pages confirmed working)

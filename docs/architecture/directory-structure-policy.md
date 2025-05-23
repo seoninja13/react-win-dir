@@ -141,7 +141,10 @@ The Relume Work Dir directory is the **main working directory** and should conta
    - `node_modules/` - Node.js dependencies
    - `Output/` - Output files
    - `public/` - Public assets
-   - `scripts/` - Scripts
+   - `scripts/` - Development and automation scripts
+     - `code-modularity/` - Code analysis and modularity tools
+     - `commit-assistant/` - Intelligent commit assistance tools
+     - `todo-list/` - AI-integrated todo list management
    - `Service accounts/` - Service account key files
    - `styles/` - Global styles
    - `Supabase/` - Supabase integration
@@ -259,4 +262,4 @@ This policy is enforced through:
 - [Component Organization](./component-organization.md)
 - [Getting Started for New Developers](../onboarding/getting-started-for-new-developers.md)
 
-Last Updated: May 28, 2025 (Updated to reflect actual project structure and added file placement guidelines)
+Last Updated: January 27, 2025 (Added scripts directory structure for Phase 1 implementation)

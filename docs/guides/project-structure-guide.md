@@ -127,11 +127,11 @@ The project uses the following configuration files:
 
 ### Root Configuration Files
 
-- `package.json`: Contains scripts that point to the `Relume-root` directory
+- `package.json`: Contains scripts that point to the `Relume Work Dir` directory
 - `.gitignore`: Specifies files to ignore in Git
 - `netlify.toml`: Netlify configuration
 
-### Relume-root Configuration Files
+### Relume Work Dir Configuration Files
 
 - `next.config.js`: Next.js configuration
 - `tailwind.config.ts`: Tailwind CSS configuration
@@ -146,17 +146,17 @@ The project uses the following configuration files:
 
 To add a new page to the project:
 
-1. Create a new directory in `Relume-root/src/app/` with the name of the page
+1. Create a new directory in `Relume Work Dir/src/app/` with the name of the page
 2. Create a `page.tsx` file in the new directory
-3. Import the necessary components from the corresponding directory in `Relume-root`
+3. Import the necessary components from the corresponding directory in `website-pages`
 
 Example:
 
 ```tsx
-// Relume-root/src/app/new-page/page.tsx
+// Relume Work Dir/src/app/new-page/page.tsx
 "use client";
 
-import { NewPage } from "../../../new-page";
+import { NewPage } from "../../../website-pages/new-page";
 
 export default function NewPageRoute() {
   return <NewPage />;
@@ -167,14 +167,14 @@ export default function NewPageRoute() {
 
 To add a new component to the project:
 
-1. Create a new directory in `Relume-root` with the name of the component
+1. Create a new directory in `website-pages` with the name of the component
 2. Create an `index.jsx` file in the new directory
 3. Create a `components` directory for any sub-components
 
 Example:
 
 ```jsx
-// Relume-root/new-component/index.jsx
+// website-pages/new-component/index.jsx
 "use client";
 
 import React from "react";

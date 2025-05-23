@@ -32,19 +32,19 @@ flowchart TD
     A --> C[Docs]
     A --> D[Relume-DO-NOT-EDIT]
     A --> E[Other Support Directories]
-    
+
     B --> F[src]
     B --> G[Website Pages]
     B --> H[Configuration Files]
     B --> I[Support Directories]
-    
+
     F --> J[app]
     F --> K[components]
     F --> L[lib]
     F --> M[utils]
     F --> N[types]
     F --> O[supabase]
-    
+
     J --> P[Page Routes]
     G --> Q[Page Components]
 ```
@@ -94,7 +94,10 @@ Relume Work Dir/
 ├── node_modules/            # Node.js dependencies
 ├── Output/                  # Output files
 ├── public/                  # Public assets
-├── scripts/                 # Scripts
+├── scripts/                 # Development and automation scripts
+│   ├── code-modularity/     # Code analysis and modularity tools
+│   ├── commit-assistant/    # Intelligent commit assistance tools
+│   └── todo-list/           # AI-integrated todo list management
 ├── Service accounts/        # Service account files
 ├── src/                     # Source code
 ├── styles/                  # Global styles
@@ -127,6 +130,58 @@ src/
 4. **utils/**: Contains utility functions and helpers
 5. **types/**: Contains TypeScript type definitions
 6. **supabase/**: Contains Supabase database integration code
+
+## Scripts Directory
+
+The `scripts/` directory contains development and automation tools that enhance the development workflow:
+
+```
+scripts/
+├── code-modularity/         # Code analysis and modularity tools
+│   ├── code-analyzer.js     # Enhanced static code analysis engine
+│   ├── config.js            # Configuration for analysis tools
+│   ├── index.js             # Main entry point for modularity tools
+│   ├── notification.js      # Notification system for analysis results
+│   └── refactoring-suggester.js # Automated refactoring suggestions
+├── commit-assistant/        # Intelligent commit assistance tools
+│   ├── ai-message-generator.js # AI-powered commit message generation
+│   ├── commit-reminder.js   # Automated commit reminders
+│   ├── config.js            # Configuration for commit tools
+│   ├── index.js             # Main entry point for commit assistance
+│   └── notification.js      # Notification system for commit reminders
+└── todo-list/               # AI-integrated todo list management
+    ├── ai-integration.js    # AI integration for todo management
+    ├── config.js            # Configuration for todo tools
+    ├── index.js             # Main entry point for todo management
+    ├── notification.js      # Notification system for todo items
+    ├── storage-adapters/    # Storage adapters for different backends
+    └── todo-manager.js      # Core todo management functionality
+```
+
+### Code Modularity Tools
+
+The code-modularity tools provide comprehensive static code analysis capabilities:
+
+- **Enhanced Static Code Analysis**: Dead code detection, unused imports detection, code duplication detection
+- **Configurable Thresholds**: Customizable analysis parameters and severity levels
+- **Integration**: Seamless integration with existing development workflow
+- **Notification System**: Real-time notifications for code quality issues
+
+### Commit Assistant Tools
+
+The commit-assistant tools provide intelligent commit assistance:
+
+- **AI-Powered Messages**: Automated generation of meaningful commit messages
+- **Commit Reminders**: Intelligent reminders based on code changes
+- **Integration**: Git hooks integration for automated assistance
+
+### Todo List Management
+
+The todo-list tools provide AI-integrated task management:
+
+- **AI Integration**: Smart task prioritization and suggestions
+- **Multiple Storage**: Support for various storage backends
+- **Notification System**: Automated reminders and progress tracking
 
 ## App Router Structure
 
@@ -271,4 +326,4 @@ The project uses Next.js App Router for routing:
 - [File Placement Guide](./file-placement-guide.md)
 - [Component Organization](./component-organization.md)
 
-Last Updated: May 28, 2025
+Last Updated: January 27, 2025 (Added scripts directory structure for Phase 1 implementation)

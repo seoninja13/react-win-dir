@@ -64,12 +64,12 @@ This document maps the current page routes in the `/src/app/` directory to their
 
 | Current Path | Component Import | Target Path | Status |
 |--------------|------------------|-------------|--------|
-| `/src/app/window-style-finder/page.tsx` | `../../../window-style-finder/index.jsx` | `/Relume-root/src/app/window-style-finder/page.tsx` | Completed |
-| `/src/app/1000-series/page.tsx` | `../../../1000-series-simple.jsx` | `/Relume-root/src/app/1000-series/page.tsx` | Not Started |
+| `/src/app/window-style-finder/page.tsx` | `../../../window-style-finder/index.jsx` | `/Relume Work Dir/src/app/window-style-finder/page.tsx` | Completed |
+| `/src/app/1000-series/page.tsx` | `../../../1000-series-simple.jsx` | `/Relume Work Dir/src/app/1000-series/page.tsx` | Not Started |
 
 ## Import Path Adjustments
 
-When migrating pages from `/src/app/` to `/Relume-root/src/app/`, the import paths need to be adjusted as follows:
+When migrating pages from `/src/app/` to `/Relume Work Dir/src/app/`, the import paths need to be adjusted as follows:
 
 1. For top-level pages:
    - From: `../../../[component-dir]/index.jsx`

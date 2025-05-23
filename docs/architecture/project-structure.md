@@ -62,12 +62,18 @@ Relume-root/
 ├── pages/               # Pages Router pages (legacy)
 ├── public/              # Public assets
 ├── roofing/             # Roofing page components
+├── scripts/             # Development and automation scripts
+│   ├── code-modularity/ # Code analysis and modularity tools
+│   ├── commit-assistant/# Intelligent commit assistance tools
+│   ├── todo-list/       # AI-integrated todo list management
+│   └── [other scripts]  # Various utility and automation scripts
 ├── src/                 # Source code
 │   ├── app/             # App Router pages
 │   └── components/      # Shared components
 ├── styles/              # Global styles
 ├── vinyl-siding/        # Vinyl siding page components
 ├── warranty/            # Warranty page components
+├── website-pages/       # Page-specific component directories
 ├── window-style-finder/ # Window style finder components
 └── windows/             # Windows page components
 ```
@@ -116,6 +122,59 @@ src/app/
 └── styles.css           # Additional styles
 ```
 
+### scripts
+
+The `scripts` directory contains development and automation tools that enhance the development workflow. Here's an overview of its structure:
+
+```
+scripts/
+├── code-modularity/     # Code analysis and modularity tools
+│   ├── code-analyzer.js # Enhanced static code analysis engine
+│   ├── config.js        # Configuration for analysis tools
+│   ├── index.js         # Main entry point for modularity tools
+│   ├── notification.js  # Notification system for analysis results
+│   └── refactoring-suggester.js # Automated refactoring suggestions
+├── commit-assistant/    # Intelligent commit assistance tools
+│   ├── ai-message-generator.js # AI-powered commit message generation
+│   ├── commit-reminder.js # Automated commit reminders
+│   ├── config.js        # Configuration for commit tools
+│   ├── index.js         # Main entry point for commit assistance
+│   └── notification.js  # Notification system for commit reminders
+├── todo-list/           # AI-integrated todo list management
+│   ├── ai-integration.js # AI integration for todo management
+│   ├── config.js        # Configuration for todo tools
+│   ├── index.js         # Main entry point for todo management
+│   ├── notification.js  # Notification system for todo items
+│   ├── storage-adapters/ # Storage adapters for different backends
+│   └── todo-manager.js  # Core todo management functionality
+└── [other scripts]      # Various utility and automation scripts
+```
+
+#### Code Modularity Tools
+
+The code-modularity tools provide comprehensive static code analysis capabilities:
+
+- **Enhanced Static Code Analysis**: Dead code detection, unused imports detection, code duplication detection
+- **Configurable Thresholds**: Customizable analysis parameters and severity levels
+- **Integration**: Seamless integration with existing development workflow
+- **Notification System**: Real-time notifications for code quality issues
+
+#### Commit Assistant Tools
+
+The commit-assistant tools provide intelligent commit assistance:
+
+- **AI-Powered Messages**: Automated generation of meaningful commit messages
+- **Commit Reminders**: Intelligent reminders based on code changes
+- **Integration**: Git hooks integration for automated assistance
+
+#### Todo List Management
+
+The todo-list tools provide AI-integrated task management:
+
+- **AI Integration**: Smart task prioritization and suggestions
+- **Multiple Storage**: Support for various storage backends
+- **Notification System**: Automated reminders and progress tracking
+
 ### Docs
 
 The `Docs` directory contains all the project documentation. Here's an overview of its structure:
@@ -137,11 +196,11 @@ The project uses the following configuration files:
 
 ### Root Configuration Files
 
-- `package.json`: Contains scripts that point to the `Relume-root` directory
+- `package.json`: Contains scripts that point to the `Relume Work Dir` directory
 - `.gitignore`: Specifies files to ignore in Git
 - `netlify.toml`: Netlify configuration
 
-### Relume-root Configuration Files
+### Relume Work Dir Configuration Files
 
 - `next.config.js`: Next.js configuration
 - `tailwind.config.ts`: Tailwind CSS configuration
@@ -200,4 +259,4 @@ Documentation: [Project Structure Consolidation Plan](../processes/project-struc
 - [Documentation Map](../documentation-map.md) - Map of all project documentation
 - [Architecture Index](./index.md) - Index of all architecture documentation
 
-Last Updated: May 15, 2025
+Last Updated: January 27, 2025 (Added scripts directory structure for Phase 1 implementation)

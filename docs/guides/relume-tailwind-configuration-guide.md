@@ -242,8 +242,8 @@ module.exports = {
     // Your project files
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    // Relume-root directory
-    "./Relume-root/**/*.{js,ts,jsx,tsx,mdx}",
+    // Website pages directory
+    "./website-pages/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   // ... rest of your configuration
 };

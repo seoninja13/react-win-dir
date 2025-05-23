@@ -102,14 +102,14 @@ The project has experienced routing conflicts between Pages Router and App Route
      - Update imports to use the correct paths
 
 3. **Verify Root Files**
-   - Ensure `Relume-root/src/app/layout.tsx` is properly configured
-   - Ensure `Relume-root/src/app/page.tsx` is properly configured
-   - Ensure `Relume-root/src/app/globals.css` and `Relume-root/src/app/styles.css` are present
+   - Ensure `Relume Work Dir/src/app/layout.tsx` is properly configured
+   - Ensure `Relume Work Dir/src/app/page.tsx` is properly configured
+   - Ensure `Relume Work Dir/src/app/globals.css` and `Relume Work Dir/src/app/styles.css` are present
 
 ### Phase 4: Update Import Paths
 
 1. **Update Import Paths in App Router Pages**
-   - For each page in `Relume-root/src/app`:
+   - For each page in `Relume Work Dir/src/app`:
      - Update import paths to use the correct relative paths or path aliases
      - Replace imports from `../../../component` with `@/component` where appropriate
 

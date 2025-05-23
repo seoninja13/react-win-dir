@@ -61,10 +61,10 @@ To fix the issue of Pages Router implementations taking precedence over App Rout
    ```bash
    # For Bay-Bow Windows
    mv Relume-root/pages/bay-bow.js Relume-root/pages/bay-bow.js.bak
-   
+
    # For Hinged Patio Doors
    mv Relume-root/pages/hinged-patio-doors.js Relume-root/pages/hinged-patio-doors.js.bak
-   
+
    # For Vinyl Siding Series Pages
    mv Relume-root/pages/1000-series.js Relume-root/pages/1000-series.js.bak
    mv Relume-root/pages/1500-series.js Relume-root/pages/1500-series.js.bak
@@ -124,9 +124,9 @@ After resolving the immediate issues, the following short-term actions should be
 
 To fix the issue of inconsistent directory structure:
 
-1. **Ensure All App Router Pages Are in `Relume-root/src/app/`**:
-   - Identify any App Router pages that are in `src/app/` but not in `Relume-root/src/app/`
-   - Move these pages to `Relume-root/src/app/`
+1. **Ensure All App Router Pages Are in `Relume Work Dir/src/app/`**:
+   - Identify any App Router pages that are in `src/app/` but not in `Relume Work Dir/src/app/`
+   - Move these pages to `Relume Work Dir/src/app/`
    - Update import paths to reflect the correct directory structure
 
 2. **Test All Pages**:

@@ -70,16 +70,16 @@ mv src/app/garage-doors/page.tsx src/app/garage-doors/page.tsx.bak
 
 Once the non-working pages are fixed, the next priority is to standardize the directory structure:
 
-### 2.1. Identify App Router Pages Outside Relume-root
+### 2.1. Identify App Router Pages Outside Relume Work Dir
 
 ```bash
-# List all App Router pages outside Relume-root
-find src/app -name "page.tsx" | grep -v "Relume-root"
+# List all App Router pages outside Relume Work Dir
+find src/app -name "page.tsx" | grep -v "Relume Work Dir"
 ```
 
 - Document these pages for migration
 
-### 2.2. Move App Router Pages to Relume-root/src/app/
+### 2.2. Move App Router Pages to Relume Work Dir/src/app/
 
 For each identified page:
 

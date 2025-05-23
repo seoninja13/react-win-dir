@@ -1,626 +1,334 @@
-# Windows Doors Website React - Project Rules and Documentation
+# Windows Doors Website React - IDE Instructions
 
-## Table of Contents
+## 🎯 MANDATORY TASK COMPLETION PROCESS
 
-1. [Tech Stack and Architecture](#1-tech-stack-and-architecture)
-2. [Project Structure](#2-project-structure)
-3. [UI Requirements](#3-ui-requirements)
-4. [Development Guidelines](#4-development-guidelines)
-5. [Development Environment](#5-development-environment)
-6. [Documentation Standards](#6-documentation-standards)
-7. [Exact Cloning Guidelines](#7-exact-cloning-guidelines)
-8. [Testing Requirements](#8-testing-requirements)
-9. [Page Implementation Workflow](#9-page-implementation-workflow)
-10. [Advanced Development Tools](#10-advanced-development-tools)
-11. [Common Troubleshooting Scenarios](#11-common-troubleshooting-scenarios)
-12. [Common Errors to Avoid](#12-common-errors-to-avoid)
-13. [Case Studies](#13-case-studies)
+**CRITICAL: EVERY TASK COMPLETION MUST FOLLOW THIS 3-STEP PROCESS**
 
-## 1. Tech Stack and Architecture
+### Step 1: Update Project Documentation
+- Update relevant documentation files in `Docs/` directory
+- Update webpage progress tracker (`Docs/tracking/webpage-progress-tracker.md`)
+- Create or update daily logs (`Docs/daily-logs/YYYY-MM-DD-*.md`)
+- Follow pyramid hierarchical structure starting from README.md
+- Update architecture documentation for significant changes
+- Document component changes with JSDoc comments
+- Update API documentation for integration changes
+- Maintain cross-references and links between documents
 
-- **Framework**: Next.js 15.3.1 with App Router
-- **Routing Strategy**: Dynamic routing with ISR
-- **URL Structure**:
-  - Exact match to Window World LA website structure
-  - Examples: `/windows`, `/doors`, `/about-us`, `/contact-us`, etc.
-  - All URLs are defined in the architecture documentation
+### Step 2: Update Tracking Systems
+- Update all relevant tracking documents
+- Ensure progress metrics are current and accurate
+- Document any issues resolved or created
+- Maintain consistency across all tracking systems
+- Update project priorities and task lists
+- Record testing results and quality metrics
+- Document performance improvements and optimizations
+- Track code coverage and testing compliance
 
-### Core Technical Components
+### Step 3: Use Linear + Sequential Thinking for Task Management
+- **Linear**: Create or update issues for completed work, sync with documentation
+- **Sequential Thinking MCP**: Use for complex problem analysis and planning
+- **Complementary Usage**: Sequential Thinking for analysis, Linear for tracking
+- Link related issues and dependencies in Linear
+- Add detailed progress information and references
+- Maintain epic and milestone tracking
+- Document blockers and resolution strategies
 
-- **Frontend**: Next.js, React 18.2.0, TypeScript, Tailwind CSS
+**🔄 DUAL-SOURCE TRUTH REQUIREMENT (CRITICAL):**
+- **Project Documentation** ↔ **Linear** must be **identical and synced**
+- Information must never be out of sync
+- Both systems must be updated simultaneously
+- Any discrepancy must be resolved immediately
+- Verify synchronization after each update cycle
+
+## Tech Stack & Core Components
+
+- **Framework**: Next.js 15.3.1 with App Router (ISR with 6-month cache)
+- **Frontend**: React 18.2.0, TypeScript, Tailwind CSS
 - **UI Library**: Relume UI (@relume_io/relume-ui and @relume_io/relume-tailwind)
-- **API Integrations**: Google Maps API, Form submission APIs
-- **Database**: Supabase for all data storage and management
-- **Build Optimization**: ISR with 6-month cache (revalidate: 86400)
+- **Database**: Supabase with pgvector for vector storage and search
+- **Testing**: Jest, React Testing Library, Playwright for E2E
+- **AI Integration**: Google Cloud Vertex AI (Imagen API, Gemini 2.0 Flash)
+- **Development Tools**: Netlify Dev, Supabase CLI, Linear MCP, Sequential Thinking MCP
+- **Architecture**: Located at `docs/architecture/architecture-documentation.md`
 
-### Architecture Documentation
-
-The comprehensive architecture documentation is located at:
-
-- `docs/architecture/architecture-documentation.md`
-
-This document contains a detailed analysis of the Window World LA website that we are replicating exactly, including:
-
-1. Full site map and navigation analysis
-2. Page template analysis and wireframe descriptions
-3. Content inventory (textual and visual assets)
-4. UI/UX design elements specification
-5. Responsive behavior analysis
-6. Technology stack details
-7. Replication guidance and considerations
-8. Implementation for Windows Doors CA website
-
-## 2. Project Structure
-
-### Directory Organization
-
-- **src/app/**: Next.js App Router pages and layouts
-- **Relume-root/**: Relume UI components and templates
-  - **components/**: Shared Relume components
-  - **pages/**: Relume page components
-- **docs/**: Project documentation
-  - **architecture/**: Architecture documentation
-  - **daily-logs/**: Daily development logs
-  - **features/**: Feature documentation
-  - **processes/**: Process documentation
-  - **tracking/**: Progress tracking documentation
-
-### Content Structure
-
-The content structure follows the architecture documentation, with pages organized according to the identified templates:
-
-- T1: Homepage Template
-- T2: Product/Service Category Page Template (Windows, Doors, Siding, Roofing)
-- T3: Product/Service Detail Page Template (Double-Hung Windows, Entry Doors, etc.)
-- T4: Standard Informational Page Template (About, Financing, Warranty, etc.)
-- T5: Blog List/Archive Page Template
-- T6: Blog Single Post Page Template
-- T7: Contact Page Template
-- T8: Gallery Page Template
-- T9: FAQ Page Template
-
-### Database Structure
-
-We use Supabase as our database for all storage needs. The database tables are designed based on the Window World LA website architecture and our UI requirements:
-
-- **products**: Stores all product information (windows, doors, siding, roofing)
-  - Categories, types, features, specifications, images
-  - Organized to support the T2 and T3 page templates
-
-- **content**: Stores content for informational pages
-  - Page content, sections, images
-  - Supports T4, T5, T6, T8, and T9 page templates
-
-- **leads**: Stores all lead information from the Request Free Estimate (RFE) forms
-  - Customer information, requested services, timestamps
-  - Critical for tracking conversion from the primary CTA across the site
-
-- **testimonials**: Stores customer testimonials displayed across the site
-  - Customer name, location, testimonial text, rating
-
-- **gallery**: Stores project images for the gallery page
-  - Project type, location, images, descriptions
-
-- **service_areas**: Stores information about service areas
-  - Cities, counties, zip codes, service availability
-
-The database schema is designed to support the exact replication of the Window World LA website structure while providing efficient data retrieval for our Next.js implementation.
-
-## 3. UI Requirements
-
-### Component Specifications
-
-- **All UI Components**: Must be exact visual replicas of Window World LA components
-- **Navigation Menu**: Must match all dropdowns and interactions from original site
-- **Forms**: Must replicate all form fields, validation, and submission behavior
-- **Interactive Elements**: Must match all sliders, galleries, and other interactive components
-- **Responsive Design**: Must match the original site at all breakpoints
-
-### Visual Requirements
-
-- **Color Scheme**: Must match Window World LA exactly (refer to architecture documentation)
-- **Typography**: Must match font families, sizes, weights, and spacing
-- **Spacing and Layout**: Must match padding, margins, and overall layout
-- **Images and Icons**: Must use identical or visually equivalent assets
-- **Animations and Transitions**: Must replicate all animations and transition effects
-
-### Relume UI Integration
-
-- Use Relume UI components as the foundation for building UI elements
-- Customize Relume components to match the exact visual style of the original site
-- Ensure proper Tailwind CSS configuration for Relume components
-- Follow the Relume component structure documented in `docs/architecture/relume-wireframe-conversion.md`
-
-## 4. Development Guidelines
+## Development Guidelines
 
 ### General Rules
-
-- Before creating new components, check if they already exist in the codebase
-- All documentation in docs/ folder following the established pyramid structure
-- Follow component naming conventions that match the original site's structure
-- Document code changes before committing. commit only with my approval.
-- Maintain exact visual and functional parity with the original site
-- **NEVER** edit any files in the "Relume-DO-NOT-EDIT" folder
-- When working with Relume components:
-  - Copy content from the "Relume-DO-NOT-EDIT" folder to the appropriate location
-  - Make any necessary modifications only to the copied files
-  - Leave the original files in the "Relume-DO-NOT-EDIT" folder completely untouched
+- **Component Reuse**: Check existing components before creating new ones
+- **Documentation Structure**: Follow pyramid documentation structure in docs/ folder
+- **File Protection**: **NEVER** edit files in "Relume-DO-NOT-EDIT" folder - copy and modify instead
+- **Change Documentation**: Document code changes before committing (approval required)
+- **Visual Parity**: Maintain exact visual/functional parity with original Window World LA site
+- **Pattern Following**: Follow established patterns from working implementations
+- **Context Management**: Stop and update documentation when context window reaches 800,000 tokens
 
 ### Best Practices
+- **Architecture Reference**: Use architecture documentation as primary reference
+- **Responsive Testing**: Test components at multiple screen sizes and breakpoints
+- **Database Standards**: Follow Supabase best practices (typed queries, error handling, RLS)
+- **Daily Documentation**: Create daily logs in docs/daily-logs/ (YYYY-MM-DD format)
+- **Code Quality**: Write heavily commented code explaining component matching
+- **Performance**: Clean Next.js cache when needed for optimal performance
+- **Accessibility**: Add proper ARIA attributes while maintaining visual parity
+- **SEO**: Preserve all meta tags and URL structure from original site
 
-- Check for existing files before creating new ones
-- Preserve layouts when replacing images
-- Use heavily commented code to explain how components match the original
-- Clean Next.js cache when needed
-- Test all components at multiple screen sizes to ensure responsive design matches
-- Use the architecture documentation as the primary reference for implementation
-- Follow Supabase best practices for database operations:
-  - Use typed queries with TypeScript for type safety
-  - Implement proper error handling for all database operations
-  - Use RLS (Row Level Security) policies for data protection
-  - Create database indexes for frequently queried columns
+### Code Documentation Standards
+- **JSDoc Comments**: Document all public APIs, exported functions, and components
+- **Complex Logic**: Add inline comments for non-obvious code and business logic
+- **API Documentation**: Document all external integrations and data flows
+- **Usage Examples**: Provide usage examples for components and utilities
+- **Architecture Updates**: Update architecture documentation for significant changes
+- **Component Documentation**: Maintain component documentation for new or modified components
 
-### Daily Logs
-
-- Create logs in docs/daily-logs/
-- Use YYYY-MM-DD format for filenames
-- Never delete logs, only create new ones
-- Update project-tasks.md and priority-list.md for new features
-- Document all component implementations and changes
-
-## 5. Development Environment
+## Development Environment
 
 ### Setup Instructions
 
 #### Directory Requirements
-- Always run development server from the project root directory
-- Ensure all paths are relative to the project root
+- **Working Directory**: Always run development server from the project root directory
+- **Path Resolution**: Ensure all paths are relative to the project root
+- **Environment Files**: Ensure `.env.local` is in the root of "Relume Work Dir", not in subdirectories
+- **Import Paths**: For pages using website-pages components, use path: `../../../website-pages/[page]/components/`
+- **Route Structure**: Some pages are at root level (e.g., `/double-hung`, `/wood-windows`) not under `/windows/`
 
-#### Command Syntax
-- Use semicolons (;) instead of && for commands
-- Correct command: `cd path/to/project; npm run dev`
-- For Netlify development: `netlify dev`
+#### Command Syntax and Development Server
+- **Command Chaining**: Use semicolons (;) instead of && for commands
+- **Development Command**: `cd path/to/project; npm run dev`
+- **Netlify Development**: `netlify dev` for local development with Netlify functions
+- **Port Management**: Development server should run on port 3000, Next.js on port 8888
+- **Port Conflicts**: Kill all ports first: `taskkill /F /FI "IMAGENAME eq node.exe"`
 
-#### Supabase Setup
-- Install Supabase CLI: `npm install -g supabase`
-- Start local Supabase: `supabase start`
-- Generate TypeScript types: `supabase gen types typescript --local > src/types/supabase.ts`
-- Access local Supabase Studio: <http://localhost:54323>
+#### Supabase Setup and Configuration
+- **CLI Installation**: `npm install -g supabase`
+- **Local Development**: `supabase start` to start local Supabase instance
+- **Type Generation**: `supabase gen types typescript --local > src/types/supabase.ts`
+- **Studio Access**: Local Supabase Studio at <http://localhost:54323>
+- **Database Operations**: Use typed queries with TypeScript for type safety
+- **Error Handling**: Implement proper error handling for all database operations
+- **Security**: Use RLS (Row Level Security) policies for data protection
+- **Performance**: Create database indexes for frequently queried columns
 
-#### Troubleshooting
-- If port conflicts occur, kill all ports first: `taskkill /F /FI "IMAGENAME eq node.exe"`
-- Always verify current working directory before running development server
-- Fix build errors before trying to run the development server
-- Ensure Relume UI is properly configured in tailwind.config.ts
-- For Supabase connection issues, check environment variables and network connectivity
+#### Troubleshooting and Error Resolution
+- **Build Errors**: Fix build errors before trying to run the development server
+- **Working Directory**: Always verify current working directory before running development server
+- **Relume UI**: Ensure Relume UI is properly configured in tailwind.config.ts
+- **Supabase Issues**: Check environment variables and network connectivity
+- **Repeated Errors**: Document troubleshooting steps when encountering repeated errors
+- **Port Issues**: Kill ports and restart development server after 3 identical errors
+- **SQL Errors**: Avoid SQL queries on non-existent table columns
+- **Alternative Approaches**: Continue troubleshooting with alternative approaches when stuck
 
-## 6. Documentation Standards
+## Testing Methodology
 
-### Areas Where Documentation Adherence Needs Improvement
+### Comprehensive Testing Strategy
 
-#### Strict Adherence to Documentation Standards
-- Immediately check the documentation standards guide before making any changes
-- Verify all required elements from the start rather than adding them incrementally
-- Add table of contents for documentation over 400 lines
+#### Unit Testing
+- **Framework**: Jest with React Testing Library
+- **Coverage Requirements**: 100% for utility functions, 80% for components, 70% for pages
+- **Focus Areas**: Individual components and functions in isolation
+- **Test Behavior**: Test what the code does, not how it does it
+- **Realistic Data**: Use realistic data in tests to reflect real-world usage
 
-#### Complete Cross-Reference Updates
-- Search for all references to specific terms across the codebase first
-- Create a comprehensive list of all files needing updates before making any changes
-- Always update the daily log when making significant changes
+#### Integration Testing
+- **API Testing**: Test all Supabase integrations and external APIs
+- **Component Integration**: Test component interactions and data flow
+- **Error Handling**: 100% coverage for error scenarios
+- **Performance Metrics**: Monitor response times and resource usage
 
-#### Proper Documentation Workflow
-- Follow the exact workflow specified in the documentation standards
-- Check for existing documentation before suggesting changes
-- Verify the documentation pyramid structure before making edits
+#### End-to-End Testing
+- **Framework**: Playwright for browser automation
+- **User Journeys**: Test complete user workflows and interactions
+- **Cross-Browser**: Test across different browsers and devices
+- **Visual Regression**: AI-powered visual change detection
 
-#### Attention to Detail in Documentation Requirements
-- Pay close attention to the specific formatting requirements
-- Ensure all dates are in the correct format (YYYY-MM-DD)
-- Verify all links are using the correct relative paths
+#### AI Integration Testing
+- **Google Cloud APIs**: Test Imagen API and Gemini 2.0 Flash integrations
+- **Error Scenarios**: Test API failures, rate limiting, and timeout handling
+- **Performance**: Monitor API response times and resource usage
+- **Usage Tracking**: Monitor API usage statistics and costs
 
-### Steps to Improve Documentation Adherence
+### Page Testing Process
+1. **Create Route**: Establish proper App Router structure following established patterns
+2. **Verify Functionality**: Test in browser before proceeding with implementation
+3. **Cross-Browser Testing**: Verify functionality across different browsers and devices
+4. **Responsive Testing**: Test at multiple breakpoints and screen sizes
+5. **Accessibility Testing**: Run automated accessibility tests (Lighthouse, axe)
+6. **Performance Testing**: Compare load times with original site
+7. **Document Results**: Update tracking systems immediately with test results
+8. **Follow 3-Step Process**: Complete documentation and Linear sync
 
-#### Start with a Documentation Review
-- Always begin by reviewing the documentation standards guide
-- Create a checklist of required elements based on the standards
-- Verify the current state of documentation before suggesting changes
+### Error Resolution Workflow
+1. **Identify Root Cause**: Analyze error patterns, logs, and stack traces systematically
+2. **Check Existing Solutions**: Reference previous implementations and documented fixes
+3. **Implement Fix**: Apply solution following established patterns and best practices
+4. **Test Fix**: Verify fix resolves issue without introducing new problems
+5. **Document Fix**: Record solution in appropriate documentation with context
+6. **Update Tracking**: Ensure all systems reflect current status and resolution
+7. **Share Knowledge**: Document insights and solutions for team knowledge sharing
 
-#### Follow the Exact Workflow
-- Follow the exact workflow specified in the documentation standards
-- Check for existing documentation before creating or modifying files
-- Verify the documentation pyramid structure before making edits
+### Quality Assurance Standards
+- **Functional Testing**: Test all interactive elements for proper functionality
+- **Responsive Design**: Verify responsive design across all breakpoints
+- **Accessibility Compliance**: Ensure WCAG 2.1 AA standards compliance
+- **Performance Standards**: Optimize Core Web Vitals while maintaining visual parity
+- **Visual Parity**: Validate exact matching against original Window World LA site
+- **SEO Compliance**: Preserve all meta tags and URL structure from original
+- **Database Integrity**: Test all Supabase queries for correctness and performance
 
-## 7. Exact Cloning Guidelines
+## Page Implementation Workflow
 
-### Component Mapping Process
+### Sequential Implementation Process
+1. **Pre-Implementation Analysis**
+   - Review architecture documentation for component requirements
+   - Analyze original site structure and functionality
+   - Check for existing similar implementations
+   - Plan component structure and data requirements
 
-1. Refer to the architecture documentation for component details
-2. Analyze HTML structure, CSS styles, and JavaScript functionality
-3. Create a React component that exactly matches the original
-4. Implement all interactive behaviors using React hooks
-5. Connect components to Supabase for dynamic content where appropriate
-6. Test the component against the original for visual and functional parity
-7. Document any deviations or workarounds required
+2. **Route Creation**
+   - Establish proper App Router structure following Next.js 15.3.1 patterns
+   - Implement dynamic routing with ISR where appropriate
+   - Configure proper metadata and SEO elements
+   - Set up proper error boundaries and loading states
 
-### Database Integration Process
+3. **Component Development**
+   - Copy relevant components from "Relume-DO-NOT-EDIT" folder
+   - Modify components to match original site exactly
+   - Implement proper TypeScript types and interfaces
+   - Add comprehensive JSDoc documentation
 
-1. Analyze the content structure from the Window World LA website
-2. Design Supabase tables based on content types and relationships
-3. Create appropriate indexes and constraints for performance and data integrity
-4. Implement Row Level Security (RLS) policies for data protection
-5. Generate TypeScript types for type-safe database operations
-6. Create utility functions for common database operations
-7. Test database performance with realistic data volumes
+4. **Functionality Verification**
+   - Test in browser before proceeding with additional features
+   - Verify all interactive elements work correctly
+   - Test responsive design at multiple breakpoints
+   - Validate accessibility compliance
 
-### Accessibility Enhancements
+5. **Integration Testing**
+   - Test Supabase integrations and data flow
+   - Verify external API integrations work correctly
+   - Test error handling and edge cases
+   - Validate performance meets requirements
 
-- Add proper ARIA attributes while maintaining visual parity
-- Ensure keyboard navigation works for all interactive elements
-- Maintain proper color contrast ratios
-- Add descriptive alt text for all images
-- Implement focus indicators that match the original site's style
+6. **Documentation and Confirmation**
+   - Wait for confirmation that page matches expected design
+   - Document implementation details, errors encountered, and solutions
+   - Update webpage progress tracker with current status
+   - Record any deviations or workarounds required
 
-### SEO Optimization
+7. **Completion and Handoff**
+   - Complete 3-step task completion process
+   - Update all tracking systems with final status
+   - Wait for command before proceeding to next page
+   - Ensure no parallel page development occurs
 
-- Preserve all meta tags from the original site
-- Maintain identical URL structure
-- Implement structured data matching the original site
-- Ensure all canonical links are preserved
-- Generate a comprehensive sitemap
+## Advanced Development Tools
 
-## 8. Testing Requirements
+### MCP Server Configuration and Usage
+**Available MCP Servers:**
+- **brave-search**: Web search capabilities for research and documentation
+- **context7**: Library documentation retrieval (start with 5000 tokens, increase to 20000 if needed)
+- **google-maps**: Geographic and location-based functionality
+- **mcp-openai**: AI-powered development assistance
+- **server-sequential-thinking**: Complex problem analysis and multi-step planning
 
-### Visual Testing
+### MCP Server Usage Guidelines
+- **Context7 Usage**: Limit searches to 3 attempts max per topic
+- **Fallback Strategy**: Use Brave MCP server for wider searches if Context7 fails
+- **Token Management**: Start with conservative token limits, increase as needed
+- **Documentation**: Document MCP server usage patterns and successful queries
 
-- Compare screenshots of components against the original site
-- Test at multiple breakpoints to verify responsive design
-- Verify all animations and transitions match the original
+### Sequential Thinking + Linear Integration Workflow
+- **Sequential Thinking MCP**: Use for complex problem analysis, multi-step planning, and decision trees
+- **Linear MCP**: Use for issue tracking, project management, and status updates
+- **Complementary Workflow**: Sequential Thinking for analysis → Document results in Linear
+- **Integration Points**: Link Sequential Thinking insights to Linear issues and epics
+- **Documentation Sync**: Ensure insights from Sequential Thinking are captured in project documentation
 
-### Functional Testing
+### Knowledge Base System Integration
+- **Supabase pgvector**: Vector storage for searchable documentation repository
+- **Gemini 2.0 Flash**: Embedding generation for semantic search
+- **Automated Ingestion**: Content ingestion from files, URLs, and Brave search results
+- **Search Functionality**: Semantic search across project documentation and external sources
 
-- Test all interactive elements for identical behavior
-- Verify all form validations match the original
-- Test navigation and routing to ensure it matches the original site
-- Verify all external links are preserved
-
-### Database Testing
-
-- Test all Supabase queries for correctness and performance
-- Verify data integrity constraints are enforced
-- Test Row Level Security (RLS) policies for proper access control
-- Benchmark query performance with realistic data volumes
-- Test error handling for database operations
-- Verify TypeScript type safety for database operations
-
-### Accessibility Testing
-
-- Run automated accessibility tests (Lighthouse, axe)
-- Perform keyboard navigation testing
-- Test with screen readers
-- Verify color contrast meets WCAG 2.1 AA standards
-
-### Performance Testing
-
-- Compare load times with the original site
-- Optimize Core Web Vitals while maintaining visual parity
-- Test on multiple devices and browsers
-
-## 9. Page Implementation Workflow
-
-Follow this exact workflow when implementing new pages:
-
-1. **Create the route for the page**
-   - Create the route file in the appropriate location
-   - Ensure it follows the established pattern from working pages
-
-2. **Open the page in the browser**
-   - Verify it is working as expected
-   - If you encounter errors, do NOT create minimal or simplified pages
-   - Reference what worked in previous page implementations
-
-3. **Wait for confirmation**
-   - Wait for confirmation that the page matches the expected design
-   - Do not proceed with documentation until confirmation is received
-
-4. **Document the implementation**
-   - Document all errors that occurred and their solutions
-   - Ensure thorough documentation for future reference
-   - Update the webpage progress tracker
-   - Update all relevant documentation in the project's pyramidal structure
-
-5. **Wait for command**
-   - Once documentation is complete, wait for command before proceeding to the next page
-   - Do not start implementing multiple pages simultaneously
-
-## 10. Advanced Development Tools
-
-### Knowledge Base System
-
-The project includes a comprehensive knowledge base system that uses Supabase's pgvector capabilities and Gemini 2.0 Flash embeddings to create a powerful, searchable repository for documentation, API references, code snippets, and other information.
-
-#### Automated Knowledge Base Ingestion
-
-The `knowledge-base-ingestion.mjs` script automates the process of retrieving content from various sources, chunking it semantically, generating embeddings, and storing everything in Supabase. Here's how to use it:
-
+#### Knowledge Base Usage Commands
 ```bash
-# Ingest content from Brave search results
-node scripts/knowledge-base-ingestion.mjs --source brave --query "windows installation guide"
+# Ingest from Brave search
+node scripts/knowledge-base-ingestion.mjs --source brave --query "guide"
 
-# Ingest content from a web URL
-node scripts/knowledge-base-ingestion.mjs --source url --url "https://example.com/documentation"
+# Ingest from URL
+node scripts/knowledge-base-ingestion.mjs --source url --url "https://example.com"
 
-# Ingest content from a local file
+# Ingest from file
 node scripts/knowledge-base-ingestion.mjs --source file --path "./docs/guide.md"
 ```
 
-#### Ingestion Process Workflow
+### AI-Enhanced Development Features
+- **Automated Test Generation**: AI creates test cases from requirements
+- **Visual Regression Testing**: AI detects visual changes and regressions
+- **Performance Monitoring**: AI analyzes performance trends and identifies issues
+- **Bug Prediction**: AI identifies potential bug-prone areas in code
+- **Code Review**: AI-powered code review and suggestion system
 
-The automated ingestion process follows this workflow:
+## Documentation Standards and Workflow
 
-1. **Content Retrieval**: Content is retrieved from the specified source (Brave search, URL, or file)
-2. **Content Processing**: Content is cleaned and normalized
-3. **Semantic Chunking**: Content is chunked using our hierarchical semantic chunking process
-4. **Embedding Generation**: Embeddings are generated for each chunk using Gemini 2.0 Flash
-5. **Supabase Storage**: Chunks, embeddings, and metadata are stored in Supabase
+### Documentation Hierarchy (Pyramid Structure)
+- **Entry Point**: All documentation starts from single entry point: `README.md`
+- **Hierarchical Structure**: Follow pyramid structure with clear navigation paths
+- **Cross-References**: Maintain comprehensive cross-references and links between documents
+- **Breadcrumb Navigation**: Include breadcrumb navigation in all documentation files
+- **Table of Contents**: Add table of contents for documentation over 400 lines
 
-#### Configuration Options
+### Documentation Types and Requirements
+- **README.md**: Project overview, quick start, and navigation to detailed documentation
+- **Architecture Documentation**: Detailed technical specifications and design decisions
+- **Daily Logs**: YYYY-MM-DD format, comprehensive record of daily development work
+- **Process Documentation**: Methodical workflows and standard operating procedures
+- **Testing Documentation**: Testing strategies, guidelines, and results
+- **Integration Documentation**: External service integrations and API documentation
 
-The script supports several configuration options:
+### Documentation Maintenance Workflow
+1. **Before Changes**: Review documentation standards guide before making any changes
+2. **During Development**: Update relevant documentation files as changes are made
+3. **Cross-Reference Updates**: Search for all references to modified terms across codebase
+4. **Verification**: Verify documentation pyramid structure before making edits
+5. **Quality Check**: Ensure all required elements are present and properly formatted
+6. **Link Validation**: Verify all links use correct relative paths and are functional
 
-| Option | Description | Default |
-|--------|-------------|--------|
-| `--source` | Content source (brave, url, file) | Required |
-| `--query` | Search query for Brave search | Required for brave source |
-| `--url` | URL to fetch content from | Required for url source |
-| `--path` | File path to read content from | Required for file source |
-| `--tag` | Tag to associate with the content | Source-specific default |
-| `--chunk-size` | Size of chunks in characters | 1000 |
-| `--chunk-overlap` | Overlap between chunks in characters | 200 |
+### Documentation Quality Standards
+- **Formatting**: Follow specific formatting requirements consistently
+- **Date Format**: Use YYYY-MM-DD format for all dates
+- **File Naming**: Use hyphenated filenames with 5-7 word descriptions
+- **Version Control**: Never delete documentation files, only create new ones
+- **Completeness**: Ensure all documentation includes required elements from standards
+- **Accuracy**: Verify all technical information is current and correct
 
-#### Documentation
+## Process Quick Reference
 
-For detailed documentation on the knowledge base system, refer to:
-- [Knowledge Base Overview](../docs/Knowledge%20Base/index.md)
-- [Knowledge Base Workflow](../docs/Knowledge%20Base/knowledge-base-workflow.md)
-- [Automated Ingestion Process](../docs/Knowledge%20Base/automated-ingestion-process.md)
+### Task Completion Checklist
+- [ ] **Step 1**: Update project documentation (files, trackers, daily logs, architecture)
+- [ ] **Step 2**: Update tracking systems (progress metrics, issues, priorities, testing results)
+- [ ] **Step 3**: Use Sequential Thinking (analysis) + Linear (tracking) with proper linking
+- [ ] **Verify**: Dual-source truth maintained between documentation and Linear
+- [ ] **Cross-Reference**: Update all related documents and maintain links
+- [ ] **Quality Check**: Ensure documentation standards compliance
 
-### MCP Server Configuration
+### Error Resolution Process
+- **Identify**: Analyze root cause systematically using logs and error patterns
+- **Reference**: Check existing solutions first in documentation and previous implementations
+- **Research**: Use MCP servers for additional research if needed (Context7, Brave)
+- **Implement**: Apply solution following established patterns and best practices
+- **Test**: Verify fix resolves issue without introducing new problems
+- **Document**: Record fix in appropriate location with full context and reasoning
+- **Update**: Ensure all tracking systems reflect resolution and lessons learned
+- **Share**: Document insights for team knowledge sharing and future reference
 
-The project uses several Model Context Protocol (MCP) servers for enhanced functionality. The configuration is in `.vscode/settings.json`:
+### Development Process Optimization
+- **Pattern Recognition**: Identify and document successful development patterns
+- **Workflow Improvement**: Continuously refine processes based on experience
+- **Tool Integration**: Leverage MCP servers and AI tools for enhanced productivity
+- **Knowledge Sharing**: Maintain comprehensive documentation for team learning
+- **Quality Assurance**: Implement systematic testing and review processes
+- **Performance Monitoring**: Track and optimize development velocity and quality metrics
 
-```json
-{
-  "cascade.mcpServers": {
-    "brave-search": {
-      "command": "cmd",
-      "args": [
-        "/c",
-        "npx",
-        "-y",
-        "@smithery/cli@latest",
-        "run",
-        "@smithery-ai/brave-search",
-        "--key",
-        "ea6a680f-20bb-4968-bcaa-1568439806c4"
-      ]
-    },
-    "context7": {
-      "command": "cmd",
-      "args": [
-        "/c",
-        "npx",
-        "-y",
-        "@smithery/cli@latest",
-        "run",
-        "@smithery-ai/context7",
-        "--key",
-        "ea6a680f-20bb-4968-bcaa-1568439806c4"
-      ]
-    },
-    "google-maps": {
-      "command": "cmd",
-      "args": [
-        "/c",
-        "npx",
-        "-y",
-        "@smithery/cli@latest",
-        "run",
-        "@smithery-ai/google-maps",
-        "--key",
-        "ea6a680f-20bb-4968-bcaa-1568439806c4"
-      ]
-    },
-    "mcp-openai": {
-      "command": "cmd",
-      "args": [
-        "/c",
-        "npx",
-        "-y",
-        "@smithery/cli@latest",
-        "run",
-        "@smithery-ai/mcp-openai",
-        "--key",
-        "ea6a680f-20bb-4968-bcaa-1568439806c4"
-      ]
-    },
-    "server-sequential-thinking": {
-      "command": "cmd",
-      "args": [
-        "/c",
-        "npx",
-        "-y",
-        "@smithery/cli@latest",
-        "run",
-        "@smithery-ai/server-sequential-thinking",
-        "--key",
-        "ea6a680f-20bb-4968-bcaa-1568439806c4"
-      ]
-    }
-  }
-}
-```
+---
 
-## 11. Common Troubleshooting Scenarios
-
-### Accordion Component Issues
-
-When implementing pages with accordion components (like FAQ sections), ensure that:
-
-1. **Import all necessary components**: Always import all required components from @relume_io/relume-ui:
-
-```jsx
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-  Button,
-} from "@relume_io/relume-ui";
-```
-
-1. **Use the correct component structure**: Follow this pattern for accordion components:
-
-```jsx
-<Accordion type="multiple" className="grid items-start justify-stretch gap-4">
-  <div className="border rounded-md shadow-sm">
-    <AccordionItem value="item-0" className="border-none px-5 md:px-6">
-      <AccordionTrigger
-        icon={<Icon />}
-        className="md:py-5 md:text-md [&[data-state=open]>svg]:rotate-45"
-      >
-        Question text here
-      </AccordionTrigger>
-      <AccordionContent className="md:pb-6">
-        Answer text here
-      </AccordionContent>
-    </AccordionItem>
-  </div>
-</Accordion>
-```
-
-1. **Check existing implementations**: When encountering issues with a component, compare it with working versions of the same component from other pages.
-
-### Connection Refused Errors
-
-If you encounter "Connection refused" errors when accessing pages:
-
-1. **Kill all Node.js processes**: Use `taskkill /F /FI "IMAGENAME eq node.exe"` to ensure no conflicting processes are running
-2. **Start the development server from the correct directory**: Always run `yarn dev` from the project root directory
-3. **Check port configuration**: Verify the port settings in netlify.toml and next.config.js
-4. **Verify route files**: Ensure the route file exists in the correct location with the proper import paths
-
-### Import Path Issues
-
-When creating new pages or components:
-
-1. **Verify relative paths**: Ensure import paths correctly reflect the actual project structure
-2. **Check for path inconsistencies**: The project may have inconsistencies between the documented structure and actual structure
-3. **Use absolute imports when possible**: Configure path aliases in tsconfig.json to avoid complex relative paths
-4. **Test imports incrementally**: When troubleshooting, import components one by one to identify problematic imports
-
-### Project Structure Inconsistencies
-
-Be aware of potential inconsistencies between documentation and actual project structure:
-
-1. **src/app directory location**: The documentation may specify that src/app should be inside Relume-root, but it might actually be at the project root level
-2. **Import path resolution**: Adjust import paths based on the actual project structure, not just the documented structure
-3. **Document inconsistencies**: When you find inconsistencies, document them in the daily logs for future reference
-
-## 12. Common Errors to Avoid
-
-The following errors should be carefully avoided during development to ensure smooth progress and maintain code quality:
-
-### Markdown Linting Issues
-
-- **Heading Spacing**: Always add blank lines around headings
-- **List Spacing**: Always add blank lines around lists
-- **Code Block Spacing**: Always add blank lines around code blocks
-- **Code Language Specification**: Always specify language for code blocks (e.g., ```javascript)
-- **Line Length**: Keep lines under 80 characters in length for documentation files
-- **Trailing Spaces**: Remove any trailing spaces at the end of lines
-
-### Tool Call Errors
-
-- **Argument Accuracy**: Always match exact content when using tool call arguments
-- **File Existence Checks**: Always check file existence before creating new files
-- **Redundant Calls**: Avoid making redundant tool calls for the same operation
-- **Parameter Correctness**: Use the correct parameter names and formats for tools
-- **Tool Availability**: Only use tools that are available in the current context
-
-### Code Editing Errors
-
-- **Parallel Edits**: Never make multiple parallel calls to edit the same file
-- **Parameter Order**: Always specify TargetFile as the first argument in file editing tools
-- **Content Matching**: Ensure replacement content exactly matches the target content
-- **Comprehensive Edits**: Make comprehensive changes instead of incremental edits
-- **Layout Preservation**: Always preserve existing layouts when replacing content
-
-### Security Issues
-
-- **Sensitive Information**: Never include API keys or credentials in documentation or code
-- **Project Identifiers**: Use placeholders instead of actual project IDs
-- **Information Sanitization**: Always sanitize potentially sensitive information before committing
-
-### Documentation Errors
-
-- **Redundancy**: Avoid creating redundant documentation files
-- **Structure Consistency**: Follow consistent documentation structure
-- **Update Information**: Always update the "Last Updated" section with current information
-- **Heading Hierarchy**: Follow proper heading hierarchy (h1 > h2 > h3)
-- **Formatting Consistency**: Maintain consistent formatting across documentation files
-
-### Command Execution Errors
-
-- **Directory Changes**: Never include `cd` commands directly in the command line
-- **Working Directory**: Always specify the current working directory (cwd) parameter
-- **Command Safety**: Never run potentially unsafe commands without proper verification
-- **Output Handling**: Always handle command output properly
-
-### Troubleshooting Approach Errors
-
-- **Loop Avoidance**: Avoid getting stuck in unproductive loops trying to fix the same issue
-- **Approach Variation**: Try different approaches when one fails repeatedly
-- **Root Cause Analysis**: Always identify the root cause of issues
-- **Priority Focus**: Focus on major issues before addressing minor ones
-
-### Communication Errors
-
-- **Conciseness**: Be concise and avoid verbosity when brevity is requested
-- **Instruction Acknowledgment**: Clearly acknowledge user instructions
-- **Action Explanation**: Provide clear explanations for actions taken
-- **Change Summary**: Always summarize changes made to files
-
-### Project Structure Errors
-
-- **Existing File Checks**: Always check for existing files before creating new ones
-- **Structure Adherence**: Follow the established project structure
-- **Functionality Preservation**: Preserve existing functionality when making changes
-
-### Error Handling Errors
-
-- **Implementation**: Always implement proper error handling in code
-- **Clear Messages**: Provide clear error messages
-- **Solution Suggestions**: Suggest solutions for common errors
-
-## 13. Case Studies
-
-### 5000-Series Page Implementation
-
-The 5000-Series page implementation provides a valuable case study in troubleshooting and documentation:
-
-1. **Issue Identification**: The Faq5.jsx component was missing necessary imports for Accordion components
-2. **Comparative Analysis**: By comparing with working versions of the same component from other series pages, the issue was identified
-3. **Solution Implementation**: The component was updated to include the missing imports and correct component structure
-4. **Comprehensive Documentation**: The entire process was documented, including:
-   - Daily troubleshooting log
-   - Page documentation
-   - Updates to the webpage progress tracker
-   - Updates to the project tasks and priority list
-
-This case demonstrates the importance of:
-- Checking existing implementations before creating new components
-- Comparing problematic components with working versions
-- Following established patterns for component structure
-- Documenting all issues and solutions for future reference
-
-Last Updated: May 14, 2025 (Improved document layout and formatting for better readability)
+**Note**: This document contains methodical processes and workflows designed to improve development efficiency and quality. For current project status, implementation details, and time-sensitive information, refer to the project documentation in the `Docs/` directory and Linear tracking system. All processes should be followed consistently to maintain project quality and team coordination.
