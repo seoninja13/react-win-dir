@@ -1,14 +1,28 @@
 "use client";
 
-import { Button, useMediaQuery } from "@relume_io/relume-ui";
+import { Button } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { RxChevronDown } from "react-icons/rx";
 
 const useRelume = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 991px)");
+  const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 991);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
   const openOnMobileDropdownMenu = () => {
     setIsDropdownOpen((prev) => !prev);
@@ -34,11 +48,31 @@ const useRelume = () => {
     animateMobileMenuButtonSpan,
     animateDropdownMenu,
     animateDropdownMenuIcon,
+    isClient,
   };
 };
 
 export function Navbar10() {
   const useActive = useRelume();
+
+  if (!useActive.isClient) {
+    return (
+      <section
+        id="relume"
+        className="relative z-[999] flex min-h-16 w-full items-center border-b border-border-primary bg-background-primary px-[5%] md:min-h-18"
+      >
+        <div className="mx-auto flex size-full max-w-full items-center justify-between">
+          <a href="#">
+            <img
+              src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+              alt="Logo image"
+            />
+          </a>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section
       id="relume"

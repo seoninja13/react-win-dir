@@ -226,13 +226,13 @@ Test scripts for Vertex AI might exist in the root `scripts` directory (e.g., `t
 Example run command for a hypothetical test script (adjust path as necessary):
 
 ```bash
-npx ts-node -r dotenv/config c:/Users/IvoD/repos/react-win-dir/scripts/test-vertex-ai.ts 
+npx ts-node -r dotenv/config c:/Users/IvoD/repos/react-win-dir/scripts/test-vertex-ai.ts
 ```
 
 ### Notes on ESM vs CommonJS
 
 - Some utility scripts (e.g., in the root `scripts` directory) might be CommonJS (`.js` or `.cjs`) and use `require()`.
-- Next.js components and modules within `Relume-root/src` are typically ES Modules and use `import`.
+- Next.js components and modules within `Relume Work Dir/src` are typically ES Modules and use `import`.
 - Pay attention to `type: "module"` in `package.json` if present, as it affects how `.js` files are treated.
 - TypeScript files (`.ts`) compiled by `tsc` or run by `tsx`/`ts-node` will handle imports according to your `tsconfig.json` module settings.
 
