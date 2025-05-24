@@ -27,8 +27,8 @@ export function Header36() {
       </div>
       <div>
         <img
-          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-          alt="Relume placeholder image"
+          src="/images/windows/windows-hero-main.png"
+          alt="Sacramento home with energy-efficient replacement windows"
           className="w-full object-cover lg:h-screen lg:max-h-[60rem]"
         />
       </div>

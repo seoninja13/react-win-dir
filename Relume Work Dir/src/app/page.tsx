@@ -5,7 +5,6 @@ import { useLogger } from '@/utils/logger';
 
 // Import Relume components using index file to work around path resolution issues
 import {
-  Navbar10,
   Header47,
   Header15,
   Layout6,
@@ -15,8 +14,7 @@ import {
   Layout251,
   Layout4_1,
   Gallery4,
-  Cta1,
-  Footer4
+  Cta1
 } from '@/components/home';
 
 export default function Home() {
@@ -37,7 +35,6 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar10 />
       <Header47 />
       <Header15 />
       <Layout6 />
@@ -48,7 +45,6 @@ export default function Home() {
       <Layout4_1 />
       <Gallery4 />
       <Cta1 />
-      <Footer4 />
     </div>
   );
 }

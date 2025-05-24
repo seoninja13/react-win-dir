@@ -75,8 +75,8 @@ export function Testimonial32() {
                 </blockquote>
                 <div className="flex flex-col items-start gap-4 md:flex-row md:items-center">
                   <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                    alt="Testimonial avatar 2"
+                    src="/images/windows/windows-testimonial-avatar-1.png"
+                    alt="Satisfied homeowner testimonial"
                     className="size-12 min-h-12 min-w-12 rounded-full object-cover"
                   />
                   <div>
@@ -101,8 +101,8 @@ export function Testimonial32() {
                 </blockquote>
                 <div className="flex flex-col items-start gap-4 md:flex-row md:items-center">
                   <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                    alt="Testimonial avatar 3"
+                    src="/images/windows/windows-testimonial-avatar-2.png"
+                    alt="Happy customer testimonial"
                     className="size-12 min-h-12 min-w-12 rounded-full object-cover"
                   />
                   <div>
@@ -127,8 +127,8 @@ export function Testimonial32() {
                 </blockquote>
                 <div className="flex flex-col items-start gap-4 md:flex-row md:items-center">
                   <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                    alt="Testimonial avatar 4"
+                    src="/images/windows/windows-testimonial-avatar-3.png"
+                    alt="Satisfied customer testimonial"
                     className="size-12 min-h-12 min-w-12 rounded-full object-cover"
                   />
                   <div>

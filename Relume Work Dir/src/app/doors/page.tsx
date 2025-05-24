@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import { logger } from '@/utils/logger';
 
 // Import the Doors page components from website-pages directory
-import { Navbar10 } from '../../../website-pages/doors/components/Navbar10';
 import { Header44 } from '../../../website-pages/doors/components/Header44';
 import { Header9 } from '../../../website-pages/doors/components/Header9';
 import { Layout101 } from '../../../website-pages/doors/components/Layout101';
@@ -14,7 +13,6 @@ import { Layout101_1 } from '../../../website-pages/doors/components/Layout101_1
 import { Layout16 } from '../../../website-pages/doors/components/Layout16';
 import { Cta25 } from '../../../website-pages/doors/components/Cta25';
 import { Testimonial4 } from '../../../website-pages/doors/components/Testimonial4';
-import { Footer4 } from '../../../website-pages/doors/components/Footer4';
 
 export default function Doors() {
   useEffect(() => {
@@ -27,7 +25,6 @@ export default function Doors() {
 
   return (
     <div>
-      <Navbar10 />
       <Header44 />
       <Header9 />
       <Layout101 />
@@ -37,7 +34,6 @@ export default function Doors() {
       <Layout16 />
       <Cta25 />
       <Testimonial4 />
-      <Footer4 />
     </div>
   );
 }

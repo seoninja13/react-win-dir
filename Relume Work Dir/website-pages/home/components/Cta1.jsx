@@ -25,9 +25,9 @@ export function Cta1() {
           </div>
           <div>
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+              src="/images/home/home-cta-estimate.png"
               className="w-full rounded-image object-cover"
-              alt="Relume placeholder image"
+              alt="Get your free estimate today - beautiful home transformation"
             />
           </div>
         </div>

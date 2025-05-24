@@ -59,7 +59,7 @@ export function Footer4() {
         <div className="h-px w-full bg-black" />
         <div className="flex flex-col-reverse items-center justify-center justify-items-center pt-6 pb-4 text-sm md:flex-row md:gap-x-6 md:pt-8 md:pb-0">
           <ul className="grid grid-flow-row grid-cols-[max-content] items-center justify-center justify-items-center gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0">
-            <p className="mt-8 md:mt-0">© 2024 Relume. All rights reserved.</p>
+            <p className="mt-8 md:mt-0">© 2024 Windows and Doors California. All rights reserved.</p>
           </ul>
         </div>
       </div>

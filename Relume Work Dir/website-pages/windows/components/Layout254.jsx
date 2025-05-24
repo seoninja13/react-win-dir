@@ -58,8 +58,8 @@ export function Layout254() {
           </div>
           <div className="relative order-last w-full sm:col-span-2 lg:order-none lg:col-span-1">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-              alt="Relume placeholder image"
+              src="/images/windows/windows-styles-showcase.png"
+              alt="Diverse window styles showcase"
               className="h-auto w-full rounded-image object-cover"
             />
           </div>

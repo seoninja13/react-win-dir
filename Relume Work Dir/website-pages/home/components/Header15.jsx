@@ -29,9 +29,9 @@ export function Header15() {
         </div>
         <div>
           <img
-            src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+            src="/images/home/home-header-hero.png"
             className="w-full rounded-image object-cover"
-            alt="Relume placeholder image"
+            alt="Beautiful home with premium windows and doors"
           />
         </div>
       </div>

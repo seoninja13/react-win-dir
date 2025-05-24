@@ -17,29 +17,29 @@ export function Gallery4() {
         <div className="grid grid-cols-2 items-start justify-center gap-6 md:gap-8 lg:grid-cols-4">
           <a href="#">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-              alt="Relume placeholder image 1"
+              src="/images/home/home-gallery-1.png"
+              alt="Modern home with new replacement windows"
               className="size-full rounded-image object-cover"
             />
           </a>
           <a href="#">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-              alt="Relume placeholder image 2"
+              src="/images/home/home-gallery-2.png"
+              alt="Elegant front door installation"
               className="size-full rounded-image object-cover"
             />
           </a>
           <a href="#">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-              alt="Relume placeholder image 3"
+              src="/images/home/home-gallery-3.png"
+              alt="Home with premium vinyl siding"
               className="size-full rounded-image object-cover"
             />
           </a>
           <a href="#">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-              alt="Relume placeholder image 4"
+              src="/images/home/home-gallery-4.png"
+              alt="Complete home transformation"
               className="size-full rounded-image object-cover"
             />
           </a>

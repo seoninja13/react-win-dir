@@ -53,9 +53,9 @@ export function Layout4() {
           </div>
           <div>
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              src="/images/doors/doors-entry-showcase.png"
               className="w-full rounded-image object-cover"
-              alt="Relume placeholder image"
+              alt="Elegant entry door on Sacramento home showcasing style and security"
             />
           </div>
         </div>

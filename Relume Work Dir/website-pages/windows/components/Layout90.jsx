@@ -20,9 +20,9 @@ export function Layout90() {
           </p>
         </div>
         <img
-          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+          src="/images/windows/windows-local-advantages.png"
           className="w-full rounded-image object-cover"
-          alt="Relume placeholder image"
+          alt="Window World Sacramento local team and storefront"
         />
       </div>
     </section>

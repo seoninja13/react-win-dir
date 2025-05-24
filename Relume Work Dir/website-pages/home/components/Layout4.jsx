@@ -54,9 +54,9 @@ export function Layout4() {
           </div>
           <div>
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              src="/images/home/home-layout4-feature.png"
               className="w-full rounded-image object-cover"
-              alt="Relume placeholder image"
+              alt="Professional home improvement installation"
             />
           </div>
         </div>

@@ -71,9 +71,9 @@ export function Layout16() {
           </div>
           <div>
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              src="/images/doors/doors-garage-showcase.png"
               className="w-full rounded-image object-cover"
-              alt="Relume placeholder image"
+              alt="Premium garage doors enhancing Sacramento home curb appeal and security"
             />
           </div>
         </div>

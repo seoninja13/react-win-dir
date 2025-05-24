@@ -64,8 +64,8 @@ export function Contact16() {
         </div>
         <a href="#" className="justify-self-end md:w-[321.6px] lg:w-auto">
           <img
-            src="https://relume-assets.s3.us-east-1.amazonaws.com/placeholder-map-image.svg"
-            alt="Relume placeholder map image"
+            src="/images/about/about-location-map.png"
+            alt="Sacramento area map showing Window World location"
             className="size-full h-[400px] object-cover md:h-[516px]"
           />
         </a>

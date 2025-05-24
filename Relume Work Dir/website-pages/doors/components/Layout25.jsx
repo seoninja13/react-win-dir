@@ -48,9 +48,9 @@ export function Layout25() {
             </div>
           </div>
           <img
-            src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+            src="/images/doors/doors-patio-showcase.png"
             className="w-full rounded-image object-cover"
-            alt="Relume placeholder image"
+            alt="Stunning patio doors connecting indoor and outdoor spaces in Sacramento home"
           />
         </div>
       </div>

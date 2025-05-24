@@ -37,9 +37,9 @@ export function Layout1() {
           </div>
           <div>
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              src="/images/about/about-why-choose-us.png"
               className="w-full rounded-image object-cover"
-              alt="Relume placeholder image"
+              alt="Quality window installation work showcasing professional craftsmanship"
             />
           </div>
         </div>

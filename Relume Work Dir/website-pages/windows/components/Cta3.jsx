@@ -25,9 +25,9 @@ export function Cta3() {
       </div>
       <div className="absolute inset-0 z-0">
         <img
-          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          src="/images/windows/windows-cta-background.png"
           className="size-full object-cover"
-          alt="Relume placeholder image"
+          alt="Beautiful Sacramento home with new windows"
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>

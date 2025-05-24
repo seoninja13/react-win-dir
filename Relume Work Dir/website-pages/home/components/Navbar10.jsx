@@ -133,8 +133,8 @@ export function Navbar10() {
                           >
                             <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                               <img
-                                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                alt="Relume placeholder image 1"
+                                src="/images/home/home-nav-dropdown-5.png"
+                                alt="Premium vinyl siding installation"
                                 className="absolute inset-0 size-full object-cover"
                               />
                             </div>
@@ -161,8 +161,8 @@ export function Navbar10() {
                           >
                             <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                               <img
-                                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                alt="Relume placeholder image 1"
+                                src="/images/home/home-nav-dropdown-7.png"
+                                alt="Energy-efficient window technology"
                                 className="absolute inset-0 size-full object-cover"
                               />
                             </div>
@@ -189,8 +189,8 @@ export function Navbar10() {
                           >
                             <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                               <img
-                                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                alt="Relume placeholder image 1"
+                                src="/images/home/home-nav-dropdown-3.png"
+                                alt="Professional window installation service"
                                 className="absolute inset-0 size-full object-cover"
                               />
                             </div>
@@ -217,8 +217,8 @@ export function Navbar10() {
                           >
                             <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                               <img
-                                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                alt="Relume placeholder image 1"
+                                src="/images/home/home-nav-dropdown-6.png"
+                                alt="Satisfied customer with home renovation"
                                 className="absolute inset-0 size-full object-cover"
                               />
                             </div>
@@ -246,8 +246,8 @@ export function Navbar10() {
                           >
                             <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                               <img
-                                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                alt="Relume placeholder image 1"
+                                src="/images/home/home-nav-dropdown-4.png"
+                                alt="Expert door installation service"
                                 className="absolute inset-0 size-full object-cover"
                               />
                             </div>
@@ -274,8 +274,8 @@ export function Navbar10() {
                           >
                             <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                               <img
-                                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                alt="Relume placeholder image 1"
+                                src="/images/home/home-nav-dropdown-8.png"
+                                alt="Professional warranty and service guarantee"
                                 className="absolute inset-0 size-full object-cover"
                               />
                             </div>
@@ -452,8 +452,8 @@ export function Navbar10() {
                             >
                               <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                                 <img
-                                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                  alt="Relume placeholder image 1"
+                                  src="/images/home/home-nav-dropdown-3.png"
+                                  alt="Professional window installation service"
                                   className="absolute inset-0 size-full object-cover"
                                 />
                               </div>
@@ -481,8 +481,8 @@ export function Navbar10() {
                             >
                               <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                                 <img
-                                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                  alt="Relume placeholder image 2"
+                                  src="/images/home/home-nav-dropdown-4.png"
+                                  alt="Expert door installation service"
                                   className="absolute inset-0 size-full object-cover"
                                 />
                               </div>
@@ -510,8 +510,8 @@ export function Navbar10() {
                             >
                               <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                                 <img
-                                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                  alt="Relume placeholder image 3"
+                                  src="/images/home/home-nav-dropdown-5.png"
+                                  alt="Premium vinyl siding installation"
                                   className="absolute inset-0 size-full object-cover"
                                 />
                               </div>
@@ -539,8 +539,8 @@ export function Navbar10() {
                             >
                               <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                                 <img
-                                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                  alt="Relume placeholder image 4"
+                                  src="/images/home/home-nav-dropdown-6.png"
+                                  alt="Satisfied customer with home renovation"
                                   className="absolute inset-0 size-full object-cover"
                                 />
                               </div>
@@ -568,8 +568,8 @@ export function Navbar10() {
                             >
                               <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                                 <img
-                                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                  alt="Relume placeholder image 5"
+                                  src="/images/home/home-nav-dropdown-7.png"
+                                  alt="Energy-efficient window technology"
                                   className="absolute inset-0 size-full object-cover"
                                 />
                               </div>
@@ -597,8 +597,8 @@ export function Navbar10() {
                             >
                               <div className="relative flex w-full flex-col pt-[66.6%] lg:flex-row">
                                 <img
-                                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                                  alt="Relume placeholder image 6"
+                                  src="/images/home/home-nav-dropdown-8.png"
+                                  alt="Professional warranty and service guarantee"
                                   className="absolute inset-0 size-full object-cover"
                                 />
                               </div>

@@ -28,8 +28,8 @@ export function Layout251() {
           <div>
             <div className="mb-6 md:mb-8">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                alt="Relume placeholder image"
+                src="/images/home/home-process-consultation.png"
+                alt="Free consultation meeting"
                 className="rounded-image"
               />
             </div>
@@ -41,28 +41,28 @@ export function Layout251() {
           <div>
             <div className="mb-6 md:mb-8">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                alt="Relume placeholder image"
+                src="/images/home/home-process-measurement.png"
+                alt="Professional measurement process"
                 className="rounded-image"
               />
             </div>
             <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
-              Step 2: Choose Your Perfect Products
+              Step 2: Professional Measurement and Assessment
             </h3>
-            <p>Explore our extensive range of styles and options.</p>
+            <p>Our experts will measure and assess your needs.</p>
           </div>
           <div>
             <div className="mb-6 md:mb-8">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                alt="Relume placeholder image"
+                src="/images/home/home-process-installation.png"
+                alt="Expert installation service"
                 className="rounded-image"
               />
             </div>
             <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
-              Step 3: Professional Installation by Experts
+              Step 3: Expert Installation and Quality Assurance
             </h3>
-            <p>Our skilled team ensures a flawless installation.</p>
+            <p>Professional installation with lifetime warranty.</p>
           </div>
         </div>
         <div className="mt-12 flex items-center gap-4 md:mt-18 lg:mt-20">

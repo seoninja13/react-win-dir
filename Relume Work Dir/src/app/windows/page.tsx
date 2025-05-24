@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import { logger } from '@/utils/logger';
 
 // Import components from the website-pages directory
-import { Navbar10 } from '../../../website-pages/windows/components/Navbar10';
 import { Header46 } from '../../../website-pages/windows/components/Header46';
 import { Header36 } from '../../../website-pages/windows/components/Header36';
 import { Layout6 } from '../../../website-pages/windows/components/Layout6';
@@ -16,7 +15,6 @@ import { Layout246 } from '../../../website-pages/windows/components/Layout246';
 import { Layout101 } from '../../../website-pages/windows/components/Layout101';
 import { Testimonial32 } from '../../../website-pages/windows/components/Testimonial32';
 import { Cta3 } from '../../../website-pages/windows/components/Cta3';
-import { Footer4 } from '../../../website-pages/windows/components/Footer4';
 
 export default function Windows() {
   useEffect(() => {
@@ -29,7 +27,6 @@ export default function Windows() {
 
   return (
     <div>
-      <Navbar10 />
       <Header46 />
       <Header36 />
       <Layout6 />
@@ -41,7 +38,6 @@ export default function Windows() {
       <Layout101 />
       <Testimonial32 />
       <Cta3 />
-      <Footer4 />
     </div>
   );
 }

@@ -69,9 +69,9 @@ export function Layout10() {
           </div>
           <div>
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              src="/images/about/about-commitment-service.png"
               className="w-full rounded-image object-cover"
-              alt="Relume placeholder image"
+              alt="Window World team providing excellent customer service and consultation"
             />
           </div>
         </div>

@@ -71,9 +71,9 @@ export function Layout101() {
           </div>
         </div>
         <img
-          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+          src="/images/windows/windows-financing-options.png"
           className="w-full rounded-image object-cover"
-          alt="Relume placeholder image"
+          alt="Beautiful home interior with financing options for new windows"
         />
       </div>
     </section>

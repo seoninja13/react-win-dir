@@ -22,8 +22,8 @@ export function Testimonial4() {
           <div className="mt-6 flex w-full flex-col items-center justify-center gap-3 text-center md:mt-8 md:w-auto md:flex-row md:gap-5 md:text-left">
             <div>
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                alt="Testimonial avatar 1"
+                src="/images/doors/doors-customer-testimonial.png"
+                alt="Jessica Brown - Satisfied Sacramento homeowner"
                 className="size-14 min-h-14 min-w-14 rounded-full object-cover"
               />
             </div>

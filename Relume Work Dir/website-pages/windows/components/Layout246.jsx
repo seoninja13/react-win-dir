@@ -27,9 +27,9 @@ export function Layout246() {
           <div>
             <div className="mb-5 md:mb-6">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
+                src="/images/windows/windows-process-step-1-icon.png"
                 className="size-12"
-                alt="Relume logo"
+                alt="Contact consultation process icon"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
@@ -45,9 +45,9 @@ export function Layout246() {
           <div>
             <div className="mb-5 md:mb-6">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
+                src="/images/windows/windows-process-step-2-icon.png"
                 className="size-12"
-                alt="Relume logo"
+                alt="Measurement estimation process icon"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
@@ -63,9 +63,9 @@ export function Layout246() {
           <div>
             <div className="mb-5 md:mb-6">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg"
+                src="/images/windows/windows-process-step-3-icon.png"
                 className="size-12"
-                alt="Relume logo"
+                alt="Installation completion process icon"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">

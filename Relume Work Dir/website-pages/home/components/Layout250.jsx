@@ -19,13 +19,13 @@ export function Layout250() {
           <div className="flex flex-col">
             <div className="mb-6 md:mb-8">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                alt="Relume placeholder image"
+                src="/images/home/home-feature-windows.png"
+                alt="Energy-efficient replacement windows"
                 className="rounded-image"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
-              Stylish and Durable Doors for Every Entryway
+              Energy-Efficient Replacement Windows
             </h3>
             <p>
               Our windows offer unparalleled energy efficiency, enhancing your
@@ -40,16 +40,16 @@ export function Layout250() {
           <div className="flex flex-col">
             <div className="mb-6 md:mb-8">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                alt="Relume placeholder image"
+                src="/images/home/home-feature-doors.png"
+                alt="Stylish and durable entry doors"
                 className="rounded-image"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
-              Upgrade Your Home's Aesthetic with Our Premium Siding Options
+              Stylish and Durable Doors for Every Entryway
             </h3>
             <p>
-              Choose from a variety of styles and colors to match your vision.
+              Choose from our premium door collection with detailed craftsmanship and premium materials.
             </p>
             <div className="mt-6 flex gap-4 md:mt-8">
               <Button iconRight={<RxChevronRight />} variant="link" size="link">
@@ -60,18 +60,16 @@ export function Layout250() {
           <div className="flex flex-col">
             <div className="mb-6 md:mb-8">
               <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                alt="Relume placeholder image"
+                src="/images/home/home-feature-siding.png"
+                alt="Premium vinyl siding options"
                 className="rounded-image"
               />
             </div>
             <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
-              Experience Exceptional Craftsmanship with Our Installation
-              Services
+              Upgrade Your Home's Aesthetic with Our Premium Siding Options
             </h3>
             <p>
-              Our expert team ensures a seamless installation process for your
-              peace of mind.
+              Choose from a variety of styles and colors to match your vision with our premium vinyl siding.
             </p>
             <div className="mt-6 flex gap-4 md:mt-8">
               <Button iconRight={<RxChevronRight />} variant="link" size="link">

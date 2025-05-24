@@ -38,9 +38,9 @@ export function Layout6() {
           </div>
           <div>
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              src="/images/about/about-showroom-interior.png"
               className="w-full rounded-image object-cover"
-              alt="Relume placeholder image"
+              alt="Window World showroom interior in Sacramento with window and door displays"
             />
           </div>
         </div>
