@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SampleProductCard matches snapshot 1`] = `
+<div
+  class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow "
+>
+  <div
+    class="aspect-video overflow-hidden"
+  >
+    <img
+      alt="Test Product - Test image description"
+      class="w-full h-full object-cover transition-transform hover:scale-105"
+      src="https://example.com/test-image.jpg"
+    />
+  </div>
+  <div
+    class="p-4"
+  >
+    <h3
+      class="text-xl font-semibold mb-2"
+    >
+      Test Product
+    </h3>
+    <p
+      class="text-gray-600 mb-4 line-clamp-3"
+    >
+      This is a test product description that should be displayed in the card.
+    </p>
+    <a
+      class="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+      href="/test-product"
+    >
+      Learn More
+    </a>
+  </div>
+</div>
+`;

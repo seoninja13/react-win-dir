@@ -1,9 +1,9 @@
 /**
  * Vertex AI Image Generation with Service Account Authentication
- * 
+ *
  * This script generates images using Google's Vertex AI with Imagen 3.0 model.
  * It uses explicit service account authentication from a JSON key file.
- * 
+ *
  * Features:
  * - Uses @google/genai SDK with Vertex AI
  * - Service account authentication
@@ -11,16 +11,16 @@
  * - Supports batch image generation
  * - Comprehensive error handling and retries
  * - Detailed logging
- * 
+ *
  * Prerequisites:
  * - Node.js 18+
  * - @google/genai package
  * - Google Cloud service account key file
  * - Project configured in us-west1 region
- * 
+ *
  * Environment Variables:
  * - GOOGLE_APPLICATION_CREDENTIALS: Path to service account key file (required)
- * 
+ *
  * Usage:
  *   node scripts/genai-vertexai-imagen3-imagegen-serviceaccount.mjs \
  *     --prompt="A modern window with ocean view" \
@@ -29,21 +29,16 @@
  *     --aspect-ratio=16:9
  */
 
-import { GoogleGenAI } from '@google/genai';
-import fs from 'fs/promises';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { createHash } from 'crypto';
+// Dynamic imports will be used in the main function to avoid hanging issues
 
 // ======================
 // Configuration
 // ======================
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Configuration will be loaded dynamically in the main function
 
 // Default configuration
 const DEFAULTS = {
-  MODEL: 'imagen-3.0-generate-002',
+  MODEL: 'imagen-3.0-fast-generate',
   REGION: 'us-west1',
   MAX_RETRIES: 3,
   TIMEOUT_MS: 30000,
@@ -79,7 +74,7 @@ class RateLimiter {
     return new Promise((resolve) => {
       const now = Date.now();
       this.queue = this.queue.filter(ts => now - ts < this.timeWindow);
-      
+
       if (this.queue.length < this.maxRequests) {
         this.queue.push(now);
         resolve();
@@ -112,14 +107,14 @@ async function withRetry(fn, options = {}) {
     } catch (error) {
       const statusCode = error.status || error.statusCode || 0;
       const isRetryable = retryableStatusCodes.includes(statusCode);
-      
+
       if (!isRetryable || retries >= maxRetries) {
         throw error;
       }
 
       console.warn(`Retry ${retries + 1}/${maxRetries} after ${delay}ms`);
       await new Promise(resolve => setTimeout(resolve, delay));
-      
+
       retries++;
       delay = Math.min(delay * factor, maxDelay);
     }
@@ -131,30 +126,51 @@ async function withRetry(fn, options = {}) {
 // ======================
 class VertexAIClient {
   constructor() {
-    this.validateEnvironment();
+    console.log('🏗️ Creating VertexAIClient instance...');
     this.rateLimiter = new RateLimiter(DEFAULTS.RATE_LIMIT, DEFAULTS.RATE_WINDOW_MS);
-    this.initializeClient();
+    this.initialized = false;
+    console.log('✅ VertexAIClient constructor completed');
+  }
+
+  async initialize() {
+    if (this.initialized) return;
+    console.log('🔧 Initializing VertexAIClient...');
+    await this.validateEnvironment();
+    await this.initializeClient();
+    this.initialized = true;
+    console.log('✅ VertexAIClient initialization completed');
   }
 
   async validateEnvironment() {
+    console.log('🔍 Validating environment...');
+    console.log('GOOGLE_APPLICATION_CREDENTIALS:', process.env.GOOGLE_APPLICATION_CREDENTIALS);
+
     if (!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
       throw new Error('GOOGLE_APPLICATION_CREDENTIALS environment variable is required for service account authentication');
     }
-    
+
     try {
       await fs.access(process.env.GOOGLE_APPLICATION_CREDENTIALS);
+      console.log('✅ Service account key file found');
     } catch (error) {
+      console.error('❌ Service account key file not found:', error.message);
       throw new Error(`Service account key file not found at ${process.env.GOOGLE_APPLICATION_CREDENTIALS}`);
     }
   }
-  
+
   async initializeClient() {
     try {
+      console.log('🔧 Initializing Vertex AI client...');
+
       // Load service account credentials
       const credentials = JSON.parse(
         await fs.readFile(process.env.GOOGLE_APPLICATION_CREDENTIALS, 'utf8')
       );
-      
+
+      console.log('📋 Service account project:', credentials.project_id);
+      console.log('🌍 Region:', DEFAULTS.REGION);
+      console.log('🤖 Model:', DEFAULTS.MODEL);
+
       // Initialize client with service account and stable API version
       this.client = new GoogleGenAI({
         projectId: credentials.project_id,
@@ -162,10 +178,11 @@ class VertexAIClient {
         serviceAccountKey: credentials,
         apiVersion: 'v1'
       });
-      
-      console.log(`Initialized Vertex AI client with service account for project: ${credentials.project_id}`);
+
+      console.log(`✅ Initialized Vertex AI client with service account for project: ${credentials.project_id}`);
     } catch (error) {
-      console.error('Failed to initialize Vertex AI client:', error.message);
+      console.error('❌ Failed to initialize Vertex AI client:', error.message);
+      console.error('Error details:', error);
       throw new Error(`Failed to initialize Vertex AI client: ${error.message}`);
     }
   }
@@ -180,9 +197,12 @@ class VertexAIClient {
    * @returns {Promise<Array<{image: Buffer, mimeType: string}>>} Generated images
    */
   async generateImages(prompt, { count = 1, aspectRatio = '1:1', seed } = {}) {
+    // Ensure client is initialized
+    await this.initialize();
+
     const startTime = Date.now();
     const requestId = createHash('md5').update(`${Date.now()}-${Math.random()}`).digest('hex').substring(0, 8);
-    
+
     try {
       // Validate inputs
       if (count < 1 || count > 4) {
@@ -193,10 +213,10 @@ class VertexAIClient {
       }
 
       console.log(`[${requestId}] Generating ${count} image(s) with prompt: "${prompt}"`);
-      
+
       // Acquire rate limit slot
       await this.rateLimiter.acquire();
-      
+
       // Make the API call with retry
       return await withRetry(async () => {
         // Use the models module to generate images
@@ -217,16 +237,16 @@ class VertexAIClient {
 
         const duration = Date.now() - startTime;
         console.log(`[${requestId}] Generated ${images.length} image(s) in ${duration}ms`);
-        
+
         return images;
       });
-      
+
     } catch (error) {
       console.error(`[${requestId}] Error generating images:`, error.message);
       throw error;
     }
   }
-  
+
   /**
    * Generate multiple images from a batch of prompts
    * @param {Array<string>} prompts - Array of prompts
@@ -235,7 +255,7 @@ class VertexAIClient {
    */
   async generateBatchImages(prompts, options = {}) {
     const results = [];
-    
+
     for (const prompt of prompts) {
       try {
         const images = await this.generateImages(prompt, options);
@@ -245,7 +265,7 @@ class VertexAIClient {
         results.push({ prompt, error: error.message });
       }
     }
-    
+
     return results;
   }
 }
@@ -266,16 +286,16 @@ async function ensureDirectoryExists(dirPath) {
 async function saveImages(images, outputDir, baseName) {
   await ensureDirectoryExists(outputDir);
   const savedPaths = [];
-  
+
   for (let i = 0; i < images.length; i++) {
     const filename = `${baseName}-${Date.now()}-${i + 1}.png`;
     const filePath = path.join(outputDir, filename);
-    
+
     await fs.writeFile(filePath, images[i].image);
     savedPaths.push(filePath);
     console.log(`Saved: ${filePath}`);
   }
-  
+
   return savedPaths;
 }
 
@@ -283,57 +303,131 @@ async function saveImages(images, outputDir, baseName) {
 // Main Function
 // ======================
 async function main() {
-  // Parse command line arguments
-  const args = process.argv.slice(2).reduce((acc, arg) => {
-    const [key, value] = arg.split('=');
-    acc[key.replace(/^--/, '')] = value || true;
-    return acc;
-  }, {});
+  console.log('🚀 Starting Vertex AI Image Generation Script');
+  console.log('📅 Timestamp:', new Date().toISOString());
 
-  // Show help if needed
-  if (args.help || !args.prompt) {
-    console.log(`
-Usage: node ${path.basename(__filename)} --prompt="<prompt>" [options]
+  try {
+    // Dynamic imports
+    console.log('📦 Loading modules...');
+    const { GoogleGenAI } = await import('@google/genai');
+    const fs = await import('fs/promises');
+    const path = await import('path');
+    const { fileURLToPath } = await import('url');
+    const { createHash } = await import('crypto');
+    const dotenv = await import('dotenv');
+
+    console.log('✅ Modules loaded');
+
+    // Setup paths and environment
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+    const envPath = path.join(__dirname, '..', '.env.local');
+
+    console.log('🔧 Loading environment from:', envPath);
+    dotenv.config({ path: envPath });
+    console.log('✅ Environment loaded');
+
+    // Parse command line arguments
+    const args = process.argv.slice(2).reduce((acc, arg) => {
+      const [key, value] = arg.split('=');
+      acc[key.replace(/^--/, '')] = value || true;
+      return acc;
+    }, {});
+
+    console.log('📝 Command line arguments:', args);
+
+    // Show help if needed
+    if (args.help || !args.prompt) {
+      console.log(`
+Usage: node script.mjs --prompt="<prompt>" [options]
 
 Options:
   --prompt="text"     Prompt for image generation (required)
-  --output-dir=path   Output directory (default: ${DEFAULTS.DEFAULT_OUTPUT_DIR})
+  --output-dir=path   Output directory (default: generated-images)
   --count=number      Number of images to generate (1-4, default: 1)
   --aspect-ratio=ratio Aspect ratio (1:1, 4:3, 16:9, 9:16, default: 1:1)
   --seed=number       Random seed for reproducibility
   --help              Show this help message
 `);
-    process.exit(0);
-  }
+      process.exit(0);
+    }
 
-  try {
-    // Initialize client
-    const client = new VertexAIClient();
-    
+    // Load service account
+    console.log('🔑 Loading service account...');
+    const credentials = JSON.parse(await fs.readFile(process.env.GOOGLE_APPLICATION_CREDENTIALS, 'utf8'));
+    console.log('✅ Service account loaded for project:', credentials.project_id);
+
+    // Create client
+    console.log('🔧 Creating GoogleGenAI client...');
+    const client = new GoogleGenAI({
+      projectId: credentials.project_id,
+      location: 'us-west1',
+      serviceAccountKey: credentials,
+      apiVersion: 'v1'
+    });
+    console.log('✅ Client created');
+
     // Generate images
-    const images = await client.generateImages(args.prompt, {
-      count: parseInt(args.count, 10) || 1,
+    console.log('🎨 Generating images...');
+    const result = await client.models.generateImages({
+      model: 'imagen-3.0-fast-generate',
+      prompt: args.prompt,
       aspectRatio: args['aspect-ratio'] || '1:1',
-      seed: args.seed ? parseInt(args.seed, 10) : undefined,
+      sampleCount: parseInt(args.count, 10) || 1,
+      responseFormat: 'b64_json'
     });
 
-    // Save images
-    const outputDir = args['output-dir'] || DEFAULTS.DEFAULT_OUTPUT_DIR;
-    const baseName = args.prompt.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-    
-    const savedPaths = await saveImages(images, outputDir, baseName);
-    console.log(`\nSuccessfully generated and saved ${savedPaths.length} image(s)`);
-    
+    console.log('✅ Image generation completed');
+
+    if (result && result.images && result.images.length > 0) {
+      console.log('📸 Generated', result.images.length, 'image(s)');
+
+      // Save images
+      const outputDir = args['output-dir'] || 'generated-images';
+      await fs.mkdir(outputDir, { recursive: true });
+      console.log('📁 Output directory:', outputDir);
+
+      const savedPaths = [];
+      for (let i = 0; i < result.images.length; i++) {
+        const imageData = Buffer.from(result.images[i].data, 'base64');
+        const baseName = args.prompt.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        const filename = `${baseName}-${Date.now()}-${i + 1}.png`;
+        const filepath = path.join(outputDir, filename);
+
+        await fs.writeFile(filepath, imageData);
+        savedPaths.push(filepath);
+        console.log('💾 Saved:', filepath);
+      }
+
+      console.log(`\n✅ Successfully generated and saved ${savedPaths.length} image(s)`);
+
+    } else {
+      console.log('⚠️ No images generated');
+    }
+
   } catch (error) {
-    console.error('\nError:', error.message);
+    console.error('\n❌ Error:', error.message);
+    console.error('🔍 Error stack:', error.stack);
     process.exit(1);
   }
 }
 
 // Run the script if this is the main module
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch(console.error);
-}
+console.log('🔍 Checking if this is the main module...');
+
+// Use dynamic import for fileURLToPath since we removed static imports
+import('url').then(({ fileURLToPath }) => {
+  console.log('import.meta.url:', import.meta.url);
+  console.log('process.argv[1]:', process.argv[1]);
+  console.log('fileURLToPath(import.meta.url):', fileURLToPath(import.meta.url));
+
+  if (fileURLToPath(import.meta.url) === process.argv[1]) {
+    console.log('✅ This is the main module, running main()...');
+    main().catch(console.error);
+  } else {
+    console.log('ℹ️ This module is being imported, not running main()');
+  }
+}).catch(console.error);
 
 // Helper functions for external use
 async function generateImage(prompt, options = {}) {
