@@ -227,9 +227,18 @@ export default function RootLayout({
 
 ### Adding Global Components
 
-To add global components that should appear on all pages, modify the root layout to include those components:
+**IMPLEMENTED**: Global components have been added to the root layout to ensure site-wide consistency:
 
 ```tsx
+// src/app/layout.tsx
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import './globals.css';
+import './styles.css';
+import { LoggingProvider } from '@/components/LoggingProvider';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -237,17 +246,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body className={inter.className}>
+        <LoggingProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </LoggingProvider>
       </body>
     </html>
   );
 }
 ```
+
+**Shared Components Created:**
+- `src/components/layout/Navbar.jsx` - Site-wide navigation with services dropdown images
+- `src/components/layout/Footer.jsx` - Site-wide footer with consistent branding
+
+**Pages Updated:**
+- All individual pages (home, windows, doors) have had duplicate Navbar10 and Footer4 components removed
+- Navigation is now consistent across all pages
+- Services dropdown with images works site-wide
 
 ## Related Documentation
 
