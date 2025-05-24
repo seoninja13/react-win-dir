@@ -35,9 +35,9 @@ export function Layout27() {
           </div>
           <div>
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              src="/images/about/about-service-installation.png"
               className="w-full rounded-image object-cover"
-              alt="Relume placeholder image"
+              alt="Professional window installation service by Windows and Doors California"
             />
           </div>
         </div>

@@ -28,9 +28,9 @@ export function Layout24() {
           </div>
           <div>
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              src="/images/about/about-team-professional.png"
               className="w-full rounded-image object-cover"
-              alt="Relume placeholder image"
+              alt="Professional team of Windows and Doors California employees"
             />
           </div>
         </div>

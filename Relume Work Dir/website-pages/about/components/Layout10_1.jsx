@@ -70,9 +70,9 @@ export function Layout10_1() {
           </div>
           <div>
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+              src="/images/about/about-community-giving-back.png"
               className="w-full rounded-image object-cover"
-              alt="Relume placeholder image"
+              alt="Windows and Doors California team giving back to Sacramento community"
             />
           </div>
         </div>

@@ -10,10 +10,10 @@ export function Header5() {
         <div className="flex max-h-[60rem] min-h-svh items-center py-16 md:py-24 lg:py-28">
           <div className="max-w-md">
             <h1 className="mb-5 text-6xl font-bold text-text-alternative md:mb-6 md:text-9xl lg:text-10xl">
-              About Window World of Greater Sacramento
+              About Windows and Doors California
             </h1>
             <p className="text-text-alternative md:text-md">
-              At Window World of Greater Sacramento, we blend national expertise
+              At Windows and Doors California, we blend national expertise
               with local service. Our mission is to provide exceptional home
               improvement solutions tailored to the needs of our community.
             </p>
@@ -28,9 +28,9 @@ export function Header5() {
       </div>
       <div className="absolute inset-0 z-0">
         <img
-          src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+          src="/images/about/about-hero-background.png"
           className="size-full object-cover"
-          alt="Relume placeholder image"
+          alt="Windows and Doors California office building exterior"
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>
